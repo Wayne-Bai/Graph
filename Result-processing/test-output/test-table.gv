@@ -1,0 +1,10 @@
+// Test
+digraph {
+	A [label="Dot A"]
+	B [label="Dot B"]
+	C [label="Dot C"]
+	A -> B
+	A -> C
+	A -> B
+	B -> C [label=test]
+}
