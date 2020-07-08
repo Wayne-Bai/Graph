@@ -1,8 +1,6 @@
-import pickle
 import networkx as nx
-import matplotlib.pyplot as plt
 
-def extract(name='GraphRNN_RNN_AST_4_128_train_0.dat'):
+def extract(name):
 
     f = open('nodeLabel.txt', 'r')
 

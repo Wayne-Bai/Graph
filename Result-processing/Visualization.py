@@ -1,25 +1,28 @@
 import graphviz
 import extractInfo
 
-node_list, edge_list, node_type_list= extractInfo.extract('GraphRNN_RNN_AST_4_128_train_0.dat')
+def Visualize(name):
+    prefix = 'GraphRNN_RNN_AST_4_128_'
+    format = '.dat'
+    file = prefix+str(name)+format
+    node_list, edge_list, node_type_list = extractInfo.extract(file)
 
-dot = graphviz.Graph(comment='Result')
+    dot = graphviz.Graph(comment='Result')
 
-# Add node
-flag = 0
-for i in node_list:
-    node_id = i
-    node = node_type_list[flag]
-    print(node_id, node)
-    dot.node(str(node_id), node)
-    flag += 1
+    # Add node
+    flag = 0
+    for i in node_list:
+        node_id = i
+        node = node_type_list[flag]
+        print(node_id, node)
+        dot.node(str(node_id), node)
+        flag += 1
 
-for i in edge_list:
-    m, n = i[0], i[1]
-    dot.edge(str(m), str(n))
+    for i in edge_list:
+        m, n = i[0], i[1]
+        dot.edge(str(m), str(n))
 
-# dot.edges(['AB','AC','AB'])
-# dot.edge('B', 'C', 'test')
+    dot.render("test-output/%s.gv" %(file), view=True)
 
-print(dot.source)
-dot.render('test-output/test.gv', view=True)
+if __name__ == '__main__':
+    Visualize('train_0')
