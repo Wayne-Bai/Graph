@@ -135,7 +135,8 @@ if __name__ == '__main__':
         # edge_f_gen = MLP_plain(h_size=args.edge_feature_output_dim, embedding_size=args.embedding_size_output, y_size=args.edge_feature_output_dim).cuda()
 
     ### start training
-    train(args, dataset_loader, rnn, output, node_f_gen, edge_f_gen)
+    print(dataset)
+    # train(args, dataset_loader, rnn, output, node_f_gen, edge_f_gen)
 
     ### graph completion
     # train_graph_completion(args,dataset_loader,rnn,output)
