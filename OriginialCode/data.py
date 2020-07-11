@@ -455,6 +455,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         else:
             self.max_prev_node = max_prev_node
 
+        print('111111111111111111111')
+
         # self.max_prev_node = max_prev_node
 
         # # sort Graph in descending order
@@ -463,6 +465,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # self.adj_all = [self.adj_all[i] for i in len_batch_order]
     def __len__(self):
         return len(self.adj_all)
+        print('2222222222222222222222')
     def __getitem__(self, idx):
         # Expects 3 outputs:
         #   input_node_f: (N, INF) # INF = M + NF + EF # EF = max_edge_f_num + 2
@@ -513,6 +516,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         smallN, M, EF = edge_f_encoded.shape
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
         edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
+        print('33333333333333333333333333')
         return {'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch}
 
     def construct_raw_node_f(self, node_dict, node_num_list):
