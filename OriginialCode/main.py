@@ -135,14 +135,13 @@ if __name__ == '__main__':
         # edge_f_gen = MLP_plain(h_size=args.edge_feature_output_dim, embedding_size=args.embedding_size_output, y_size=args.edge_feature_output_dim).cuda()
 
     ### start training
-    print(len(dataset))
 
-    # {'input_node_f': x_batch, 'raw_node_f': raw_node_f_batch, 'edge_f': edge_f_padded_batch, 'len': len_batch}
+    {'input_node_f': x_batch, 'raw_node_f': raw_node_f_batch, 'edge_f': edge_f_padded_batch, 'len': len_batch}
 
-    # train(args, dataset_loader, rnn, output, node_f_gen, edge_f_gen)
+    train(args, dataset_loader, rnn, output, node_f_gen, edge_f_gen)
 
     ### graph completion
-    # train_graph_completion(args,dataset_loader,rnn,output)
+    train_graph_completion(args,dataset_loader,rnn,output)
 
     ### nll evaluation
     # train_nll(args, dataset_loader, dataset_loader, rnn, output, max_iter = 200, graph_validate_len=graph_validate_len,graph_test_len=graph_test_len)
