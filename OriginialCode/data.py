@@ -455,7 +455,6 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         else:
             self.max_prev_node = max_prev_node
 
-        print('111111111111111111111')
 
         # self.max_prev_node = max_prev_node
 
@@ -516,7 +515,6 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         smallN, M, EF = edge_f_encoded.shape
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
         edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
-        print({'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch})
         return {'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch}
 
     def construct_raw_node_f(self, node_dict, node_num_list):
