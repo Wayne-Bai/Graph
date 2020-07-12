@@ -561,7 +561,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
                # binary_cross_entropy_weight(edge_f_pred, output_edge_f)
         loss = args.edge_loss_w * edge_f_loss + args.node_loss_w * node_f_loss
         loss.backward()
-        print(loss)
+        print(loss.grad_fn.next_functions[0][0])
         # update deterministic and lstm
         optimizer_output.step()
         optimizer_rnn.step()
