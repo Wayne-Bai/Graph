@@ -136,7 +136,7 @@ if __name__ == '__main__':
 
     ### start training
 
-    {'input_node_f': x_batch, 'raw_node_f': raw_node_f_batch, 'edge_f': edge_f_padded_batch, 'len': len_batch}
+    # {'input_node_f': x_batch, 'raw_node_f': raw_node_f_batch, 'edge_f': edge_f_padded_batch, 'len': len_batch}
 
     train(args, dataset_loader, rnn, output, node_f_gen, edge_f_gen)
 

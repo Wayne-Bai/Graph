@@ -464,8 +464,9 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # self.len_all = [self.len_all[i] for i in len_batch_order]
         # self.adj_all = [self.adj_all[i] for i in len_batch_order]
     def __len__(self):
-        return len(self.adj_all)
         print('2222222222222222222222')
+        return len(self.adj_all)
+
     def __getitem__(self, idx):
         # Expects 3 outputs:
         #   input_node_f: (N, INF) # INF = M + NF + EF # EF = max_edge_f_num + 2
