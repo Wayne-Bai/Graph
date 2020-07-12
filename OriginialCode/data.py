@@ -464,7 +464,6 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # self.len_all = [self.len_all[i] for i in len_batch_order]
         # self.adj_all = [self.adj_all[i] for i in len_batch_order]
     def __len__(self):
-        print('2222222222222222222222')
         return len(self.adj_all)
 
     def __getitem__(self, idx):
@@ -517,7 +516,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         smallN, M, EF = edge_f_encoded.shape
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
         edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
-        print('33333333333333333333333333')
+        print({'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch})
         return {'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch}
 
     def construct_raw_node_f(self, node_dict, node_num_list):
