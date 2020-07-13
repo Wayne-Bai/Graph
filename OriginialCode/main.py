@@ -141,7 +141,7 @@ if __name__ == '__main__':
     train(args, dataset_loader, rnn, output, node_f_gen, edge_f_gen)
 
     ### graph completion
-    train_graph_completion(args,dataset_loader,rnn,output)
+    # train_graph_completion(args,dataset_loader,rnn,output)
 
     ### nll evaluation
     # train_nll(args, dataset_loader, dataset_loader, rnn, output, max_iter = 200, graph_validate_len=graph_validate_len,graph_test_len=graph_test_len)
