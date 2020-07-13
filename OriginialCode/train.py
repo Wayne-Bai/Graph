@@ -517,8 +517,11 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # output_x = Variable(output_x).cuda() # Dim should be SumN * M * EF
         output_y = Variable(output_y).cuda() # Dim should be SumN * M * EF
 
-        edge_rnn_input = Variable(edge_rnn_input).cuda()
-        input_node_f = Variable(input_node_f).cuda()
+        edge_rnn_input = Variable(edge_rnn_input, requires_grad=True).cuda()
+        edge_rnn_input.register_hook(save_grad('grad1'))
+        print("edge_rnn_input gradient: {}".format(grads['grad1']))
+        input_node_f = Variable(input_node_f, requires_grad=True).cuda()
+        # print("input_node_f gradient: {}".format())
 
         # output_node_f = Variable(torch.zeros(x.size(0), x.size(1), args.max_node_feature_num)).cuda() # Dim should be BS * N * NF
         output_node_f = Variable(raw_node_f).cuda()
