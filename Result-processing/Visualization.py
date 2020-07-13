@@ -1,11 +1,11 @@
 import graphviz
 import extractInfo
 
-def Visualize(name):
+def Visualize(name, num, total_feature):
     prefix = 'GraphRNN_RNN_AST_4_128_'
     format = '.dat'
     file = prefix+str(name)+format
-    node_list, edge_list, node_type_list = extractInfo.extract(file)
+    node_list, edge_list, node_type_list = extractInfo.extract(file, num, total_feature)
 
     dot = graphviz.Graph(comment='Result')
 
@@ -25,4 +25,4 @@ def Visualize(name):
     dot.render("test-output/%s.gv" %(file), view=True)
 
 if __name__ == '__main__':
-    Visualize('train_0')
+    Visualize('pred_1000_1', 0, 17)

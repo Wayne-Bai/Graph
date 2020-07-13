@@ -1,6 +1,6 @@
 import networkx as nx
 
-def extract(name):
+def extract(name, num,total_feature):
 
     f = open('nodeLabel.txt', 'r')
 
@@ -18,18 +18,18 @@ def extract(name):
     #     plt.show()
 
     # Generate node list
-    node_list = G[3].nodes
+    node_list = G[num].nodes
 
     # Generate edge list
-    edges_list = G[3].edges
+    edges_list = G[num].edges
 
     # Generate node type list
     node_type_list_num = []
 
     for i in node_list:
-        for j in range(42):
+        for j in range(total_feature):
             feature = 'f' + str(j + 1)
-            if G[3].node[i][feature] == 1:
+            if G[num].node[i][feature] == 1:
                 node_type_list_num.append(j + 1)
 
     total_type = []
