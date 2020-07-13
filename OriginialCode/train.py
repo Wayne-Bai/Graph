@@ -523,7 +523,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         edge_rnn_input = Variable(edge_rnn_input, requires_grad=True).cuda()
         edge_rnn_input.register_hook(hook)
-        print(typr(edge_rnn_input.register_hook(hook)))
+        print(type(edge_rnn_input.register_hook(hook)))
         # print("edge_rnn_input gradient: {}".format(grads['grad1']))
         input_node_f = Variable(input_node_f, requires_grad=True).cuda()
         # print("input_node_f gradient: {}".format())
