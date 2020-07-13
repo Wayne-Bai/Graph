@@ -131,8 +131,8 @@ if __name__ == '__main__':
         output = GRU_plain(input_size=args.edge_feature_output_dim, embedding_size=args.embedding_size_rnn_output,
                            hidden_size=args.hidden_size_rnn_output, num_layers=args.num_layers, has_input=True,
                            has_output=True, output_size=args.edge_feature_output_dim).cuda() # TODO: understand input_size, output_size ?
-        edge_f_gen = None
-        # edge_f_gen = MLP_plain(h_size=args.edge_feature_output_dim, embedding_size=args.embedding_size_output, y_size=args.edge_feature_output_dim).cuda()
+        # edge_f_gen = None
+        edge_f_gen = MLP_plain(h_size=args.edge_feature_output_dim, embedding_size=args.embedding_size_output, y_size=args.edge_feature_output_dim).cuda()
 
     ### start training
 
