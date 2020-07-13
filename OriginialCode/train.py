@@ -517,6 +517,13 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # output_x = Variable(output_x).cuda() # Dim should be SumN * M * EF
         output_y = Variable(output_y).cuda() # Dim should be SumN * M * EF
 
+        # ADD a method to get gradient
+        grads = {}
+        def save_grad(name):
+            def hook(grad):
+                grads[name] = grad
+            return hook
+
         edge_rnn_input = Variable(edge_rnn_input, requires_grad=True).cuda()
         edge_rnn_input.register_hook(save_grad('grad1'))
         print("edge_rnn_input gradient: {}".format(grads['grad1']))
