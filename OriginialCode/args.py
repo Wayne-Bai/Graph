@@ -62,9 +62,9 @@ class Args():
         self.embedding_size_rnn_output = 8 # the embedding size for output rnn
         self.embedding_size_output = int(64/self.parameter_shrink) # the embedding size for output (VAE/MLP)
 
-        self.batch_size = 16 # normal: 32, and the rest should be changed accordingly
-        self.test_batch_size = 8
-        self.test_total_size = 8
+        self.batch_size = 32 # normal: 32, and the rest should be changed accordingly
+        self.test_batch_size = 16
+        self.test_total_size = 16
         self.num_layers = 4
 
         ### training config
