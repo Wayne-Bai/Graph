@@ -483,7 +483,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
 
-        print("raw_edge_f_batch dim: {}".format(raw_node_f_batch.shape))
+        print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
 
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
 
