@@ -756,8 +756,8 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None):
     optimizer_rnn = optim.Adam(list(rnn.parameters()), lr=args.lr)
     optimizer_output = optim.Adam(list(output.parameters()), lr=args.lr)
 
-    scheduler_rnn = MultiStepLR(optimizer_rnn, milestones=args.milestones, gamma=args.lr_rate/100)
-    scheduler_output = MultiStepLR(optimizer_output, milestones=args.milestones, gamma=args.lr_rate/100)
+    scheduler_rnn = MultiStepLR(optimizer_rnn, milestones=args.milestones, gamma=args.lr_rate)
+    scheduler_output = MultiStepLR(optimizer_output, milestones=args.milestones, gamma=args.lr_rate)
 
     # start main loop
     time_all = np.zeros(args.epochs)
