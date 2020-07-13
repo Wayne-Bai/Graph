@@ -515,7 +515,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # x = Variable(x).cuda() # Dim should be BS * N * (M + NF + EF)
         # y = Variable(y).cuda()
         # output_x = Variable(output_x).cuda() # Dim should be SumN * M * EF
-        output_y = Variable(output_y).cuda() # Dim should be SumN * M * EF
+        output_y = Variable(output_y, requires_grad=True).cuda() # Dim should be SumN * M * EF
 
         edge_rnn_input = Variable(edge_rnn_input).cuda()
         input_node_f = Variable(input_node_f).cuda()
@@ -561,7 +561,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
                # binary_cross_entropy_weight(edge_f_pred, output_edge_f)
         loss = args.edge_loss_w * edge_f_loss + args.node_loss_w * node_f_loss
         loss.backward()
-        print(loss.grad_fn.next_functions[0][0])
+        lg = loss.grad_fn.next_functions[0][0]
+        print("loss gradient:{}".format(lg.next_functions[0][0]))
         # update deterministic and lstm
         optimizer_output.step()
         optimizer_rnn.step()
