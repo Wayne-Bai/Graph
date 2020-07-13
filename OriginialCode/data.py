@@ -471,11 +471,20 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         #   raw_node_f  : (N,  NF)
         #   edge_f      : (N, M, EF)
         adj_copy = self.adj_all[idx].copy() # Dim: 200 * 200(actual node numbers of this graph: N)
+
+        print("adj_copy dim: {}".format(adj_copy.ndim))
+
         node_dict = self.raw_node_f_all[idx].copy()
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
+
+        print("raw_node_f_batch dim: {}".format(raw_node_f_batch.ndim))
+
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
+
+        print("raw_edge_f_batch dim: {}".format(raw_node_f_batch.ndim))
+
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
 
         # x_batch = np.zeros((self.n, self.max_prev_node))  # here zeros are padded for small graph
@@ -494,9 +503,17 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         start_idx = 0
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
+
+        print("adj_copy dim: {}".format(adj_copy.ndim))
+
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
+
+        print("adj_encoded dim: {}".format(adj_encoded.ndim))
+
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
+
+        print("edge_f_encoded dim: {}".format(edge_f_encoded.ndim))
 
         # add re-ordering of node_type_feature_matrix and edge_type_feature_matrix
         raw_node_f_batch = raw_node_f_batch[x_idx, :]
@@ -515,7 +532,13 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         smallN, M, EF = edge_f_encoded.shape
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
         edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
-        return {'input_node_f':x_batch.shape,'raw_node_f':raw_node_f_batch.shape, 'edge_f':edge_f_padded_batch.shape, 'len':len_batch}
+
+        print("input_node_f: {}". format(x_batch.shape))
+        print("raw_node_f: {}".format(raw_node_f_batch))
+        print("edge_f: {}".format(edge_f_padded_batch.shape))
+        print("len: {}".format(len_batch))
+
+        return {'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch}
 
     def construct_raw_node_f(self, node_dict, node_num_list):
         node_attr_list = list(next(iter(node_dict.values())).keys())
