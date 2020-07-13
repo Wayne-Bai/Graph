@@ -479,7 +479,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
 
-        print("raw_node_f_batch dim: {}".format(raw_node_f_batch.shape))
+        # print("raw_node_f_batch dim: {}".format(raw_node_f_batch.shape))
 
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
 
