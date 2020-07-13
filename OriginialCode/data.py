@@ -472,18 +472,18 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         #   edge_f      : (N, M, EF)
         adj_copy = self.adj_all[idx].copy() # Dim: 200 * 200(actual node numbers of this graph: N)
 
-        print("adj_copy dim: {}, shape: {}".format(adj_copy.size, adj_copy.shape))
+        print("adj_copy shape: {}".format(adj_copy.shape))
 
         node_dict = self.raw_node_f_all[idx].copy()
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
 
-        print("raw_node_f_batch dim: {}".format(raw_node_f_batch.size))
+        print("raw_node_f_batch dim: {}".format(raw_node_f_batch.shape))
 
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
 
-        print("raw_edge_f_batch dim: {}".format(raw_node_f_batch.size))
+        print("raw_edge_f_batch dim: {}".format(raw_node_f_batch.shape))
 
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
 
@@ -504,16 +504,16 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
 
-        print("adj_copy dim: {}".format(adj_copy.size))
+        print("adj_copy dim: {}".format(adj_copy.shape))
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
 
-        print("adj_encoded dim: {}".format(adj_encoded.size))
+        print("adj_encoded dim: {}".format(adj_encoded.shape))
 
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
 
-        print("edge_f_encoded dim: {}".format(edge_f_encoded.size))
+        print("edge_f_encoded dim: {}".format(edge_f_encoded.shape))
 
         # add re-ordering of node_type_feature_matrix and edge_type_feature_matrix
         raw_node_f_batch = raw_node_f_batch[x_idx, :]
