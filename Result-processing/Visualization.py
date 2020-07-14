@@ -11,6 +11,8 @@ def Visualize(name, num, total_feature):
 
     # Add node
     flag = 0
+    print(len(node_list))
+    print(len(node_type_list))
     for i in node_list:
         node_id = i
         node = node_type_list[flag]
@@ -25,4 +27,4 @@ def Visualize(name, num, total_feature):
     dot.render("test-output/%s.gv" %(file), view=True)
 
 if __name__ == '__main__':
-    Visualize('pred_1000_1', 0, 17)
+    Visualize('test_0', 0, 18)

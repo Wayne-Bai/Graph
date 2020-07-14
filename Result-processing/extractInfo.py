@@ -18,7 +18,9 @@ def extract(name, num,total_feature):
     #     plt.show()
 
     # Generate node list
-    node_list = G[num].nodes
+    node_list = G[num].node
+    print(node_list)
+    print(G[num].nodes.data())
 
     # Generate edge list
     edges_list = G[num].edges
@@ -28,9 +30,9 @@ def extract(name, num,total_feature):
 
     for i in node_list:
         for j in range(total_feature):
-            feature = 'f' + str(j + 1)
+            feature = 'f' + str(j+1)
             if G[num].node[i][feature] == 1:
-                node_type_list_num.append(j + 1)
+                node_type_list_num.append(j+1)
 
     total_type = []
     count = []
@@ -44,7 +46,7 @@ def extract(name, num,total_feature):
         count.append(type_ID)
 
     for i in node_type_list_num:
-        p = count.index(str(i))
+        p = count.index(str(i+1))
         new_type = total_type[p]
         node_type_list.append(new_type)
 
