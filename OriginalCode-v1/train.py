@@ -454,16 +454,40 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # add feature matrix, e.g. data['x_node_f']
         # 'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch
         input_node_f_unsorted = data['input_node_f'].float() # Dim: BS * N_max * INF
+
+        print("input_node_f_unsorted dim: {}".format(input_node_f_unsorted.shape))
+
         raw_node_f_unsorted = data['raw_node_f'].float() # Dim: BS * N_max * NF
+
+        print("raw_node_f_unsorted dim: {}".format(raw_node_f_unsorted.shape))
+
         edge_f_unsorted = data['edge_f'].float() # Dim: BS * N_max * M * EF
+
+        print("edge_f_unsorted dim: {}".format(edge_f_unsorted.shape))
+
         y_len_unsorted = data['len'] # list of node numbers in each graph in this batch
+
+        print("y_len_unsorted: {}".format((y_len_unsorted)))
+
         y_len_max = max(y_len_unsorted) # denote as N
         # x_unsorted = x_unsorted[:, 0:y_len_max, :]# Dim: BS * N * M
         # y_unsorted = y_unsorted[:, 0:y_len_max, :]# Dim: BS * N * M
         input_node_f_unsorted = input_node_f_unsorted[:, 0:y_len_max, :] # Dim: BS * (N+1) * INF
+
+        print("input_node_f_unsorted dim: {}".format(input_node_f_unsorted.shape))
+
         raw_node_f_unsorted = raw_node_f_unsorted[:, 0:y_len_max, :] # Dim: BS * N * NF
+
+        print("raw_node_f_unsorted dim: {}".format(raw_node_f_unsorted.shape))
+
         edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :, :] # Dim: BS * N * M * EF
+
+        print("edge_f_unsorted dim: {}".format(edge_f_unsorted.shape))
+
         BS, N, M, EF = edge_f_unsorted.shape
+
+        print("BS:{}, N:{}, M:{}, EF:{}".format(BS, N, M, EF))
+
         # initialize GRU hidden state according to batch size
         rnn.hidden = rnn.init_hidden(batch_size=input_node_f_unsorted.size(0))
         # output.hidden = output.init_hidden(batch_size=x_unsorted.size(0)*x_unsorted.size(1))
