@@ -51,8 +51,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
                 G[i + 1][j]['f0'] = 0
                 G[i + 1][j]['f1'] = 1
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
-    print(list(G.nodes(data=True)))
-    print(list(G.edges(data=True)))
+    # print(list(G.nodes(data=True)))
+    # print(list(G.edges(data=True)))
 
     # Todo: Add graph label: CFG or DFG, vulnerability type
     graph_num = data_graph_indicator.max()
@@ -78,7 +78,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
             graphs.append(G_sub)
             if G_sub.number_of_nodes() > max_nodes:
                 max_nodes = G_sub.number_of_nodes()
-    print(graphs)
+    # print(graphs)
 
     print('Loaded')
     return graphs
