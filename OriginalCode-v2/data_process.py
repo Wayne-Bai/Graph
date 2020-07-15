@@ -32,10 +32,10 @@ def Graph_load_batch(min_num_nodes = 10, max_num_nodes = 2000, name = 'AST'):
     for i in range(number_of_nodes):
         for j in range(number_of_node_types):
             if j == data_node_label[i] -1:
-                feature = 'f'+str(j+1)
+                feature = 'f'+str(j)
                 G.nodes[i+1][feature] = 1
             else:
-                feature = 'f' + str(j+1)
+                feature = 'f' + str(j)
                 G.nodes[i+1][feature] = 0
 
     # print(list(G.nodes(data=True))
@@ -45,11 +45,11 @@ def Graph_load_batch(min_num_nodes = 10, max_num_nodes = 2000, name = 'AST'):
         curr_node_adj = list(G.adj[i+1])
         for j in curr_node_adj:
             if i < j:
-                G[i+1][j]['f1'] = 1
-                G[i+1][j]['f2'] = 0
+                G[i+1][j]['f0'] = 1
+                G[i+1][j]['f1'] = 0
             else:
-                G[i + 1][j]['f1'] = 0
-                G[i + 1][j]['f2'] = 1
+                G[i + 1][j]['f0'] = 0
+                G[i + 1][j]['f1'] = 1
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
     # print(list(G.edges(data=True)))
 
