@@ -469,6 +469,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         #   raw_node_f  : (N,  NF)
         #   edge_f      : (N, M, EF)
         adj_copy = self.adj_all[idx].copy() # Dim: 200 * 200(actual node numbers of this graph: N)
+
+        # print adj_copy to check the original adjacent matrix
+        print(adj_copy)
+
         node_dict = self.raw_node_f_all[idx].copy()
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
@@ -491,7 +495,13 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # start_idx = np.random.randint(adj_copy.shape[0]) # randomly select a start node
         start_idx = 0
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
+
+        print("x_idx:{}", x_idx)
+
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
+
+        print(adj_copy)
+
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
