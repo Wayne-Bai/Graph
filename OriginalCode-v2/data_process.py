@@ -38,7 +38,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
                 feature = 'f' + str(j)
                 G.nodes[i+1][feature] = 0
 
-    # print(list(G.nodes(data=True))
+    print(list(G.nodes(data=True)))
 
     # Add edges label
     # Todo: Add edge label：from small number nodes to large number nodes(f1), else(f2)
@@ -51,8 +51,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
                 G[i + 1][j]['f0'] = 0
                 G[i + 1][j]['f1'] = 1
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
-    # print(list(G.edges(data=True)))
-    print(G)
+    print(list(G.edges(data=True)))
+
     # Todo: Add graph label: CFG or DFG, vulnerability type
     graph_num = data_graph_indicator.max()
     number_of_graph_types = max(data_graph_labels)
