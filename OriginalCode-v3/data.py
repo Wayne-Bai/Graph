@@ -481,8 +481,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         adj_copy = self.adj_all[idx].copy() # Dim: 200 * 200(actual node numbers of this graph: N)
 
         # check original matrix
-        print("Original Matrix")
-        print(adj_copy)
+        # print("Original Matrix")
+        # print(adj_copy)
 
         node_dict = self.raw_node_f_all[idx].copy()
         edge_dict = self.edge_f_all[idx].copy()
@@ -508,19 +508,19 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         start_idx = self.BFS_first_node[idx]
 
-        # check start_idx
-        print("start_idx: {}".format(start_idx))
+        # # check start_idx
+        # print("start_idx: {}".format(start_idx))
 
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
 
-        # check BFS x_idx
-
-        print("x_idx: {}".format(x_idx))
+        # # check BFS x_idx
+        #
+        # print("x_idx: {}".format(x_idx))
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
 
         # check re-ordering matrix
-        print("re-ordering matrix")
-        print(adj_copy)
+        # print("re-ordering matrix")
+        # print(adj_copy)
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
