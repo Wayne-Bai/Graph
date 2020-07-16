@@ -78,7 +78,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
             graphs.append(G_sub)
             if G_sub.number_of_nodes() > max_nodes:
                 max_nodes = G_sub.number_of_nodes()
-    # print(graphs)
+    print(graphs[1].nodes())
 
     print('Loaded')
     return graphs

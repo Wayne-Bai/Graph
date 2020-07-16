@@ -471,6 +471,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         adj_copy = self.adj_all[idx].copy() # Dim: 200 * 200(actual node numbers of this graph: N)
 
         # print adj_copy to check the original adjacent matrix
+        print("original adjacency matrix")
         print(adj_copy)
 
         node_dict = self.raw_node_f_all[idx].copy()
@@ -500,6 +501,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
 
+        print("re-ordering matrix")
         print(adj_copy)
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
