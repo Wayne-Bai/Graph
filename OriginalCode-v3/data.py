@@ -164,20 +164,22 @@ def bfs_seq(G, start_id):
     :param start_id:
     :return:
     '''
-    dictionary = dict(nx.bfs_successors(G, start_id))
-    start = [start_id]
-    output = [start_id]
-    while len(start) > 0:
-        next = []
-        while len(start) > 0:
-            current = start.pop(0)
-            neighbor = dictionary.get(current)
-            if neighbor is not None:
-                #### a wrong example, should not permute here!
-                # shuffle(neighbor)
-                next = next + neighbor
-        output = output + next
-        start = next
+    BFS = nx.bfs_edges(G, start_id)
+    output = list(BFS)
+    # dictionary = dict(nx.bfs_successors(G, start_id))
+    # start = [start_id]
+    # output = [start_id]
+    # while len(start) > 0:
+    #     next = []
+    #     while len(start) > 0:
+    #         current = start.pop(0)
+    #         neighbor = dictionary.get(current)
+    #         if neighbor is not None:
+    #             #### a wrong example, should not permute here!
+    #             # shuffle(neighbor)
+    #             next = next + neighbor
+    #     output = output + next
+    #     start = next
     return output
 
 
