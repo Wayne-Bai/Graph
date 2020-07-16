@@ -453,6 +453,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                 if k in node_idx_global:
                     edge_f_dict[k] = v
             self.edge_f_all.append(edge_f_dict)
+            print(self.edge_f_all)
             self.len_all.append(G.number_of_nodes())
         if max_num_node is None:
             self.n = max(self.len_all)
