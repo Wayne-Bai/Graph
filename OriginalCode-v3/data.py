@@ -445,6 +445,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             self.adj_all.append(np.asarray(nx.to_numpy_matrix(G)))
             node_idx_global = np.asarray(list(G.nodes))
             self.node_num_all.append(node_idx_global)
+
+            # check edge information
+            print("node_num_all: {}".format(self.node_num_all))
+
             # print(len(G.nodes._nodes), len(G.edges._adjdict), len(list(G.adjacency())))
             self.raw_node_f_all.append(dict(G.nodes._nodes))
             # self.input_node_f_all.append(self.construct_input_node_f(G))
@@ -453,7 +457,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                 if k in node_idx_global:
                     edge_f_dict[k] = v
             self.edge_f_all.append(edge_f_dict)
-            print(self.edge_f_all)
+
+            # check edge information
+            print("edge_f_all: {}".format(self.edge_f_all))
+
             self.len_all.append(G.number_of_nodes())
         if max_num_node is None:
             self.n = max(self.len_all)
