@@ -435,7 +435,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             [], [], [], [], []
         for i,G in enumerate(G_list):
             # add node_type_feature_matrix and edge_type_feature_matrix
-            for node in G.nodes:
+            for node in G.nodes():
                 if G[node]['f1'] ==1:
                     start_id = node
             BFS_list = bfs_seq(G, start_id)
