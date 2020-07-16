@@ -59,6 +59,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
     graph_num = data_graph_indicator.max()
     number_of_graph_types = max(data_graph_labels)
     node_list = np.arange(data_graph_indicator.shape[0]) + 1
+    print(node_list)
     graphs = []
     max_nodes = 0
     for i in range(graph_num):
