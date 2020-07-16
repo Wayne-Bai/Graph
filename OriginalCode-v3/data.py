@@ -435,7 +435,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             [], [], [], [], []
         for i,G in enumerate(G_list):
             # add node_type_feature_matrix and edge_type_feature_matrix
-            self.adj_all.append(np.asarray(nx.to_numpy_matrix(G)))
+            BFS_list = bfs_seq(G)
+            self.adj_all.append(np.asarray(nx.to_numpy_matrix(G, nodelist=BFS_list)))
             node_idx_global = np.asarray(list(G.nodes))
             self.node_num_all.append(node_idx_global)
             # print(len(G.nodes._nodes), len(G.edges._adjdict), len(list(G.adjacency())))
