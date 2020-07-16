@@ -67,7 +67,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
 
         nodes = node_list[data_graph_indicator==i+1]
 
-        G_sub = G.subgraph(nodes_list)
+        G_sub = G.subgraph(nodes)
         # print(nodes_list)
         # print(G_sub.nodes)
         for j in range(number_of_graph_types):
