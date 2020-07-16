@@ -437,12 +437,9 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         for i,G in enumerate(G_list):
             # add node_type_feature_matrix and edge_type_feature_matrix
 
-            node_list = G.nodes()
-            print(node_list)
-            for node in range(len(node_list)):
-                print(node_list[0])
-                if G.nodes[node_list[node]]['f1'] ==1:
-                    first_n = node
+            for node in G.nodes():
+                if G.nodes[node]['f1'] ==1:
+                    first_n = list(G.nodes).index(node)
                     self.BFS_first_node.append(first_n)
 
             self.adj_all.append(np.asarray(nx.to_numpy_matrix(G)))
