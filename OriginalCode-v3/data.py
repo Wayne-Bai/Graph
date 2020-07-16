@@ -433,14 +433,15 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
     def __init__(self, G_list, max_num_node=None, max_prev_node=None, iteration=20000):
         self.adj_all, self.node_num_all, self.edge_f_all, self.raw_node_f_all, self.len_all = \
             [], [], [], [], []
+        self.BFS_first_node = []
         for i,G in enumerate(G_list):
             # add node_type_feature_matrix and edge_type_feature_matrix
 
             for node in G.nodes():
                 if G.nodes[node]['f1'] ==1:
-                    start_id = node
-            BFS_list = bfs_seq(G, start_id)
-            self.adj_all.append(np.asarray(nx.to_numpy_matrix(G, nodelist=BFS_list)))
+                    first_n = node
+            self.BFS_first_node.append(first_n)
+            self.adj_all.append(np.asarray(nx.to_numpy_matrix(G)))
             node_idx_global = np.asarray(list(G.nodes))
             self.node_num_all.append(node_idx_global)
             # print(len(G.nodes._nodes), len(G.edges._adjdict), len(list(G.adjacency())))
@@ -499,7 +500,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # start_idx = np.random.randint(adj_copy.shape[0]) # randomly select a start node
 
 
-        start_idx = 0
+        start_idx = self.BFS_first_node[idx]
 
         # check start_idx
         # print("start_idx: {}".format(start_idx))
