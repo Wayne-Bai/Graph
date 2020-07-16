@@ -494,12 +494,11 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # then do bfs in the permuted G
         # start_idx = np.random.randint(adj_copy.shape[0]) # randomly select a start node
 
-        print(G.nodes(data=True))
 
-        start_idx = min(G.nodes)
+        start_idx = 0
 
         # check start_idx
-        print("start_idx: {}".format(start_idx))
+        # print("start_idx: {}".format(start_idx))
 
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
 
