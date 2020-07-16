@@ -492,6 +492,9 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         G = nx.from_numpy_matrix(adj_copy_matrix) # re-generate the graph
         # then do bfs in the permuted G
         # start_idx = np.random.randint(adj_copy.shape[0]) # randomly select a start node
+
+        print(G.nodes(data=True))
+
         start_idx = min(G.nodes)
 
         # check start_idx

@@ -66,10 +66,10 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
         # Find the nodes for each graph
 
         nodes = node_list[data_graph_indicator==i+1]
-        nodes_list = [i for i in nodes]
+
         G_sub = G.subgraph(nodes_list)
-        print(nodes_list)
-        print(G_sub.nodes)
+        # print(nodes_list)
+        # print(G_sub.nodes)
         for j in range(number_of_graph_types):
             feature = 'f' + str(j + 1)
             if j == data_graph_labels[i] -1:
