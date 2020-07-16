@@ -180,6 +180,7 @@ def bfs_seq(G, start_id):
     #             next = next + neighbor
     #     output = output + next
     #     start = next
+    print(output)
     return output
 
 
