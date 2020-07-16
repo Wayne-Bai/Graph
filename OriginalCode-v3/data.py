@@ -489,8 +489,25 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         G = nx.from_numpy_matrix(adj_copy_matrix) # re-generate the graph
         # then do bfs in the permuted G
         # start_idx = np.random.randint(adj_copy.shape[0]) # randomly select a start node
-        start_idx = 0
+        start_idx = min(G.nodes)
+
+        # check start_idx
+        print("start_idx: {}".format(start_idx))
+
+        # check x_idx
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
+        print("x_idx: {}".format(x_idx))
+
+        # check new x_idx
+        count = 0
+        if idx == 0:
+            count = 0
+        else:
+            for i in range(idx):
+                count += len(self.node_num_all[i])
+        x_idx = x_idx -count
+        print("renew x_idx: {}".format(x_idx))
+
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
