@@ -438,6 +438,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             # add node_type_feature_matrix and edge_type_feature_matrix
 
             node_list = G.nodes()
+            print(node_list)
             for node in range(len(node_list)):
                 if G.nodes[node_list[node]]['f1'] ==1:
                     first_n = node
