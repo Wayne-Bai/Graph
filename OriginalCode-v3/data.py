@@ -433,7 +433,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
     def __init__(self, G_list, max_num_node=None, max_prev_node=None, iteration=20000):
         self.adj_all, self.node_num_all, self.edge_f_all, self.raw_node_f_all, self.len_all = \
             [], [], [], [], []
-        # self.BFS_first_node = []
+        self.BFS_first_node = []
         for i,G in enumerate(G_list):
             # add node_type_feature_matrix and edge_type_feature_matrix
 
