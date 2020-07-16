@@ -440,6 +440,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             node_list = G.nodes()
             print(node_list)
             for node in range(len(node_list)):
+                print(node_list[node])
                 if G.nodes[node_list[node]]['f1'] ==1:
                     first_n = node
                     self.BFS_first_node.append(first_n)
