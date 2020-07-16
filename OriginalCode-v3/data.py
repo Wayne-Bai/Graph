@@ -164,7 +164,7 @@ def bfs_seq(G, start_id):
     :param start_id:
     :return:
     '''
-    BFS = nx.bfs_edges(G, start_id)
+    BFS = nx.bfs_tree(G, start_id)
     output = list(BFS)
     # dictionary = dict(nx.bfs_successors(G, start_id))
     # start = [start_id]
