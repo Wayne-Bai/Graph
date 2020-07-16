@@ -442,7 +442,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             for node in range(len(node_list)):
                 if G.nodes[node_list[node]]['f1'] ==1:
                     first_n = node
-            self.BFS_first_node.append(first_n)
+                    self.BFS_first_node.append(first_n)
 
             self.adj_all.append(np.asarray(nx.to_numpy_matrix(G)))
             node_idx_global = np.asarray(list(G.nodes))
