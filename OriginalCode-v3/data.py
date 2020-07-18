@@ -497,8 +497,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
-        print(raw_edge_f_batch)
+        # print(raw_edge_f_batch)
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
+        print(edge_f_pooled_batch)
+        print("`````````````````````````````````````````````")
 
         # x_batch = np.zeros((self.n, self.max_prev_node))  # here zeros are padded for small graph
         # # x_patch Dim:
