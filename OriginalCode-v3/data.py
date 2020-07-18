@@ -497,6 +497,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
+        print(raw_edge_f_batch)
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
 
         # x_batch = np.zeros((self.n, self.max_prev_node))  # here zeros are padded for small graph
@@ -532,7 +533,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
-        print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
+        # print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
 
         # add re-ordering of node_type_feature_matrix and edge_type_feature_matrix
