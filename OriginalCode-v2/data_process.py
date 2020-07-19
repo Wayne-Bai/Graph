@@ -10,7 +10,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
     # path = "dataset/AST/shared/"
     # if name == "200Graphs":
     path = "dataset/AST/zips/200Graphs/"
-    path = "../OriginalCode-v4/dataset/"
+    path = "../OriginalCode-v3/50-10-30/"
 
     data_adj = np.loadtxt(path + name + '_A.txt', delimiter=',').astype(int)
     data_node_label = np.loadtxt(path + name + '_node_labels.txt', delimiter=',').astype(int)

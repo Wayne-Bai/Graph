@@ -157,7 +157,7 @@ def create(args):
         if not args.max_node_feature_num:
             # print(type(graphs[1].nodes._nodes), graphs[1].nodes._nodes.keys())
             args.max_node_feature_num = len(list(graphs[1].nodes._nodes._atlas[1].keys()))  # now equals to 28
-        args.max_prev_node = 7
+        args.max_prev_node = 17
     # TODO: args.max_edge_feature_num update
 
 
