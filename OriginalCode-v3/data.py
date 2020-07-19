@@ -537,14 +537,14 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
-        print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
-        print('*****************************************')
-        print(raw_edge_f_batch)
-        print('*****************************************')
+        # print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
+        # print('*****************************************')
+        # print(raw_edge_f_batch)
+        # print('*****************************************')
         # print('----------------------------------------------')
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
-        print("edge_f_encoded: {}".format(edge_f_encoded))
-        print('*****************************************')
+        # print("edge_f_encoded: {}".format(edge_f_encoded))
+        # print('*****************************************')
 
         # add re-ordering of node_type_feature_matrix and edge_type_feature_matrix
         raw_node_f_batch = raw_node_f_batch[x_idx, :]
@@ -571,8 +571,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         raw_node_f_batch = np.concatenate((raw_node_f_batch,
                                            padded), axis=0)
         smallN, M, EF = edge_f_encoded.shape
-        print(smallN, M, EF)
-        print('-----------------------------------------')
+        # print(smallN, M, EF)
+        # print('-----------------------------------------')
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
         edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
         return {'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch}
