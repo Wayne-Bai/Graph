@@ -523,6 +523,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print("start_idx: {}".format(start_idx))
 
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
+        print("x_idx: {}".format(x_idx))
+        print('*****************************************')
 
         # # check BFS x_idx
         #
