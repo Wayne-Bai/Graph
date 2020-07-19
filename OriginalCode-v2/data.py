@@ -430,7 +430,16 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
     def __init__(self, G_list, max_num_node=None, max_prev_node=None, iteration=20000):
         self.adj_all, self.node_num_all, self.edge_f_all, self.raw_node_f_all, self.len_all = \
             [], [], [], [], []
+
+        self.BFS_first_node = []
+
         for i,G in enumerate(G_list):
+
+            for node in G.nodes():
+                if G.nodes[node]['f1'] ==1:
+                    first_n = list(G.nodes).index(node)
+                    self.BFS_first_node.append(first_n)
+
             # add node_type_feature_matrix and edge_type_feature_matrix
             self.adj_all.append(np.asarray(nx.to_numpy_matrix(G)))
             node_idx_global = np.asarray(list(G.nodes))
@@ -471,8 +480,6 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         adj_copy = self.adj_all[idx].copy() # Dim: 200 * 200(actual node numbers of this graph: N)
 
         # print adj_copy to check the original adjacent matrix
-        print("original adjacency matrix")
-        print(adj_copy)
 
         node_dict = self.raw_node_f_all[idx].copy()
         edge_dict = self.edge_f_all[idx].copy()
@@ -494,15 +501,13 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         G = nx.from_numpy_matrix(adj_copy_matrix) # re-generate the graph
         # then do bfs in the permuted G
         # start_idx = np.random.randint(adj_copy.shape[0]) # randomly select a start node
-        start_idx = 0
+        start_idx = self.BFS_first_node[idx]
         x_idx = np.array(bfs_seq(G, start_idx)) # new ordering index vector
 
-        print("x_idx:{}", x_idx)
+
 
         adj_copy = adj_copy[np.ix_(x_idx, x_idx)] # re-ordering use x_idx # Dim of adj_copy: N * N
 
-        print("re-ordering matrix")
-        print(adj_copy)
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
