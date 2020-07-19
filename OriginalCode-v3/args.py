@@ -86,7 +86,7 @@ class Args():
         # self.edge_loss_w = 1.5
         # self.loss_type = "mse"
         self.loss_type = "CE"
-        self.node_loss_w = 1.5
+        self.node_loss_w = 2
         self.edge_loss_w = 10
 
         ### output config
