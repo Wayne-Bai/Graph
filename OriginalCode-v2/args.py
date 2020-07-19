@@ -70,8 +70,8 @@ class Args():
         ### training config
         self.num_workers = 0 # num workers to load data, default 4
         self.batch_ratio = 4 # how many batches of samples per epoch, default 32, e.g., 1 epoch = 32 batches
-        self.epochs = 400 # now one epoch means self.batch_ratio x batch_size
-        self.epochs_test_start = 300
+        self.epochs = 600 # now one epoch means self.batch_ratio x batch_size
+        self.epochs_test_start = 500
         self.epochs_test = 50
         self.epochs_log = 10
         self.epochs_save = 50
@@ -82,12 +82,12 @@ class Args():
 
         self.sample_time = 3 # sample time in each time step, when validating
         self.test_thres = 0.5 # value between 0-1. feature > test_thres => feature:=1, else 0
-        self.node_loss_w = 10.0
-        self.edge_loss_w = 1.5
-        self.loss_type = "mse"
-        # self.loss_type = "CE"
-        # self.node_loss_w = 1.0
-        # self.edge_loss_w = 3
+        # self.node_loss_w = 10.0
+        # self.edge_loss_w = 1.5
+        # self.loss_type = "mse"
+        self.loss_type = "CE"
+        self.node_loss_w = 1.0
+        self.edge_loss_w = 3
 
         ### output config
         # self.dir_input = "/dfs/scratch0/jiaxuany0/"
