@@ -2,7 +2,7 @@ import networkx as nx
 import numpy as np
 
 
-def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 10, name = 'AST'):
+def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 30, name = 'AST'):
 
     print('Loading graph dataset: ' + str(name))
 
