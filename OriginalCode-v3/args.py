@@ -82,12 +82,12 @@ class Args():
 
         self.sample_time = 3 # sample time in each time step, when validating
         self.test_thres = 0.5 # value between 0-1. feature > test_thres => feature:=1, else 0
-        self.node_loss_w = 10.0
-        self.edge_loss_w = 1.5
-        self.loss_type = "mse"
-        # self.loss_type = "CE"
-        # self.node_loss_w = 1.5
-        # self.edge_loss_w = 10
+        # self.node_loss_w = 10.0
+        # self.edge_loss_w = 1.5
+        # self.loss_type = "mse"
+        self.loss_type = "CE"
+        self.node_loss_w = 1.5
+        self.edge_loss_w = 10
 
         ### output config
         # self.dir_input = "/dfs/scratch0/jiaxuany0/"
