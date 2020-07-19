@@ -447,7 +447,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             self.node_num_all.append(node_idx_global)
 
             # check edge information
-            print("node_num_all: {}".format(self.node_num_all))
+            # print("node_num_all: {}".format(self.node_num_all))
 
             # print(len(G.nodes._nodes), len(G.edges._adjdict), len(list(G.adjacency())))
             self.raw_node_f_all.append(dict(G.nodes._nodes))
@@ -459,7 +459,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             self.edge_f_all.append(edge_f_dict)
 
             # check edge information
-            print("edge_f_all: {}".format(self.edge_f_all))
+            # print("edge_f_all: {}".format(self.edge_f_all))
 
             self.len_all.append(G.number_of_nodes())
         if max_num_node is None:
