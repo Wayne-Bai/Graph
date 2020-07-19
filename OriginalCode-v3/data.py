@@ -543,8 +543,12 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # add re-ordering of node_type_feature_matrix and edge_type_feature_matrix
         raw_node_f_batch = raw_node_f_batch[x_idx, :]
         print("raw_node_f_batch: {}".format(raw_node_f_batch))
+        print('*****************************************')
+        print("edge_f_pooled_batch: {}".format(edge_f_pooled_batch))
+        print('*****************************************')
         edge_f_pooled_batch = edge_f_pooled_batch[x_idx, :]
         print("edge_f_pooled_batch: {}".format(edge_f_pooled_batch))
+        print('-----------------------------------------')
         concat_node_f_batch = np.concatenate((adj_encoded, raw_node_f_batch, edge_f_pooled_batch), axis=1)
 
         # get input_node_f_batch and raw_node_f_batch and edge_f_batch
