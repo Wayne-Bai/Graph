@@ -454,6 +454,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # add feature matrix, e.g. data['x_node_f']
         # 'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch
         input_node_f_unsorted = data['input_node_f'].float() # Dim: BS * N_max * INF
+        print(input_node_f_unsorted.shape)
         raw_node_f_unsorted = data['raw_node_f'].float() # Dim: BS * N_max * NF
         edge_f_unsorted = data['edge_f'].float() # Dim: BS * N_max * M * EF
         y_len_unsorted = data['len'] # list of node numbers in each graph in this batch
