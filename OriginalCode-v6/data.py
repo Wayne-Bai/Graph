@@ -203,8 +203,8 @@ def add_from_edge_f_matrix(matrix, G:nx.Graph, node_idx):
         for j in range(min(M,N)):
             indicator = matrix[i,j,-2:]
             print(indicator)
-            if indicator[0] + indicator[1] > 0: # an edge exists
-            # if indicator[0] == 1:
+            # if indicator[0] + indicator[1] > 0: # an edge exists
+            if indicator[0] == 1:
                 edge_f_vector = matrix[i,j,:]
                 f_dict = {f'f{feature_idx}':edge_f_vector[feature_idx] for feature_idx in range(EF)}
                 if i >=M:
