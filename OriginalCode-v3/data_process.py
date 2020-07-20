@@ -48,7 +48,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
         for j in curr_node_adj:
             if i < j:
                 G[i+1][j]['f1'] = 1
-                G[i+1][j]['f2'] = 0
+                G[i+1][j]['f2'] = 1
             else:
                 G[i + 1][j]['f1'] = 0
                 G[i + 1][j]['f2'] = 1

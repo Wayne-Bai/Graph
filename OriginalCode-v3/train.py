@@ -499,8 +499,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
                              dim=1)  # should have all-1 row
-        print(edge_rnn_input.shape)
-        print('***********************************')
+
         # Dim: SumN * (M+1) * EF
 
         # output_y = y_reshape # Dim: SumN * M * 1
@@ -664,11 +663,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
         rnn.hidden = Variable(rnn.hidden.data).cuda()
     # y_pred_long_data = y_pred_long.data.long()
     node_f_pred_long_data = node_f_pred_long.data.int()
-    print("node_f_pred_long_data: {}".format(node_f_pred_long_data))
-    print("********************************************************")
     edge_f_pred_long_data = edge_f_pred_long.data.int()
-    print("edge_f_pred_long_data: {}".format(edge_f_pred_long_data))
-    print("********************************************************")
 
     # save graphs as pickle
     G_pred_list = []
