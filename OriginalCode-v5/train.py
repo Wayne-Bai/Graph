@@ -462,8 +462,10 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # y_unsorted = y_unsorted[:, 0:y_len_max, :]# Dim: BS * N * M
         input_node_f_unsorted = input_node_f_unsorted[:, 0:y_len_max, :] # Dim: BS * (N+1) * INF
         raw_node_f_unsorted = raw_node_f_unsorted[:, 0:y_len_max, :] # Dim: BS * N * NF
-        edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :, :] # Dim: BS * N * M * EF
-        BS, N, M, EF = edge_f_unsorted.shape
+        # edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :, :] # Dim: BS * N * M * EF
+        # BS, N, M, EF = edge_f_unsorted.shape
+        edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :]  # Dim: BS * N * M * EF
+        BS, N, M= edge_f_unsorted.shape
         # initialize GRU hidden state according to batch size
         rnn.hidden = rnn.init_hidden(batch_size=input_node_f_unsorted.size(0))
         # output.hidden = output.init_hidden(batch_size=x_unsorted.size(0)*x_unsorted.size(1))
@@ -492,13 +494,17 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         #
         # output_x = torch.cat((torch.ones(y_reshape.size(0),1,1),y_reshape[:,0:-1,0:1]),dim=1) # should have all-1 row
         # reverse edge_f_reshape, so that their lengths are sorted, add dimension
-        idx = [i for i in range(edge_f_reshape.size(0) - 1, -1, -1)]
+        # idx = [i for i in range(edge_f_reshape.size(0) - 1, -1, -1)]
+        idx = [i for i in range(edge_f_reshape.size(0) - 1, -1)]
         idx = torch.LongTensor(idx)
         edge_f_reshape = edge_f_reshape.index_select(0, idx)
         # edge_f_reshape = edge_f_reshape.view(edge_f_reshape.size(0), edge_f_reshape.size(1), edge_f_reshape.size(2))  # Dim: SumN * M * EF
 
-        edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
-                             dim=1)  # should have all-1 row
+        # edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
+        #                      dim=1)  # should have all-1 row
+        edge_rnn_input = torch.cat(
+            (torch.ones(edge_f_reshape.size(0), 1), edge_f_reshape[:, 0:-1]),
+            dim=1)  # should have all-1 row
         # Dim: SumN * (M+1) * EF
 
         # output_y = y_reshape # Dim: SumN * M * 1
@@ -582,7 +588,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
             # direction_loss = binary_cross_entropy_weight(F.sigmoid(y_pred[:,:,-2:]),output_y[:,:,-2:])
             # direction_loss = binary_cross_entropy_weight(torch.sigmoid(y_pred[:,:,-2:-1]),output_y[:,:,-2:-1]) 
             # compute loss of last two dimension separately
-            direction_loss = binary_cross_entropy_weight(torch.sigmoid(y_pred[:,:,-1:]),output_y[:,:,-1:])
+            # direction_loss = binary_cross_entropy_weight(torch.sigmoid(y_pred[:,:,-1:]),output_y[:,:,-1:])
+            direction_loss = binary_cross_entropy_weight(torch.sigmoid(y_pred[:, :]), output_y[:, :])
 
             # edge_f_loss = my_cross_entropy(y_pred[:,:,:-2], torch.argmax(output_y[:,:,:-2],dim=2))
             edge_f_loss = 0
@@ -650,15 +657,18 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
            # output_y_pred_step = torch.softmax(output_y_pred_step, dim=2)
             output_x_step = sample_sigmoid(output_y_pred_step, sample=False, thresh=args.test_thres, sample_time=1,if_sigmoid=True)
             # x_step[:,:,j:j+1] = output_x_step
-            edge_f_pred_long[:, i:i + 1, j:j+1, :] = output_x_step.view(output_x_step.size(0), output_x_step.size(1),
-                                                                        1, output_x_step.size(2))
+            # edge_f_pred_long[:, i:i + 1, j:j+1, :] = output_x_step.view(output_x_step.size(0), output_x_step.size(1),
+            #                                                             1, output_x_step.size(2))
+            edge_f_pred_long[:, i:i + 1, j:j + 1] = output_x_step.view(output_x_step.size(0), output_x_step.size(1),
+                                                                          1)
             output.hidden = Variable(output.hidden.data).cuda()
         # y_pred_long[:, i:i + 1, :] = x_step
 
         node_f_pred_long[:, i:i+1, :] = node_f_pred_step
-        node_edge_info = edge_f_pred_long[:, i, :, :] # (BS,  M, EF) # where EF = args.edge_feature_output_dim = args.max_edge_feature_num + 2
+        # node_edge_info = edge_f_pred_long[:, i, :, :] # (BS,  M, EF) # where EF = args.edge_feature_output_dim = args.max_edge_feature_num + 2
+        node_edge_info = edge_f_pred_long[:, i, :]
         x_step[:, :, args.max_node_feature_num:args.max_node_feature_num+args.max_prev_node] = \
-            torch.tensor(torch.tensor(node_edge_info[:, :, -2:], dtype=torch.bool).any(2), dtype=torch.uint8).\
+            torch.tensor(torch.tensor(node_edge_info[:, :], dtype=torch.bool).any(2), dtype=torch.uint8).\
                 view(test_batch_size, 1, args.max_prev_node) # (BS, 1, M)
         x_step[:, :, args.max_node_feature_num+args.max_prev_node:] = \
             node_edge_info.mean(dim=1, keepdim=True) # (BS, 1, EF)

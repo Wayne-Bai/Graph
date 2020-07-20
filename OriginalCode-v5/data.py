@@ -453,11 +453,11 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
             # print(len(G.nodes._nodes), len(G.edges._adjdict), len(list(G.adjacency())))
             self.raw_node_f_all.append(dict(G.nodes._nodes))
             # self.input_node_f_all.append(self.construct_input_node_f(G))
-            edge_f_dict = {}
-            for k,v in G.edges._adjdict._atlas.items():
-                if k in node_idx_global:
-                    edge_f_dict[k] = v
-            self.edge_f_all.append(edge_f_dict)
+            # edge_f_dict = {}
+            # for k,v in G.edges._adjdict._atlas.items():
+            #     if k in node_idx_global:
+            #         edge_f_dict[k] = v
+            # self.edge_f_all.append(edge_f_dict)
 
             # check edge information
             # print("edge_f_all: {}".format(self.edge_f_all))
@@ -494,12 +494,12 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print(adj_copy)
 
         node_dict = self.raw_node_f_all[idx].copy()
-        edge_dict = self.edge_f_all[idx].copy()
+        # edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
-        raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
+        # raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
         # print(raw_edge_f_batch)
-        edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
+        # edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
         # print(edge_f_pooled_batch)
         # print("`````````````````````````````````````````````")
 
@@ -537,13 +537,14 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print(adj_copy)
 
         adj_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node) # Dim: N * 40 (40: max_prev_node, denote as M)
-        raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
+        # raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
         # print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
         # print('*****************************************')
         # print(raw_edge_f_batch)
         # print('*****************************************')
         # print('----------------------------------------------')
-        edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
+        # edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
+        edge_f_encoded = encode_adj(adj_copy.copy(), max_prev_node=self.max_prev_node)  # Dim: N * M * EF
         # print("edge_f_encoded: {}".format(edge_f_encoded))
         # print('*****************************************')
 
@@ -553,10 +554,11 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print('*****************************************')
         # print("edge_f_pooled_batch: {}".format(edge_f_pooled_batch))
         # print('*****************************************')
-        edge_f_pooled_batch = edge_f_pooled_batch[x_idx, :]
+        # edge_f_pooled_batch = edge_f_pooled_batch[x_idx, :]
         # print("edge_f_pooled_batch: {}".format(edge_f_pooled_batch))
         # print('-----------------------------------------')
-        concat_node_f_batch = np.concatenate((adj_encoded, raw_node_f_batch, edge_f_pooled_batch), axis=1)
+        # concat_node_f_batch = np.concatenate((adj_encoded, raw_node_f_batch, edge_f_pooled_batch), axis=1)
+        concat_node_f_batch = np.concatenate((adj_encoded, raw_node_f_batch), axis=1)
 
         # get input_node_f_batch and raw_node_f_batch and edge_f_batch
         # for small graph the rest are zero padded
@@ -571,11 +573,14 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         raw_node_f_batch = np.concatenate((raw_node_f_batch,
                                            padded), axis=0)
-        smallN, M, EF = edge_f_encoded.shape
+        # smallN, M, EF = edge_f_encoded.shape
+        smallN, M= edge_f_encoded.shape
         # print(smallN, M, EF)
         # print('-----------------------------------------')
-        edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
-        edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
+        # edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
+        # edge_f_padded_batch[:smallN, :M, :] = edge_f_encoded
+        edge_f_padded_batch = np.zeros((self.n, self.max_prev_node))
+        edge_f_padded_batch[:smallN, :M] = edge_f_encoded
         return {'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch}
 
     def construct_raw_node_f(self, node_dict, node_num_list):
