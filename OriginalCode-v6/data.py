@@ -199,10 +199,13 @@ def add_from_node_f_matrix(matrix, G:nx.Graph):
 
 def add_from_edge_f_matrix(matrix, G:nx.Graph, node_idx):
     N, M, EF = matrix.shape
+    print(matrix)
+    print("**********************************")
     for i in range(N):
         for j in range(min(M,N)):
             indicator = matrix[i,j,-2:]
             print(indicator)
+            print("----------------------------------")
             # if indicator[0] + indicator[1] > 0: # an edge exists
             if indicator[0] == 1:
                 edge_f_vector = matrix[i,j,:]
