@@ -30,10 +30,11 @@ def extract(name, num,total_feature):
 
     for i in node_list:
         for j in range(total_feature):
-            feature = 'f' + str(j+1)
+            feature = 'f' + str(j)
             if G[num].node[i][feature] == 1:
-                node_type_list_num.append(j+1)
+                node_type_list_num.append(j)
 
+    print(node_type_list_num)
     total_type = []
     count = []
     node_type_list = []
