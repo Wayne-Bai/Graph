@@ -499,6 +499,9 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
                              dim=1)  # should have all-1 row
+        print(torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)))
+        print('***********************************')
+        print(torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)).shape)
         # Dim: SumN * (M+1) * EF
 
         # output_y = y_reshape # Dim: SumN * M * 1
