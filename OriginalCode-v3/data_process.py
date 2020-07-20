@@ -42,18 +42,18 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
 
     # print(list(G.nodes(data=True))
 
-    # Add edges label
-    # Todo: Add edge label：from small number nodes to large number nodes(f1), else(f2)
-        curr_node_adj = list(G.adj[i+1])
-        for j in curr_node_adj:
-            if i < j:
-                G[i+1][j]['f1'] = 1
-                G[i+1][j]['f2'] = 0
-            else:
-                G[i + 1][j]['f1'] = 0
-                G[i + 1][j]['f2'] = 1
-        # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
-    # print(list(G.edges(data=True)))
+    # # Add edges label
+    # # Todo: Add edge label：from small number nodes to large number nodes(f1), else(f2)
+    #     curr_node_adj = list(G.adj[i+1])
+    #     for j in curr_node_adj:
+    #         if i < j:
+    #             G[i+1][j]['f1'] = 1
+    #             G[i+1][j]['f2'] = 0
+    #         else:
+    #             G[i + 1][j]['f1'] = 0
+    #             G[i + 1][j]['f2'] = 1
+    #     # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
+    # # print(list(G.edges(data=True)))
 
     # Todo: Add graph label: CFG or DFG, vulnerability type
     graph_num = data_graph_indicator.max()
