@@ -454,7 +454,6 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # add feature matrix, e.g. data['x_node_f']
         # 'input_node_f':x_batch,'raw_node_f':raw_node_f_batch, 'edge_f':edge_f_padded_batch, 'len':len_batch
         input_node_f_unsorted = data['input_node_f'].float() # Dim: BS * N_max * INF
-        print(input_node_f_unsorted.shape)
         raw_node_f_unsorted = data['raw_node_f'].float() # Dim: BS * N_max * NF
         edge_f_unsorted = data['edge_f'].float() # Dim: BS * N_max * M * EF
         y_len_unsorted = data['len'] # list of node numbers in each graph in this batch
@@ -526,7 +525,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         edge_rnn_input = Variable(edge_rnn_input).cuda()
         input_node_f = Variable(input_node_f).cuda()
-
+        print(input_node_f.shape)
         # output_node_f = Variable(torch.zeros(x.size(0), x.size(1), args.max_node_feature_num)).cuda() # Dim should be BS * N * NF
         if args.loss_type == "mse":
             output_node_f = Variable(raw_node_f).cuda()
