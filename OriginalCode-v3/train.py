@@ -662,7 +662,11 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
         rnn.hidden = Variable(rnn.hidden.data).cuda()
     # y_pred_long_data = y_pred_long.data.long()
     node_f_pred_long_data = node_f_pred_long.data.int()
+    print("node_f_pred_long_data: {}".format(node_f_pred_long_data))
+    print("********************************************************")
     edge_f_pred_long_data = edge_f_pred_long.data.int()
+    print("edge_f_pred_long_data: {}".format(edge_f_pred_long_data))
+    print("********************************************************")
 
     # save graphs as pickle
     G_pred_list = []
