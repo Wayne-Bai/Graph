@@ -27,7 +27,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     # print(number_of_nodes)
 
     G.add_edges_from(data_tuple)
-
+    print(G.edges())
     # Add node label
     for i in range(number_of_nodes):
         for j in range(number_of_node_types):
