@@ -10,7 +10,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     # path = "dataset/AST/shared/"
     # if name == "200Graphs":
     path = "dataset/AST/zips/200Graphs/"
-    path = "../OriginalCode-v4/dataset/"
+    path = "../OriginalCode-v5/50-10-30/"
 
     data_adj = np.loadtxt(path + name + '_A.txt', delimiter=',').astype(int)
     data_node_label = np.loadtxt(path + name + '_node_labels.txt', delimiter=',').astype(int)
@@ -45,14 +45,13 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     # Add edges label
     # Todo: Add edge label：from small number nodes to large number nodes(f1), else(f2)
         curr_node_adj = list(G.adj[i+1])
-        print(curr_node_adj)
         for j in curr_node_adj:
-            if i < j:
-                G[i+1][j]['f1'] = 0
-                G[i+1][j]['f2'] = 1
-                G[i+1][j]['f3'] = 0
-                G[i+1][j]['f4'] = 0
-
+            # if i < j:
+            #     G[i+1][j]['f1'] = 1
+            #     G[i+1][j]['f2'] = 0
+            # else:
+            #     G[i + 1][j]['f1'] = 0
+            G[i + 1][j]['f1'] = 1
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
     # print(list(G.edges(data=True)))
 
