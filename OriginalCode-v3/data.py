@@ -621,6 +621,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
         edge_f = edge_f[np.ix_(node_num_list-offset, node_num_list-offset)] # return dim (N, N, EF)
         print(edge_f)
+        print("*************************************************")
         if pooling:
             edge_f = np.sum(edge_f, axis=1) / float(len(node_num_list)) # return dim (N, EF)
 
