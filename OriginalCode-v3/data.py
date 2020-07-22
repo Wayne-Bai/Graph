@@ -600,7 +600,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         N, EF = len(edge_dict), len(list(next(iter(node_edge_dict.values())).keys()))
         offset = min(node_num_list)
         edge_f = np.zeros(shape=(N, N, EF)) # pad 0 for small graphs
-        no_edge = [1, 0, 0, 0]
+        edge_f[:, :, 1] = 1
+        # no_edge = [1, 0, 0, 0]
         l2h_edge = [0, 1, 0, 0]
         h2l_edge = [0, 0, 1, 0]
         duo_edge = [0, 0, 0, 1]
@@ -614,8 +615,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                     edge_f[node_i-offset][node_j-offset] = np.asarray(h2l_edge)
                 elif node_i in node_num_list and node_j in node_num_list and list(edge_f_dict.values()) == duo_edge:
                     edge_f[node_i-offset][node_j-offset] = np.asarray(duo_edge)
-                else:
-                    edge_f[node_i - offset][node_j - offset] = np.asarray(no_edge)
+                # else:
+                #     edge_f[node_i - offset][node_j - offset] = np.asarray(no_edge)
 
 
         edge_f = edge_f[np.ix_(node_num_list-offset, node_num_list-offset)] # return dim (N, N, EF)
