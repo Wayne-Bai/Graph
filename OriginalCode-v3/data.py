@@ -600,7 +600,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         N, EF = len(edge_dict), len(list(next(iter(node_edge_dict.values())).keys()))
         offset = min(node_num_list)
         edge_f = np.zeros(shape=(N, N, EF)) # pad 0 for small graphs
-        edge_f[:, :, 1] = 1
+        edge_f[:, :, 0] = 1
         # no_edge = [1, 0, 0, 0]
         l2h_edge = [0, 1, 0, 0]
         h2l_edge = [0, 0, 1, 0]
