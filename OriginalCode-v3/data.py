@@ -599,15 +599,23 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         node_edge_dict = next(iter(edge_dict.values()))
         N, EF = len(edge_dict), len(list(next(iter(node_edge_dict.values())).keys()))
         offset = min(node_num_list)
-        # edge_f = np.zeros(shape=(N, N, EF)) # pad 0 for small graphs
+        edge_f = np.zeros(shape=(N, N, EF)) # pad 0 for small graphs
         no_edge = [1, 0, 0, 0]
-        edge_f = np.full((N, N), np.asarray(no_edge))
+        l2h_edge = [0, 1, 0, 0]
+        h2l_edge = [0, 0, 1, 0]
+        duo_edge = [0, 0, 0, 1]
         for node_i, i_edge_dict in edge_dict.items():
             for node_j, edge_f_dict in i_edge_dict.items():
-                if node_i in node_num_list and node_j in node_num_list:
-                    edge_f[node_i-offset][node_j-offset] = np.asarray(list(edge_f_dict.values())) # still 0-indexed!
-                # if node_i in node_num_list and node_j in node_num_list and node_i < node_j:
-                #     edge_f
+                # if node_i in node_num_list and node_j in node_num_list:
+                #     edge_f[node_i-offset][node_j-offset] = np.asarray(list(edge_f_dict.values())) # still 0-indexed!
+                if node_i in node_num_list and node_j in node_num_list and node_i < node_j and list(edge_f_dict.values()) == l2h_edge:
+                    edge_f[node_i-offset][node_j-offset] = np.asarray(l2h_edge)
+                elif node_i in node_num_list and node_j in node_num_list and node_i > node_j and list(edge_f_dict.values()) == l2h_edge:
+                    edge_f[node_i-offset][node_j-offset] = np.asarray(h2l_edge)
+                elif node_i in node_num_list and node_j in node_num_list and list(edge_f_dict.values()) == duo_edge:
+                    edge_f[node_i-offset][node_j-offset] = np.asarray(duo_edge)
+                else:
+                    edge_f[node_i - offset][node_j - offset] = np.asarray(no_edge)
 
 
         edge_f = edge_f[np.ix_(node_num_list-offset, node_num_list-offset)] # return dim (N, N, EF)
