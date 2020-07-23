@@ -1,6 +1,3 @@
-nodeLabel.txt
-    It contains the node label whose format is "stringlabel intlabel"
-Visualization.py
-    "python Visualization.py" to execute the visualization process.
-    By modifying the parameter in line28 to get your results' visualization.
-    The defeault is "train_0" which is short for "GraphRNN_RNN_AST_4_128_train_0.dat.gv.pdf".
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3c05eb24878d30f715ae0e48a80113a142523a0b80bd6167f3082d5359b77ab
+size 340
