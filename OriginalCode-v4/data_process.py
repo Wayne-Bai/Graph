@@ -48,9 +48,9 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 2000, name = 'AST'):
         for j in curr_node_adj:
             if i < j:
                 G[i+1][j]['f1'] = 1
-                G[i+1][j]['f2'] = 0
+                G[i+1][j]['f2'] = 1
             else:
-                G[i + 1][j]['f1'] = 0
+                G[i + 1][j]['f1'] = 1
                 G[i + 1][j]['f2'] = 1
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
     # print(list(G.edges(data=True)))
@@ -65,6 +65,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 2000, name = 'AST'):
         # Find the nodes for each graph
         nodes = node_list[data_graph_indicator==i+1]
         G_sub = G.subgraph(nodes)
+        print(G_sub.nodes())
         for j in range(number_of_graph_types):
             feature = 'f' + str(j + 1)
             if j == data_graph_labels[i] -1:
