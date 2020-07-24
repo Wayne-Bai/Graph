@@ -237,6 +237,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
     n = adj.shape[0]
     if is_3D:
         adj = adj[1:n, 0:n - 1, :] # delete first row and last column
+        print(adj)
+        print('*************************')
     else:
         adj = adj[1:n, 0:n-1] # delete first row and last column
 
@@ -554,8 +556,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print('*****************************************')
         # print('----------------------------------------------')
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
-        print("edge_f_encoded: {}".format(edge_f_encoded))
-        print('*****************************************')
+        # print("edge_f_encoded: {}".format(edge_f_encoded))
+        # print('*****************************************')
 
         # add re-ordering of node_type_feature_matrix and edge_type_feature_matrix
         raw_node_f_batch = raw_node_f_batch[x_idx, :]
