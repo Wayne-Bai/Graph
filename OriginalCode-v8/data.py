@@ -544,9 +544,9 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         raw_edge_f_batch = raw_edge_f_batch[np.ix_(x_idx, x_idx)]
         # print("raw_edge_f_batch dim: {}".format(raw_edge_f_batch.shape))
         # print('*****************************************')
-        # print(raw_edge_f_batch)
-        # print('*****************************************')
-        # print('----------------------------------------------')
+        print(raw_edge_f_batch)
+        print('*****************************************')
+        print('----------------------------------------------')
         edge_f_encoded = encode_adj(raw_edge_f_batch.copy(), max_prev_node=self.max_prev_node, is_3D=True) # Dim: N * M * EF
         # print("edge_f_encoded: {}".format(edge_f_encoded))
         # print('*****************************************')
@@ -625,8 +625,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
 
         edge_f = edge_f[np.ix_(node_num_list-offset, node_num_list-offset)] # return dim (N, N, EF)
-        print(edge_f)
-        print("*************************************************")
+        # print(edge_f)
+        # print("*************************************************")
         if pooling:
             edge_f = np.sum(edge_f, axis=1) / float(len(node_num_list)) # return dim (N, EF)
 
