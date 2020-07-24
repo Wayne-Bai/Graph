@@ -229,7 +229,11 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         max_prev_node = adj.shape[0]-1
 
     # pick up lower tri
-    adj = np.tril(adj, k=-1)
+    if is_3D:
+        for i in range(adj.shape[0]):
+            adj[i, i:] = [1, 0, 0, 0]
+    else:
+        adj = np.tril(adj, k=-1)
     n = adj.shape[0]
     if is_3D:
         adj = adj[1:n, 0:n - 1, :] # delete first row and last column
