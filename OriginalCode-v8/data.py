@@ -232,8 +232,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
     if is_3D:
         for i in range(adj.shape[0]):
             adj[i, i:] = [1, 0, 0, 0]
-        print(adj)
-        print('***********************************')
+        # print(adj)
+        # print('***********************************')
     else:
         adj = np.tril(adj, k=-1)
     n = adj.shape[0]
