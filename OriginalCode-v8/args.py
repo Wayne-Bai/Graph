@@ -1,5 +1,8 @@
 
 ### program configuration
+
+import numpy as np
+
 class Args():
     def __init__(self):
         ### if clean tensorboard
@@ -112,6 +115,16 @@ class Args():
         # self.metric_baseline = 'general'
         # self.metric_baseline = 'degree'
         self.metric_baseline = 'clustering'
+
+        # generate node value matrix
+        node_rules = np.zeros((44, 44))
+        f = open("nodeRules2matrix.txt", 'r')
+        for line in f.readlines():
+            line = line.strip('\n')
+            row_node, column_node = line.split(' ')
+            node_rules[int(row_node) - 1][int(column_node) - 1] = 1
+
+        self.node_rules = node_rules
 
 
         ### filenames to save intemediate and final outputs
