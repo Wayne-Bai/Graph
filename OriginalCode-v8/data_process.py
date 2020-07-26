@@ -19,7 +19,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     data_graph_indicator = np.loadtxt(path + name + '_graph_indicator.txt', delimiter=',').astype(int)
     data_graph_labels = np.loadtxt(path + name + '_graph_labels.txt', delimiter=',').astype(int)
 
-    data_node_label_matrix = list(set(data_node_label))
+    data_node_label_curr = list(set(data_node_label))
+    data_node_label_matrix = data_node_label_curr.sort()
     print(data_node_label_matrix)
 
     data_tuple = list(map(tuple, data_adj))
@@ -32,7 +33,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     # print(number_of_nodes)
 
     G.add_edges_from(data_tuple)
-    print(G.edges())
+    # print(G.edges())
     # Add node label
     for i in range(number_of_nodes):
         for j in range(number_of_node_types):
@@ -57,7 +58,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
                 G[i+1][j]['f2'] = 1
                 G[i+1][j]['f3'] = 0
                 G[i+1][j]['f4'] = 0
-    print(G.edges.data())
+    # print(G.edges.data())
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
     # print(list(G.edges(data=True)))
 
@@ -75,7 +76,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
 
         G_sub = G.subgraph(nodes)
 
-        print(G_sub.nodes())
+        # print(G_sub.nodes())
 
         # print(nodes)
         # print(G_sub.nodes)
