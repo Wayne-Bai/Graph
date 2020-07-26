@@ -19,7 +19,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     data_graph_indicator = np.loadtxt(path + name + '_graph_indicator.txt', delimiter=',').astype(int)
     data_graph_labels = np.loadtxt(path + name + '_graph_labels.txt', delimiter=',').astype(int)
 
-    print(data_node_label)
+    data_node_label_matrix = list(set(data_node_label))
+    print(data_node_label_matrix)
 
     data_tuple = list(map(tuple, data_adj))
     number_of_nodes = data_node_label.shape[0]
