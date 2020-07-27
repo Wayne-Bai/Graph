@@ -20,6 +20,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     data_graph_labels = np.loadtxt(path + name + '_graph_labels.txt', delimiter=',').astype(int)
 
     data_node_label_matrix = list(set(data_node_label))
+    data_node_label_matrix = (np.array(data_node_label_matrix) - 1).tolist()
     print(data_node_label_matrix)
 
     print("Loading node type")
