@@ -28,9 +28,11 @@ def extract(name, num,total_feature):
     # Generate node type list
     node_type_list_num = []
 
+    print(G[num].node[0]['f0'])
     for i in node_list:
         for j in range(total_feature):
             feature = 'f' + str(j)
+            print(feature)
             if G[num].node[i][feature] == 1:
                 node_type_list_num.append(j)
 
