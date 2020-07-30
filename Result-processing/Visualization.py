@@ -27,4 +27,4 @@ def Visualize(name, num, total_feature):
     dot.render("test-output/%s.gv" %(file), view=True)
 
 if __name__ == '__main__':
-    Visualize('pred_3000_1_13', 0, 23)
+    Visualize('pred_3000_1_21', 0, 23)
