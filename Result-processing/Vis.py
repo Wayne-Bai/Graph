@@ -19,9 +19,9 @@ def extract(name, num,total_feature):
     #     plt.show()
 
     # Generate node list
-    node_list = G[num].node
-    print(node_list)
-    print(G[num].nodes.data())
+    node_list = G[num].nodes
+    # print(node_list)
+    # print(G[num].nodes.data())
 
     # Generate edge list
     edges_list = G[num].edges
@@ -29,15 +29,15 @@ def extract(name, num,total_feature):
     # Generate node type list
     node_type_list_num = []
 
-    print(G[num].node[0]['f0'])
+    # print(G[num].nodes[0]['f0'])
     for i in node_list:
         for j in range(total_feature):
             feature = 'f' + str(j)
-            print(feature)
-            if G[num].node[i][feature] == 1:
+            # print(feature)
+            if G[num].nodes[i][feature] == 1:
                 node_type_list_num.append(j)
 
-    print(node_type_list_num)
+    # print(node_type_list_num)
     total_type = []
     count = []
     node_type_list = []
@@ -67,7 +67,7 @@ def extract(name, num,total_feature):
     return node_list, edges_list, node_type_list
 
 def Visualize(path, kind, name, num, total_feature):
-    pre_path = '/home/zfk/Documents/graph-generation/debug/Graph' + path
+    pre_path = '/home/zfk/Documents/graph-generation/debug/Graph/' + path
     path_whole = pre_path + '/graphs/'
     prefix = 'GraphRNN_RNN_AST%d_4_128_pred_%d_1'%(kind, name)
     format = '.dat'
@@ -79,12 +79,12 @@ def Visualize(path, kind, name, num, total_feature):
 
     # Add node
     flag = 0
-    print(len(node_list))
-    print(len(node_type_list))
+    # print(len(node_list))
+    # print(len(node_type_list))
     for i in node_list:
         node_id = i
         node = node_type_list[flag]
-        print(node_id, node)
+        # print(node_id, node)
         dot.node(str(node_id), node)
         flag += 1
 
@@ -92,7 +92,7 @@ def Visualize(path, kind, name, num, total_feature):
         m, n = i[0], i[1]
         dot.edge(str(m), str(n))
 
-    dot.render("process/test-output/%s.gv" %(name), view=True)
+    dot.render("process/%s/%s.gv" %(path, name), view=True)
 
 if __name__ == '__main__':
 
