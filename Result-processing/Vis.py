@@ -105,4 +105,4 @@ if __name__ == '__main__':
     #     Visualize(name, 0, 28)
 
     # Final result
-    Visualize('Code-0730', 50, 3000, 0, 23)
+    Visualize('Code-0730', 2, 2000, 0, 23)
