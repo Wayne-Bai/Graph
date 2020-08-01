@@ -2,10 +2,12 @@ import graphviz
 import extractInfo
 
 def Visualize(name, num, total_feature):
-    path = 'graphs1/'
-    prefix = 'GraphRNN_RNN_AST_4_128_'
+    path = 'graphs15/'
+    prefix = 'GraphRNN_RNN_AST50_4_128_'
+    # prefix = 'GraphRNN_RNN_AST_4_128_'
     format = '.dat'
     file = path+prefix+str(name)+format
+    # file = prefix+str(name)+format
     node_list, edge_list, node_type_list = extractInfo.extract(file, num, total_feature)
 
     dot = graphviz.Graph(comment='Result')
@@ -28,7 +30,8 @@ def Visualize(name, num, total_feature):
     dot.render("process/test-output/%s.gv" %(file), view=True)
 
 if __name__ == '__main__':
-    for i in range(40):
-        flag = (i+1)*50
+    for i in range(31):
+        flag = 5000 + i*100
         name = 'pred_%d_1'%(flag)
-        Visualize(name, 0, 23)
+        Visualize(name, 0, 28)
+    # Visualize('pred_3000_1_22',0,23)
