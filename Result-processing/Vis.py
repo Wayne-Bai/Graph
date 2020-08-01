@@ -98,8 +98,11 @@ if __name__ == '__main__':
 
     #TODO: this section depends on choice. (Generate all processes or only the final result)
 
+    # All process
     # for i in range(31):
     #     flag = 5000 + i*100
     #     name = 'pred_%d_1'%(flag)
     #     Visualize(name, 0, 28)
+
+    # Final result
     Visualize('Code-0730', 50, 3000, 0, 23)
