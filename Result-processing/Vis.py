@@ -3,7 +3,7 @@ import graphviz
 
 def extract(name, num,total_feature):
 
-    f = open('nodeLabel.txt', 'r')
+    f = open('/home/zfk/Documents/graph-generation/debug/Graph/Visualization/nodeLabel.txt', 'r')
 
     G = nx.read_gpickle(name)
 
@@ -20,8 +20,8 @@ def extract(name, num,total_feature):
 
     # Generate node list
     node_list = G[num].nodes
-    # print(node_list)
-    # print(G[num].nodes.data())
+    print(node_list)
+    print(G[num].nodes.data())
 
     # Generate edge list
     edges_list = G[num].edges
@@ -33,11 +33,11 @@ def extract(name, num,total_feature):
     for i in node_list:
         for j in range(total_feature):
             feature = 'f' + str(j)
-            # print(feature)
+            print(feature)
             if G[num].nodes[i][feature] == 1:
                 node_type_list_num.append(j)
 
-    # print(node_type_list_num)
+    print(node_type_list_num)
     total_type = []
     count = []
     node_type_list = []
@@ -48,6 +48,7 @@ def extract(name, num,total_feature):
 
         total_type.append(type_name)
         count.append(type_ID)
+    print(count)
 
     for i in node_type_list_num:
         p = count.index(str(i+1))
@@ -69,7 +70,11 @@ def extract(name, num,total_feature):
 def Visualize(path, kind, name, num, total_feature):
     pre_path = '/home/zfk/Documents/graph-generation/debug/Graph/' + path
     path_whole = pre_path + '/graphs/'
-    prefix = 'GraphRNN_RNN_AST%d_4_128_pred_%d_1'%(kind, name)
+    if kind == 0:
+        prefix = 'GraphRNN_RNN_AST_4_128_pred_%d_1'%(name)
+    else:
+        prefix = 'GraphRNN_RNN_AST%d_4_128_pred_%d_1'%(kind, name)
+    print(prefix)
     format = '.dat'
     file = path_whole+prefix+format
     # file = prefix+str(name)+format
@@ -79,12 +84,12 @@ def Visualize(path, kind, name, num, total_feature):
 
     # Add node
     flag = 0
-    # print(len(node_list))
-    # print(len(node_type_list))
+    print(len(node_list))
+    print(len(node_type_list))
     for i in node_list:
         node_id = i
         node = node_type_list[flag]
-        # print(node_id, node)
+        print(node_id, node)
         dot.node(str(node_id), node)
         flag += 1
 
@@ -92,17 +97,12 @@ def Visualize(path, kind, name, num, total_feature):
         m, n = i[0], i[1]
         dot.edge(str(m), str(n))
 
-    dot.render("process/%s/%s.gv" %(path, name), view=True)
+    dot.render("process/%s/%s.gv" %(path,name), view=True)
 
 if __name__ == '__main__':
 
     #TODO: this section depends on choice. (Generate all processes or only the final result)
 
-    # All process
-    # for i in range(31):
-    #     flag = 5000 + i*100
-    #     name = 'pred_%d_1'%(flag)
-    #     Visualize(name, 0, 28)
-
-    # Final result
-    Visualize('Code-0730', 2, 2000, 0, 23)
+    for i in range(3000, 5050, 500):
+       Visualize('Code-0730-v3', 50, i, 0, 28)
+    # Visualize('Code-0730', 2, 1800, 0, 23)
