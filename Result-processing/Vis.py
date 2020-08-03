@@ -79,8 +79,8 @@ def Visualize(path, kind, name, num, total_feature):
     file = path_whole+prefix+format
     # file = prefix+str(name)+format
     if num == None:
-        for i in range(16):
-            node_list, edge_list, node_type_list = extract(file, num, total_feature)
+        for c in range(16):
+            node_list, edge_list, node_type_list = extract(file, c, total_feature)
 
             dot = graphviz.Graph(comment='Result', format='png')
 
@@ -99,7 +99,7 @@ def Visualize(path, kind, name, num, total_feature):
                 m, n = i[0], i[1]
                 dot.edge(str(m), str(n))
 
-            dot.render("process/%s/%s.gv" % (path, name+'-'+str(i)), view=True)
+            dot.render("process/%s/%s.gv" % (path, str(name)+'-'+str(c)), view=True)
 
     else:
         node_list, edge_list, node_type_list = extract(file, num, total_feature)
