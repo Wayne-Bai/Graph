@@ -239,8 +239,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         # adj[idx_matrix] = [1,0,0,0]
         for i in range(adj.shape[0]):
             adj[i, i:] = [1, 0, 0, 0]
-        print('------------------------------------------')
-        print(adj)
+        # print('------------------------------------------')
+        # print(adj)
     else:
         adj = np.tril(adj, k=-1)
     n = adj.shape[0]
@@ -267,7 +267,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         else:
             adj_output[i, output_start:output_end] = adj[i, input_start:input_end]
             adj_output[i,:] = adj_output[i,:][::-1] # reverse order
-
+    print(adj_output)
+    print('------------------------------------------------')
     # Append an all-zero row to ensure dimension satisfies
     if is_3D:
         pad = np.zeros((1, max_prev_node, adj.shape[2]))
