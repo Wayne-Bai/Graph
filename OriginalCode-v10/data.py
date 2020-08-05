@@ -276,8 +276,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         adj_output = np.concatenate((adj_output, pad), axis=0)  # Dim: N * M * EF
     else:
         adj_output = np.concatenate((np.zeros((1,max_prev_node)), adj_output), axis=0) # Dim: N * M
-    print(adj_output)
-    print('----------------------------------------------------')
+    # print(adj_output)
+    # print('----------------------------------------------------')
     return adj_output
 
 def decode_adj(adj_output):
@@ -622,6 +622,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         raw_node_f_batch = np.concatenate((raw_node_f_batch,
                                            padded), axis=0)
         smallN, M, EF = edge_f_encoded.shape
+        print(edge_f_encoded.shape)
         # print(smallN, M, EF)
         # print('-----------------------------------------')
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
