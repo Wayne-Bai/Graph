@@ -622,7 +622,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         raw_node_f_batch = np.concatenate((raw_node_f_batch,
                                            padded), axis=0)
         smallN, M, EF = edge_f_encoded.shape
-        print(edge_f_encoded.shape)
+        # print(edge_f_encoded.shape)
         # print(smallN, M, EF)
         # print('-----------------------------------------')
         edge_f_padded_batch = np.zeros((self.n, self.max_prev_node, EF))
