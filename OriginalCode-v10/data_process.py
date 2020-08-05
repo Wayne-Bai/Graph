@@ -12,7 +12,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
     # path = "dataset/AST/shared/"
     # if name == "200Graphs":
     if args.dataset_type == "2":
-        path = "../OriginalCode-v4/dataset_2graphs/"
+        path = "../../OriginalCode-v4/dataset_2graphs/"
     elif args.dataset_type == "50":
         path = "../OriginalCode-v8/50-10-30/"
     elif args.dataset_type == "9":
