@@ -267,7 +267,7 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         else:
             adj_output[i, output_start:output_end] = adj[i, input_start:input_end]
             adj_output[i,:] = adj_output[i,:][::-1] # reverse order
-    print(adj_output)
+    print(adj_output.shape)
     print('------------------------------------------------')
     # Append an all-zero row to ensure dimension satisfies
     if is_3D:
