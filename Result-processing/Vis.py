@@ -126,8 +126,8 @@ def Visualize(path, kind, name, num, total_feature):
 
 if __name__ == '__main__':
 
-    #TODO: this section depends on choice. (Generate all processes or only the final result)
-
-    for i in range(3000, 5050, 500):
-       Visualize('Code-0730-v3', 50, i, 0, 28)
-    # Visualize('Code-0730', 2, 1800, 0, 23)
+    # #TODO: this section depends on choice. (Generate all processes or only the final result)
+    #
+    # for i in range(3000, 5050, 500):
+    #    Visualize('Code-0730-v3', 50, i, 0, 28)
+    Visualize('Code-0730', 2, 1800, 0, 23)
