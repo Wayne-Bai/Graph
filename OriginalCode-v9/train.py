@@ -483,7 +483,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # y_reshape = pack_padded_sequence(y,y_len,batch_first=True).data # Dim: SumN * M
         # input should be edge_f, output should be dim: SumN * M * EF
         edge_f_reshape = pack_padded_sequence(edge_f,y_len,batch_first=True).data # SumN * M * EF
-
+        print('------------edge_f_reshape : 1-------------')
+        print(edge_f_reshape)
         # # reverse y_reshape, so that their lengths are sorted, add dimension
         # idx = [i for i in range(y_reshape.size(0)-1, -1, -1)]
         # idx = torch.LongTensor(idx)
@@ -495,10 +496,14 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         idx = [i for i in range(edge_f_reshape.size(0) - 1, -1, -1)]
         idx = torch.LongTensor(idx)
         edge_f_reshape = edge_f_reshape.index_select(0, idx)
+        print('------------edge_f_reshape : 2-------------')
+        print(edge_f_reshape)
         # edge_f_reshape = edge_f_reshape.view(edge_f_reshape.size(0), edge_f_reshape.size(1), edge_f_reshape.size(2))  # Dim: SumN * M * EF
 
         edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
                              dim=1)  # should have all-1 row
+        print('------------edge_f_reshape : 3-------------')
+        print(torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :])
         # Dim: SumN * (M+1) * EF
 
         # output_y = y_reshape # Dim: SumN * M * 1
