@@ -20,7 +20,8 @@ def Visualize(name, num, total_feature):
         node_id = i
         node = node_type_list[flag]
         print(node_id, node)
-        dot.node(str(node_id), node)
+        node_p = '[{}]'.format((node_id)) +': ' + node
+        dot.node(str(node_id), node_p)
         flag += 1
 
     for i in edge_list:
