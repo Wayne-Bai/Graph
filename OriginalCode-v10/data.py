@@ -267,8 +267,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         else:
             adj_output[i, output_start:output_end] = adj[i, input_start:input_end]
             adj_output[i,:] = adj_output[i,:][::-1] # reverse order
-    print(adj_output.shape)
-    print('------------------------------------------------')
+    # print(adj_output.shape)
+    # print('------------------------------------------------')
     # Append an all-zero row to ensure dimension satisfies
     if is_3D:
         pad = np.zeros((1, max_prev_node, adj.shape[2]))
@@ -276,6 +276,8 @@ def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
         adj_output = np.concatenate((adj_output, pad), axis=0)  # Dim: N * M * EF
     else:
         adj_output = np.concatenate((np.zeros((1,max_prev_node)), adj_output), axis=0) # Dim: N * M
+    print(adj_output)
+    print('----------------------------------------------------')
     return adj_output
 
 def decode_adj(adj_output):
