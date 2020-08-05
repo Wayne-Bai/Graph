@@ -106,8 +106,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 40, name = 'AST'):
                 G_sub.graph[feature] = 0    #Todo: It should be modify when we add graph label
             else:
                 G_sub.graph[feature] = 0
-
-        print('nodes', G_sub.number_of_nodes())
+        print(G_sub.nodes())
+        # print('nodes', G_sub.number_of_nodes())
     # print('edges', G_sub.number_of_edges())
     # print('label', G_sub.graph)
         if G_sub.number_of_nodes()>=min_num_nodes and G_sub.number_of_nodes()<=max_num_nodes:
