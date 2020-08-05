@@ -29,7 +29,7 @@ import create_graphs
 
 args = Args()
 
-torch.set_printoptions(profile='full')
+torch.set_printoptions(profile='full', threshold=np.inf)
 np.set_printoptions(threshold=np.inf)
 
 def train_vae_epoch(epoch, args, rnn, output, data_loader,
