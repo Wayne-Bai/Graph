@@ -29,6 +29,8 @@ import create_graphs
 
 args = Args()
 
+torch.set_printoptions(profile='full')
+
 def train_vae_epoch(epoch, args, rnn, output, data_loader,
                     optimizer_rnn, optimizer_output,
                     scheduler_rnn, scheduler_output):
