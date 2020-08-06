@@ -478,6 +478,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         # sort input # The graph with most node numbers come first
         y_len,sort_index = torch.sort(y_len_unsorted,0,descending=True)
+        print('y_len: {}'.format(y_len), 'sort_index: {}'.format(sort_index))
         y_len = y_len.numpy().tolist()
         # x = torch.index_select(x_unsorted,0,sort_index) # Dim: BS * N * M
         # y = torch.index_select(y_unsorted,0,sort_index) # Dim: BS * N * M
