@@ -461,8 +461,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         edge_f_unsorted = data['edge_f'].float() # Dim: BS * N_max * M * EF
 
         # # Todo: check this part
-        # print('--------------------edge f unsorted------------------')
-        # print(edge_f_unsorted)
+        print('--------------------edge f unsorted------------------')
+        print(edge_f_unsorted)
 
         y_len_unsorted = data['len'] # list of node numbers in each graph in this batch
         y_len_max = max(y_len_unsorted) # denote as N
