@@ -487,8 +487,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         raw_node_f = torch.index_select(raw_node_f_unsorted, 0, sort_index)
         edge_f = torch.index_select(edge_f_unsorted, 0, sort_index)
 
-        print('----------------------edge f: 1 ----------------------')
-        print(edge_f)
+        # print('----------------------edge f: 1 ----------------------')
+        # print(edge_f)
 
 
         # input, output for output rnn module
@@ -508,8 +508,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # output_x = torch.cat((torch.ones(y_reshape.size(0),1,1),y_reshape[:,0:-1,0:1]),dim=1) # should have all-1 row
         # reverse edge_f_reshape, so that their lengths are sorted, add dimension
         idx = [i for i in range(edge_f_reshape.size(0) - 1, -1, -1)]
-        # print('----------------------idx----------------------')
-        # print(idx)
+        print('----------------------idx----------------------')
+        print(idx)
         idx = torch.LongTensor(idx)
         edge_f_reshape = edge_f_reshape.index_select(0, idx)
         edge_f_reshape = edge_f_reshape.view(edge_f_reshape.size(0), edge_f_reshape.size(1), edge_f_reshape.size(2))  # Dim: SumN * M * EF
