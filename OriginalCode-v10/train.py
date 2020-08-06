@@ -496,8 +496,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # y_reshape = pack_padded_sequence(y,y_len,batch_first=True).data # Dim: SumN * M
         # input should be edge_f, output should be dim: SumN * M * EF
         edge_f_reshape = pack_padded_sequence(edge_f,y_len,batch_first=True).data # SumN * M * EF
-        # print('----------------------edge f reshape: 2 ----------------------')
-        # print(edge_f_reshape)
+        print('----------------------edge f reshape: 2 ----------------------')
+        print(edge_f_reshape.shape)
 
         # # reverse y_reshape, so that their lengths are sorted, add dimension
         # idx = [i for i in range(y_reshape.size(0)-1, -1, -1)]
