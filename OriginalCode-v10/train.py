@@ -483,12 +483,12 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # x = torch.index_select(x_unsorted,0,sort_index) # Dim: BS * N * M
         # y = torch.index_select(y_unsorted,0,sort_index) # Dim: BS * N * M
         input_node_f = torch.index_select(input_node_f_unsorted, 0, sort_index)
-        print(input_node_f.shape)
+        # print(input_node_f.shape)
         raw_node_f = torch.index_select(raw_node_f_unsorted, 0, sort_index)
         edge_f = torch.index_select(edge_f_unsorted, 0, sort_index)
 
-        # print('----------------------edge f: 1 ----------------------')
-        # print(edge_f)
+        print('----------------------edge f: 1 ----------------------')
+        print(edge_f)
 
 
         # input, output for output rnn module
