@@ -586,7 +586,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         output_h = pack_padded_sequence(y_pred_origin, output_y_len, batch_first=True).data
         idx = [i for i in range(output_h.size(0)-1, -1, -1)]
         idx = Variable(torch.LongTensor(idx)).cuda()
-        output_h = output_h.index_slect(0,idx)
+        output_h = output_h.index_select(0,idx)
         hidden_null = Variable(torch.zeros(args.num_layers - 1, output_h.size(0), output_h.size(1))).cuda()
         output.hidden = torch.cat((output_h.view(1, output_h.size(0), output_h.size(1)), hidden_null), dim=0)
         y_pred_origin = output(edge_rnn_input_1, pack=True, input_len=output_y_len)
