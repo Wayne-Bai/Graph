@@ -496,6 +496,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # y_reshape = pack_padded_sequence(y,y_len,batch_first=True).data # Dim: SumN * M
         # input should be edge_f, output should be dim: SumN * M * EF
         edge_f_reshape = pack_padded_sequence(edge_f,y_len,batch_first=True).data # SumN * M * EF
+        edge_f_reshape_1 = edge_f_reshape
         # print('----------------------edge f reshape: 2 ----------------------')
         # print(edge_f_reshape.shape)
 
@@ -516,6 +517,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # print('----------------------edge f reshape: 3 ----------------------')
         # print(edge_f_reshape)
         edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
+                             dim=1)  # should have all-1 row
+        edge_rnn_input_1 = torch.cat((torch.ones(edge_f_reshape_1.size(0), 1, edge_f_reshape_1.size(2)), edge_f_reshape_1[:, 0:-1, :]),
                              dim=1)  # should have all-1 row
         # Dim: SumN * (M+1) * EF
         # print('----------------------edge f reshape: 4 ----------------------')
@@ -564,8 +567,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
 
         h = pack_padded_sequence(h,y_len,batch_first=True).data # get packed hidden vector
-        print('--------------------------------------------')
-        print(h.size)
+        # print('--------------------------------------------')
+        # print(h.size)
         # Dim should be SumN * hidden_size_rnn_output
 
         # reverse h # TODO: why reverse?
@@ -578,6 +581,15 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         y_pred_origin = output(edge_rnn_input, pack=True, input_len=output_y_len) # Dim: SumN * (M+1) * EF
         # edge_f_pred = edge_f_gen(y_pred)  # TODO: check if dim correct
         # edge_f_pred = torch.sigmoid(edge_f_pred)
+
+        # try another level rnn
+        output_h = pack_padded_sequence(y_pred_origin, output_y_len, batch_first=True).data
+        idx = [i for i in range(output_h.size(0)-1, -1, -1)]
+        idx = Variable(torch.LongTensor(idx)).cuda()
+        output_h = output_h.index_slect(0,idx)
+        hidden_null = Variable(torch.zeros(args.num_layers - 1, output_h.size(0), output_h.size(1))).cuda()
+        output.hidden = torch.cat((output_h.view(1, output_h.size(0), output_h.size(1)), hidden_null), dim=0)
+        y_pred_origin = output(edge_rnn_input_1, pack=True, input_len=output_y_len)
 
         # y_pred = torch.softmax(y_pred, dim=2) # Dim: SumN * M * EF
 
