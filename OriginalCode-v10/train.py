@@ -539,7 +539,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         edge_rnn_input = Variable(edge_rnn_input).cuda()
         input_node_f = Variable(input_node_f).cuda()
-        print(input_node_f.size)
+        # print(input_node_f.size)
 
 
         # output_node_f = Variable(torch.zeros(x.size(0), x.size(1), args.max_node_feature_num)).cuda() # Dim should be BS * N * NF
@@ -556,7 +556,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # print('-------------------------')
         # print(input_node_f.size)
         h = rnn(input_node_f, pack=True, input_len=y_len) # Dim: BS * (N+1) * hidden_size_rnn_output
-
+        print(h.size)
         node_f_pred = node_f_gen(h)  # Dim: BS * (N+1) * NF
         # TODO node_f_pred = Mask & node_f_pred
         # Matrix, (NF, NF) 1,1,1,0,0,0...
