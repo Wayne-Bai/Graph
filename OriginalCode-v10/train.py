@@ -556,7 +556,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # print('-------------------------')
         # print(input_node_f.size)
         h = rnn(input_node_f, pack=True, input_len=y_len) # Dim: BS * (N+1) * hidden_size_rnn_output
-        print(h.data.size)
+        # print(h.data.size)
         node_f_pred = node_f_gen(h)  # Dim: BS * (N+1) * NF
         # TODO node_f_pred = Mask & node_f_pred
         # Matrix, (NF, NF) 1,1,1,0,0,0...
@@ -564,14 +564,14 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
 
         h = pack_padded_sequence(h,y_len,batch_first=True).data # get packed hidden vector
-        # print('--------------------------------------------')
-        # print(h.size)
+        print('--------------------------------------------')
+        print(h.size)
         # Dim should be SumN * hidden_size_rnn_output
 
         # reverse h # TODO: why reverse?
-        # idx = [i for i in range(h.size(0) - 1, -1, -1)]
-        # idx = Variable(torch.LongTensor(idx)).cuda()
-        # h = h.index_select(0, idx)
+        idx = [i for i in range(h.size(0) - 1, -1, -1)]
+        idx = Variable(torch.LongTensor(idx)).cuda()
+        h = h.index_select(0, idx)
         hidden_null = Variable(torch.zeros(args.num_layers-1, h.size(0), h.size(1))).cuda()
         output.hidden = torch.cat((h.view(1,h.size(0),h.size(1)),hidden_null),dim=0) # num_layers, SumN, hidden_size
         # y_pred = output(output_x, pack=True, input_len=output_y_len)
