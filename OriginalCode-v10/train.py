@@ -551,6 +551,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         # if using ground truth to train
         # h = rnn(x, pack=True, input_len=y_len) # Dim should be BS * N * hidden_size_rnn_output
+        print('-------------------------')
+        print(input_node_f.size)
         h = rnn(input_node_f, pack=True, input_len=y_len) # Dim: BS * (N+1) * hidden_size_rnn_output
 
         node_f_pred = node_f_gen(h)  # Dim: BS * (N+1) * NF
@@ -560,8 +562,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
 
         h = pack_padded_sequence(h,y_len,batch_first=True).data # get packed hidden vector
-        print('--------------------------------------------')
-        print(h.size)
+        # print('--------------------------------------------')
+        # print(h.size)
         # Dim should be SumN * hidden_size_rnn_output
 
         # reverse h # TODO: why reverse?
