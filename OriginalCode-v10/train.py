@@ -556,7 +556,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # print('-------------------------')
         # print(input_node_f.size)
         h = rnn(input_node_f, pack=True, input_len=y_len) # Dim: BS * (N+1) * hidden_size_rnn_output
-        print(h.size)
+        print(h.data.size)
         node_f_pred = node_f_gen(h)  # Dim: BS * (N+1) * NF
         # TODO node_f_pred = Mask & node_f_pred
         # Matrix, (NF, NF) 1,1,1,0,0,0...
