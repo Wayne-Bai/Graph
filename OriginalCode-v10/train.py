@@ -541,6 +541,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         output_y = Variable(output_y).cuda() # Dim should be SumN * M * EF
 
         edge_rnn_input = Variable(edge_rnn_input).cuda()
+        edge_rnn_input_1 = Variable(edge_rnn_input_1).cuda()
         input_node_f = Variable(input_node_f).cuda()
         # print(input_node_f.size)
 
