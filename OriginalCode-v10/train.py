@@ -487,8 +487,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         raw_node_f = torch.index_select(raw_node_f_unsorted, 0, sort_index)
         edge_f = torch.index_select(edge_f_unsorted, 0, sort_index)
 
-        print('----------------------edge f: 1 ----------------------')
-        print(edge_f.shape)
+        # print('----------------------edge f: 1 ----------------------')
+        # print(edge_f.shape)
 
 
         # input, output for output rnn module
@@ -550,9 +550,9 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
 
         # if using ground truth to train
-        # h = rnn(x, pack=True, input_len=y_len) # Dim should be BS * N * hidden_size_rnn_output
-        print('-------------------------')
-        print(input_node_f.size)
+        # # h = rnn(x, pack=True, input_len=y_len) # Dim should be BS * N * hidden_size_rnn_output
+        # print('-------------------------')
+        # print(input_node_f.size)
         h = rnn(input_node_f, pack=True, input_len=y_len) # Dim: BS * (N+1) * hidden_size_rnn_output
 
         node_f_pred = node_f_gen(h)  # Dim: BS * (N+1) * NF
