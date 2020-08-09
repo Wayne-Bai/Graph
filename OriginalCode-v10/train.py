@@ -691,8 +691,8 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
         # TODO node_f_pred = Mask & node_f_pred
 
         hidden_null = Variable(torch.zeros(args.num_layers - 1, h.size(0), h.size(2))).cuda()
-        output.hidden = torch.cat((h.permute(1,0,2), hidden_null),
-                                  dim=0)  # num_layers, batch_size, hidden_size
+        # output.hidden = torch.cat((h.permute(1,0,2), hidden_null),
+        #                           dim=0)  # num_layers, batch_size, hidden_size
         # should renew x_step
         x_step = Variable(torch.zeros(test_batch_size,1,args.node_feature_input_dim)).cuda()
         # x_step[:, :, args.max_prev_node:args.max_node_feature_num+args.max_prev_node] = node_f_pred_step
@@ -709,7 +709,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
             # x_step[:,:,j:j+1] = output_x_step
             edge_f_pred_long[:, i:i + 1, j:j+1, :] = output_x_step.view(output_x_step.size(0), output_x_step.size(1),
                                                                         1, output_x_step.size(2))
-            output.hidden = Variable(output.hidden.data).cuda()
+            # output.hidden = Variable(output.hidden.data).cuda()
             # Add noise to output_x_step
             #output_x_step += Variable(torch.rand(output_x_step.size(0),output_x_step.size(1),output_x_step.size(2))).cuda()
         # y_pred_long[:, i:i + 1, :] = x_step
