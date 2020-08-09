@@ -483,7 +483,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # x = torch.index_select(x_unsorted,0,sort_index) # Dim: BS * N * M
         # y = torch.index_select(y_unsorted,0,sort_index) # Dim: BS * N * M
         input_node_f = torch.index_select(input_node_f_unsorted, 0, sort_index)
-        print(input_node_f.shape)
+        # print(input_node_f.shape)
         raw_node_f = torch.index_select(raw_node_f_unsorted, 0, sort_index)
         edge_f = torch.index_select(edge_f_unsorted, 0, sort_index)
 
@@ -539,6 +539,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
 
         edge_rnn_input = Variable(edge_rnn_input).cuda()
         input_node_f = Variable(input_node_f).cuda()
+        print(input_node_f.size)
+
 
         # output_node_f = Variable(torch.zeros(x.size(0), x.size(1), args.max_node_feature_num)).cuda() # Dim should be BS * N * NF
         if args.loss_type == "mse":
