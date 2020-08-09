@@ -607,7 +607,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print("edge_f_pooled_batch: {}".format(edge_f_pooled_batch))
         # print('-----------------------------------------')
         concat_node_f_batch = np.concatenate((adj_encoded, raw_node_f_batch, edge_f_pooled_batch), axis=1)
-        # print(concat_node_f_batch.shape)
+        print(concat_node_f_batch.shape)
         # get input_node_f_batch and raw_node_f_batch and edge_f_batch
         # for small graph the rest are zero padded
         x_batch = np.zeros((self.n+1, concat_node_f_batch.shape[1]))  # here zeros are padded for small graph
@@ -615,9 +615,9 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # y_batch[0:adj_encoded.shape[0], :] = adj_encoded
         x_batch[1:concat_node_f_batch.shape[0] + 1, :] = concat_node_f_batch # has an all-1 row at the beginning of it
         x_batch[concat_node_f_batch.shape[0] + 1:,adj_encoded.shape[1]+raw_node_f_batch.shape[1]-1] = 1
-        print('----------------------------------------------')
-        print(x_batch.shape)
-        print(x_batch)
+        # print('----------------------------------------------')
+        # print(x_batch.shape)
+        # print(x_batch)
 
         padded = np.zeros((self.n - raw_node_f_batch.shape[0], raw_node_f_batch.shape[1]))
         padded[:,-1] = 1
