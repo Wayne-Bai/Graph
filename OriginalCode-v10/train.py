@@ -567,7 +567,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # idx = Variable(torch.LongTensor(idx)).cuda()
         # h = h.index_select(0, idx)
         hidden_null = Variable(torch.zeros(args.num_layers-1, h.size(0), h.size(1))).cuda()
-        output.hidden = torch.cat((h.view(1,h.size(0),h.size(1)),hidden_null),dim=0) # num_layers, SumN, hidden_size
+        # output.hidden = torch.cat((h.view(1,h.size(0),h.size(1)),hidden_null),dim=0) # num_layers, SumN, hidden_size
         # y_pred = output(output_x, pack=True, input_len=output_y_len)
         y_pred_origin = output(edge_rnn_input, pack=True, input_len=output_y_len) # Dim: SumN * (M+1) * EF
         # edge_f_pred = edge_f_gen(y_pred)  # TODO: check if dim correct
