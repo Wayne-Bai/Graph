@@ -496,7 +496,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # y_reshape = pack_padded_sequence(y,y_len,batch_first=True).data # Dim: SumN * M
         # input should be edge_f, output should be dim: SumN * M * EF
         edge_f_reshape = pack_padded_sequence(edge_f,y_len,batch_first=True).data # SumN * M * EF
-        edge_f_reshape_1 = edge_f_reshape
+        # edge_f_reshape_1 = edge_f_reshape
         # print('----------------------edge f reshape: 2 ----------------------')
         # print(edge_f_reshape.shape)
 
@@ -518,8 +518,8 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # print(edge_f_reshape)
         edge_rnn_input = torch.cat((torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :]),
                              dim=1)  # should have all-1 row
-        edge_rnn_input_1 = torch.cat((torch.ones(edge_f_reshape_1.size(0), 1, edge_f_reshape_1.size(2)), edge_f_reshape_1[:, 0:-1, :]),
-                             dim=1)  # should have all-1 row
+        # edge_rnn_input_1 = torch.cat((torch.ones(edge_f_reshape_1.size(0), 1, edge_f_reshape_1.size(2)), edge_f_reshape_1[:, 0:-1, :]),
+        #                      dim=1)  # should have all-1 row
         # Dim: SumN * (M+1) * EF
         # print('----------------------edge f reshape: 4 ----------------------')
         # print(torch.ones(edge_f_reshape.size(0), 1, edge_f_reshape.size(2)), edge_f_reshape[:, 0:-1, :])
@@ -541,7 +541,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         output_y = Variable(output_y).cuda() # Dim should be SumN * M * EF
 
         edge_rnn_input = Variable(edge_rnn_input).cuda()
-        edge_rnn_input_1 = Variable(edge_rnn_input_1).cuda()
+        # edge_rnn_input_1 = Variable(edge_rnn_input_1).cuda()
         input_node_f = Variable(input_node_f).cuda()
         # print(input_node_f.size)
 
@@ -583,14 +583,14 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         # edge_f_pred = edge_f_gen(y_pred)  # TODO: check if dim correct
         # edge_f_pred = torch.sigmoid(edge_f_pred)
 
-        # try another level rnn
-        output_h = pack_padded_sequence(y_pred_origin, output_y_len, batch_first=True).data
-        idx = [i for i in range(output_h.size(0)-1, -1, -1)]
-        idx = Variable(torch.LongTensor(idx)).cuda()
-        output_h = output_h.index_select(0,idx)
-        hidden_null = Variable(torch.zeros(args.num_layers - 1, output_h.size(0), output_h.size(1))).cuda()
-        output.hidden = torch.cat((output_h.view(1, output_h.size(0), output_h.size(1)), hidden_null), dim=0)
-        y_pred_origin = output(edge_rnn_input_1, pack=True, input_len=output_y_len)
+        # # try another level rnn
+        # output_h = pack_padded_sequence(y_pred_origin, output_y_len, batch_first=True).data
+        # idx = [i for i in range(output_h.size(0)-1, -1, -1)]
+        # idx = Variable(torch.LongTensor(idx)).cuda()
+        # output_h = output_h.index_select(0,idx)
+        # hidden_null = Variable(torch.zeros(args.num_layers - 1, output_h.size(0), output_h.size(1))).cuda()
+        # output.hidden = torch.cat((output_h.view(1, output_h.size(0), output_h.size(1)), hidden_null), dim=0)
+        # y_pred_origin = output(edge_rnn_input_1, pack=True, input_len=output_y_len)
 
         # y_pred = torch.softmax(y_pred, dim=2) # Dim: SumN * M * EF
 
