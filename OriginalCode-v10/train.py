@@ -29,6 +29,7 @@ import create_graphs
 
 args = Args()
 
+# show all value in the matrix
 torch.set_printoptions(profile='full', threshold=np.inf)
 np.set_printoptions(threshold=np.inf)
 
