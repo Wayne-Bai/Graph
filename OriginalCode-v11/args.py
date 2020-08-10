@@ -136,7 +136,7 @@ class Args():
         self.if_add_train_mask = False
         self.if_add_test_mask = True
 
-        self.if_test_use_groundtruth = False
+        self.if_test_use_groundtruth = True
 
         ### filenames to save intemediate and final outputs
         self.fname = self.note + '_' + self.graph_type + '_' + str(self.num_layers) + '_' + str(self.hidden_size_rnn) + '_'
