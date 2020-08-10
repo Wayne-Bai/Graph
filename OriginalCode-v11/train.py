@@ -781,6 +781,10 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
                 for bs in range(args.test_batch_size):
                     if i < y_len[bs]: # Should use groundtruth
                         # if random.randint(0,1) == 1:
+                        print('--------------------------------x_step----------------------------')
+                        print(x_step[bs,0,:])
+                        print('--------------------------------input_node_f----------------------------')
+                        print(input_node_f[bs,i,:])
                         x_step[bs,0,:] = input_node_f[bs,i,:]
                         # if bs==0:
                         #     print(f'x_step i: {i} value: {torch.argmax(x_step[bs,0,args.max_prev_node:args.max_node_feature_num+args.max_prev_node],dim=-1)+1}')
