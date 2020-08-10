@@ -1,5 +1,6 @@
 import networkx as nx
 import graphviz
+import json
 
 def extract(G, total_feature):
 
@@ -133,12 +134,11 @@ if __name__ == '__main__':
     # #    Visualize('Code-0730-v3', 50, i, 0, 28)
     # Visualize('Code-0730', 2, 1800, 0, 23)
 
-    import networkx as nx
-    import json
+
 
     # import matplotlib.pyplot as plt
 
-    f = open('programs_training_2.json', 'r')
+    f = open('dataset_54graphs/programs_training_20nodes.json', 'r')
     # w1 = open('AST_A.txt', 'a')
     # w2 = open('AST_graph_indicator.txt', 'a')
     # w3 = open('AST_graph_labels.txt', 'a')
