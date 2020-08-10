@@ -29,6 +29,10 @@ import create_graphs
 
 args = Args()
 
+# show all value in the matrix
+torch.set_printoptions(profile='full', threshold=np.inf)
+np.set_printoptions(threshold=np.inf)
+
 def train_vae_epoch(epoch, args, rnn, output, data_loader,
                     optimizer_rnn, optimizer_output,
                     scheduler_rnn, scheduler_output):
@@ -684,8 +688,8 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
             y_len_max = max(y_len_unsorted) # denote as N
             
             input_node_f_unsorted = input_node_f_unsorted[:, 1:y_len_max+1, :] # Dim: BS * (N+1) * INF
-            print('----------------------------------------')
-            print(input_node_f_unsorted)
+            # print('----------------------------------------')
+            # print(input_node_f_unsorted)
             # index start from 1, ignore the all-1 row
             
             edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :, :] # Dim: BS * N * M * EF
