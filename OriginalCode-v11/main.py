@@ -34,8 +34,9 @@ if __name__ == '__main__':
     shuffle(graphs)
     graphs_train = graphs
     graphs_len = len(graphs)
-    graphs_test = graphs[int(0.8 * graphs_len):]
-    graphs_train = graphs[0:int(0.8*graphs_len)]
+    # graphs_test = graphs[int(0.8 * graphs_len):]
+    # graphs_train = graphs[0:int(0.8*graphs_len)]
+    graphs_test = graphs
     # graphs_validate = graphs[0:max(1,int(0.2*graphs_len))]
 
     # if use pre-saved graphs
