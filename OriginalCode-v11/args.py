@@ -8,7 +8,7 @@ class Args():
         ### if clean tensorboard
         self.clean_tensorboard = False
         ### Which CUDA GPU device is used for training
-        self.cuda = 1
+        self.cuda = 0
 
         ### Which GraphRNN model variant is used.
         # The simple version of Graph RNN
