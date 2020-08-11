@@ -28,9 +28,9 @@ class Args():
         # self.graph_type = 'community4'
         # self.graph_type = 'grid'
         self.graph_type = "AST"
-        # self.dataset_type = "2"
+        self.dataset_type = "2"
         # self.dataset_type = "50"
-        self.dataset_type = '50-10'
+        # self.dataset_type = '50-10'
         # self.dataset_type = "9"
         # self.dataset_type = "50-200"           
         # self.graph_type = 'grid_small'
