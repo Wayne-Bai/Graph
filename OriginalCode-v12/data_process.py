@@ -29,6 +29,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     data_node_label = np.loadtxt(path + name + '_node_labels.txt', delimiter=',').astype(int)
     data_graph_indicator = np.loadtxt(path + name + '_graph_indicator.txt', delimiter=',').astype(int)
     data_graph_labels = np.loadtxt(path + name + '_graph_labels.txt', delimiter=',').astype(int)
+    f = open(path + name + '_node_value.txt', 'r')
 
     data_node_label_matrix = list(set(data_node_label))
     # data_node_label_matrix = (np.array(data_node_label_matrix) - 1).tolist()
@@ -84,6 +85,34 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     # print(G.edges.data())
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
     # print(list(G.edges(data=True)))
+
+    # add node value
+    # properties = []
+    # unnum_properties = []
+    # for line in f.readlines():
+    #     line =line.strip('\n')
+    #     n_id, n_type, n_value = line.split(': ')
+    #     # G.nodes[n_id]['value'] = n_value
+    #     if n_type == 'LiteralNumber' or 'Identifier' or 'Property' and '.' in n_value:
+    #         n_value = float(n_value)
+    #     if n_type == 'LiteralNumber' or 'Identifier' or 'Property':
+    #         try:
+    #             n_value = int(n_value)
+    #         except ValueError:
+    #             pass
+    #     if n_value not in properties:
+    #         properties.append(n_value)
+    #     if type(n_value) != int and type(n_value) != float and n_value not in unnum_properties:
+    #         unnum_properties.append(n_value)
+    # dic_propertiers = {}
+    # dic_unnum_properties = {}
+    # for k, v in enumerate(properties):
+    #     dic_propertiers[k] = v
+    # for k, v in enumerate(dic_unnum_properties):
+    #     dic_unnum_properties[k] = v
+
+
+
 
     # Todo: Add graph label: CFG or DFG, vulnerability type
     graph_num = data_graph_indicator.max()
