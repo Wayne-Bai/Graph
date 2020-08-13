@@ -664,7 +664,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         #         m,n = v.split(',')
         #         value_list.append(int(n))
         # print(value_list)
-        NV = args.max_node_value_num
+        NV = int(args.max_node_value_num)
         N = len(node_dict)
         offset = min(node_num_list)
         index_matrix = np.zeros(shape=(N,3)) # 3 means int, float, string
