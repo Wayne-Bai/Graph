@@ -638,18 +638,13 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     def construct_raw_node_f(self, node_dict, node_num_list):
         node_attr_list = list(next(iter(node_dict.values())).keys())
-        if 'value' in node_attr_list:
-            print('********************************')
-            node_attr_list.remove('value')
-        N, NF = len(node_dict), len(node_attr_list)
+        N, NF = len(node_dict), len(node_attr_list)-1
         offset = min(node_num_list)
         raw_node_f = np.zeros(shape=(N, NF)) # pad 0 for small graphs
         # idx_list = list(range(N))
         for node, f_dict in node_dict.items():
-            if 'value' in f_dict.keys():
-                del f_dict['value']
             if node in node_num_list:
-                raw_node_f[node-offset] = np.asarray(list(f_dict.values())) # 0-indexed
+                raw_node_f[node-offset] = np.asarray(list(f_dict.values()).pop(-1)) # 0-indexed
 
         raw_node_f = raw_node_f[node_num_list-offset,:]
         # raw_node_f[:,-1] = 1
