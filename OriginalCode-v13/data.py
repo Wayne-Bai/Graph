@@ -643,8 +643,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         raw_node_f = np.zeros(shape=(N, NF)) # pad 0 for small graphs
         # idx_list = list(range(N))
         for node, f_dict in node_dict.items():
+            f_dict_copy = f_dict.copy()
+            del f_dict_copy['value']
             if node in node_num_list:
-                raw_node_f[node-offset] = np.asarray(list(f_dict.values()).pop(-1)) # 0-indexed
+                raw_node_f[node-offset] = np.asarray(list(f_dict_copy.values())) # 0-indexed
 
         raw_node_f = raw_node_f[node_num_list-offset,:]
         # raw_node_f[:,-1] = 1
