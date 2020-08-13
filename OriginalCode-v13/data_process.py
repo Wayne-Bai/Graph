@@ -94,7 +94,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
         node_id, node_value = line.split(': ')
         G.nodes[int(node_id)]['value'] = node_value
 
-    print(list(G.nodes(data=True)))
+    # print(list(G.nodes(data=True)))
 
     # Todo: Add graph label: CFG or DFG, vulnerability type
     graph_num = data_graph_indicator.max()
