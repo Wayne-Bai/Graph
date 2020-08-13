@@ -56,7 +56,7 @@ class Args():
         self.max_prev_node = None # max previous node that looks back
 
         self.max_node_feature_num = None # max node feature number of desired output # note as NF
-        self.max_node_value_num = None
+        self.max_node_value_num = 282
         self.max_edge_feature_num = 0 # max edge feature number of desired output
         self.edge_feature_output_dim = None # note as EF
         self.node_feature_input_dim = None # note as INF

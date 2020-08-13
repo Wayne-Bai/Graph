@@ -138,7 +138,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     print('Loaded')
 
 
-    return graphs, rule_matrix, max_node_value_num
+    return graphs, rule_matrix
 
 
 if __name__ == "__main__":

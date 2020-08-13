@@ -152,7 +152,7 @@ def create(args):
         args.max_prev_node = 15
 
     elif args.graph_type == 'AST' or args.graph_type == '200Graphs':
-        graphs, rule_matrix, args.max_node_value_num = ast_graph_load_batch(min_num_nodes=1, name=args.graph_type)
+        graphs, rule_matrix= ast_graph_load_batch(min_num_nodes=1, name=args.graph_type)
         # update edge_feature_output_dim
         if not args.max_node_feature_num:
             # print(type(graphs[1].nodes._nodes), graphs[1].nodes._nodes.keys())
