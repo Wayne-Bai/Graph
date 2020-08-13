@@ -663,18 +663,21 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         raw_node_v_str = np.zeros(shape=(N, NV)) # value of string
         # idx_list = list(range(N))
         for node, f_dict in node_dict.items():
-            dic_value = f_dict.pop('value')
-            n_index, n_value = dic_value.split(',')
-            if node in node_num_list:
-                if int(n_index) == 1:
-                    index_matrix[node-offset, 0] = 1
-                    raw_node_v_num[node-offset, 0] = int(n_value)
-                if int(n_index) == 2:
-                    index_matrix[node-offset, 1] = 1
-                    raw_node_v_num[node-offset, 1] = float(n_value)
-                if int(n_index) == 3:
-                    index_matrix[node-offset, 2] = 1
-                    raw_node_v_str[node-offset, int(n_value)-1] = 1
+            # dic_value = f_dict.pop('value')
+            for k,v in f_dict.items():
+                print(v)
+                if v == 'value':
+                    n_index, n_value = dic_value.split(',')
+                    if node in node_num_list:
+                        if int(n_index) == 1:
+                            index_matrix[node-offset, 0] = 1
+                            raw_node_v_num[node-offset, 0] = int(n_value)
+                        if int(n_index) == 2:
+                            index_matrix[node-offset, 1] = 1
+                            raw_node_v_num[node-offset, 1] = float(n_value)
+                        if int(n_index) == 3:
+                            index_matrix[node-offset, 2] = 1
+                            raw_node_v_str[node-offset, int(n_value)-1] = 1
         raw_node_v = np.concatenate((index_matrix, raw_node_v_num, raw_node_v_str), axis=1)
 
         raw_node_v = raw_node_v[node_num_list-offset,:]
