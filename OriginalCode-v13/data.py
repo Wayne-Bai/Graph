@@ -657,7 +657,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         node_value_list = list(next(iter(node_dict.values())).values())
         if 'value' in node_value_list:
             print('---------------------------')
-
+        print(node_value_list)
         value_list = []
         for v in node_value_list:
             if ',' in str(v):
