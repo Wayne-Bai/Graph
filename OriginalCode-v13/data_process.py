@@ -89,10 +89,13 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     # print(list(G.edges(data=True)))
 
     # add node value
+    node_value_list = []
     for line in data_node_value.readlines():
         line = line.strip('\n')
         node_id, node_value = line.split(': ')
         G.nodes[int(node_id)]['value'] = node_value
+        node_value_list.append(int(node_value))
+    args.max_node_value_num = max(node_value_list)
 
     # print(list(G.nodes(data=True)))
 
