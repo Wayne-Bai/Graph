@@ -33,7 +33,8 @@ class Args():
         # self.dataset_type = "9"
         # self.dataset_type = "50-200"  
         # self.dataset_type = "54"     
-        self.dataset_type = "500"    
+        # self.dataset_type = "500"
+        self.dataset_type = "500-50-normalize"
         # self.graph_type = 'grid_small'
         # self.graph_type = 'ladder_small'
 
