@@ -692,7 +692,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                                 index_matrix[node-offset,2] = 1
                                 raw_node_v_str[node - offset, 0] = 1
                             else:
-                                index_matrix[node-offset, 2] = 1
+                                index_matrix[node-offset, 3] = 1
                                 raw_node_v_str[node-offset, int(n_value)-1] = 1
 
         # print('-----------------')
