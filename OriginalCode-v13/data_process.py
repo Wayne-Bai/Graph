@@ -118,7 +118,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
 
         G_sub = G.subgraph(nodes)
 
-        # print(G_sub.nodes())
+        print(G_sub.nodes())
 
         # print(nodes)
         # print(G_sub.nodes)

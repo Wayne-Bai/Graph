@@ -671,7 +671,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         NV = int(args.max_node_value_num)
         N = len(node_dict)
         offset = min(node_num_list)
-        index_matrix = np.zeros(shape=(N,3)) # 3 means int, float, string
+        index_matrix = np.zeros(shape=(N,4)) # 3 means int, float, string
         raw_node_v_num = np.zeros(shape=(N,2))  # value of int and float
         raw_node_v_str = np.zeros(shape=(N, NV)) # value of string
         # idx_list = list(range(N))
@@ -688,8 +688,12 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                             index_matrix[node-offset, 1] = 1
                             raw_node_v_num[node-offset, 1] = float(n_value)
                         if int(n_index) == 3:
-                            index_matrix[node-offset, 2] = 1
-                            raw_node_v_str[node-offset, int(n_value)-1] = 1
+                            if int(n_value) == 1:
+                                index_matrix[node-offset,2] = 1
+                                raw_node_v_str[node - offset, 0] = 1
+                            else:
+                                index_matrix[node-offset, 2] = 1
+                                raw_node_v_str[node-offset, int(n_value)-1] = 1
 
         # print('-----------------')
         # print(index_matrix)
