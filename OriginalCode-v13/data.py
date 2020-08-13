@@ -544,6 +544,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
+        raw_node_v_batch = self.construct_raw_node_v(node_dict,node_num_list)
+        print(raw_node_v_batch.shape)
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
         # print(raw_edge_f_batch)
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
@@ -635,18 +637,48 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     def construct_raw_node_f(self, node_dict, node_num_list):
         node_attr_list = list(next(iter(node_dict.values())).keys())
-        print(node_attr_list)
+        node_attr_list.remove('value')
         N, NF = len(node_dict), len(node_attr_list)
         offset = min(node_num_list)
         raw_node_f = np.zeros(shape=(N, NF)) # pad 0 for small graphs
         # idx_list = list(range(N))
         for node, f_dict in node_dict.items():
+            del f_dict['value']
             if node in node_num_list:
                 raw_node_f[node-offset] = np.asarray(list(f_dict.values())) # 0-indexed
 
         raw_node_f = raw_node_f[node_num_list-offset,:]
         # raw_node_f[:,-1] = 1
         return raw_node_f
+
+    # for now, we use one-hot to display the string
+    def construct_raw_node_v(self, node_dict, node_num_list):
+        node_value_list = list(next(iter(node_dict.values())).values())
+        NV = max(node_value_list)
+        N = len(node_dict)
+        offset = min(node_num_list)
+        index_matrix = np.zeros(shape=(N,3)) # 3 means int, float, string
+        raw_node_v_num = np.zeros(shape=(N,2))  # value of int and float
+        raw_node_v_str = np.zeros(shape=(N, NV)) # value of string
+        # idx_list = list(range(N))
+        for node, f_dict in node_dict.items():
+            dic_value = f_dict.pop('value')
+            n_index, n_value = dic_value.split(',')
+            if node in node_num_list:
+                if int(n_index) == 1:
+                    index_matrix[node-offset, 0] = 1
+                    raw_node_v_num[node-offset, 0] = int(n_value)
+                if int(n_index) == 2:
+                    index_matrix[node-offset, 1] = 1
+                    raw_node_v_num[node-offset, 1] = float(n_value)
+                if int(n_index) == 3:
+                    index_matrix[node-offset, 2] = 1
+                    raw_node_v_str[node-offset, int(n_value)-1] = 1
+        raw_node_v = np.concatenate((index_matrix, raw_node_v_num, raw_node_v_str), axis=1)
+
+        raw_node_v = raw_node_v[node_num_list-offset,:]
+        # raw_node_f[:,-1] = 1
+        return raw_node_v
 
     def construct_input_node_f(self, node_dict):
         pass
