@@ -92,7 +92,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     for line in data_node_value.readlines():
         line = line.strip('\n')
         node_id, node_value = line.split(': ')
-        G.nodes[node_id]['value'] = node_value
+        G.nodes[int(node_id)]['value'] = node_value
 
     print(list(G.nodes(data=True)))
 
