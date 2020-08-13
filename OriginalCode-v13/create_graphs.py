@@ -167,7 +167,7 @@ def create(args):
             args.max_prev_node = 40
         elif args.dataset_type == "50-200":
             args.max_prev_node = 150
-        elif args.dataset_type == '500-50-nomalize':
+        elif args.dataset_type == '500-50-normalize':
             args.max_prev_node = 40
     # TODO: args.max_edge_feature_num update
 
