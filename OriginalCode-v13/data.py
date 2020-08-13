@@ -655,8 +655,9 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     # for now, we use one-hot to display the string
     def construct_raw_node_v(self, node_dict, node_num_list):
-        node_value_list = list(next(iter(node_dict.values())).values())
-        print(node_value_list)
+        node_value_list = list(next(iter(node_dict.values())).keys())
+        if 'value' in node_value_list:
+            print('---------------------------')
         NV = max(node_value_list)
         N = len(node_dict)
         offset = min(node_num_list)
