@@ -654,10 +654,17 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     # for now, we use one-hot to display the string
     def construct_raw_node_v(self, node_dict, node_num_list):
-        node_value_list = list(next(iter(node_dict.values())).keys())
+        node_value_list = list(next(iter(node_dict.values())).values())
         if 'value' in node_value_list:
             print('---------------------------')
-        NV = max(node_value_list)
+
+        value_list = []
+        for v in node_value_list:
+            if ',' in str(v):
+                m,n = v.split(',')
+                value_list.append(n)
+        print(value_list)
+        NV = max(value_list)
         N = len(node_dict)
         offset = min(node_num_list)
         index_matrix = np.zeros(shape=(N,3)) # 3 means int, float, string
