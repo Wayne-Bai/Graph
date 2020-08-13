@@ -1,0 +1,17 @@
+1: Program: NoValue
+2: ExpressionStatement: NoValue
+3: AssignmentExpression: NoValue
+4: MemberExpression: NoValue
+5: Identifier: v0
+6: Property: exports
+7: ArrayExpression: NoValue
+8: LiteralNumber: 8237
+9: Program: NoValue
+10: ExpressionStatement: NoValue
+11: AssignmentExpression: NoValue
+12: Identifier: v0
+13: NewExpression: NoValue
+14: MemberExpression: NoValue
+15: Identifier: v1
+16: Property: v2
+17: LiteralString: s0

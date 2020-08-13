@@ -1,0 +1,17 @@
+Program
+ExpressionStatement
+AssignmentExpression
+MemberExpression
+Identifier
+Property
+ArrayExpression
+LiteralNumber
+Program
+ExpressionStatement
+AssignmentExpression
+Identifier
+NewExpression
+MemberExpression
+Identifier
+Property
+LiteralString
