@@ -657,17 +657,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     # for now, we use one-hot to display the string
     def construct_raw_node_v(self, node_dict, node_num_list):
-        # node_value_list = list(next(iter(node_dict.values())).values())
-        # if 'value' in node_value_list:
-        #     print('---------------------------')
-        # print(node_value_list)
-        # value_list = []
-        # for v in node_value_list:
-        #     if ',' in str(v):
-        #         m,n = v.split(',')
-        #         value_list.append(int(n))
-        # print(value_list)
-        # print(args.max_node_value_num)
+        # int. float, string, no value, int(value), flaot(value), string(value)
         NV = int(args.max_node_value_num)
         N = len(node_dict)
         offset = min(node_num_list)
@@ -689,10 +679,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                             raw_node_v_num[node-offset, 1] = float(n_value)
                         if int(n_index) == 3:
                             if int(n_value) == 1:
-                                index_matrix[node-offset,2] = 1
+                                index_matrix[node-offset,3] = 1
                                 raw_node_v_str[node - offset, 0] = 1
                             else:
-                                index_matrix[node-offset, 3] = 1
+                                index_matrix[node-offset, 2] = 1
                                 raw_node_v_str[node-offset, int(n_value)-1] = 1
 
         # print('-----------------')
