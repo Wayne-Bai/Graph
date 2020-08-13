@@ -639,6 +639,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
     def construct_raw_node_f(self, node_dict, node_num_list):
         node_attr_list = list(next(iter(node_dict.values())).keys())
         if 'value' in node_attr_list:
+            print('********************************')
             node_attr_list.remove('value')
         N, NF = len(node_dict), len(node_attr_list)
         offset = min(node_num_list)
