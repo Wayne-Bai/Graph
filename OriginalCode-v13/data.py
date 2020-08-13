@@ -693,8 +693,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         # print(raw_node_v)
         # print('-----------------')
         raw_node_v = raw_node_v[node_num_list-offset,:]
-        print(raw_node_v)
-        print('-----------------')
+        # print(raw_node_v)
+        # print('-----------------')
         # raw_node_f[:,-1] = 1
         return raw_node_v
 
