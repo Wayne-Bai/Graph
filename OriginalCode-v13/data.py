@@ -655,16 +655,16 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
     # for now, we use one-hot to display the string
     def construct_raw_node_v(self, node_dict, node_num_list):
         node_value_list = list(next(iter(node_dict.values())).values())
-        if 'value' in node_value_list:
-            print('---------------------------')
-        print(node_value_list)
-        value_list = []
-        for v in node_value_list:
-            if ',' in str(v):
-                m,n = v.split(',')
-                value_list.append(int(n))
-        print(value_list)
-        NV = max(value_list)
+        # if 'value' in node_value_list:
+        #     print('---------------------------')
+        # print(node_value_list)
+        # value_list = []
+        # for v in node_value_list:
+        #     if ',' in str(v):
+        #         m,n = v.split(',')
+        #         value_list.append(int(n))
+        # print(value_list)
+        NV = args.max_node_value_num
         N = len(node_dict)
         offset = min(node_num_list)
         index_matrix = np.zeros(shape=(N,3)) # 3 means int, float, string
@@ -687,10 +687,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                             index_matrix[node-offset, 2] = 1
                             raw_node_v_str[node-offset, int(n_value)-1] = 1
 
-        # print('-----------------')
-        # print(index_matrix.shape)
-        # print(raw_node_v_num.shape)
-        # print(raw_node_v_str.shape)
+        print('-----------------')
+        print(index_matrix.shape)
+        print(raw_node_v_num.shape)
+        print(raw_node_v_str.shape)
         raw_node_v = np.concatenate((index_matrix, raw_node_v_num, raw_node_v_str), axis=1)
 
         raw_node_v = raw_node_v[node_num_list-offset,:]
