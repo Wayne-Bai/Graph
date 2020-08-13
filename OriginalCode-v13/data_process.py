@@ -97,8 +97,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
         n_index, n_value = node_value.split(',')
         if str(n_index) == '3':
             node_value_list.append(int(n_value))
-    args.max_node_value_num = max(node_value_list)
-    print(args.max_node_value_num)
+    max_node_value_num = max(node_value_list)
+    # print(args.max_node_value_num)
 
     # print(list(G.nodes(data=True)))
 
@@ -138,7 +138,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     print('Loaded')
 
 
-    return graphs, rule_matrix
+    return graphs, rule_matrix, max_node_value_num
 
 
 if __name__ == "__main__":
