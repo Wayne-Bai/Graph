@@ -662,7 +662,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         for v in node_value_list:
             if ',' in str(v):
                 m,n = v.split(',')
-                value_list.append(n)
+                value_list.append(str(n))
         print(value_list)
         NV = max(value_list)
         N = len(node_dict)
