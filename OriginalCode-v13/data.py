@@ -545,8 +545,11 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
+        print('-----------------------------')
+        print(raw_node_f_batch.shape)
         raw_node_v_batch = self.construct_raw_node_v(node_dict_v,node_num_list)
-        # print(raw_node_v_batch.shape)
+        print(raw_node_v_batch.shape)
+        print('*****************************')
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
         # print(raw_edge_f_batch)
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
@@ -664,7 +667,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         #         m,n = v.split(',')
         #         value_list.append(int(n))
         # print(value_list)
-        print(args.max_node_value_num)
+        # print(args.max_node_value_num)
         NV = int(args.max_node_value_num)
         N = len(node_dict)
         offset = min(node_num_list)
@@ -688,10 +691,10 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                             index_matrix[node-offset, 2] = 1
                             raw_node_v_str[node-offset, int(n_value)-1] = 1
 
-        print('-----------------')
-        print(index_matrix.shape)
-        print(raw_node_v_num.shape)
-        print(raw_node_v_str.shape)
+        # print('-----------------')
+        # print(index_matrix.shape)
+        # print(raw_node_v_num.shape)
+        # print(raw_node_v_str.shape)
         raw_node_v = np.concatenate((index_matrix, raw_node_v_num, raw_node_v_str), axis=1)
 
         raw_node_v = raw_node_v[node_num_list-offset,:]
