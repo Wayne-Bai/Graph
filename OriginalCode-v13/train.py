@@ -29,6 +29,10 @@ import create_graphs
 
 args = Args()
 
+# show all value in the matrix
+torch.set_printoptions(profile='full', threshold=np.inf)
+np.set_printoptions(threshold=np.inf)
+
 def train_vae_epoch(epoch, args, rnn, output, data_loader,
                     optimizer_rnn, optimizer_output,
                     scheduler_rnn, scheduler_output):
