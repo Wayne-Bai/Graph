@@ -545,11 +545,11 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
-        print('-----------------------------')
-        print(raw_node_f_batch)
+        # print('-----------------------------')
+        # print(raw_node_f_batch)
         raw_node_v_batch = self.construct_raw_node_v(node_dict_v,node_num_list)# Dim: N * NV (index:3 + int&float:2 + value: 282 = 287)
-        print('*****************************')
-        print(raw_node_v_batch)
+        # print('*****************************')
+        # print(raw_node_v_batch)
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
         # print(raw_edge_f_batch)
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
@@ -657,7 +657,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     # for now, we use one-hot to display the string
     def construct_raw_node_v(self, node_dict, node_num_list):
-        node_value_list = list(next(iter(node_dict.values())).values())
+        # node_value_list = list(next(iter(node_dict.values())).values())
         # if 'value' in node_value_list:
         #     print('---------------------------')
         # print(node_value_list)
@@ -692,7 +692,7 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
                             raw_node_v_str[node-offset, int(n_value)-1] = 1
 
         # print('-----------------')
-        # print(index_matrix.shape)
+        print(index_matrix)
         # print(raw_node_v_num.shape)
         # print(raw_node_v_str.shape)
         raw_node_v = np.concatenate((index_matrix, raw_node_v_num, raw_node_v_str), axis=1)
