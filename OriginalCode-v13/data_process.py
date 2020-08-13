@@ -31,6 +31,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     data_node_label = np.loadtxt(path + name + '_node_labels.txt', delimiter=',').astype(int)
     data_graph_indicator = np.loadtxt(path + name + '_graph_indicator.txt', delimiter=',').astype(int)
     data_graph_labels = np.loadtxt(path + name + '_graph_labels.txt', delimiter=',').astype(int)
+    data_node_value = open(path + name + '_node_value.txt', 'r')
 
     data_node_label_matrix = list(set(data_node_label))
     # data_node_label_matrix = (np.array(data_node_label_matrix) - 1).tolist()
@@ -71,7 +72,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
         G.nodes[i+1]['f'+str(number_of_node_types+1)]=0 
         # 0 represent true node, 1 represent there is no node
 
-    # print(list(G.nodes(data=True))
+
 
     # Add edges label
     # Todo: Add edge label：from small number nodes to large number nodes(f1), else(f2)
@@ -86,6 +87,14 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     # print(G.edges.data())
         # This is the version for AST which is undirected graph. For CFG and DFG, i<j f1=1, i>j f2=1
     # print(list(G.edges(data=True)))
+
+    # add node value
+    for line in data_node_value.readlines():
+        line = line.strip('\n')
+        node_id, node_value = line.split(': ')
+        G.nodes[node_id]['value'] = node_value
+
+    print(list(G.nodes(data=True)))
 
     # Todo: Add graph label: CFG or DFG, vulnerability type
     graph_num = data_graph_indicator.max()
