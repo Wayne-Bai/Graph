@@ -637,8 +637,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
 
     def construct_raw_node_f(self, node_dict, node_num_list):
         node_attr_list = list(next(iter(node_dict.values())).keys())
-        print(node_attr_list)
-        node_attr_list.remove('value')
+        if 'value' in node_attr_list:
+            node_attr_list.remove('value')
         N, NF = len(node_dict), len(node_attr_list)
         offset = min(node_num_list)
         raw_node_f = np.zeros(shape=(N, NF)) # pad 0 for small graphs
@@ -665,9 +665,8 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         for node, f_dict in node_dict.items():
             # dic_value = f_dict.pop('value')
             for k,v in f_dict.items():
-                print(v)
-                if v == 'value':
-                    n_index, n_value = dic_value.split(',')
+                if k == 'value':
+                    n_index, n_value = v.split(',')
                     if node in node_num_list:
                         if int(n_index) == 1:
                             index_matrix[node-offset, 0] = 1
