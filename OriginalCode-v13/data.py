@@ -545,11 +545,11 @@ class Graph_sequence_sampler_pytorch(torch.utils.data.Dataset):
         edge_dict = self.edge_f_all[idx].copy()
         node_num_list = self.node_num_all[idx]
         raw_node_f_batch = self.construct_raw_node_f(node_dict, node_num_list) # Dim: N * NF
-        # print('-----------------------------')
-        # print(raw_node_f_batch.shape)
+        print('-----------------------------')
+        print(raw_node_f_batch)
         raw_node_v_batch = self.construct_raw_node_v(node_dict_v,node_num_list)# Dim: N * NV (index:3 + int&float:2 + value: 282 = 287)
-        # print(raw_node_v_batch.shape)
-        # print('*****************************')
+        print('*****************************')
+        print(raw_node_v_batch)
         raw_edge_f_batch = self.construct_edge_f(edge_dict, node_num_list) # Dim: N * N * EF
         # print(raw_edge_f_batch)
         edge_f_pooled_batch = self.construct_edge_f(edge_dict, node_num_list, pooling=True)
