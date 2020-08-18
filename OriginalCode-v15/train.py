@@ -744,7 +744,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
             for i in range(test_batch_size):
                 node_idx_list = add_from_node_f_matrix(input_node_f_unsorted_data[i].cpu().numpy(), G_test, new_args=args)
                 add_from_edge_f_matrix(edge_f_unsorted_data[i].cpu().numpy(), G_test, node_idx_list)
-            G_test_list.append(G_test)
+                G_test_list.append(G_test)
 
             # initialize GRU hidden state according to batch size
             rnn.hidden = rnn.init_hidden(batch_size=input_node_f_unsorted.size(0))
