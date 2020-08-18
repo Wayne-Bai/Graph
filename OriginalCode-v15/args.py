@@ -69,7 +69,7 @@ class Args():
         self.node_feature_input_dim = None # note as INF
 
 
-        self.only_use_adj = True
+        self.only_use_adj = False
         self.not_use_pooling = True
 
         ### network config
