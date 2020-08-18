@@ -171,6 +171,9 @@ def create(args):
         elif args.dataset_type == "500-50-normalize":
             args.max_prev_node = 40
             args.max_node_value_num = 282
+        elif args.dataset_type == "50-normalize":
+            args.max_prev_node = 20
+            args.max_node_value_num = 42
     # TODO: args.max_edge_feature_num update
 
         args.node_rules = rule_matrix
