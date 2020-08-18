@@ -740,7 +740,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
 
             G_test = nx.Graph()
             for i in range(test_batch_size):
-                node_idx_list = add_from_node_f_matrix(input_node_f_unsorted[i], G_test)
+                node_idx_list = add_from_node_f_matrix(input_node_f_unsorted[i], G_test, new_args=args)
                 add_from_edge_f_matrix(edge_f_unsorted[i], G_test, node_idx_list)
             G_test_list.append(G_test)
 
