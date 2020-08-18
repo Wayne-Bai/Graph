@@ -1,0 +1,626 @@
+CUDA 1
+File name prefix GraphRNN_RNN_AST_4_128_
+Loading graph dataset: AST
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 40, 41]
+Loading node type
+[[0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 0. 0. 1. 0. 1. 0. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0. 1. 0. 0. 1. 0.
+  1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1. 1. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 0.
+  1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 0. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 0.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1. 0. 1. 1. 1. 1. 0. 1.
+  1. 0. 0. 0. 1. 1. 1. 1. 1. 0. 0. 1. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 1. 0. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 1. 0. 0. 0. 1. 1. 1. 1. 1.
+  1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 0. 0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Loaded
+total graph num: 468, training set: 374
+max number node: 55
+max/min number edge: 54; 46
+max previous node: 40
+train and test graphs saved at:  ./graphs_500/GraphRNN_RNN_AST_4_128_test_0.dat
+CUDA 1
+File name prefix GraphRNN_RNN_AST_4_128_
+Loading graph dataset: AST
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 40, 41]
+Loading node type
+[[0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 0. 0. 1. 0. 1. 0. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0. 1. 0. 0. 1. 0.
+  1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 0. 1. 0. 1. 0. 1. 1. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 0.
+  1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 0. 1. 0. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 0.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 1. 0. 1. 1. 1. 1. 0. 1.
+  1. 0. 0. 0. 1. 1. 1. 1. 1. 0. 0. 1. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 1. 1. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 1. 0. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 0. 0. 0. 0. 0. 1. 0. 1. 1. 0. 0. 0. 1. 1. 1. 1. 1.
+  1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 0. 0. 0. 0. 0. 1. 1. 1. 1. 0. 1. 0. 1. 1. 0. 1. 0.
+  1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+args.max_node_value_num: 272
+Loaded
+total graph num: 468, training set: 374
+max number node: 55
+max/min number edge: 54; 46
+max previous node: 40
+train and test graphs saved at:  ./graphs_500/GraphRNN_RNN_AST_4_128_test_0.dat
+Epoch: 10/8000, train loss: 12.097519, node_f_loss: 7.869782, [type_loss 3.707591, index_loss 1.793059, int_v_loss 0.881089, float_v_loss 0.009803, string_loss 1.478241], direction_loss:4.227736
+Epoch: 20/8000, train loss: 11.427940, node_f_loss: 7.405946, [type_loss 3.711760, index_loss 1.706532, int_v_loss 0.503923, float_v_loss 0.008893, string_loss 1.474838], direction_loss:4.021994
+Epoch: 30/8000, train loss: 12.114180, node_f_loss: 8.277101, [type_loss 3.573752, index_loss 1.702636, int_v_loss 0.421190, float_v_loss 1.093807, string_loss 1.485716], direction_loss:3.837079
+Epoch: 40/8000, train loss: 11.205192, node_f_loss: 7.444393, [type_loss 3.445403, index_loss 1.641641, int_v_loss 0.840882, float_v_loss 0.003762, string_loss 1.512705], direction_loss:3.760798
+Epoch: 50/8000, train loss: 10.852330, node_f_loss: 7.094395, [type_loss 3.455332, index_loss 1.611313, int_v_loss 0.482956, float_v_loss 0.011799, string_loss 1.532996], direction_loss:3.757936
+Epoch: 60/8000, train loss: 17.081661, node_f_loss: 13.412135, [type_loss 3.473788, index_loss 1.621869, int_v_loss 5.670702, float_v_loss 1.103724, string_loss 1.542052], direction_loss:3.669526
+Epoch: 70/8000, train loss: 11.565923, node_f_loss: 7.865568, [type_loss 3.464525, index_loss 1.634646, int_v_loss 1.190902, float_v_loss 0.013977, string_loss 1.561518], direction_loss:3.700355
+Epoch: 80/8000, train loss: 12.335501, node_f_loss: 8.651477, [type_loss 3.385896, index_loss 1.561946, int_v_loss 2.135560, float_v_loss 0.010624, string_loss 1.557451], direction_loss:3.684024
+Epoch: 90/8000, train loss: 10.229047, node_f_loss: 6.557608, [type_loss 3.337659, index_loss 1.528593, int_v_loss 0.120289, float_v_loss 0.003087, string_loss 1.567980], direction_loss:3.671439
+Epoch: 100/8000, train loss: 14.199242, node_f_loss: 10.557146, [type_loss 3.340299, index_loss 1.604171, int_v_loss 2.940254, float_v_loss 1.093964, string_loss 1.578459], direction_loss:3.642095
+Epoch: 110/8000, train loss: 12.230049, node_f_loss: 8.602953, [type_loss 3.370878, index_loss 1.579860, int_v_loss 0.978511, float_v_loss 1.098107, string_loss 1.575597], direction_loss:3.627096
+Epoch: 120/8000, train loss: 11.341896, node_f_loss: 7.697423, [type_loss 3.281255, index_loss 1.510909, int_v_loss 1.330865, float_v_loss 0.006153, string_loss 1.568241], direction_loss:3.644474
+Epoch: 130/8000, train loss: 13.768013, node_f_loss: 10.114725, [type_loss 3.335222, index_loss 1.543519, int_v_loss 2.562368, float_v_loss 1.097034, string_loss 1.576581], direction_loss:3.653288
+Epoch: 140/8000, train loss: 10.589071, node_f_loss: 6.947851, [type_loss 3.280116, index_loss 1.444240, int_v_loss 0.651960, float_v_loss 0.005778, string_loss 1.565757], direction_loss:3.641221
+Epoch: 150/8000, train loss: 12.769991, node_f_loss: 9.114424, [type_loss 3.298045, index_loss 1.483315, int_v_loss 1.657894, float_v_loss 1.108339, string_loss 1.566830], direction_loss:3.655567
+Epoch: 160/8000, train loss: 13.604317, node_f_loss: 9.982969, [type_loss 3.315301, index_loss 1.552394, int_v_loss 3.538074, float_v_loss 0.006374, string_loss 1.570826], direction_loss:3.621347
+Epoch: 170/8000, train loss: 10.422832, node_f_loss: 6.781672, [type_loss 3.348859, index_loss 1.445420, int_v_loss 0.411290, float_v_loss 0.003830, string_loss 1.572273], direction_loss:3.641160
+Epoch: 180/8000, train loss: 11.494350, node_f_loss: 7.855540, [type_loss 3.285691, index_loss 1.446428, int_v_loss 1.549993, float_v_loss 0.009872, string_loss 1.563556], direction_loss:3.638810
+Epoch: 190/8000, train loss: 10.763751, node_f_loss: 7.145401, [type_loss 3.254690, index_loss 1.431172, int_v_loss 0.896438, float_v_loss 0.005430, string_loss 1.557670], direction_loss:3.618350
+Epoch: 200/8000, train loss: 10.383223, node_f_loss: 6.832257, [type_loss 3.296647, index_loss 1.457703, int_v_loss 0.427394, float_v_loss 0.084741, string_loss 1.565773], direction_loss:3.550966
+Epoch: 210/8000, train loss: 10.531499, node_f_loss: 6.955396, [type_loss 3.346595, index_loss 1.441112, int_v_loss 0.604145, float_v_loss 0.010207, string_loss 1.553336], direction_loss:3.576103
+Epoch: 220/8000, train loss: 10.415153, node_f_loss: 6.820808, [type_loss 3.209854, index_loss 1.367367, int_v_loss 0.673285, float_v_loss 0.005977, string_loss 1.564325], direction_loss:3.594344
+Epoch: 230/8000, train loss: 10.812436, node_f_loss: 7.235684, [type_loss 3.316519, index_loss 1.466879, int_v_loss 0.879552, float_v_loss 0.013530, string_loss 1.559205], direction_loss:3.576752
+Epoch: 240/8000, train loss: 10.205137, node_f_loss: 6.671741, [type_loss 3.275420, index_loss 1.413071, int_v_loss 0.340850, float_v_loss 0.085971, string_loss 1.556429], direction_loss:3.533395
+Epoch: 250/8000, train loss: 12.361234, node_f_loss: 8.832159, [type_loss 3.190614, index_loss 1.380535, int_v_loss 2.685714, float_v_loss 0.010635, string_loss 1.564660], direction_loss:3.529075
+Epoch: 260/8000, train loss: 10.706678, node_f_loss: 7.140326, [type_loss 3.271018, index_loss 1.341963, int_v_loss 0.964115, float_v_loss 0.007267, string_loss 1.555963], direction_loss:3.566353
+Epoch: 270/8000, train loss: 13.729506, node_f_loss: 10.201343, [type_loss 3.186297, index_loss 1.386177, int_v_loss 4.050359, float_v_loss 0.011782, string_loss 1.566728], direction_loss:3.528164
+Epoch: 280/8000, train loss: 10.035346, node_f_loss: 6.463562, [type_loss 3.142657, index_loss 1.240563, int_v_loss 0.520615, float_v_loss 0.010564, string_loss 1.549163], direction_loss:3.571784
+Epoch: 290/8000, train loss: 12.206729, node_f_loss: 8.696993, [type_loss 3.144437, index_loss 1.342496, int_v_loss 2.640411, float_v_loss 0.008109, string_loss 1.561540], direction_loss:3.509736
+Epoch: 300/8000, train loss: 11.235050, node_f_loss: 7.724342, [type_loss 3.224722, index_loss 1.373751, int_v_loss 1.494187, float_v_loss 0.080461, string_loss 1.551220], direction_loss:3.510709
+Epoch: 310/8000, train loss: 9.696488, node_f_loss: 6.208145, [type_loss 3.175317, index_loss 1.291948, int_v_loss 0.167265, float_v_loss 0.006070, string_loss 1.567546], direction_loss:3.488344
+Epoch: 320/8000, train loss: 13.461473, node_f_loss: 9.919794, [type_loss 3.118336, index_loss 1.244713, int_v_loss 3.969295, float_v_loss 0.013833, string_loss 1.573617], direction_loss:3.541678
+Epoch: 330/8000, train loss: 12.063454, node_f_loss: 8.525649, [type_loss 3.138864, index_loss 1.298840, int_v_loss 2.509770, float_v_loss 0.009354, string_loss 1.568820], direction_loss:3.537805
+Epoch: 340/8000, train loss: 11.092155, node_f_loss: 7.651978, [type_loss 3.244799, index_loss 1.334139, int_v_loss 1.508086, float_v_loss 0.010325, string_loss 1.554630], direction_loss:3.440177
+Epoch: 350/8000, train loss: 9.395772, node_f_loss: 5.933233, [type_loss 3.092847, index_loss 1.212623, int_v_loss 0.042240, float_v_loss 0.006064, string_loss 1.579460], direction_loss:3.462538
+Epoch: 360/8000, train loss: 11.202831, node_f_loss: 7.755597, [type_loss 3.179859, index_loss 1.268020, int_v_loss 1.722441, float_v_loss 0.020250, string_loss 1.565027], direction_loss:3.447235
+Epoch: 370/8000, train loss: 15.853949, node_f_loss: 12.401892, [type_loss 3.137567, index_loss 1.260616, int_v_loss 4.245961, float_v_loss 2.201313, string_loss 1.556435], direction_loss:3.452057
+Epoch: 380/8000, train loss: 9.903347, node_f_loss: 6.446846, [type_loss 3.237441, index_loss 1.246523, int_v_loss 0.400181, float_v_loss 0.010465, string_loss 1.552236], direction_loss:3.456501
+Epoch: 390/8000, train loss: 12.072865, node_f_loss: 8.667382, [type_loss 3.183532, index_loss 1.249562, int_v_loss 2.685197, float_v_loss 0.007693, string_loss 1.541398], direction_loss:3.405483
+Epoch: 400/8000, train loss: 12.511709, node_f_loss: 9.125852, [type_loss 3.156810, index_loss 1.315668, int_v_loss 3.081005, float_v_loss 0.008673, string_loss 1.563696], direction_loss:3.385858
+Epoch: 410/8000, train loss: 11.723949, node_f_loss: 8.336089, [type_loss 3.079873, index_loss 1.265020, int_v_loss 2.416612, float_v_loss 0.008485, string_loss 1.566099], direction_loss:3.387861
+Epoch: 420/8000, train loss: 9.926373, node_f_loss: 6.558579, [type_loss 3.213648, index_loss 1.287122, int_v_loss 0.416803, float_v_loss 0.081440, string_loss 1.559566], direction_loss:3.367793
+Epoch: 430/8000, train loss: 10.025856, node_f_loss: 6.693050, [type_loss 3.181317, index_loss 1.234474, int_v_loss 0.708518, float_v_loss 0.008038, string_loss 1.560703], direction_loss:3.332806
+Epoch: 440/8000, train loss: 10.590068, node_f_loss: 7.317741, [type_loss 3.099349, index_loss 1.245364, int_v_loss 0.334183, float_v_loss 1.079459, string_loss 1.559387], direction_loss:3.272326
+Epoch: 450/8000, train loss: 9.178733, node_f_loss: 5.904709, [type_loss 3.094739, index_loss 1.204728, int_v_loss 0.034786, float_v_loss 0.006678, string_loss 1.563778], direction_loss:3.274023
+Epoch: 460/8000, train loss: 9.769637, node_f_loss: 6.454137, [type_loss 3.171196, index_loss 1.218879, int_v_loss 0.493808, float_v_loss 0.005733, string_loss 1.564522], direction_loss:3.315500
+Epoch: 470/8000, train loss: 9.251080, node_f_loss: 5.989831, [type_loss 3.088720, index_loss 1.150088, int_v_loss 0.165912, float_v_loss 0.008195, string_loss 1.576916], direction_loss:3.261249
+Epoch: 480/8000, train loss: 10.019208, node_f_loss: 6.806369, [type_loss 3.100602, index_loss 1.222902, int_v_loss 0.927516, float_v_loss 0.007480, string_loss 1.547869], direction_loss:3.212839
+Epoch: 490/8000, train loss: 11.764790, node_f_loss: 8.459124, [type_loss 3.151357, index_loss 1.199466, int_v_loss 2.530517, float_v_loss 0.007766, string_loss 1.570017], direction_loss:3.305666
+Epoch: 500/8000, train loss: 8.957582, node_f_loss: 5.733782, [type_loss 3.022238, index_loss 1.095203, int_v_loss 0.051233, float_v_loss 0.006896, string_loss 1.558212], direction_loss:3.223801
+Epoch: 510/8000, train loss: 13.415169, node_f_loss: 10.185699, [type_loss 3.043460, index_loss 1.181866, int_v_loss 3.297503, float_v_loss 1.085544, string_loss 1.577326], direction_loss:3.229469
+Epoch: 520/8000, train loss: 9.394488, node_f_loss: 6.163072, [type_loss 3.214672, index_loss 1.258408, int_v_loss 0.156383, float_v_loss 0.008245, string_loss 1.525364], direction_loss:3.231417
+Epoch: 530/8000, train loss: 11.692739, node_f_loss: 8.473386, [type_loss 3.044539, index_loss 1.173370, int_v_loss 2.679845, float_v_loss 0.008268, string_loss 1.567362], direction_loss:3.219353
+Epoch: 540/8000, train loss: 9.822823, node_f_loss: 6.574750, [type_loss 3.078070, index_loss 1.167024, int_v_loss 0.743475, float_v_loss 0.009056, string_loss 1.577126], direction_loss:3.248073
+Epoch: 550/8000, train loss: 10.984935, node_f_loss: 7.770271, [type_loss 3.192377, index_loss 1.251663, int_v_loss 1.771182, float_v_loss 0.008099, string_loss 1.546950], direction_loss:3.214664
+Epoch: 560/8000, train loss: 10.488947, node_f_loss: 7.280324, [type_loss 3.013724, index_loss 1.174737, int_v_loss 1.516355, float_v_loss 0.010937, string_loss 1.564571], direction_loss:3.208622
+Epoch: 570/8000, train loss: 9.703152, node_f_loss: 6.480841, [type_loss 3.075509, index_loss 1.175022, int_v_loss 0.659358, float_v_loss 0.009262, string_loss 1.561690], direction_loss:3.222311
+Epoch: 580/8000, train loss: 9.853460, node_f_loss: 6.663734, [type_loss 3.065193, index_loss 1.160789, int_v_loss 0.877038, float_v_loss 0.008978, string_loss 1.551737], direction_loss:3.189726
+Epoch: 590/8000, train loss: 9.941057, node_f_loss: 6.705271, [type_loss 3.078382, index_loss 1.130179, int_v_loss 0.923312, float_v_loss 0.009676, string_loss 1.563721], direction_loss:3.235786
+Epoch: 600/8000, train loss: 12.821836, node_f_loss: 9.617376, [type_loss 3.098877, index_loss 1.196775, int_v_loss 3.761149, float_v_loss 0.011150, string_loss 1.549425], direction_loss:3.204460
+Epoch: 610/8000, train loss: 9.961040, node_f_loss: 6.750873, [type_loss 2.994710, index_loss 1.100407, int_v_loss 1.082245, float_v_loss 0.009823, string_loss 1.563687], direction_loss:3.210168
+Epoch: 620/8000, train loss: 9.804737, node_f_loss: 6.640650, [type_loss 3.050837, index_loss 1.173450, int_v_loss 0.846623, float_v_loss 0.009179, string_loss 1.560562], direction_loss:3.164087
+Epoch: 630/8000, train loss: 13.007469, node_f_loss: 9.830677, [type_loss 3.082699, index_loss 1.255228, int_v_loss 3.946865, float_v_loss 0.011572, string_loss 1.534313], direction_loss:3.176793
+Epoch: 640/8000, train loss: 14.016762, node_f_loss: 10.851395, [type_loss 3.004307, index_loss 1.129099, int_v_loss 2.987082, float_v_loss 2.164658, string_loss 1.566249], direction_loss:3.165367
+Epoch: 650/8000, train loss: 9.894696, node_f_loss: 6.708800, [type_loss 3.089794, index_loss 1.216766, int_v_loss 0.851112, float_v_loss 0.011001, string_loss 1.540128], direction_loss:3.185896
+Epoch: 660/8000, train loss: 10.753801, node_f_loss: 7.598688, [type_loss 3.046896, index_loss 1.105878, int_v_loss 0.808348, float_v_loss 1.087342, string_loss 1.550223], direction_loss:3.155114
+Epoch: 670/8000, train loss: 10.786320, node_f_loss: 7.609156, [type_loss 3.156583, index_loss 1.196202, int_v_loss 1.715331, float_v_loss 0.010309, string_loss 1.530732], direction_loss:3.177164
+Epoch: 680/8000, train loss: 9.030457, node_f_loss: 5.860739, [type_loss 2.989741, index_loss 1.108162, int_v_loss 0.108597, float_v_loss 0.083664, string_loss 1.570574], direction_loss:3.169717
+Epoch: 690/8000, train loss: 9.311200, node_f_loss: 6.148841, [type_loss 2.929966, index_loss 1.083418, int_v_loss 0.569680, float_v_loss 0.016082, string_loss 1.549695], direction_loss:3.162359
+Epoch: 700/8000, train loss: 10.565250, node_f_loss: 7.356133, [type_loss 3.103582, index_loss 1.124654, int_v_loss 1.565532, float_v_loss 0.011204, string_loss 1.551162], direction_loss:3.209118
+Epoch: 710/8000, train loss: 13.008855, node_f_loss: 9.817503, [type_loss 3.008231, index_loss 1.102354, int_v_loss 4.136528, float_v_loss 0.010675, string_loss 1.559715], direction_loss:3.191352
+Epoch: 720/8000, train loss: 9.007521, node_f_loss: 5.824710, [type_loss 2.976460, index_loss 1.062213, int_v_loss 0.222805, float_v_loss 0.010815, string_loss 1.552416], direction_loss:3.182811
+Epoch: 730/8000, train loss: 14.549707, node_f_loss: 11.377092, [type_loss 3.015682, index_loss 1.195717, int_v_loss 5.626643, float_v_loss 0.012119, string_loss 1.526931], direction_loss:3.172615
+Epoch: 740/8000, train loss: 10.985773, node_f_loss: 7.870085, [type_loss 2.920206, index_loss 1.039172, int_v_loss 1.247997, float_v_loss 1.088354, string_loss 1.574356], direction_loss:3.115688
+Epoch: 750/8000, train loss: 14.248703, node_f_loss: 11.096151, [type_loss 2.923740, index_loss 1.054465, int_v_loss 3.360708, float_v_loss 2.189615, string_loss 1.567623], direction_loss:3.152551
+Epoch: 760/8000, train loss: 12.861046, node_f_loss: 9.663098, [type_loss 3.155826, index_loss 1.250999, int_v_loss 3.716131, float_v_loss 0.012277, string_loss 1.527864], direction_loss:3.197948
+Epoch: 770/8000, train loss: 9.556628, node_f_loss: 6.427842, [type_loss 2.969427, index_loss 1.077620, int_v_loss 0.829748, float_v_loss 0.010831, string_loss 1.540216], direction_loss:3.128786
+Epoch: 780/8000, train loss: 9.213081, node_f_loss: 6.064791, [type_loss 3.101194, index_loss 1.138325, int_v_loss 0.263604, float_v_loss 0.011194, string_loss 1.550474], direction_loss:3.148290
+Epoch: 790/8000, train loss: 11.090447, node_f_loss: 7.917359, [type_loss 2.956805, index_loss 1.061910, int_v_loss 2.327153, float_v_loss 0.010040, string_loss 1.561450], direction_loss:3.173089
+Epoch: 800/8000, train loss: 10.496337, node_f_loss: 7.393209, [type_loss 3.042418, index_loss 1.080241, int_v_loss 0.638808, float_v_loss 1.090571, string_loss 1.541172], direction_loss:3.103127
+Epoch: 810/8000, train loss: 9.185645, node_f_loss: 6.055306, [type_loss 2.987617, index_loss 1.083737, int_v_loss 0.411231, float_v_loss 0.010154, string_loss 1.562568], direction_loss:3.130339
+Epoch: 820/8000, train loss: 12.349438, node_f_loss: 9.282495, [type_loss 3.007715, index_loss 1.086611, int_v_loss 1.488403, float_v_loss 2.152207, string_loss 1.547559], direction_loss:3.066942
+Epoch: 830/8000, train loss: 11.969508, node_f_loss: 8.873000, [type_loss 2.956764, index_loss 1.060555, int_v_loss 1.116226, float_v_loss 2.171957, string_loss 1.567498], direction_loss:3.096508
+Epoch: 840/8000, train loss: 11.920820, node_f_loss: 8.809865, [type_loss 2.908736, index_loss 1.057439, int_v_loss 3.281171, float_v_loss 0.011863, string_loss 1.550656], direction_loss:3.110956
+Epoch: 850/8000, train loss: 10.904281, node_f_loss: 7.800808, [type_loss 2.898249, index_loss 1.046446, int_v_loss 2.261242, float_v_loss 0.010726, string_loss 1.584146], direction_loss:3.103472
+Epoch: 860/8000, train loss: 8.889307, node_f_loss: 5.756615, [type_loss 3.055760, index_loss 1.119457, int_v_loss 0.049561, float_v_loss 0.011932, string_loss 1.519905], direction_loss:3.132693
+Epoch: 870/8000, train loss: 9.150264, node_f_loss: 6.047465, [type_loss 2.931604, index_loss 1.032882, int_v_loss 0.523950, float_v_loss 0.010792, string_loss 1.548238], direction_loss:3.102799
+Epoch: 880/8000, train loss: 10.362581, node_f_loss: 7.256644, [type_loss 2.874715, index_loss 0.999196, int_v_loss 0.696405, float_v_loss 1.107262, string_loss 1.579067], direction_loss:3.105937
+Epoch: 890/8000, train loss: 10.186440, node_f_loss: 7.078414, [type_loss 2.935381, index_loss 1.038813, int_v_loss 1.542593, float_v_loss 0.011701, string_loss 1.549926], direction_loss:3.108025
+Epoch: 900/8000, train loss: 10.410406, node_f_loss: 7.334370, [type_loss 3.035072, index_loss 1.134519, int_v_loss 1.616999, float_v_loss 0.013954, string_loss 1.533826], direction_loss:3.076036
+Epoch: 910/8000, train loss: 10.671606, node_f_loss: 7.577790, [type_loss 3.027205, index_loss 1.065738, int_v_loss 0.849055, float_v_loss 1.095744, string_loss 1.540048], direction_loss:3.093816
+Epoch: 920/8000, train loss: 8.866071, node_f_loss: 5.820775, [type_loss 2.726783, index_loss 0.943347, int_v_loss 0.535063, float_v_loss 0.011664, string_loss 1.603919], direction_loss:3.045296
+Epoch: 930/8000, train loss: 9.947670, node_f_loss: 6.885465, [type_loss 2.949968, index_loss 0.994805, int_v_loss 1.373457, float_v_loss 0.010385, string_loss 1.556850], direction_loss:3.062205
+Epoch: 940/8000, train loss: 9.553675, node_f_loss: 6.483160, [type_loss 3.033057, index_loss 1.102655, int_v_loss 0.796414, float_v_loss 0.013045, string_loss 1.537989], direction_loss:3.070514
+Epoch: 950/8000, train loss: 8.972717, node_f_loss: 5.891420, [type_loss 2.849494, index_loss 0.991596, int_v_loss 0.494302, float_v_loss 0.012263, string_loss 1.543766], direction_loss:3.081297
+Epoch: 960/8000, train loss: 10.286070, node_f_loss: 7.239607, [type_loss 2.688693, index_loss 0.902810, int_v_loss 0.952868, float_v_loss 1.097028, string_loss 1.598207], direction_loss:3.046463
+Epoch: 970/8000, train loss: 9.244217, node_f_loss: 6.116496, [type_loss 2.874469, index_loss 1.040116, int_v_loss 0.650175, float_v_loss 0.011962, string_loss 1.539774], direction_loss:3.127721
+Epoch: 980/8000, train loss: 8.711118, node_f_loss: 5.642394, [type_loss 2.939678, index_loss 1.026400, int_v_loss 0.126434, float_v_loss 0.010541, string_loss 1.539342], direction_loss:3.068724
+Epoch: 990/8000, train loss: 9.390990, node_f_loss: 6.327797, [type_loss 3.037269, index_loss 1.080139, int_v_loss 0.658890, float_v_loss 0.013199, string_loss 1.538300], direction_loss:3.063194
+Epoch: 1000/8000, train loss: 14.023285, node_f_loss: 10.950356, [type_loss 2.906516, index_loss 1.059657, int_v_loss 3.245630, float_v_loss 2.175608, string_loss 1.562945], direction_loss:3.072928
+Epoch: 1010/8000, train loss: 10.049479, node_f_loss: 6.983513, [type_loss 3.038632, index_loss 1.061040, int_v_loss 1.345253, float_v_loss 0.012613, string_loss 1.525975], direction_loss:3.065965
+Epoch: 1020/8000, train loss: 8.522655, node_f_loss: 5.485962, [type_loss 2.922884, index_loss 0.998260, int_v_loss 0.013101, float_v_loss 0.011031, string_loss 1.540686], direction_loss:3.036692
+Epoch: 1030/8000, train loss: 11.366954, node_f_loss: 8.336176, [type_loss 2.896783, index_loss 1.038018, int_v_loss 2.834035, float_v_loss 0.011948, string_loss 1.555391], direction_loss:3.030778
+Epoch: 1040/8000, train loss: 8.358749, node_f_loss: 5.297761, [type_loss 2.696998, index_loss 0.900628, int_v_loss 0.069192, float_v_loss 0.014990, string_loss 1.615955], direction_loss:3.060988
+Epoch: 1050/8000, train loss: 9.263032, node_f_loss: 6.232780, [type_loss 2.802943, index_loss 0.996685, int_v_loss 0.853169, float_v_loss 0.012573, string_loss 1.567409], direction_loss:3.030253
+Epoch: 1060/8000, train loss: 9.183865, node_f_loss: 6.120028, [type_loss 2.909870, index_loss 1.043224, int_v_loss 0.597294, float_v_loss 0.015110, string_loss 1.554530], direction_loss:3.063836
+Epoch: 1070/8000, train loss: 9.978848, node_f_loss: 7.004898, [type_loss 2.863503, index_loss 1.021155, int_v_loss 0.488069, float_v_loss 1.075693, string_loss 1.556479], direction_loss:2.973949
+Epoch: 1080/8000, train loss: 11.920691, node_f_loss: 8.851273, [type_loss 2.773315, index_loss 0.983862, int_v_loss 2.444721, float_v_loss 1.106334, string_loss 1.543040], direction_loss:3.069419
+Epoch: 1090/8000, train loss: 10.360165, node_f_loss: 7.311444, [type_loss 2.930328, index_loss 1.030232, int_v_loss 0.725897, float_v_loss 1.099177, string_loss 1.525811], direction_loss:3.048720
+Epoch: 1100/8000, train loss: 8.918737, node_f_loss: 5.897132, [type_loss 2.873550, index_loss 1.058756, int_v_loss 0.392488, float_v_loss 0.011044, string_loss 1.561294], direction_loss:3.021605
+Epoch: 1110/8000, train loss: 8.572640, node_f_loss: 5.550273, [type_loss 2.870755, index_loss 1.000947, int_v_loss 0.115688, float_v_loss 0.011730, string_loss 1.551153], direction_loss:3.022367
+Epoch: 1120/8000, train loss: 10.361917, node_f_loss: 7.318439, [type_loss 3.056550, index_loss 1.122075, int_v_loss 1.607817, float_v_loss 0.013979, string_loss 1.518017], direction_loss:3.043479
+Epoch: 1130/8000, train loss: 8.441046, node_f_loss: 5.418732, [type_loss 2.675529, index_loss 0.914031, int_v_loss 0.142534, float_v_loss 0.085812, string_loss 1.600825], direction_loss:3.022314
+Epoch: 1140/8000, train loss: 10.413050, node_f_loss: 7.362135, [type_loss 2.942089, index_loss 1.093525, int_v_loss 0.659011, float_v_loss 1.104352, string_loss 1.563158], direction_loss:3.050914
+Epoch: 1150/8000, train loss: 8.455495, node_f_loss: 5.408823, [type_loss 2.839343, index_loss 0.971978, int_v_loss 0.043750, float_v_loss 0.012465, string_loss 1.541287], direction_loss:3.046672
+Epoch: 1160/8000, train loss: 9.273677, node_f_loss: 6.245136, [type_loss 2.828837, index_loss 1.004450, int_v_loss 0.783591, float_v_loss 0.086945, string_loss 1.541313], direction_loss:3.028541
+Epoch: 1170/8000, train loss: 10.381321, node_f_loss: 7.347115, [type_loss 2.871815, index_loss 0.979016, int_v_loss 1.929174, float_v_loss 0.012058, string_loss 1.555051], direction_loss:3.034206
+Epoch: 1180/8000, train loss: 10.726648, node_f_loss: 7.687869, [type_loss 2.849048, index_loss 1.013746, int_v_loss 2.281816, float_v_loss 0.013015, string_loss 1.530243], direction_loss:3.038780
+Epoch: 1190/8000, train loss: 8.462426, node_f_loss: 5.473539, [type_loss 2.746101, index_loss 0.949226, int_v_loss 0.195859, float_v_loss 0.013182, string_loss 1.569171], direction_loss:2.988887
+Epoch: 1200/8000, train loss: 13.283697, node_f_loss: 10.254281, [type_loss 2.994993, index_loss 1.050824, int_v_loss 3.550054, float_v_loss 1.091314, string_loss 1.567096], direction_loss:3.029416
+Epoch: 1210/8000, train loss: 8.455369, node_f_loss: 5.418104, [type_loss 2.714440, index_loss 0.920109, int_v_loss 0.211805, float_v_loss 0.014078, string_loss 1.557672], direction_loss:3.037265
+Epoch: 1220/8000, train loss: 8.345206, node_f_loss: 5.335129, [type_loss 2.793288, index_loss 0.933183, int_v_loss 0.050857, float_v_loss 0.013693, string_loss 1.544107], direction_loss:3.010077
+Epoch: 1230/8000, train loss: 8.436474, node_f_loss: 5.412921, [type_loss 2.833128, index_loss 0.962972, int_v_loss 0.052751, float_v_loss 0.012566, string_loss 1.551503], direction_loss:3.023553
+Epoch: 1240/8000, train loss: 8.979807, node_f_loss: 5.962810, [type_loss 2.765756, index_loss 0.946437, int_v_loss 0.685277, float_v_loss 0.013504, string_loss 1.551836], direction_loss:3.016997
+Epoch: 1250/8000, train loss: 10.294289, node_f_loss: 7.284995, [type_loss 2.918582, index_loss 1.044534, int_v_loss 1.774086, float_v_loss 0.015558, string_loss 1.532235], direction_loss:3.009294
+Epoch: 1260/8000, train loss: 8.368792, node_f_loss: 5.336239, [type_loss 2.758071, index_loss 0.904450, int_v_loss 0.106620, float_v_loss 0.012014, string_loss 1.555085], direction_loss:3.032552
+Epoch: 1270/8000, train loss: 9.810663, node_f_loss: 6.766076, [type_loss 2.950521, index_loss 0.966603, int_v_loss 1.286055, float_v_loss 0.011846, string_loss 1.551051], direction_loss:3.044587
+Epoch: 1280/8000, train loss: 11.569480, node_f_loss: 8.527781, [type_loss 2.850268, index_loss 0.938762, int_v_loss 3.189914, float_v_loss 0.013913, string_loss 1.534923], direction_loss:3.041699
+Epoch: 1290/8000, train loss: 8.674622, node_f_loss: 5.648003, [type_loss 2.897275, index_loss 0.992683, int_v_loss 0.220237, float_v_loss 0.012448, string_loss 1.525359], direction_loss:3.026619
+Epoch: 1300/8000, train loss: 11.335690, node_f_loss: 8.293502, [type_loss 2.683991, index_loss 0.902243, int_v_loss 3.110597, float_v_loss 0.013927, string_loss 1.582744], direction_loss:3.042187
+Epoch: 1310/8000, train loss: 8.608921, node_f_loss: 5.602750, [type_loss 2.975398, index_loss 0.936279, int_v_loss 0.144677, float_v_loss 0.012477, string_loss 1.533919], direction_loss:3.006171
+Epoch: 1320/8000, train loss: 8.727840, node_f_loss: 5.731467, [type_loss 2.830506, index_loss 0.987923, int_v_loss 0.334977, float_v_loss 0.012483, string_loss 1.565579], direction_loss:2.996373
+Epoch: 1330/8000, train loss: 8.630378, node_f_loss: 5.608020, [type_loss 2.762747, index_loss 0.877790, int_v_loss 0.389945, float_v_loss 0.013476, string_loss 1.564062], direction_loss:3.022358
+Epoch: 1340/8000, train loss: 9.859569, node_f_loss: 6.837084, [type_loss 2.817039, index_loss 0.975755, int_v_loss 0.405997, float_v_loss 1.097475, string_loss 1.540817], direction_loss:3.022485
+Epoch: 1350/8000, train loss: 11.128551, node_f_loss: 8.077630, [type_loss 2.750878, index_loss 0.923878, int_v_loss 1.720445, float_v_loss 1.110714, string_loss 1.571715], direction_loss:3.050922
+Epoch: 1360/8000, train loss: 9.648654, node_f_loss: 6.644614, [type_loss 2.720846, index_loss 0.922765, int_v_loss 1.430721, float_v_loss 0.012425, string_loss 1.557857], direction_loss:3.004040
+Epoch: 1370/8000, train loss: 14.071831, node_f_loss: 11.079645, [type_loss 2.817136, index_loss 0.952861, int_v_loss 3.598788, float_v_loss 2.171078, string_loss 1.539782], direction_loss:2.992185
+Epoch: 1380/8000, train loss: 10.440819, node_f_loss: 7.448092, [type_loss 3.010716, index_loss 1.079846, int_v_loss 1.801746, float_v_loss 0.024684, string_loss 1.531099], direction_loss:2.992728
+Epoch: 1390/8000, train loss: 10.991664, node_f_loss: 7.970019, [type_loss 2.688883, index_loss 0.951459, int_v_loss 2.684078, float_v_loss 0.088162, string_loss 1.557437], direction_loss:3.021644
+Epoch: 1400/8000, train loss: 9.184725, node_f_loss: 6.163030, [type_loss 2.845415, index_loss 1.001080, int_v_loss 0.785079, float_v_loss 0.013029, string_loss 1.518426], direction_loss:3.021695
+Epoch: 1410/8000, train loss: 8.749637, node_f_loss: 5.747633, [type_loss 2.941221, index_loss 1.019355, int_v_loss 0.239157, float_v_loss 0.013544, string_loss 1.534356], direction_loss:3.002003
+Epoch: 1420/8000, train loss: 12.348864, node_f_loss: 9.333619, [type_loss 2.747922, index_loss 0.956467, int_v_loss 2.989175, float_v_loss 1.096876, string_loss 1.543180], direction_loss:3.015245
+Epoch: 1430/8000, train loss: 10.783638, node_f_loss: 7.829790, [type_loss 2.827419, index_loss 1.056451, int_v_loss 2.419012, float_v_loss 0.014356, string_loss 1.512553], direction_loss:2.953847
+Epoch: 1440/8000, train loss: 8.423629, node_f_loss: 5.406247, [type_loss 2.855882, index_loss 0.977045, int_v_loss 0.014002, float_v_loss 0.013535, string_loss 1.545782], direction_loss:3.017382
+Epoch: 1450/8000, train loss: 9.566695, node_f_loss: 6.587421, [type_loss 2.839725, index_loss 1.008416, int_v_loss 1.180865, float_v_loss 0.013643, string_loss 1.544772], direction_loss:2.979274
+Epoch: 1460/8000, train loss: 8.883158, node_f_loss: 5.881507, [type_loss 2.816664, index_loss 0.946925, int_v_loss 0.576951, float_v_loss 0.012176, string_loss 1.528792], direction_loss:3.001651
+Epoch: 1470/8000, train loss: 10.175785, node_f_loss: 7.177847, [type_loss 2.871511, index_loss 1.008875, int_v_loss 0.677987, float_v_loss 1.095484, string_loss 1.523991], direction_loss:2.997937
+Epoch: 1480/8000, train loss: 10.759689, node_f_loss: 7.733304, [type_loss 2.791357, index_loss 0.978971, int_v_loss 2.422769, float_v_loss 0.014151, string_loss 1.526056], direction_loss:3.026385
+Epoch: 1490/8000, train loss: 8.765280, node_f_loss: 5.740071, [type_loss 2.776165, index_loss 0.948495, int_v_loss 0.481337, float_v_loss 0.011652, string_loss 1.522422], direction_loss:3.025208
+Epoch: 1500/8000, train loss: 8.349825, node_f_loss: 5.330503, [type_loss 2.798291, index_loss 0.950892, int_v_loss 0.045516, float_v_loss 0.012209, string_loss 1.523595], direction_loss:3.019322
+Epoch: 1510/8000, train loss: 8.740335, node_f_loss: 5.763886, [type_loss 2.734150, index_loss 0.959783, int_v_loss 0.502387, float_v_loss 0.016463, string_loss 1.551104], direction_loss:2.976449
+Epoch: 1520/8000, train loss: 9.537790, node_f_loss: 6.535542, [type_loss 2.661688, index_loss 0.850149, int_v_loss 0.321425, float_v_loss 1.099413, string_loss 1.602867], direction_loss:3.002248
+Epoch: 1530/8000, train loss: 9.521896, node_f_loss: 6.548112, [type_loss 2.793727, index_loss 0.986889, int_v_loss 1.119718, float_v_loss 0.085225, string_loss 1.562553], direction_loss:2.973784
+Epoch: 1540/8000, train loss: 11.513694, node_f_loss: 8.509297, [type_loss 2.825750, index_loss 1.017623, int_v_loss 3.103400, float_v_loss 0.014180, string_loss 1.548344], direction_loss:3.004396
+Epoch: 1550/8000, train loss: 11.178676, node_f_loss: 8.194283, [type_loss 2.900293, index_loss 1.006886, int_v_loss 2.742397, float_v_loss 0.013291, string_loss 1.531416], direction_loss:2.984392
+Epoch: 1560/8000, train loss: 11.629943, node_f_loss: 8.609267, [type_loss 2.595083, index_loss 0.839695, int_v_loss 2.482483, float_v_loss 1.110269, string_loss 1.581737], direction_loss:3.020675
+Epoch: 1570/8000, train loss: 9.041375, node_f_loss: 6.040090, [type_loss 2.485287, index_loss 0.880708, int_v_loss 1.069675, float_v_loss 0.013875, string_loss 1.590544], direction_loss:3.001286
+Epoch: 1580/8000, train loss: 8.848488, node_f_loss: 5.842264, [type_loss 2.667205, index_loss 0.913056, int_v_loss 0.669114, float_v_loss 0.013641, string_loss 1.579248], direction_loss:3.006224
+Epoch: 1590/8000, train loss: 11.667991, node_f_loss: 8.676758, [type_loss 2.771729, index_loss 1.009740, int_v_loss 2.153887, float_v_loss 1.172043, string_loss 1.569359], direction_loss:2.991233
+Epoch: 1600/8000, train loss: 8.289618, node_f_loss: 5.304734, [type_loss 2.736648, index_loss 0.892842, int_v_loss 0.117797, float_v_loss 0.012561, string_loss 1.544886], direction_loss:2.984884
+Epoch: 1610/8000, train loss: 8.525627, node_f_loss: 5.510600, [type_loss 2.677417, index_loss 0.879314, int_v_loss 0.390613, float_v_loss 0.013138, string_loss 1.550118], direction_loss:3.015028
+Epoch: 1620/8000, train loss: 9.685684, node_f_loss: 6.724835, [type_loss 2.771442, index_loss 0.953708, int_v_loss 1.434464, float_v_loss 0.012746, string_loss 1.552476], direction_loss:2.960850
+Epoch: 1630/8000, train loss: 9.640424, node_f_loss: 6.625554, [type_loss 2.604353, index_loss 0.857274, int_v_loss 0.464961, float_v_loss 1.115634, string_loss 1.583331], direction_loss:3.014870
+Epoch: 1640/8000, train loss: 8.487466, node_f_loss: 5.469946, [type_loss 2.760572, index_loss 0.881929, int_v_loss 0.265801, float_v_loss 0.014243, string_loss 1.547399], direction_loss:3.017520
+Epoch: 1650/8000, train loss: 9.191494, node_f_loss: 6.220770, [type_loss 2.694549, index_loss 0.929099, int_v_loss 1.053488, float_v_loss 0.014587, string_loss 1.529047], direction_loss:2.970724
+Epoch: 1660/8000, train loss: 8.743147, node_f_loss: 5.663375, [type_loss 2.690896, index_loss 0.907608, int_v_loss 0.498339, float_v_loss 0.015283, string_loss 1.551249], direction_loss:3.079772
+Epoch: 1670/8000, train loss: 8.920064, node_f_loss: 5.923382, [type_loss 2.774336, index_loss 0.947607, int_v_loss 0.635065, float_v_loss 0.013269, string_loss 1.553106], direction_loss:2.996682
+Epoch: 1680/8000, train loss: 11.275589, node_f_loss: 8.258914, [type_loss 2.726960, index_loss 0.931152, int_v_loss 1.957708, float_v_loss 1.104402, string_loss 1.538692], direction_loss:3.016675
+Epoch: 1690/8000, train loss: 9.197445, node_f_loss: 6.200912, [type_loss 2.700853, index_loss 0.940723, int_v_loss 0.991250, float_v_loss 0.013773, string_loss 1.554314], direction_loss:2.996533
+Epoch: 1700/8000, train loss: 11.557028, node_f_loss: 8.645432, [type_loss 2.859004, index_loss 1.005070, int_v_loss 1.145488, float_v_loss 2.114148, string_loss 1.521722], direction_loss:2.911597
+Epoch: 1710/8000, train loss: 8.619098, node_f_loss: 5.687554, [type_loss 2.811728, index_loss 0.903134, int_v_loss 0.384596, float_v_loss 0.014473, string_loss 1.573622], direction_loss:2.931543
+Epoch: 1720/8000, train loss: 9.495851, node_f_loss: 6.509017, [type_loss 2.767025, index_loss 0.974334, int_v_loss 1.204742, float_v_loss 0.015214, string_loss 1.547703], direction_loss:2.986833
+Epoch: 1730/8000, train loss: 10.155161, node_f_loss: 7.143038, [type_loss 2.975314, index_loss 1.047706, int_v_loss 0.499057, float_v_loss 1.103201, string_loss 1.517760], direction_loss:3.012122
+Epoch: 1740/8000, train loss: 10.749718, node_f_loss: 7.768797, [type_loss 2.660284, index_loss 0.884064, int_v_loss 2.651001, float_v_loss 0.014984, string_loss 1.558464], direction_loss:2.980921
+Epoch: 1750/8000, train loss: 8.440914, node_f_loss: 5.442588, [type_loss 2.753379, index_loss 0.917111, int_v_loss 0.242186, float_v_loss 0.015475, string_loss 1.514437], direction_loss:2.998326
+Epoch: 1760/8000, train loss: 8.482333, node_f_loss: 5.504706, [type_loss 2.644802, index_loss 0.873180, int_v_loss 0.408262, float_v_loss 0.014922, string_loss 1.563541], direction_loss:2.977627
+Epoch: 1770/8000, train loss: 8.394997, node_f_loss: 5.424538, [type_loss 2.449208, index_loss 0.805249, int_v_loss 0.510692, float_v_loss 0.013561, string_loss 1.645828], direction_loss:2.970459
+Epoch: 1780/8000, train loss: 12.128324, node_f_loss: 9.117000, [type_loss 2.765990, index_loss 0.982325, int_v_loss 3.835301, float_v_loss 0.018065, string_loss 1.515319], direction_loss:3.011324
+Epoch: 1790/8000, train loss: 11.022507, node_f_loss: 8.035063, [type_loss 2.810363, index_loss 0.938778, int_v_loss 1.627937, float_v_loss 1.088751, string_loss 1.569234], direction_loss:2.987444
+Epoch: 1800/8000, train loss: 9.755684, node_f_loss: 6.795008, [type_loss 2.705500, index_loss 0.908923, int_v_loss 1.636586, float_v_loss 0.014285, string_loss 1.529712], direction_loss:2.960676
+Epoch: 1810/8000, train loss: 9.100586, node_f_loss: 6.130015, [type_loss 2.808674, index_loss 0.967070, int_v_loss 0.778483, float_v_loss 0.015616, string_loss 1.560174], direction_loss:2.970571
+Epoch: 1820/8000, train loss: 8.687650, node_f_loss: 5.739216, [type_loss 2.609600, index_loss 0.870706, int_v_loss 0.602831, float_v_loss 0.085216, string_loss 1.570863], direction_loss:2.948433
+Epoch: 1830/8000, train loss: 13.571815, node_f_loss: 10.584305, [type_loss 2.777334, index_loss 0.985497, int_v_loss 4.214560, float_v_loss 1.093901, string_loss 1.513012], direction_loss:2.987510
+Epoch: 1840/8000, train loss: 10.795435, node_f_loss: 7.823020, [type_loss 2.694498, index_loss 0.920915, int_v_loss 2.633602, float_v_loss 0.015341, string_loss 1.558664], direction_loss:2.972416
+Epoch: 1850/8000, train loss: 9.720808, node_f_loss: 6.729767, [type_loss 2.841961, index_loss 0.902690, int_v_loss 1.444068, float_v_loss 0.014963, string_loss 1.526085], direction_loss:2.991040
+Epoch: 1860/8000, train loss: 10.125469, node_f_loss: 7.136998, [type_loss 2.732245, index_loss 0.935554, int_v_loss 1.916669, float_v_loss 0.013405, string_loss 1.539126], direction_loss:2.988471
+Epoch: 1870/8000, train loss: 8.289506, node_f_loss: 5.349949, [type_loss 2.682664, index_loss 0.855582, int_v_loss 0.257285, float_v_loss 0.014263, string_loss 1.540156], direction_loss:2.939557
+Epoch: 1880/8000, train loss: 12.876364, node_f_loss: 9.864477, [type_loss 2.612345, index_loss 0.915477, int_v_loss 4.755058, float_v_loss 0.014667, string_loss 1.566929], direction_loss:3.011886
+Epoch: 1890/8000, train loss: 10.521569, node_f_loss: 7.560959, [type_loss 2.672920, index_loss 0.872015, int_v_loss 2.438823, float_v_loss 0.014571, string_loss 1.562630], direction_loss:2.960610
+Epoch: 1900/8000, train loss: 9.195904, node_f_loss: 6.241095, [type_loss 2.710763, index_loss 0.939111, int_v_loss 1.028366, float_v_loss 0.014254, string_loss 1.548600], direction_loss:2.954809
+Epoch: 1910/8000, train loss: 10.213764, node_f_loss: 7.213911, [type_loss 2.614381, index_loss 0.858359, int_v_loss 2.163188, float_v_loss 0.018477, string_loss 1.559506], direction_loss:2.999853
+Epoch: 1920/8000, train loss: 9.026789, node_f_loss: 6.017669, [type_loss 2.686155, index_loss 0.901074, int_v_loss 0.883647, float_v_loss 0.014215, string_loss 1.532577], direction_loss:3.009120
+Epoch: 1930/8000, train loss: 9.848980, node_f_loss: 6.867248, [type_loss 2.824139, index_loss 0.945055, int_v_loss 1.567972, float_v_loss 0.014340, string_loss 1.515742], direction_loss:2.981733
+Epoch: 1940/8000, train loss: 8.630297, node_f_loss: 5.682082, [type_loss 2.596663, index_loss 0.892942, int_v_loss 0.602120, float_v_loss 0.015116, string_loss 1.575241], direction_loss:2.948215
+Epoch: 1950/8000, train loss: 10.407417, node_f_loss: 7.449841, [type_loss 2.736543, index_loss 0.904482, int_v_loss 1.167860, float_v_loss 1.091228, string_loss 1.549728], direction_loss:2.957577
+Epoch: 1960/8000, train loss: 11.605396, node_f_loss: 8.645654, [type_loss 2.803187, index_loss 0.962421, int_v_loss 3.335769, float_v_loss 0.018999, string_loss 1.525278], direction_loss:2.959743
+Epoch: 1970/8000, train loss: 10.455853, node_f_loss: 7.436539, [type_loss 2.744688, index_loss 0.900091, int_v_loss 1.114693, float_v_loss 1.123263, string_loss 1.553805], direction_loss:3.019314
+Epoch: 1980/8000, train loss: 12.025992, node_f_loss: 9.091021, [type_loss 2.726911, index_loss 0.931253, int_v_loss 2.834499, float_v_loss 1.080596, string_loss 1.517762], direction_loss:2.934972
+Epoch: 1990/8000, train loss: 9.733119, node_f_loss: 6.722434, [type_loss 2.815138, index_loss 0.890226, int_v_loss 0.365074, float_v_loss 1.113207, string_loss 1.538789], direction_loss:3.010685
+Epoch: 2000/8000, train loss: 9.676497, node_f_loss: 6.746893, [type_loss 2.585535, index_loss 0.859202, int_v_loss 1.690023, float_v_loss 0.014742, string_loss 1.597391], direction_loss:2.929604
+Epoch: 2010/8000, train loss: 9.575272, node_f_loss: 6.635996, [type_loss 2.702951, index_loss 0.880463, int_v_loss 1.491394, float_v_loss 0.015847, string_loss 1.545340], direction_loss:2.939275
+Epoch: 2020/8000, train loss: 9.421362, node_f_loss: 6.369625, [type_loss 2.765486, index_loss 0.936690, int_v_loss 1.143031, float_v_loss 0.015847, string_loss 1.508570], direction_loss:3.051736
+Epoch: 2030/8000, train loss: 8.725962, node_f_loss: 5.797860, [type_loss 2.785178, index_loss 0.916344, int_v_loss 0.538871, float_v_loss 0.015500, string_loss 1.541968], direction_loss:2.928102
+Epoch: 2040/8000, train loss: 8.714483, node_f_loss: 5.743134, [type_loss 2.770509, index_loss 0.869219, int_v_loss 0.540839, float_v_loss 0.015827, string_loss 1.546741], direction_loss:2.971349
+Epoch: 2050/8000, train loss: 8.457808, node_f_loss: 5.525283, [type_loss 2.541720, index_loss 0.846746, int_v_loss 0.523425, float_v_loss 0.015581, string_loss 1.597811], direction_loss:2.932525
+Epoch: 2060/8000, train loss: 10.048619, node_f_loss: 7.071083, [type_loss 2.625610, index_loss 0.867078, int_v_loss 2.029270, float_v_loss 0.015496, string_loss 1.533629], direction_loss:2.977536
+Epoch: 2070/8000, train loss: 8.247532, node_f_loss: 5.333708, [type_loss 2.554163, index_loss 0.804154, int_v_loss 0.403456, float_v_loss 0.014997, string_loss 1.556939], direction_loss:2.913823
+Epoch: 2080/8000, train loss: 8.452386, node_f_loss: 5.567396, [type_loss 2.383692, index_loss 0.761062, int_v_loss 0.785147, float_v_loss 0.013409, string_loss 1.624086], direction_loss:2.884990
+Epoch: 2090/8000, train loss: 8.781160, node_f_loss: 5.854546, [type_loss 2.593312, index_loss 0.882193, int_v_loss 0.742855, float_v_loss 0.089162, string_loss 1.547023], direction_loss:2.926614
+Epoch: 2100/8000, train loss: 9.141864, node_f_loss: 6.172634, [type_loss 2.731497, index_loss 0.885369, int_v_loss 0.967084, float_v_loss 0.015615, string_loss 1.573070], direction_loss:2.969230
+Epoch: 2110/8000, train loss: 8.525204, node_f_loss: 5.610119, [type_loss 2.715349, index_loss 0.841302, int_v_loss 0.502597, float_v_loss 0.015792, string_loss 1.535080], direction_loss:2.915084
+Epoch: 2120/8000, train loss: 9.612417, node_f_loss: 6.666857, [type_loss 2.660918, index_loss 0.874741, int_v_loss 1.570996, float_v_loss 0.016104, string_loss 1.544097], direction_loss:2.945561
+Epoch: 2130/8000, train loss: 10.911598, node_f_loss: 7.932674, [type_loss 2.602381, index_loss 0.872021, int_v_loss 2.724062, float_v_loss 0.163477, string_loss 1.570733], direction_loss:2.978924
+Epoch: 2140/8000, train loss: 13.278676, node_f_loss: 10.322735, [type_loss 2.676621, index_loss 0.923526, int_v_loss 5.172411, float_v_loss 0.015806, string_loss 1.534371], direction_loss:2.955941
+Epoch: 2150/8000, train loss: 10.376123, node_f_loss: 7.413028, [type_loss 2.470244, index_loss 0.796669, int_v_loss 2.562615, float_v_loss 0.015510, string_loss 1.567991], direction_loss:2.963096
+Epoch: 2160/8000, train loss: 8.487160, node_f_loss: 5.514153, [type_loss 2.653602, index_loss 0.848512, int_v_loss 0.427192, float_v_loss 0.014141, string_loss 1.570706], direction_loss:2.973008
+Epoch: 2170/8000, train loss: 9.769510, node_f_loss: 6.819585, [type_loss 2.731912, index_loss 0.910903, int_v_loss 1.537273, float_v_loss 0.090516, string_loss 1.548980], direction_loss:2.949926
+Epoch: 2180/8000, train loss: 9.761118, node_f_loss: 6.815862, [type_loss 2.788016, index_loss 0.928374, int_v_loss 0.405044, float_v_loss 1.162753, string_loss 1.531676], direction_loss:2.945256
+Epoch: 2190/8000, train loss: 10.311813, node_f_loss: 7.387482, [type_loss 2.654067, index_loss 0.839792, int_v_loss 2.324124, float_v_loss 0.020329, string_loss 1.549169], direction_loss:2.924332
+Epoch: 2200/8000, train loss: 9.573872, node_f_loss: 6.623126, [type_loss 2.682815, index_loss 0.815885, int_v_loss 1.568316, float_v_loss 0.015090, string_loss 1.541021], direction_loss:2.950746
+Epoch: 2210/8000, train loss: 8.091782, node_f_loss: 5.144228, [type_loss 2.555704, index_loss 0.768491, int_v_loss 0.210994, float_v_loss 0.014967, string_loss 1.594072], direction_loss:2.947554
+Epoch: 2220/8000, train loss: 13.555782, node_f_loss: 10.591208, [type_loss 2.717248, index_loss 0.948985, int_v_loss 3.243993, float_v_loss 2.168245, string_loss 1.512736], direction_loss:2.964574
+Epoch: 2230/8000, train loss: 9.150102, node_f_loss: 6.201025, [type_loss 2.807719, index_loss 0.853543, int_v_loss 0.960322, float_v_loss 0.015316, string_loss 1.564126], direction_loss:2.949076
+Epoch: 2240/8000, train loss: 12.153851, node_f_loss: 9.173404, [type_loss 2.625934, index_loss 0.823466, int_v_loss 1.912568, float_v_loss 2.264470, string_loss 1.546965], direction_loss:2.980447
+Epoch: 2250/8000, train loss: 8.151796, node_f_loss: 5.223847, [type_loss 2.684059, index_loss 0.872104, int_v_loss 0.118634, float_v_loss 0.015282, string_loss 1.533767], direction_loss:2.927949
+Epoch: 2260/8000, train loss: 10.468500, node_f_loss: 7.501080, [type_loss 2.856867, index_loss 0.955015, int_v_loss 2.161840, float_v_loss 0.016677, string_loss 1.510680], direction_loss:2.967421
+Epoch: 2270/8000, train loss: 7.937688, node_f_loss: 5.007536, [type_loss 2.633199, index_loss 0.748253, int_v_loss 0.056336, float_v_loss 0.015052, string_loss 1.554696], direction_loss:2.930152
+Epoch: 2280/8000, train loss: 11.807181, node_f_loss: 8.845133, [type_loss 2.735200, index_loss 0.882850, int_v_loss 2.577386, float_v_loss 1.099368, string_loss 1.550329], direction_loss:2.962049
+Epoch: 2290/8000, train loss: 11.442905, node_f_loss: 8.508548, [type_loss 2.518121, index_loss 0.788515, int_v_loss 2.531494, float_v_loss 1.100750, string_loss 1.569668], direction_loss:2.934357
+Epoch: 2300/8000, train loss: 9.661789, node_f_loss: 6.738922, [type_loss 2.698401, index_loss 0.935981, int_v_loss 1.463461, float_v_loss 0.088918, string_loss 1.552160], direction_loss:2.922867
+Epoch: 2310/8000, train loss: 9.393616, node_f_loss: 6.454494, [type_loss 2.494416, index_loss 0.806472, int_v_loss 1.569674, float_v_loss 0.014836, string_loss 1.569096], direction_loss:2.939121
+Epoch: 2320/8000, train loss: 10.437302, node_f_loss: 7.511812, [type_loss 2.624179, index_loss 0.881140, int_v_loss 1.374354, float_v_loss 1.087486, string_loss 1.544654], direction_loss:2.925489
+Epoch: 2330/8000, train loss: 9.651037, node_f_loss: 6.725162, [type_loss 2.487808, index_loss 0.810795, int_v_loss 0.750921, float_v_loss 1.098119, string_loss 1.577518], direction_loss:2.925875
+Epoch: 2340/8000, train loss: 11.376299, node_f_loss: 8.441431, [type_loss 2.524549, index_loss 0.837025, int_v_loss 1.273513, float_v_loss 2.257091, string_loss 1.549254], direction_loss:2.934868
+Epoch: 2350/8000, train loss: 7.970270, node_f_loss: 5.026317, [type_loss 2.466214, index_loss 0.772022, int_v_loss 0.163968, float_v_loss 0.013971, string_loss 1.610141], direction_loss:2.943953
+Epoch: 2360/8000, train loss: 7.716249, node_f_loss: 4.814489, [type_loss 2.399169, index_loss 0.757379, int_v_loss 0.026296, float_v_loss 0.013935, string_loss 1.617711], direction_loss:2.901759
+Epoch: 2370/8000, train loss: 8.094418, node_f_loss: 5.096275, [type_loss 2.603900, index_loss 0.881104, int_v_loss 0.017664, float_v_loss 0.015244, string_loss 1.578364], direction_loss:2.998142
+Epoch: 2380/8000, train loss: 8.108496, node_f_loss: 5.181888, [type_loss 2.643056, index_loss 0.833333, int_v_loss 0.133946, float_v_loss 0.020911, string_loss 1.550640], direction_loss:2.926608
+Epoch: 2390/8000, train loss: 10.993477, node_f_loss: 8.081280, [type_loss 2.693036, index_loss 0.861445, int_v_loss 1.891331, float_v_loss 1.089098, string_loss 1.546371], direction_loss:2.912197
+Epoch: 2400/8000, train loss: 9.546669, node_f_loss: 6.607964, [type_loss 2.506266, index_loss 0.817774, int_v_loss 1.673547, float_v_loss 0.016465, string_loss 1.593912], direction_loss:2.938705
+Epoch: 2410/8000, train loss: 8.228777, node_f_loss: 5.314941, [type_loss 2.371434, index_loss 0.823867, int_v_loss 0.498164, float_v_loss 0.015258, string_loss 1.606218], direction_loss:2.913835
+Epoch: 2420/8000, train loss: 8.400639, node_f_loss: 5.441820, [type_loss 2.513795, index_loss 0.791344, int_v_loss 0.535030, float_v_loss 0.014959, string_loss 1.586691], direction_loss:2.958819
+Epoch: 2430/8000, train loss: 9.889358, node_f_loss: 6.920453, [type_loss 2.603736, index_loss 0.861123, int_v_loss 1.894752, float_v_loss 0.016436, string_loss 1.544405], direction_loss:2.968904
+Epoch: 2440/8000, train loss: 7.882067, node_f_loss: 4.976387, [type_loss 2.367425, index_loss 0.738843, int_v_loss 0.241248, float_v_loss 0.013912, string_loss 1.614959], direction_loss:2.905680
+Epoch: 2450/8000, train loss: 8.893691, node_f_loss: 5.986495, [type_loss 2.412812, index_loss 0.744105, int_v_loss 1.188320, float_v_loss 0.015011, string_loss 1.626248], direction_loss:2.907196
+Epoch: 2460/8000, train loss: 10.330364, node_f_loss: 7.348295, [type_loss 2.607143, index_loss 0.768196, int_v_loss 1.229417, float_v_loss 1.185321, string_loss 1.558218], direction_loss:2.982069
+Epoch: 2470/8000, train loss: 13.192506, node_f_loss: 10.292003, [type_loss 2.655967, index_loss 0.868100, int_v_loss 4.149088, float_v_loss 1.083830, string_loss 1.535017], direction_loss:2.900503
+Epoch: 2480/8000, train loss: 8.080712, node_f_loss: 5.145636, [type_loss 2.695519, index_loss 0.852861, int_v_loss 0.037271, float_v_loss 0.024058, string_loss 1.535925], direction_loss:2.935077
+Epoch: 2490/8000, train loss: 7.573109, node_f_loss: 4.634838, [type_loss 2.257673, index_loss 0.707121, int_v_loss 0.016677, float_v_loss 0.013644, string_loss 1.639723], direction_loss:2.938271
+Epoch: 2500/8000, train loss: 8.057726, node_f_loss: 5.094391, [type_loss 2.661691, index_loss 0.809689, int_v_loss 0.067625, float_v_loss 0.015484, string_loss 1.539903], direction_loss:2.963335
+Epoch: 2510/8000, train loss: 11.187588, node_f_loss: 8.269309, [type_loss 2.575079, index_loss 0.860627, int_v_loss 2.205499, float_v_loss 1.083923, string_loss 1.544181], direction_loss:2.918279
+Epoch: 2520/8000, train loss: 9.917075, node_f_loss: 7.030046, [type_loss 2.626466, index_loss 0.786991, int_v_loss 0.985011, float_v_loss 1.083345, string_loss 1.548232], direction_loss:2.887030
+Epoch: 2530/8000, train loss: 7.941668, node_f_loss: 5.022500, [type_loss 2.411518, index_loss 0.762990, int_v_loss 0.212632, float_v_loss 0.014911, string_loss 1.620449], direction_loss:2.919168
+Epoch: 2540/8000, train loss: 9.081372, node_f_loss: 6.169356, [type_loss 2.423408, index_loss 0.734204, int_v_loss 0.311336, float_v_loss 1.092947, string_loss 1.607463], direction_loss:2.912016
+Epoch: 2550/8000, train loss: 12.395837, node_f_loss: 9.448363, [type_loss 2.750320, index_loss 0.932550, int_v_loss 3.150340, float_v_loss 1.088621, string_loss 1.526532], direction_loss:2.947473
+Epoch: 2560/8000, train loss: 10.209700, node_f_loss: 7.265206, [type_loss 2.318827, index_loss 0.708907, int_v_loss 2.602980, float_v_loss 0.014603, string_loss 1.619889], direction_loss:2.944493
+Epoch: 2570/8000, train loss: 9.810427, node_f_loss: 6.886427, [type_loss 2.668579, index_loss 0.835909, int_v_loss 1.835793, float_v_loss 0.017429, string_loss 1.528718], direction_loss:2.923999
+Epoch: 2580/8000, train loss: 8.035348, node_f_loss: 5.127028, [type_loss 2.743623, index_loss 0.796276, int_v_loss 0.039265, float_v_loss 0.015550, string_loss 1.532313], direction_loss:2.908320
+Epoch: 2590/8000, train loss: 10.012925, node_f_loss: 7.086156, [type_loss 2.409743, index_loss 0.696095, int_v_loss 1.250096, float_v_loss 1.103057, string_loss 1.627165], direction_loss:2.926769
+Epoch: 2600/8000, train loss: 9.939889, node_f_loss: 7.007961, [type_loss 2.598737, index_loss 0.783497, int_v_loss 2.057098, float_v_loss 0.016675, string_loss 1.551954], direction_loss:2.931927
+Epoch: 2610/8000, train loss: 10.527052, node_f_loss: 7.613323, [type_loss 2.471204, index_loss 0.761043, int_v_loss 2.784171, float_v_loss 0.014938, string_loss 1.581967], direction_loss:2.913728
+Epoch: 2620/8000, train loss: 11.299614, node_f_loss: 8.327110, [type_loss 2.576982, index_loss 0.787226, int_v_loss 3.402027, float_v_loss 0.017029, string_loss 1.543847], direction_loss:2.972504
+Epoch: 2630/8000, train loss: 10.724060, node_f_loss: 7.764522, [type_loss 2.711342, index_loss 0.865625, int_v_loss 1.522865, float_v_loss 1.107918, string_loss 1.556772], direction_loss:2.959538
+Epoch: 2640/8000, train loss: 8.256414, node_f_loss: 5.359248, [type_loss 2.483226, index_loss 0.774131, int_v_loss 0.486272, float_v_loss 0.016451, string_loss 1.599169], direction_loss:2.897166
+Epoch: 2650/8000, train loss: 8.415236, node_f_loss: 5.456617, [type_loss 2.609129, index_loss 0.776495, int_v_loss 0.498853, float_v_loss 0.016704, string_loss 1.555435], direction_loss:2.958620
+Epoch: 2660/8000, train loss: 10.700013, node_f_loss: 7.770679, [type_loss 2.406561, index_loss 0.781364, int_v_loss 2.959057, float_v_loss 0.015897, string_loss 1.607800], direction_loss:2.929333
+Epoch: 2670/8000, train loss: 9.660674, node_f_loss: 6.721174, [type_loss 2.695635, index_loss 0.871395, int_v_loss 1.621731, float_v_loss 0.019088, string_loss 1.513325], direction_loss:2.939500
+Epoch: 2680/8000, train loss: 7.984334, node_f_loss: 5.061119, [type_loss 2.624932, index_loss 0.804275, int_v_loss 0.077467, float_v_loss 0.016474, string_loss 1.537971], direction_loss:2.923215
+Epoch: 2690/8000, train loss: 8.090124, node_f_loss: 5.181586, [type_loss 2.491554, index_loss 0.731148, int_v_loss 0.359064, float_v_loss 0.015796, string_loss 1.584025], direction_loss:2.908539
+Epoch: 2700/8000, train loss: 10.013620, node_f_loss: 7.068136, [type_loss 2.685708, index_loss 0.842969, int_v_loss 0.803327, float_v_loss 1.169835, string_loss 1.566297], direction_loss:2.945485
+Epoch: 2710/8000, train loss: 8.108600, node_f_loss: 5.165257, [type_loss 2.694341, index_loss 0.846945, int_v_loss 0.099189, float_v_loss 0.025247, string_loss 1.499533], direction_loss:2.943343
+Epoch: 2720/8000, train loss: 8.667283, node_f_loss: 5.749283, [type_loss 2.502488, index_loss 0.776948, int_v_loss 0.857798, float_v_loss 0.015945, string_loss 1.596104], direction_loss:2.918000
+Epoch: 2730/8000, train loss: 7.742980, node_f_loss: 4.848553, [type_loss 2.512059, index_loss 0.724861, int_v_loss 0.027459, float_v_loss 0.018536, string_loss 1.565637], direction_loss:2.894428
+Epoch: 2740/8000, train loss: 7.993665, node_f_loss: 5.077255, [type_loss 2.650214, index_loss 0.781548, int_v_loss 0.068889, float_v_loss 0.016545, string_loss 1.560059], direction_loss:2.916410
+Epoch: 2750/8000, train loss: 7.866393, node_f_loss: 4.947251, [type_loss 2.530837, index_loss 0.775670, int_v_loss 0.045504, float_v_loss 0.015420, string_loss 1.579821], direction_loss:2.919142
+Epoch: 2760/8000, train loss: 10.577787, node_f_loss: 7.614126, [type_loss 2.653718, index_loss 0.754825, int_v_loss 2.638198, float_v_loss 0.016661, string_loss 1.550724], direction_loss:2.963662
+Epoch: 2770/8000, train loss: 7.779995, node_f_loss: 4.877804, [type_loss 2.551819, index_loss 0.731673, int_v_loss 0.020144, float_v_loss 0.017455, string_loss 1.556713], direction_loss:2.902192
+Epoch: 2780/8000, train loss: 8.393015, node_f_loss: 5.478847, [type_loss 2.351212, index_loss 0.657589, int_v_loss 0.844635, float_v_loss 0.015873, string_loss 1.609538], direction_loss:2.914167
+Epoch: 2790/8000, train loss: 7.853835, node_f_loss: 4.971035, [type_loss 2.523704, index_loss 0.717600, int_v_loss 0.148810, float_v_loss 0.017002, string_loss 1.563919], direction_loss:2.882800
+Epoch: 2800/8000, train loss: 8.920169, node_f_loss: 6.001125, [type_loss 2.556190, index_loss 0.802576, int_v_loss 1.083648, float_v_loss 0.017242, string_loss 1.541469], direction_loss:2.919043
+Epoch: 2810/8000, train loss: 10.444336, node_f_loss: 7.501386, [type_loss 2.600925, index_loss 0.781855, int_v_loss 2.554955, float_v_loss 0.016809, string_loss 1.546840], direction_loss:2.942950
+Epoch: 2820/8000, train loss: 7.985943, node_f_loss: 5.044614, [type_loss 2.626481, index_loss 0.821330, int_v_loss 0.058524, float_v_loss 0.017207, string_loss 1.521073], direction_loss:2.941329
+Epoch: 2830/8000, train loss: 9.846561, node_f_loss: 6.931391, [type_loss 2.564229, index_loss 0.750488, int_v_loss 2.066718, float_v_loss 0.016547, string_loss 1.533410], direction_loss:2.915171
+Epoch: 2840/8000, train loss: 9.946377, node_f_loss: 7.058971, [type_loss 2.273326, index_loss 0.721316, int_v_loss 1.337374, float_v_loss 1.100590, string_loss 1.626364], direction_loss:2.887406
+Epoch: 2850/8000, train loss: 8.007158, node_f_loss: 5.067590, [type_loss 2.550083, index_loss 0.778895, int_v_loss 0.162813, float_v_loss 0.017427, string_loss 1.558372], direction_loss:2.939569
+Epoch: 2860/8000, train loss: 8.421415, node_f_loss: 5.542819, [type_loss 2.598588, index_loss 0.766930, int_v_loss 0.581171, float_v_loss 0.016967, string_loss 1.579162], direction_loss:2.878597
+Epoch: 2870/8000, train loss: 9.324971, node_f_loss: 6.384754, [type_loss 2.693868, index_loss 0.848809, int_v_loss 1.264229, float_v_loss 0.023595, string_loss 1.554253], direction_loss:2.940217
+Epoch: 2880/8000, train loss: 7.801310, node_f_loss: 4.925346, [type_loss 2.467244, index_loss 0.711636, int_v_loss 0.086535, float_v_loss 0.088711, string_loss 1.571221], direction_loss:2.875963
+Epoch: 2890/8000, train loss: 8.153400, node_f_loss: 5.238510, [type_loss 2.456898, index_loss 0.725223, int_v_loss 0.448576, float_v_loss 0.016973, string_loss 1.590840], direction_loss:2.914890
+Epoch: 2900/8000, train loss: 9.879216, node_f_loss: 6.961721, [type_loss 2.512361, index_loss 0.763818, int_v_loss 2.110607, float_v_loss 0.016117, string_loss 1.558818], direction_loss:2.917495
+Epoch: 2910/8000, train loss: 10.985855, node_f_loss: 8.070635, [type_loss 2.540344, index_loss 0.795546, int_v_loss 3.138953, float_v_loss 0.018861, string_loss 1.576930], direction_loss:2.915221
+Epoch: 2920/8000, train loss: 10.224276, node_f_loss: 7.335268, [type_loss 2.425650, index_loss 0.737083, int_v_loss 2.550315, float_v_loss 0.015693, string_loss 1.606527], direction_loss:2.889007
+Epoch: 2930/8000, train loss: 9.298208, node_f_loss: 6.394642, [type_loss 2.309018, index_loss 0.709997, int_v_loss 0.652730, float_v_loss 1.100193, string_loss 1.622705], direction_loss:2.903566
+Epoch: 2940/8000, train loss: 10.369902, node_f_loss: 7.502584, [type_loss 2.474835, index_loss 0.742067, int_v_loss 0.597935, float_v_loss 2.126788, string_loss 1.560958], direction_loss:2.867317
+Epoch: 2950/8000, train loss: 10.439694, node_f_loss: 7.513858, [type_loss 2.486795, index_loss 0.745808, int_v_loss 1.596189, float_v_loss 1.098839, string_loss 1.586228], direction_loss:2.925837
+Epoch: 2960/8000, train loss: 8.892755, node_f_loss: 5.980919, [type_loss 2.583449, index_loss 0.780142, int_v_loss 1.056121, float_v_loss 0.017947, string_loss 1.543261], direction_loss:2.911835
+Epoch: 2970/8000, train loss: 12.232546, node_f_loss: 9.368187, [type_loss 2.449560, index_loss 0.726570, int_v_loss 3.516087, float_v_loss 1.069602, string_loss 1.606368], direction_loss:2.864359
+Epoch: 2980/8000, train loss: 10.254061, node_f_loss: 7.344882, [type_loss 2.628542, index_loss 0.771473, int_v_loss 1.285959, float_v_loss 1.097620, string_loss 1.561287], direction_loss:2.909179
+Epoch: 2990/8000, train loss: 10.926781, node_f_loss: 7.965862, [type_loss 2.670312, index_loss 0.772009, int_v_loss 2.991116, float_v_loss 0.018160, string_loss 1.514265], direction_loss:2.960919
+Epoch: 3000/8000, train loss: 10.749262, node_f_loss: 7.849786, [type_loss 2.478188, index_loss 0.740936, int_v_loss 3.062581, float_v_loss 0.016373, string_loss 1.551708], direction_loss:2.899476
+Epoch: 3010/8000, train loss: 7.744169, node_f_loss: 4.861227, [type_loss 2.493534, index_loss 0.701301, int_v_loss 0.046918, float_v_loss 0.019855, string_loss 1.599619], direction_loss:2.882942
+Epoch: 3020/8000, train loss: 11.969159, node_f_loss: 9.086851, [type_loss 2.513357, index_loss 0.761316, int_v_loss 4.230400, float_v_loss 0.020626, string_loss 1.561151], direction_loss:2.882308
+Epoch: 3030/8000, train loss: 11.436737, node_f_loss: 8.550942, [type_loss 2.660869, index_loss 0.779247, int_v_loss 3.544729, float_v_loss 0.019217, string_loss 1.546881], direction_loss:2.885794
+Epoch: 3040/8000, train loss: 8.417071, node_f_loss: 5.540074, [type_loss 2.482049, index_loss 0.736891, int_v_loss 0.726545, float_v_loss 0.018073, string_loss 1.576517], direction_loss:2.876997
+Epoch: 3050/8000, train loss: 11.809600, node_f_loss: 8.884055, [type_loss 2.498853, index_loss 0.729081, int_v_loss 4.095539, float_v_loss 0.017000, string_loss 1.543582], direction_loss:2.925545
+Epoch: 3060/8000, train loss: 10.773531, node_f_loss: 7.864612, [type_loss 2.621411, index_loss 0.803006, int_v_loss 1.830942, float_v_loss 1.086484, string_loss 1.522769], direction_loss:2.908919
+Epoch: 3070/8000, train loss: 10.729231, node_f_loss: 7.778750, [type_loss 2.690732, index_loss 0.802229, int_v_loss 1.648143, float_v_loss 1.105585, string_loss 1.532062], direction_loss:2.950480
+Epoch: 3080/8000, train loss: 8.334561, node_f_loss: 5.383898, [type_loss 2.593045, index_loss 0.788599, int_v_loss 0.445144, float_v_loss 0.018234, string_loss 1.538877], direction_loss:2.950664
+Epoch: 3090/8000, train loss: 8.066994, node_f_loss: 5.128766, [type_loss 2.492491, index_loss 0.715288, int_v_loss 0.255011, float_v_loss 0.090800, string_loss 1.575176], direction_loss:2.938228
+Epoch: 3100/8000, train loss: 8.161980, node_f_loss: 5.288138, [type_loss 2.464558, index_loss 0.737013, int_v_loss 0.497524, float_v_loss 0.016052, string_loss 1.572991], direction_loss:2.873842
+Epoch: 3110/8000, train loss: 10.379519, node_f_loss: 7.483512, [type_loss 2.528025, index_loss 0.759299, int_v_loss 2.647227, float_v_loss 0.017540, string_loss 1.531422], direction_loss:2.896007
+Epoch: 3120/8000, train loss: 10.455519, node_f_loss: 7.527932, [type_loss 2.669334, index_loss 0.779846, int_v_loss 2.505213, float_v_loss 0.018161, string_loss 1.555379], direction_loss:2.927587
+Epoch: 3130/8000, train loss: 8.308824, node_f_loss: 5.360954, [type_loss 2.510918, index_loss 0.759025, int_v_loss 0.507389, float_v_loss 0.017071, string_loss 1.566551], direction_loss:2.947869
+Epoch: 3140/8000, train loss: 12.691045, node_f_loss: 9.775661, [type_loss 2.318190, index_loss 0.752735, int_v_loss 5.097234, float_v_loss 0.018568, string_loss 1.588933], direction_loss:2.915385
+Epoch: 3150/8000, train loss: 8.228315, node_f_loss: 5.299912, [type_loss 2.473634, index_loss 0.750430, int_v_loss 0.494922, float_v_loss 0.019062, string_loss 1.561864], direction_loss:2.928403
+Epoch: 3160/8000, train loss: 9.336230, node_f_loss: 6.414738, [type_loss 2.516056, index_loss 0.750532, int_v_loss 0.501450, float_v_loss 1.098932, string_loss 1.547768], direction_loss:2.921492
+Epoch: 3170/8000, train loss: 11.482488, node_f_loss: 8.553787, [type_loss 2.497856, index_loss 0.776351, int_v_loss 1.511680, float_v_loss 2.180300, string_loss 1.587600], direction_loss:2.928700
+Epoch: 3180/8000, train loss: 9.316118, node_f_loss: 6.407228, [type_loss 2.602927, index_loss 0.716352, int_v_loss 1.490453, float_v_loss 0.017015, string_loss 1.580482], direction_loss:2.908891
+Epoch: 3190/8000, train loss: 7.833445, node_f_loss: 4.907806, [type_loss 2.600852, index_loss 0.689310, int_v_loss 0.028002, float_v_loss 0.018766, string_loss 1.570875], direction_loss:2.925639
+Epoch: 3200/8000, train loss: 7.651177, node_f_loss: 4.723097, [type_loss 2.408322, index_loss 0.688259, int_v_loss 0.018863, float_v_loss 0.017737, string_loss 1.589916], direction_loss:2.928081
+Epoch: 3210/8000, train loss: 10.688771, node_f_loss: 7.787245, [type_loss 2.644464, index_loss 0.712167, int_v_loss 1.792968, float_v_loss 1.096189, string_loss 1.541456], direction_loss:2.901526
+Epoch: 3220/8000, train loss: 10.021355, node_f_loss: 7.131094, [type_loss 2.503880, index_loss 0.706713, int_v_loss 2.337842, float_v_loss 0.017805, string_loss 1.564854], direction_loss:2.890260
+Epoch: 3230/8000, train loss: 12.934759, node_f_loss: 10.018452, [type_loss 2.625665, index_loss 0.727489, int_v_loss 2.928299, float_v_loss 2.185822, string_loss 1.551176], direction_loss:2.916308
+Epoch: 3240/8000, train loss: 9.998941, node_f_loss: 7.114453, [type_loss 2.522046, index_loss 0.750630, int_v_loss 2.267038, float_v_loss 0.018878, string_loss 1.555861], direction_loss:2.884488
+Epoch: 3250/8000, train loss: 8.295158, node_f_loss: 5.376552, [type_loss 2.504662, index_loss 0.760011, int_v_loss 0.521672, float_v_loss 0.017101, string_loss 1.573106], direction_loss:2.918606
+Epoch: 3260/8000, train loss: 11.321289, node_f_loss: 8.403770, [type_loss 2.477277, index_loss 0.706200, int_v_loss 2.566556, float_v_loss 1.087256, string_loss 1.566482], direction_loss:2.917519
+Epoch: 3270/8000, train loss: 8.968200, node_f_loss: 6.042263, [type_loss 2.561846, index_loss 0.840375, int_v_loss 1.086234, float_v_loss 0.019741, string_loss 1.534068], direction_loss:2.925937
+Epoch: 3280/8000, train loss: 9.443504, node_f_loss: 6.529933, [type_loss 2.590816, index_loss 0.747715, int_v_loss 1.648370, float_v_loss 0.019804, string_loss 1.523228], direction_loss:2.913572
+Epoch: 3290/8000, train loss: 10.448985, node_f_loss: 7.517509, [type_loss 2.391681, index_loss 0.665136, int_v_loss 2.873778, float_v_loss 0.017870, string_loss 1.569044], direction_loss:2.931475
+Epoch: 3300/8000, train loss: 9.043550, node_f_loss: 6.109740, [type_loss 2.479443, index_loss 0.607549, int_v_loss 1.440827, float_v_loss 0.017741, string_loss 1.564180], direction_loss:2.933810
+Epoch: 3310/8000, train loss: 9.586122, node_f_loss: 6.702756, [type_loss 2.450621, index_loss 0.764796, int_v_loss 0.820764, float_v_loss 1.091319, string_loss 1.575255], direction_loss:2.883365
+Epoch: 3320/8000, train loss: 10.935805, node_f_loss: 8.016207, [type_loss 2.494754, index_loss 0.745232, int_v_loss 3.214961, float_v_loss 0.018644, string_loss 1.542616], direction_loss:2.919599
+Epoch: 3330/8000, train loss: 10.877958, node_f_loss: 7.974627, [type_loss 2.464812, index_loss 0.768293, int_v_loss 2.061085, float_v_loss 1.095003, string_loss 1.585433], direction_loss:2.903332
+Epoch: 3340/8000, train loss: 9.540854, node_f_loss: 6.615730, [type_loss 2.586002, index_loss 0.774548, int_v_loss 1.679434, float_v_loss 0.019357, string_loss 1.556389], direction_loss:2.925123
+Epoch: 3350/8000, train loss: 8.017457, node_f_loss: 5.119524, [type_loss 2.424387, index_loss 0.689993, int_v_loss 0.404343, float_v_loss 0.018424, string_loss 1.582378], direction_loss:2.897933
+Epoch: 3360/8000, train loss: 9.808897, node_f_loss: 6.937464, [type_loss 2.475855, index_loss 0.710269, int_v_loss 2.154785, float_v_loss 0.017912, string_loss 1.578642], direction_loss:2.871434
+Epoch: 3370/8000, train loss: 8.821234, node_f_loss: 5.879900, [type_loss 2.393930, index_loss 0.659993, int_v_loss 1.224229, float_v_loss 0.018502, string_loss 1.583245], direction_loss:2.941334
+Epoch: 3380/8000, train loss: 10.154909, node_f_loss: 7.242877, [type_loss 2.460875, index_loss 0.700548, int_v_loss 1.408426, float_v_loss 1.096909, string_loss 1.576117], direction_loss:2.912032
+Epoch: 3390/8000, train loss: 10.398753, node_f_loss: 7.474595, [type_loss 2.511971, index_loss 0.694509, int_v_loss 2.669015, float_v_loss 0.021806, string_loss 1.577294], direction_loss:2.924158
+Epoch: 3400/8000, train loss: 8.794652, node_f_loss: 5.886559, [type_loss 2.436822, index_loss 0.699308, int_v_loss 1.143454, float_v_loss 0.018747, string_loss 1.588228], direction_loss:2.908093
+Epoch: 3410/8000, train loss: 8.408916, node_f_loss: 5.509588, [type_loss 2.400121, index_loss 0.705042, int_v_loss 0.807152, float_v_loss 0.019623, string_loss 1.577650], direction_loss:2.899328
+Epoch: 3420/8000, train loss: 11.153095, node_f_loss: 8.267656, [type_loss 2.415634, index_loss 0.661839, int_v_loss 3.591178, float_v_loss 0.019499, string_loss 1.579506], direction_loss:2.885439
+Epoch: 3430/8000, train loss: 8.468164, node_f_loss: 5.572851, [type_loss 2.455879, index_loss 0.630870, int_v_loss 0.883360, float_v_loss 0.019042, string_loss 1.583701], direction_loss:2.895314
+Epoch: 3440/8000, train loss: 8.822258, node_f_loss: 5.927343, [type_loss 2.304555, index_loss 0.594028, int_v_loss 0.323371, float_v_loss 1.090624, string_loss 1.614766], direction_loss:2.894915
+Epoch: 3450/8000, train loss: 7.706425, node_f_loss: 4.795592, [type_loss 2.499607, index_loss 0.667555, int_v_loss 0.049167, float_v_loss 0.017802, string_loss 1.561462], direction_loss:2.910833
+Epoch: 3460/8000, train loss: 9.274734, node_f_loss: 6.382996, [type_loss 2.538707, index_loss 0.691403, int_v_loss 0.499432, float_v_loss 1.097838, string_loss 1.555615], direction_loss:2.891738
+Epoch: 3470/8000, train loss: 8.591154, node_f_loss: 5.700468, [type_loss 2.641701, index_loss 0.660781, int_v_loss 0.871289, float_v_loss 0.019148, string_loss 1.507548], direction_loss:2.890686
+Epoch: 3480/8000, train loss: 10.297481, node_f_loss: 7.403286, [type_loss 2.696160, index_loss 0.788168, int_v_loss 1.227950, float_v_loss 1.161441, string_loss 1.529568], direction_loss:2.894194
+Epoch: 3490/8000, train loss: 8.818445, node_f_loss: 5.865321, [type_loss 2.376459, index_loss 0.662567, int_v_loss 1.230920, float_v_loss 0.018347, string_loss 1.577029], direction_loss:2.953125
+Epoch: 3500/8000, train loss: 12.162612, node_f_loss: 9.263466, [type_loss 2.446553, index_loss 0.713282, int_v_loss 3.376743, float_v_loss 1.166028, string_loss 1.560861], direction_loss:2.899146
+Epoch: 3510/8000, train loss: 8.554388, node_f_loss: 5.651001, [type_loss 2.540447, index_loss 0.673995, int_v_loss 0.853781, float_v_loss 0.020444, string_loss 1.562333], direction_loss:2.903387
+Epoch: 3520/8000, train loss: 8.950924, node_f_loss: 6.039673, [type_loss 2.375905, index_loss 0.609424, int_v_loss 0.342703, float_v_loss 1.107577, string_loss 1.604064], direction_loss:2.911251
+Epoch: 3530/8000, train loss: 7.983014, node_f_loss: 5.126743, [type_loss 2.403219, index_loss 0.671862, int_v_loss 0.478448, float_v_loss 0.018145, string_loss 1.555071], direction_loss:2.856271
+Epoch: 3540/8000, train loss: 8.790842, node_f_loss: 5.864109, [type_loss 2.673847, index_loss 0.685088, int_v_loss 0.977581, float_v_loss 0.019720, string_loss 1.507873], direction_loss:2.926733
+Epoch: 3550/8000, train loss: 11.746916, node_f_loss: 8.794944, [type_loss 2.488707, index_loss 0.688201, int_v_loss 1.845247, float_v_loss 2.204863, string_loss 1.567926], direction_loss:2.951972
+Epoch: 3560/8000, train loss: 8.027048, node_f_loss: 5.077576, [type_loss 2.426250, index_loss 0.705292, int_v_loss 0.374271, float_v_loss 0.019117, string_loss 1.552647], direction_loss:2.949472
+Epoch: 3570/8000, train loss: 8.446846, node_f_loss: 5.563033, [type_loss 2.396901, index_loss 0.680560, int_v_loss 0.859189, float_v_loss 0.019807, string_loss 1.606577], direction_loss:2.883813
+Epoch: 3580/8000, train loss: 13.169157, node_f_loss: 10.283166, [type_loss 2.431093, index_loss 0.642537, int_v_loss 5.634600, float_v_loss 0.017222, string_loss 1.557715], direction_loss:2.885991
+Epoch: 3590/8000, train loss: 9.146839, node_f_loss: 6.225421, [type_loss 2.427442, index_loss 0.667430, int_v_loss 0.442735, float_v_loss 1.106433, string_loss 1.581383], direction_loss:2.921418
+Epoch: 3600/8000, train loss: 7.802721, node_f_loss: 4.919518, [type_loss 2.488228, index_loss 0.659554, int_v_loss 0.171315, float_v_loss 0.019251, string_loss 1.581170], direction_loss:2.883203
+Epoch: 3610/8000, train loss: 9.283976, node_f_loss: 6.352586, [type_loss 2.346663, index_loss 0.636141, int_v_loss 0.691453, float_v_loss 1.098128, string_loss 1.580202], direction_loss:2.931390
+Epoch: 3620/8000, train loss: 9.965935, node_f_loss: 7.042334, [type_loss 2.465406, index_loss 0.728966, int_v_loss 2.281299, float_v_loss 0.020427, string_loss 1.546235], direction_loss:2.923601
+Epoch: 3630/8000, train loss: 9.165930, node_f_loss: 6.299396, [type_loss 2.446142, index_loss 0.733080, int_v_loss 1.455653, float_v_loss 0.091701, string_loss 1.572821], direction_loss:2.866533
+Epoch: 3640/8000, train loss: 8.712862, node_f_loss: 5.814633, [type_loss 2.530885, index_loss 0.673906, int_v_loss 1.078210, float_v_loss 0.019799, string_loss 1.511832], direction_loss:2.898229
+Epoch: 3650/8000, train loss: 7.446623, node_f_loss: 4.550689, [type_loss 2.306221, index_loss 0.589923, int_v_loss 0.030701, float_v_loss 0.018717, string_loss 1.605126], direction_loss:2.895934
+Epoch: 3660/8000, train loss: 8.080326, node_f_loss: 5.198428, [type_loss 2.374984, index_loss 0.639006, int_v_loss 0.580076, float_v_loss 0.019586, string_loss 1.584775], direction_loss:2.881898
+Epoch: 3670/8000, train loss: 7.678689, node_f_loss: 4.805868, [type_loss 2.545654, index_loss 0.665715, int_v_loss 0.030511, float_v_loss 0.018879, string_loss 1.545110], direction_loss:2.872820
+Epoch: 3680/8000, train loss: 9.935094, node_f_loss: 7.073604, [type_loss 2.278374, index_loss 0.659095, int_v_loss 2.546199, float_v_loss 0.017980, string_loss 1.571956], direction_loss:2.861490
+Epoch: 3690/8000, train loss: 11.217235, node_f_loss: 8.302631, [type_loss 2.566832, index_loss 0.728606, int_v_loss 2.346265, float_v_loss 1.107010, string_loss 1.553918], direction_loss:2.914603
+Epoch: 3700/8000, train loss: 9.069086, node_f_loss: 6.176503, [type_loss 2.423261, index_loss 0.687744, int_v_loss 0.389891, float_v_loss 1.096556, string_loss 1.579051], direction_loss:2.892583
+Epoch: 3710/8000, train loss: 9.642494, node_f_loss: 6.810682, [type_loss 2.479185, index_loss 0.654233, int_v_loss 1.092987, float_v_loss 1.071062, string_loss 1.513216], direction_loss:2.831812
+Epoch: 3720/8000, train loss: 10.941915, node_f_loss: 8.043701, [type_loss 2.420115, index_loss 0.677323, int_v_loss 2.284390, float_v_loss 1.090969, string_loss 1.570904], direction_loss:2.898214
+Epoch: 3730/8000, train loss: 9.697416, node_f_loss: 6.815211, [type_loss 2.317715, index_loss 0.642541, int_v_loss 1.162491, float_v_loss 1.093921, string_loss 1.598542], direction_loss:2.882205
+Epoch: 3740/8000, train loss: 8.800194, node_f_loss: 5.897487, [type_loss 2.662914, index_loss 0.739626, int_v_loss 0.932817, float_v_loss 0.021137, string_loss 1.540994], direction_loss:2.902708
+Epoch: 3750/8000, train loss: 8.684408, node_f_loss: 5.776006, [type_loss 2.464210, index_loss 0.725187, int_v_loss 1.031646, float_v_loss 0.020428, string_loss 1.534534], direction_loss:2.908402
+Epoch: 3760/8000, train loss: 14.015572, node_f_loss: 11.128526, [type_loss 2.658399, index_loss 0.698865, int_v_loss 6.177807, float_v_loss 0.092631, string_loss 1.500823], direction_loss:2.887045
+Epoch: 3770/8000, train loss: 8.018312, node_f_loss: 5.094112, [type_loss 2.678015, index_loss 0.716753, int_v_loss 0.145822, float_v_loss 0.020003, string_loss 1.533520], direction_loss:2.924200
+Epoch: 3780/8000, train loss: 7.461038, node_f_loss: 4.593253, [type_loss 2.395160, index_loss 0.595471, int_v_loss 0.030373, float_v_loss 0.018600, string_loss 1.553649], direction_loss:2.867784
+Epoch: 3790/8000, train loss: 8.441776, node_f_loss: 5.579250, [type_loss 2.427168, index_loss 0.660067, int_v_loss 0.903249, float_v_loss 0.020034, string_loss 1.568731], direction_loss:2.862526
+Epoch: 3800/8000, train loss: 7.973112, node_f_loss: 5.092997, [type_loss 2.448436, index_loss 0.633621, int_v_loss 0.420125, float_v_loss 0.019517, string_loss 1.571298], direction_loss:2.880115
+Epoch: 3810/8000, train loss: 9.630457, node_f_loss: 6.769354, [type_loss 2.683435, index_loss 0.750459, int_v_loss 1.797349, float_v_loss 0.026448, string_loss 1.511663], direction_loss:2.861103
+Epoch: 3820/8000, train loss: 9.722092, node_f_loss: 6.808586, [type_loss 2.334957, index_loss 0.660678, int_v_loss 1.123701, float_v_loss 1.098656, string_loss 1.590594], direction_loss:2.913506
+Epoch: 3830/8000, train loss: 8.373213, node_f_loss: 5.452358, [type_loss 2.528355, index_loss 0.646147, int_v_loss 0.713525, float_v_loss 0.021603, string_loss 1.542728], direction_loss:2.920855
+Epoch: 3840/8000, train loss: 8.029095, node_f_loss: 5.134125, [type_loss 2.460574, index_loss 0.608365, int_v_loss 0.502953, float_v_loss 0.020066, string_loss 1.542168], direction_loss:2.894970
+Epoch: 3850/8000, train loss: 8.258747, node_f_loss: 5.351202, [type_loss 2.575994, index_loss 0.659457, int_v_loss 0.564071, float_v_loss 0.019809, string_loss 1.531870], direction_loss:2.907546
+Epoch: 3860/8000, train loss: 7.839147, node_f_loss: 4.963521, [type_loss 2.487409, index_loss 0.611484, int_v_loss 0.267546, float_v_loss 0.019521, string_loss 1.577561], direction_loss:2.875626
+Epoch: 3870/8000, train loss: 10.108904, node_f_loss: 7.219497, [type_loss 2.432665, index_loss 0.689314, int_v_loss 1.421949, float_v_loss 1.097836, string_loss 1.577734], direction_loss:2.889407
+Epoch: 3880/8000, train loss: 8.542922, node_f_loss: 5.639383, [type_loss 2.579072, index_loss 0.704137, int_v_loss 0.781502, float_v_loss 0.020272, string_loss 1.554400], direction_loss:2.903539
+Epoch: 3890/8000, train loss: 9.105839, node_f_loss: 6.212231, [type_loss 2.529927, index_loss 0.675058, int_v_loss 1.461404, float_v_loss 0.020357, string_loss 1.525485], direction_loss:2.893608
+Epoch: 3900/8000, train loss: 9.591383, node_f_loss: 6.709783, [type_loss 2.417109, index_loss 0.665158, int_v_loss 2.026512, float_v_loss 0.023451, string_loss 1.577554], direction_loss:2.881600
+Epoch: 3910/8000, train loss: 11.072972, node_f_loss: 8.156405, [type_loss 2.474570, index_loss 0.662500, int_v_loss 1.252339, float_v_loss 2.189602, string_loss 1.577395], direction_loss:2.916567
+Epoch: 3920/8000, train loss: 9.678527, node_f_loss: 6.777159, [type_loss 2.569402, index_loss 0.702548, int_v_loss 1.968344, float_v_loss 0.021334, string_loss 1.515531], direction_loss:2.901368
+Epoch: 3930/8000, train loss: 8.657955, node_f_loss: 5.753096, [type_loss 2.475851, index_loss 0.678982, int_v_loss 1.034827, float_v_loss 0.020736, string_loss 1.542700], direction_loss:2.904860
+Epoch: 3940/8000, train loss: 7.605121, node_f_loss: 4.756217, [type_loss 2.372609, index_loss 0.639439, int_v_loss 0.076990, float_v_loss 0.089868, string_loss 1.577311], direction_loss:2.848904
+Epoch: 3950/8000, train loss: 7.979545, node_f_loss: 5.084637, [type_loss 2.439901, index_loss 0.601870, int_v_loss 0.469877, float_v_loss 0.020002, string_loss 1.552988], direction_loss:2.894908
+Epoch: 3960/8000, train loss: 7.590721, node_f_loss: 4.676923, [type_loss 2.293959, index_loss 0.593775, int_v_loss 0.190567, float_v_loss 0.018059, string_loss 1.580564], direction_loss:2.913798
+Epoch: 3970/8000, train loss: 8.787180, node_f_loss: 5.897207, [type_loss 2.666193, index_loss 0.663390, int_v_loss 1.027498, float_v_loss 0.022651, string_loss 1.517474], direction_loss:2.889974
+Epoch: 3980/8000, train loss: 10.694687, node_f_loss: 7.802263, [type_loss 2.593098, index_loss 0.698845, int_v_loss 1.915246, float_v_loss 1.095303, string_loss 1.499772], direction_loss:2.892424
+Epoch: 3990/8000, train loss: 9.598814, node_f_loss: 6.696866, [type_loss 2.268906, index_loss 0.551133, int_v_loss 2.285553, float_v_loss 0.017671, string_loss 1.573603], direction_loss:2.901948
+Epoch: 4000/8000, train loss: 8.135660, node_f_loss: 5.253431, [type_loss 2.381886, index_loss 0.670502, int_v_loss 0.630576, float_v_loss 0.020074, string_loss 1.550393], direction_loss:2.882229
+Epoch: 4010/8000, train loss: 11.159801, node_f_loss: 8.247221, [type_loss 2.399186, index_loss 0.619888, int_v_loss 2.563138, float_v_loss 1.106923, string_loss 1.558085], direction_loss:2.912580
+Epoch: 4020/8000, train loss: 12.341736, node_f_loss: 9.450401, [type_loss 2.514115, index_loss 0.710896, int_v_loss 4.576425, float_v_loss 0.094404, string_loss 1.554562], direction_loss:2.891334
+Epoch: 4030/8000, train loss: 11.383810, node_f_loss: 8.477076, [type_loss 2.528794, index_loss 0.738801, int_v_loss 2.587405, float_v_loss 1.102310, string_loss 1.519766], direction_loss:2.906734
+Epoch: 4040/8000, train loss: 7.842702, node_f_loss: 4.952998, [type_loss 2.486310, index_loss 0.649854, int_v_loss 0.241725, float_v_loss 0.018755, string_loss 1.556355], direction_loss:2.889704
+Epoch: 4050/8000, train loss: 7.708312, node_f_loss: 4.812765, [type_loss 2.320574, index_loss 0.589996, int_v_loss 0.287990, float_v_loss 0.019321, string_loss 1.594884], direction_loss:2.895547
+Epoch: 4060/8000, train loss: 10.041117, node_f_loss: 7.162169, [type_loss 2.411799, index_loss 0.592455, int_v_loss 2.573003, float_v_loss 0.019284, string_loss 1.565628], direction_loss:2.878947
+Epoch: 4070/8000, train loss: 10.675810, node_f_loss: 7.844803, [type_loss 2.299608, index_loss 0.608128, int_v_loss 2.296955, float_v_loss 1.067611, string_loss 1.572501], direction_loss:2.831007
+Epoch: 4080/8000, train loss: 7.783637, node_f_loss: 4.900061, [type_loss 2.459757, index_loss 0.668961, int_v_loss 0.205236, float_v_loss 0.020020, string_loss 1.546088], direction_loss:2.883576
+Epoch: 4090/8000, train loss: 8.986442, node_f_loss: 6.105293, [type_loss 2.530384, index_loss 0.652835, int_v_loss 1.381609, float_v_loss 0.020381, string_loss 1.520084], direction_loss:2.881149
+Epoch: 4100/8000, train loss: 9.646175, node_f_loss: 6.749039, [type_loss 2.475431, index_loss 0.637788, int_v_loss 1.002505, float_v_loss 1.086833, string_loss 1.546483], direction_loss:2.897136
+Epoch: 4110/8000, train loss: 9.886115, node_f_loss: 7.005639, [type_loss 2.344157, index_loss 0.567046, int_v_loss 1.323687, float_v_loss 1.169925, string_loss 1.600825], direction_loss:2.880476
+Epoch: 4120/8000, train loss: 8.551266, node_f_loss: 5.660073, [type_loss 2.485574, index_loss 0.657167, int_v_loss 0.958490, float_v_loss 0.021765, string_loss 1.537077], direction_loss:2.891192
+Epoch: 4130/8000, train loss: 8.788082, node_f_loss: 5.916400, [type_loss 2.438318, index_loss 0.689646, int_v_loss 1.234542, float_v_loss 0.020952, string_loss 1.532942], direction_loss:2.871681
+Epoch: 4140/8000, train loss: 8.613808, node_f_loss: 5.725709, [type_loss 2.315122, index_loss 0.637203, int_v_loss 1.093331, float_v_loss 0.092355, string_loss 1.587698], direction_loss:2.888099
+Epoch: 4150/8000, train loss: 10.245116, node_f_loss: 7.376278, [type_loss 2.429034, index_loss 0.648783, int_v_loss 2.745929, float_v_loss 0.021508, string_loss 1.531024], direction_loss:2.868838
+Epoch: 4160/8000, train loss: 8.542366, node_f_loss: 5.650141, [type_loss 2.471786, index_loss 0.651087, int_v_loss 0.898738, float_v_loss 0.092514, string_loss 1.536015], direction_loss:2.892225
+Epoch: 4170/8000, train loss: 8.217974, node_f_loss: 5.363345, [type_loss 2.421699, index_loss 0.666191, int_v_loss 0.705506, float_v_loss 0.020981, string_loss 1.548968], direction_loss:2.854629
+Epoch: 4180/8000, train loss: 7.321051, node_f_loss: 4.431545, [type_loss 2.212734, index_loss 0.532635, int_v_loss 0.070181, float_v_loss 0.019974, string_loss 1.596021], direction_loss:2.889506
+Epoch: 4190/8000, train loss: 7.619166, node_f_loss: 4.695786, [type_loss 2.493323, index_loss 0.585898, int_v_loss 0.068961, float_v_loss 0.020375, string_loss 1.527229], direction_loss:2.923380
+Epoch: 4200/8000, train loss: 9.453215, node_f_loss: 6.646264, [type_loss 2.326886, index_loss 0.632603, int_v_loss 1.024544, float_v_loss 1.068538, string_loss 1.593693], direction_loss:2.806950
+Epoch: 4210/8000, train loss: 8.878390, node_f_loss: 6.047896, [type_loss 2.402783, index_loss 0.596142, int_v_loss 0.393914, float_v_loss 1.079624, string_loss 1.575434], direction_loss:2.830494
+Epoch: 4220/8000, train loss: 11.243425, node_f_loss: 8.399508, [type_loss 2.207040, index_loss 0.553003, int_v_loss 1.802923, float_v_loss 2.215782, string_loss 1.620761], direction_loss:2.843918
+Epoch: 4230/8000, train loss: 7.475443, node_f_loss: 4.635155, [type_loss 2.295369, index_loss 0.553085, int_v_loss 0.168028, float_v_loss 0.018486, string_loss 1.600187], direction_loss:2.840288
+Epoch: 4240/8000, train loss: 9.371754, node_f_loss: 6.487673, [type_loss 2.341930, index_loss 0.578075, int_v_loss 0.877540, float_v_loss 1.097964, string_loss 1.592165], direction_loss:2.884081
+Epoch: 4250/8000, train loss: 10.119167, node_f_loss: 7.202731, [type_loss 2.593016, index_loss 0.733339, int_v_loss 1.255036, float_v_loss 1.105670, string_loss 1.515671], direction_loss:2.916436
+Epoch: 4260/8000, train loss: 11.156466, node_f_loss: 8.284212, [type_loss 2.400476, index_loss 0.625172, int_v_loss 3.679807, float_v_loss 0.019888, string_loss 1.558870], direction_loss:2.872254
+Epoch: 4270/8000, train loss: 8.922403, node_f_loss: 6.075055, [type_loss 2.442196, index_loss 0.606263, int_v_loss 0.403532, float_v_loss 1.077815, string_loss 1.545249], direction_loss:2.847349
+Epoch: 4280/8000, train loss: 11.835986, node_f_loss: 8.967777, [type_loss 2.381415, index_loss 0.645707, int_v_loss 4.353474, float_v_loss 0.022020, string_loss 1.565160], direction_loss:2.868209
+Epoch: 4290/8000, train loss: 12.427218, node_f_loss: 9.533608, [type_loss 2.364130, index_loss 0.635479, int_v_loss 4.986831, float_v_loss 0.020188, string_loss 1.526980], direction_loss:2.893610
+Epoch: 4300/8000, train loss: 8.322572, node_f_loss: 5.424517, [type_loss 2.459785, index_loss 0.610460, int_v_loss 0.777756, float_v_loss 0.020006, string_loss 1.556509], direction_loss:2.898055
+Epoch: 4310/8000, train loss: 7.746866, node_f_loss: 4.866002, [type_loss 2.339674, index_loss 0.532555, int_v_loss 0.404639, float_v_loss 0.017485, string_loss 1.571648], direction_loss:2.880865

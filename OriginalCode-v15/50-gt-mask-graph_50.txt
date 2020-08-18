@@ -1,0 +1,1572 @@
+CUDA 1
+File name prefix GraphRNN_RNN_AST_4_128_
+Loading graph dataset: AST
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 27]
+Loading node type
+[[0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 0. 1. 0. 0. 0. 0. 1. 0. 0. 1. 1. 0. 0. 1. 0. 0. 1. 0.
+  1. 0. 0. 0. 0.]
+ [0. 1. 0. 0. 0. 0. 0. 0. 1. 0. 0. 1. 1. 1. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 1. 1. 1. 1. 0. 1. 1. 1. 0. 0. 1. 1. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1. 0.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 0. 0. 1. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 0.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 1. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 1. 1. 1. 0. 1. 1. 0. 0. 1. 0. 0. 0. 1. 1. 1. 1. 0. 1. 1. 1. 1. 1.
+  1. 1. 1. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+  0. 0. 0. 0. 0.]]
+Loaded
+total graph num: 50, training set: 40
+max number node: 25
+max/min number edge: 24; 7
+max previous node: 20
+train and test graphs saved at:  ./graphs_50/GraphRNN_RNN_AST_4_128_test_0.dat
+Epoch: 10/5000, train loss: 11.663651, node_f_loss: 6.421428, [type_loss 3.043805, index_loss 1.846547, int_v_loss 0.071963, float_v_loss 0.023603, string_loss 1.435510], direction_loss:5.242224
+Epoch: 20/5000, train loss: 11.403224, node_f_loss: 5.994130, [type_loss 3.012668, index_loss 1.438724, int_v_loss 0.060859, float_v_loss 0.012996, string_loss 1.468883], direction_loss:5.409094
+Epoch: 30/5000, train loss: 11.170219, node_f_loss: 5.783286, [type_loss 2.929705, index_loss 1.325748, int_v_loss 0.013452, float_v_loss 0.029018, string_loss 1.485364], direction_loss:5.386934
+Epoch: 40/5000, train loss: 10.941082, node_f_loss: 5.733993, [type_loss 2.961026, index_loss 1.261165, int_v_loss 0.017630, float_v_loss 0.011848, string_loss 1.482324], direction_loss:5.207090
+Epoch: 50/5000, train loss: 10.932829, node_f_loss: 5.686037, [type_loss 2.859355, index_loss 1.250509, int_v_loss 0.077352, float_v_loss 0.025031, string_loss 1.473789], direction_loss:5.246792
+Epoch: 60/5000, train loss: 10.970381, node_f_loss: 5.667044, [type_loss 2.895040, index_loss 1.234986, int_v_loss 0.041072, float_v_loss 0.010615, string_loss 1.485330], direction_loss:5.303338
+Epoch: 70/5000, train loss: 11.031111, node_f_loss: 5.741192, [type_loss 2.885411, index_loss 1.263198, int_v_loss 0.084786, float_v_loss 0.019766, string_loss 1.488032], direction_loss:5.289919
+Epoch: 80/5000, train loss: 10.759624, node_f_loss: 5.498291, [type_loss 2.845964, index_loss 1.158056, int_v_loss 0.016769, float_v_loss 0.008717, string_loss 1.468786], direction_loss:5.261333
+Epoch: 90/5000, train loss: 10.923018, node_f_loss: 5.515620, [type_loss 2.873161, index_loss 1.120689, int_v_loss 0.021955, float_v_loss 0.030611, string_loss 1.469204], direction_loss:5.407398
+Epoch: 100/5000, train loss: 10.733191, node_f_loss: 5.591582, [type_loss 2.885897, index_loss 1.187209, int_v_loss 0.035802, float_v_loss 0.006594, string_loss 1.476080], direction_loss:5.141609
+Epoch: 110/5000, train loss: 10.839425, node_f_loss: 5.658483, [type_loss 2.869616, index_loss 1.216851, int_v_loss 0.069939, float_v_loss 0.009488, string_loss 1.492589], direction_loss:5.180943
+Epoch: 120/5000, train loss: 10.718460, node_f_loss: 5.447588, [type_loss 2.777884, index_loss 1.128144, int_v_loss 0.040612, float_v_loss 0.031689, string_loss 1.469260], direction_loss:5.270872
+Epoch: 130/5000, train loss: 10.581850, node_f_loss: 5.336036, [type_loss 2.755788, index_loss 1.051038, int_v_loss 0.066691, float_v_loss 0.007498, string_loss 1.455020], direction_loss:5.245814
+Epoch: 140/5000, train loss: 10.542586, node_f_loss: 5.307494, [type_loss 2.736635, index_loss 1.048629, int_v_loss 0.042718, float_v_loss 0.028605, string_loss 1.450907], direction_loss:5.235092
+Epoch: 150/5000, train loss: 10.618675, node_f_loss: 5.411495, [type_loss 2.781911, index_loss 1.110855, int_v_loss 0.050871, float_v_loss 0.008137, string_loss 1.459722], direction_loss:5.207180
+Epoch: 160/5000, train loss: 10.449935, node_f_loss: 5.299968, [type_loss 2.743890, index_loss 1.059816, int_v_loss 0.021920, float_v_loss 0.012896, string_loss 1.461447], direction_loss:5.149967
+Epoch: 170/5000, train loss: 10.735622, node_f_loss: 5.485937, [type_loss 2.780124, index_loss 1.216495, int_v_loss 0.024104, float_v_loss 0.013563, string_loss 1.451651], direction_loss:5.249686
+Epoch: 180/5000, train loss: 10.380622, node_f_loss: 5.222046, [type_loss 2.718293, index_loss 1.016119, int_v_loss 0.029965, float_v_loss 0.010542, string_loss 1.447127], direction_loss:5.158576
+Epoch: 190/5000, train loss: 10.245321, node_f_loss: 5.304236, [type_loss 2.724618, index_loss 1.060051, int_v_loss 0.044521, float_v_loss 0.005907, string_loss 1.469137], direction_loss:4.941085
+Epoch: 200/5000, train loss: 10.273888, node_f_loss: 5.443481, [type_loss 2.848285, index_loss 1.062117, int_v_loss 0.043814, float_v_loss 0.005887, string_loss 1.483378], direction_loss:4.830406
+Epoch: 210/5000, train loss: 10.237584, node_f_loss: 5.261273, [type_loss 2.718396, index_loss 1.043164, int_v_loss 0.034501, float_v_loss 0.006234, string_loss 1.458979], direction_loss:4.976311
+Epoch: 220/5000, train loss: 10.096220, node_f_loss: 5.117760, [type_loss 2.661323, index_loss 0.976665, int_v_loss 0.025500, float_v_loss 0.009976, string_loss 1.444295], direction_loss:4.978460
+Epoch: 230/5000, train loss: 10.104052, node_f_loss: 5.201378, [type_loss 2.730612, index_loss 0.988024, int_v_loss 0.027266, float_v_loss 0.007065, string_loss 1.448411], direction_loss:4.902674
+Epoch: 240/5000, train loss: 10.033696, node_f_loss: 5.055142, [type_loss 2.606868, index_loss 0.930870, int_v_loss 0.070853, float_v_loss 0.007809, string_loss 1.438743], direction_loss:4.978554
+Epoch: 250/5000, train loss: 9.805762, node_f_loss: 4.904978, [type_loss 2.572904, index_loss 0.876971, int_v_loss 0.026035, float_v_loss 0.007532, string_loss 1.421536], direction_loss:4.900784
+Epoch: 260/5000, train loss: 10.019783, node_f_loss: 5.053725, [type_loss 2.517916, index_loss 0.918589, int_v_loss 0.164126, float_v_loss 0.012169, string_loss 1.440925], direction_loss:4.966058
+Epoch: 270/5000, train loss: 9.824897, node_f_loss: 5.034993, [type_loss 2.644338, index_loss 0.881982, int_v_loss 0.046689, float_v_loss 0.012375, string_loss 1.449609], direction_loss:4.789904
+Epoch: 280/5000, train loss: 9.868896, node_f_loss: 4.938449, [type_loss 2.510661, index_loss 0.909851, int_v_loss 0.072222, float_v_loss 0.010914, string_loss 1.434801], direction_loss:4.930446
+Epoch: 290/5000, train loss: 9.706904, node_f_loss: 4.816999, [type_loss 2.515102, index_loss 0.824774, int_v_loss 0.025358, float_v_loss 0.012732, string_loss 1.439034], direction_loss:4.889905
+Epoch: 300/5000, train loss: 9.748838, node_f_loss: 5.037027, [type_loss 2.579269, index_loss 0.954100, int_v_loss 0.033475, float_v_loss 0.012584, string_loss 1.457599], direction_loss:4.711811
+Epoch: 310/5000, train loss: 9.724889, node_f_loss: 5.086427, [type_loss 2.591198, index_loss 0.965979, int_v_loss 0.050607, float_v_loss 0.010716, string_loss 1.467926], direction_loss:4.638462
+Epoch: 320/5000, train loss: 9.794562, node_f_loss: 5.127662, [type_loss 2.694004, index_loss 0.915835, int_v_loss 0.028503, float_v_loss 0.012759, string_loss 1.476561], direction_loss:4.666901
+Epoch: 330/5000, train loss: 9.321589, node_f_loss: 4.679459, [type_loss 2.417012, index_loss 0.766554, int_v_loss 0.047223, float_v_loss 0.010672, string_loss 1.437998], direction_loss:4.642129
+Epoch: 340/5000, train loss: 9.106037, node_f_loss: 4.611178, [type_loss 2.397617, index_loss 0.732706, int_v_loss 0.042129, float_v_loss 0.014682, string_loss 1.424044], direction_loss:4.494858
+Epoch: 350/5000, train loss: 9.498569, node_f_loss: 4.683014, [type_loss 2.425805, index_loss 0.763433, int_v_loss 0.046448, float_v_loss 0.012427, string_loss 1.434901], direction_loss:4.815555
+Epoch: 360/5000, train loss: 9.485500, node_f_loss: 4.760270, [type_loss 2.457724, index_loss 0.789533, int_v_loss 0.048642, float_v_loss 0.013084, string_loss 1.451288], direction_loss:4.725230
+Epoch: 370/5000, train loss: 9.415794, node_f_loss: 4.664903, [type_loss 2.360145, index_loss 0.776406, int_v_loss 0.054415, float_v_loss 0.013606, string_loss 1.460330], direction_loss:4.750891
+Epoch: 380/5000, train loss: 9.572075, node_f_loss: 4.778141, [type_loss 2.460916, index_loss 0.780230, int_v_loss 0.071235, float_v_loss 0.012173, string_loss 1.453586], direction_loss:4.793934
+Epoch: 390/5000, train loss: 9.209995, node_f_loss: 4.598438, [type_loss 2.376884, index_loss 0.711881, int_v_loss 0.046038, float_v_loss 0.012087, string_loss 1.451549], direction_loss:4.611557
+Epoch: 400/5000, train loss: 9.138588, node_f_loss: 4.568169, [type_loss 2.328189, index_loss 0.715895, int_v_loss 0.066841, float_v_loss 0.013563, string_loss 1.443682], direction_loss:4.570419
+Epoch: 410/5000, train loss: 9.043456, node_f_loss: 4.393641, [type_loss 2.295974, index_loss 0.636017, int_v_loss 0.020668, float_v_loss 0.011424, string_loss 1.429558], direction_loss:4.649815
+Epoch: 420/5000, train loss: 9.072291, node_f_loss: 4.434414, [type_loss 2.296712, index_loss 0.648046, int_v_loss 0.023427, float_v_loss 0.014998, string_loss 1.451230], direction_loss:4.637877
+Epoch: 430/5000, train loss: 9.309331, node_f_loss: 4.415855, [type_loss 2.269768, index_loss 0.666431, int_v_loss 0.021230, float_v_loss 0.013617, string_loss 1.444809], direction_loss:4.893476
+Epoch: 440/5000, train loss: 9.331496, node_f_loss: 4.768942, [type_loss 2.405956, index_loss 0.788919, int_v_loss 0.073422, float_v_loss 0.018625, string_loss 1.482020], direction_loss:4.562554
+Epoch: 450/5000, train loss: 9.159362, node_f_loss: 4.394944, [type_loss 2.282838, index_loss 0.612308, int_v_loss 0.043955, float_v_loss 0.018025, string_loss 1.437818], direction_loss:4.764418
+Epoch: 460/5000, train loss: 8.928597, node_f_loss: 4.355055, [type_loss 2.237599, index_loss 0.628183, int_v_loss 0.024194, float_v_loss 0.013709, string_loss 1.451369], direction_loss:4.573543
+Epoch: 470/5000, train loss: 8.980690, node_f_loss: 4.353052, [type_loss 2.247997, index_loss 0.588607, int_v_loss 0.046773, float_v_loss 0.014745, string_loss 1.454931], direction_loss:4.627638
+Epoch: 480/5000, train loss: 8.665039, node_f_loss: 4.255641, [type_loss 2.234333, index_loss 0.528983, int_v_loss 0.020307, float_v_loss 0.022049, string_loss 1.449969], direction_loss:4.409398
+Epoch: 490/5000, train loss: 8.959717, node_f_loss: 4.315506, [type_loss 2.188038, index_loss 0.607583, int_v_loss 0.067315, float_v_loss 0.015425, string_loss 1.437145], direction_loss:4.644211
+Epoch: 500/5000, train loss: 8.779451, node_f_loss: 4.307574, [type_loss 2.219227, index_loss 0.575104, int_v_loss 0.021805, float_v_loss 0.016998, string_loss 1.474440], direction_loss:4.471877
+Epoch: 510/5000, train loss: 9.011614, node_f_loss: 4.409843, [type_loss 2.212583, index_loss 0.653523, int_v_loss 0.050174, float_v_loss 0.018482, string_loss 1.475082], direction_loss:4.601770
+Epoch: 520/5000, train loss: 8.821127, node_f_loss: 4.379401, [type_loss 2.224763, index_loss 0.627048, int_v_loss 0.030557, float_v_loss 0.017128, string_loss 1.479904], direction_loss:4.441727
+Epoch: 530/5000, train loss: 8.870972, node_f_loss: 4.354131, [type_loss 2.245395, index_loss 0.548171, int_v_loss 0.065893, float_v_loss 0.016906, string_loss 1.477766], direction_loss:4.516841
+Epoch: 540/5000, train loss: 8.976490, node_f_loss: 4.433785, [type_loss 2.275012, index_loss 0.609114, int_v_loss 0.044420, float_v_loss 0.019891, string_loss 1.485348], direction_loss:4.542705
+Epoch: 550/5000, train loss: 8.578072, node_f_loss: 3.901988, [type_loss 1.976199, index_loss 0.448550, int_v_loss 0.023024, float_v_loss 0.012976, string_loss 1.441240], direction_loss:4.676083
+Epoch: 560/5000, train loss: 8.874683, node_f_loss: 4.312903, [type_loss 2.233457, index_loss 0.548893, int_v_loss 0.028381, float_v_loss 0.016901, string_loss 1.485271], direction_loss:4.561780
+Epoch: 570/5000, train loss: 8.773435, node_f_loss: 4.109231, [type_loss 2.115335, index_loss 0.496075, int_v_loss 0.023327, float_v_loss 0.016865, string_loss 1.457628], direction_loss:4.664204
+Epoch: 580/5000, train loss: 8.659809, node_f_loss: 4.142870, [type_loss 2.092728, index_loss 0.508522, int_v_loss 0.048719, float_v_loss 0.018735, string_loss 1.474166], direction_loss:4.516939
+Epoch: 590/5000, train loss: 8.936386, node_f_loss: 4.403485, [type_loss 2.219055, index_loss 0.621642, int_v_loss 0.073333, float_v_loss 0.017383, string_loss 1.472072], direction_loss:4.532902
+Epoch: 600/5000, train loss: 8.886368, node_f_loss: 4.248790, [type_loss 2.125711, index_loss 0.582845, int_v_loss 0.052885, float_v_loss 0.014685, string_loss 1.472664], direction_loss:4.637578
+Epoch: 610/5000, train loss: 9.025066, node_f_loss: 4.461613, [type_loss 2.235101, index_loss 0.628047, int_v_loss 0.076723, float_v_loss 0.017233, string_loss 1.504510], direction_loss:4.563454
+Epoch: 620/5000, train loss: 8.837269, node_f_loss: 4.156034, [type_loss 2.125666, index_loss 0.487321, int_v_loss 0.049416, float_v_loss 0.017604, string_loss 1.476027], direction_loss:4.681234
+Epoch: 630/5000, train loss: 8.519899, node_f_loss: 3.973968, [type_loss 1.972903, index_loss 0.472820, int_v_loss 0.048316, float_v_loss 0.014964, string_loss 1.464965], direction_loss:4.545932
+Epoch: 640/5000, train loss: 8.589386, node_f_loss: 4.078042, [type_loss 1.949483, index_loss 0.561955, int_v_loss 0.072720, float_v_loss 0.017135, string_loss 1.476748], direction_loss:4.511344
+Epoch: 650/5000, train loss: 8.517153, node_f_loss: 3.918596, [type_loss 1.987527, index_loss 0.427069, int_v_loss 0.024807, float_v_loss 0.014442, string_loss 1.464751], direction_loss:4.598557
+Epoch: 660/5000, train loss: 8.530821, node_f_loss: 3.938702, [type_loss 1.966967, index_loss 0.465711, int_v_loss 0.025683, float_v_loss 0.013738, string_loss 1.466602], direction_loss:4.592119
+Epoch: 670/5000, train loss: 8.465904, node_f_loss: 3.857191, [type_loss 1.898995, index_loss 0.462504, int_v_loss 0.025383, float_v_loss 0.012988, string_loss 1.457321], direction_loss:4.608714
+Epoch: 680/5000, train loss: 8.712000, node_f_loss: 4.050590, [type_loss 2.013950, index_loss 0.496400, int_v_loss 0.050334, float_v_loss 0.015216, string_loss 1.474690], direction_loss:4.661410
+Epoch: 690/5000, train loss: 8.661211, node_f_loss: 4.060532, [type_loss 2.099269, index_loss 0.428696, int_v_loss 0.026566, float_v_loss 0.018312, string_loss 1.487689], direction_loss:4.600679
+Epoch: 700/5000, train loss: 8.439943, node_f_loss: 3.939748, [type_loss 2.017981, index_loss 0.392698, int_v_loss 0.025178, float_v_loss 0.012751, string_loss 1.491141], direction_loss:4.500196
+Epoch: 710/5000, train loss: 8.160959, node_f_loss: 3.891679, [type_loss 1.948389, index_loss 0.397094, int_v_loss 0.024999, float_v_loss 0.015033, string_loss 1.506163], direction_loss:4.269280
+Epoch: 720/5000, train loss: 8.500340, node_f_loss: 4.111519, [type_loss 2.027262, index_loss 0.504092, int_v_loss 0.074447, float_v_loss 0.015194, string_loss 1.490523], direction_loss:4.388822
+Epoch: 730/5000, train loss: 8.331926, node_f_loss: 3.856673, [type_loss 1.899475, index_loss 0.433616, int_v_loss 0.025926, float_v_loss 0.016932, string_loss 1.480724], direction_loss:4.475254
+Epoch: 740/5000, train loss: 8.391175, node_f_loss: 3.880911, [type_loss 1.951543, index_loss 0.399532, int_v_loss 0.026338, float_v_loss 0.019481, string_loss 1.484017], direction_loss:4.510264
+Epoch: 750/5000, train loss: 8.289132, node_f_loss: 3.812784, [type_loss 1.782572, index_loss 0.458957, int_v_loss 0.070431, float_v_loss 0.018406, string_loss 1.482417], direction_loss:4.476348
+Epoch: 760/5000, train loss: 8.304503, node_f_loss: 3.846198, [type_loss 1.895197, index_loss 0.423554, int_v_loss 0.025915, float_v_loss 0.019576, string_loss 1.481956], direction_loss:4.458305
+Epoch: 770/5000, train loss: 8.248449, node_f_loss: 3.787298, [type_loss 1.841495, index_loss 0.408759, int_v_loss 0.029160, float_v_loss 0.014203, string_loss 1.493681], direction_loss:4.461151
+Epoch: 780/5000, train loss: 8.548717, node_f_loss: 4.006099, [type_loss 2.022480, index_loss 0.435791, int_v_loss 0.049960, float_v_loss 0.018897, string_loss 1.478970], direction_loss:4.542618
+Epoch: 790/5000, train loss: 8.277980, node_f_loss: 3.854659, [type_loss 1.886778, index_loss 0.417175, int_v_loss 0.029006, float_v_loss 0.018998, string_loss 1.502701], direction_loss:4.423321
+Epoch: 800/5000, train loss: 8.164549, node_f_loss: 3.711172, [type_loss 1.779458, index_loss 0.394608, int_v_loss 0.027373, float_v_loss 0.013623, string_loss 1.496111], direction_loss:4.453377
+Epoch: 810/5000, train loss: 8.400279, node_f_loss: 3.963152, [type_loss 1.852462, index_loss 0.533836, int_v_loss 0.055163, float_v_loss 0.017445, string_loss 1.504246], direction_loss:4.437127
+Epoch: 820/5000, train loss: 8.186364, node_f_loss: 3.772299, [type_loss 1.829179, index_loss 0.407210, int_v_loss 0.028219, float_v_loss 0.015340, string_loss 1.492352], direction_loss:4.414065
+Epoch: 830/5000, train loss: 8.108947, node_f_loss: 3.624721, [type_loss 1.755171, index_loss 0.365653, int_v_loss 0.025294, float_v_loss 0.015132, string_loss 1.463470], direction_loss:4.484226
+Epoch: 840/5000, train loss: 8.327096, node_f_loss: 3.964110, [type_loss 1.794430, index_loss 0.522013, int_v_loss 0.119455, float_v_loss 0.016045, string_loss 1.512166], direction_loss:4.362987
+Epoch: 850/5000, train loss: 8.269354, node_f_loss: 3.866468, [type_loss 1.868661, index_loss 0.434063, int_v_loss 0.049111, float_v_loss 0.016140, string_loss 1.498493], direction_loss:4.402886
+Epoch: 860/5000, train loss: 8.087968, node_f_loss: 3.772683, [type_loss 1.811327, index_loss 0.417595, int_v_loss 0.045469, float_v_loss 0.014066, string_loss 1.484226], direction_loss:4.315285
+Epoch: 870/5000, train loss: 8.045319, node_f_loss: 3.733083, [type_loss 1.799500, index_loss 0.371429, int_v_loss 0.044313, float_v_loss 0.016626, string_loss 1.501214], direction_loss:4.312235
+Epoch: 880/5000, train loss: 8.436174, node_f_loss: 3.922021, [type_loss 1.844217, index_loss 0.490912, int_v_loss 0.093430, float_v_loss 0.011383, string_loss 1.482079], direction_loss:4.514153
+Epoch: 890/5000, train loss: 8.275778, node_f_loss: 3.768638, [type_loss 1.852864, index_loss 0.397663, int_v_loss 0.026106, float_v_loss 0.018882, string_loss 1.473123], direction_loss:4.507140
+Epoch: 900/5000, train loss: 8.228547, node_f_loss: 3.831532, [type_loss 1.857274, index_loss 0.401334, int_v_loss 0.044735, float_v_loss 0.015242, string_loss 1.512947], direction_loss:4.397015
+Epoch: 910/5000, train loss: 8.196827, node_f_loss: 3.749146, [type_loss 1.804732, index_loss 0.391212, int_v_loss 0.045499, float_v_loss 0.015383, string_loss 1.492320], direction_loss:4.447681
+Epoch: 920/5000, train loss: 8.288309, node_f_loss: 3.827961, [type_loss 1.818899, index_loss 0.464601, int_v_loss 0.030551, float_v_loss 0.016491, string_loss 1.497420], direction_loss:4.460349
+Epoch: 930/5000, train loss: 8.089174, node_f_loss: 3.756230, [type_loss 1.805304, index_loss 0.415415, int_v_loss 0.020560, float_v_loss 0.012710, string_loss 1.502242], direction_loss:4.332944
+Epoch: 940/5000, train loss: 8.179518, node_f_loss: 3.685399, [type_loss 1.709035, index_loss 0.416528, int_v_loss 0.049264, float_v_loss 0.018201, string_loss 1.492370], direction_loss:4.494120
+Epoch: 950/5000, train loss: 8.032991, node_f_loss: 3.717413, [type_loss 1.797077, index_loss 0.386226, int_v_loss 0.020385, float_v_loss 0.016218, string_loss 1.497506], direction_loss:4.315578
+Epoch: 960/5000, train loss: 8.173702, node_f_loss: 3.626647, [type_loss 1.764488, index_loss 0.334837, int_v_loss 0.020523, float_v_loss 0.017102, string_loss 1.489696], direction_loss:4.547056
+Epoch: 970/5000, train loss: 8.085023, node_f_loss: 3.715752, [type_loss 1.784563, index_loss 0.384445, int_v_loss 0.041571, float_v_loss 0.013889, string_loss 1.491284], direction_loss:4.369271
+Epoch: 980/5000, train loss: 8.062025, node_f_loss: 3.808659, [type_loss 1.750033, index_loss 0.460422, int_v_loss 0.067952, float_v_loss 0.013535, string_loss 1.516717], direction_loss:4.253366
+Epoch: 990/5000, train loss: 8.171534, node_f_loss: 3.792800, [type_loss 1.848549, index_loss 0.410285, int_v_loss 0.025774, float_v_loss 0.015229, string_loss 1.492964], direction_loss:4.378733
+Epoch: 1000/5000, train loss: 7.957288, node_f_loss: 3.611167, [type_loss 1.703931, index_loss 0.390811, int_v_loss 0.021926, float_v_loss 0.013591, string_loss 1.480909], direction_loss:4.346121
+Epoch: 1010/5000, train loss: 8.345239, node_f_loss: 3.798220, [type_loss 1.762826, index_loss 0.446466, int_v_loss 0.073180, float_v_loss 0.012846, string_loss 1.502902], direction_loss:4.547019
+Epoch: 1020/5000, train loss: 8.255204, node_f_loss: 3.844264, [type_loss 1.927829, index_loss 0.343831, int_v_loss 0.041326, float_v_loss 0.016860, string_loss 1.514418], direction_loss:4.410940
+Epoch: 1030/5000, train loss: 7.899018, node_f_loss: 3.606186, [type_loss 1.697600, index_loss 0.385219, int_v_loss 0.021205, float_v_loss 0.010580, string_loss 1.491582], direction_loss:4.292832
+Epoch: 1040/5000, train loss: 8.127245, node_f_loss: 3.641743, [type_loss 1.690006, index_loss 0.394081, int_v_loss 0.044087, float_v_loss 0.016371, string_loss 1.497196], direction_loss:4.485502
+Epoch: 1050/5000, train loss: 8.119825, node_f_loss: 3.762836, [type_loss 1.792730, index_loss 0.410022, int_v_loss 0.043199, float_v_loss 0.012282, string_loss 1.504602], direction_loss:4.356990
+Epoch: 1060/5000, train loss: 8.012746, node_f_loss: 3.640438, [type_loss 1.658298, index_loss 0.400385, int_v_loss 0.063772, float_v_loss 0.011700, string_loss 1.506282], direction_loss:4.372308
+Epoch: 1070/5000, train loss: 8.196863, node_f_loss: 3.691634, [type_loss 1.725076, index_loss 0.409616, int_v_loss 0.044932, float_v_loss 0.023120, string_loss 1.488891], direction_loss:4.505229
+Epoch: 1080/5000, train loss: 8.168280, node_f_loss: 3.762435, [type_loss 1.769511, index_loss 0.425392, int_v_loss 0.044548, float_v_loss 0.014535, string_loss 1.508449], direction_loss:4.405844
+Epoch: 1090/5000, train loss: 7.942472, node_f_loss: 3.651851, [type_loss 1.636867, index_loss 0.429611, int_v_loss 0.066461, float_v_loss 0.012487, string_loss 1.506426], direction_loss:4.290622
+Epoch: 1100/5000, train loss: 7.780411, node_f_loss: 3.699900, [type_loss 1.763619, index_loss 0.395241, int_v_loss 0.023557, float_v_loss 0.011022, string_loss 1.506462], direction_loss:4.080511
+Epoch: 1110/5000, train loss: 8.236139, node_f_loss: 3.791368, [type_loss 1.777883, index_loss 0.432555, int_v_loss 0.044581, float_v_loss 0.015552, string_loss 1.520796], direction_loss:4.444772
+Epoch: 1120/5000, train loss: 7.915271, node_f_loss: 3.718924, [type_loss 1.718464, index_loss 0.410816, int_v_loss 0.062433, float_v_loss 0.016153, string_loss 1.511057], direction_loss:4.196347
+Epoch: 1130/5000, train loss: 7.945080, node_f_loss: 3.585578, [type_loss 1.646369, index_loss 0.372373, int_v_loss 0.038701, float_v_loss 0.014323, string_loss 1.513812], direction_loss:4.359502
+Epoch: 1140/5000, train loss: 7.992921, node_f_loss: 3.586899, [type_loss 1.648361, index_loss 0.386371, int_v_loss 0.042431, float_v_loss 0.010001, string_loss 1.499734], direction_loss:4.406022
+Epoch: 1150/5000, train loss: 8.033627, node_f_loss: 3.645130, [type_loss 1.685026, index_loss 0.384079, int_v_loss 0.063479, float_v_loss 0.016511, string_loss 1.496036], direction_loss:4.388496
+Epoch: 1160/5000, train loss: 8.027076, node_f_loss: 3.587469, [type_loss 1.655009, index_loss 0.379564, int_v_loss 0.042994, float_v_loss 0.014568, string_loss 1.495333], direction_loss:4.439607
+Epoch: 1170/5000, train loss: 7.977289, node_f_loss: 3.501590, [type_loss 1.599589, index_loss 0.350513, int_v_loss 0.038453, float_v_loss 0.019714, string_loss 1.493321], direction_loss:4.475699
+Epoch: 1180/5000, train loss: 7.886620, node_f_loss: 3.500242, [type_loss 1.677118, index_loss 0.282489, int_v_loss 0.015222, float_v_loss 0.015110, string_loss 1.510303], direction_loss:4.386377
+Epoch: 1190/5000, train loss: 8.080396, node_f_loss: 3.567860, [type_loss 1.661649, index_loss 0.337751, int_v_loss 0.041729, float_v_loss 0.018872, string_loss 1.507859], direction_loss:4.512536
+Epoch: 1200/5000, train loss: 7.975521, node_f_loss: 3.554617, [type_loss 1.656922, index_loss 0.349925, int_v_loss 0.039051, float_v_loss 0.011873, string_loss 1.496846], direction_loss:4.420904
+Epoch: 1210/5000, train loss: 7.770784, node_f_loss: 3.405306, [type_loss 1.550943, index_loss 0.337575, int_v_loss 0.017090, float_v_loss 0.013079, string_loss 1.486619], direction_loss:4.365478
+Epoch: 1220/5000, train loss: 8.106661, node_f_loss: 3.617104, [type_loss 1.628797, index_loss 0.381717, int_v_loss 0.088676, float_v_loss 0.012217, string_loss 1.505697], direction_loss:4.489557
+Epoch: 1230/5000, train loss: 7.990197, node_f_loss: 3.599819, [type_loss 1.663790, index_loss 0.376144, int_v_loss 0.041600, float_v_loss 0.011423, string_loss 1.506863], direction_loss:4.390378
+Epoch: 1240/5000, train loss: 8.034983, node_f_loss: 3.644378, [type_loss 1.719225, index_loss 0.390997, int_v_loss 0.018730, float_v_loss 0.009895, string_loss 1.505531], direction_loss:4.390605
+Epoch: 1250/5000, train loss: 7.837234, node_f_loss: 3.598160, [type_loss 1.697374, index_loss 0.333168, int_v_loss 0.037379, float_v_loss 0.013418, string_loss 1.516821], direction_loss:4.239073
+Epoch: 1260/5000, train loss: 7.806667, node_f_loss: 3.602312, [type_loss 1.718587, index_loss 0.337015, int_v_loss 0.014900, float_v_loss 0.013363, string_loss 1.518447], direction_loss:4.204355
+Epoch: 1270/5000, train loss: 7.642996, node_f_loss: 3.577553, [type_loss 1.669680, index_loss 0.355809, int_v_loss 0.017514, float_v_loss 0.017129, string_loss 1.517421], direction_loss:4.065443
+Epoch: 1280/5000, train loss: 7.701940, node_f_loss: 3.426422, [type_loss 1.547670, index_loss 0.352067, int_v_loss 0.019306, float_v_loss 0.011055, string_loss 1.496324], direction_loss:4.275518
+Epoch: 1290/5000, train loss: 7.967242, node_f_loss: 3.600678, [type_loss 1.678807, index_loss 0.343999, int_v_loss 0.036377, float_v_loss 0.012405, string_loss 1.529090], direction_loss:4.366564
+Epoch: 1300/5000, train loss: 7.873081, node_f_loss: 3.416123, [type_loss 1.553958, index_loss 0.354125, int_v_loss 0.013003, float_v_loss 0.016267, string_loss 1.478770], direction_loss:4.456958
+Epoch: 1310/5000, train loss: 7.734561, node_f_loss: 3.322442, [type_loss 1.496123, index_loss 0.313871, int_v_loss 0.013064, float_v_loss 0.012399, string_loss 1.486985], direction_loss:4.412119
+Epoch: 1320/5000, train loss: 7.861586, node_f_loss: 3.582903, [type_loss 1.652262, index_loss 0.383974, int_v_loss 0.016589, float_v_loss 0.015244, string_loss 1.514835], direction_loss:4.278683
+Epoch: 1330/5000, train loss: 8.028931, node_f_loss: 3.681936, [type_loss 1.694275, index_loss 0.401272, int_v_loss 0.041381, float_v_loss 0.012342, string_loss 1.532665], direction_loss:4.346995
+Epoch: 1340/5000, train loss: 7.835591, node_f_loss: 3.490775, [type_loss 1.528363, index_loss 0.372160, int_v_loss 0.057055, float_v_loss 0.012147, string_loss 1.521050], direction_loss:4.344816
+Epoch: 1350/5000, train loss: 7.597827, node_f_loss: 3.508128, [type_loss 1.632026, index_loss 0.327787, int_v_loss 0.012815, float_v_loss 0.011738, string_loss 1.523762], direction_loss:4.089699
+Epoch: 1360/5000, train loss: 7.728880, node_f_loss: 3.503855, [type_loss 1.583961, index_loss 0.373746, int_v_loss 0.021396, float_v_loss 0.011673, string_loss 1.513079], direction_loss:4.225025
+Epoch: 1370/5000, train loss: 7.778584, node_f_loss: 3.416613, [type_loss 1.496548, index_loss 0.324235, int_v_loss 0.058711, float_v_loss 0.013774, string_loss 1.523345], direction_loss:4.361971
+Epoch: 1380/5000, train loss: 7.865565, node_f_loss: 3.454368, [type_loss 1.517365, index_loss 0.381370, int_v_loss 0.035072, float_v_loss 0.017241, string_loss 1.503320], direction_loss:4.411197
+Epoch: 1390/5000, train loss: 7.943509, node_f_loss: 3.560950, [type_loss 1.581067, index_loss 0.373380, int_v_loss 0.060965, float_v_loss 0.013509, string_loss 1.532029], direction_loss:4.382559
+Epoch: 1400/5000, train loss: 7.717039, node_f_loss: 3.348635, [type_loss 1.426690, index_loss 0.363676, int_v_loss 0.033113, float_v_loss 0.011773, string_loss 1.513384], direction_loss:4.368404
+Epoch: 1410/5000, train loss: 7.720145, node_f_loss: 3.395340, [type_loss 1.493369, index_loss 0.355814, int_v_loss 0.013920, float_v_loss 0.008938, string_loss 1.523300], direction_loss:4.324804
+Epoch: 1420/5000, train loss: 7.762048, node_f_loss: 3.349935, [type_loss 1.471468, index_loss 0.350492, int_v_loss 0.013556, float_v_loss 0.008038, string_loss 1.506381], direction_loss:4.412113
+Epoch: 1430/5000, train loss: 7.589954, node_f_loss: 3.323821, [type_loss 1.461104, index_loss 0.313796, int_v_loss 0.013176, float_v_loss 0.009097, string_loss 1.526648], direction_loss:4.266133
+Epoch: 1440/5000, train loss: 7.292731, node_f_loss: 3.293174, [type_loss 1.448762, index_loss 0.287890, int_v_loss 0.010429, float_v_loss 0.011594, string_loss 1.534500], direction_loss:3.999557
+Epoch: 1450/5000, train loss: 7.695006, node_f_loss: 3.335761, [type_loss 1.484940, index_loss 0.304138, int_v_loss 0.013469, float_v_loss 0.010395, string_loss 1.522820], direction_loss:4.359245
+Epoch: 1460/5000, train loss: 7.806209, node_f_loss: 3.480225, [type_loss 1.593905, index_loss 0.340575, int_v_loss 0.016764, float_v_loss 0.013401, string_loss 1.515580], direction_loss:4.325984
+Epoch: 1470/5000, train loss: 7.600326, node_f_loss: 3.410777, [type_loss 1.457248, index_loss 0.340385, int_v_loss 0.077067, float_v_loss 0.013412, string_loss 1.522666], direction_loss:4.189549
+Epoch: 1480/5000, train loss: 7.610885, node_f_loss: 3.438376, [type_loss 1.486167, index_loss 0.361887, int_v_loss 0.057088, float_v_loss 0.011728, string_loss 1.521506], direction_loss:4.172509
+Epoch: 1490/5000, train loss: 7.462824, node_f_loss: 3.215873, [type_loss 1.379409, index_loss 0.316152, int_v_loss 0.012878, float_v_loss 0.012359, string_loss 1.495075], direction_loss:4.246951
+Epoch: 1500/5000, train loss: 7.884350, node_f_loss: 3.472302, [type_loss 1.506481, index_loss 0.375382, int_v_loss 0.035706, float_v_loss 0.012681, string_loss 1.542052], direction_loss:4.412048
+Epoch: 1510/5000, train loss: 7.806473, node_f_loss: 3.345726, [type_loss 1.447305, index_loss 0.338320, int_v_loss 0.014793, float_v_loss 0.019184, string_loss 1.526123], direction_loss:4.460747
+Epoch: 1520/5000, train loss: 7.796793, node_f_loss: 3.385944, [type_loss 1.507834, index_loss 0.330923, int_v_loss 0.034137, float_v_loss 0.018506, string_loss 1.494545], direction_loss:4.410849
+Epoch: 1530/5000, train loss: 7.445549, node_f_loss: 3.267751, [type_loss 1.433749, index_loss 0.292039, int_v_loss 0.010974, float_v_loss 0.013806, string_loss 1.517182], direction_loss:4.177798
+Epoch: 1540/5000, train loss: 7.570750, node_f_loss: 3.366899, [type_loss 1.438809, index_loss 0.358392, int_v_loss 0.034690, float_v_loss 0.010536, string_loss 1.524473], direction_loss:4.203851
+Epoch: 1550/5000, train loss: 7.655465, node_f_loss: 3.443705, [type_loss 1.523456, index_loss 0.322678, int_v_loss 0.059103, float_v_loss 0.012065, string_loss 1.526403], direction_loss:4.211760
+Epoch: 1560/5000, train loss: 7.525021, node_f_loss: 3.293471, [type_loss 1.432806, index_loss 0.312737, int_v_loss 0.016666, float_v_loss 0.009492, string_loss 1.521770], direction_loss:4.231549
+Epoch: 1570/5000, train loss: 7.803060, node_f_loss: 3.462704, [type_loss 1.508417, index_loss 0.372841, int_v_loss 0.037749, float_v_loss 0.011673, string_loss 1.532025], direction_loss:4.340355
+Epoch: 1580/5000, train loss: 7.562598, node_f_loss: 3.197053, [type_loss 1.361189, index_loss 0.284921, int_v_loss 0.012944, float_v_loss 0.012832, string_loss 1.525167], direction_loss:4.365545
+Epoch: 1590/5000, train loss: 7.681270, node_f_loss: 3.402012, [type_loss 1.481870, index_loss 0.350932, int_v_loss 0.034583, float_v_loss 0.007738, string_loss 1.526889], direction_loss:4.279258
+Epoch: 1600/5000, train loss: 7.711846, node_f_loss: 3.351285, [type_loss 1.471803, index_loss 0.308661, int_v_loss 0.043725, float_v_loss 0.012517, string_loss 1.514580], direction_loss:4.360561
+Epoch: 1610/5000, train loss: 7.717152, node_f_loss: 3.324149, [type_loss 1.433396, index_loss 0.353884, int_v_loss 0.016997, float_v_loss 0.010923, string_loss 1.508949], direction_loss:4.393003
+Epoch: 1620/5000, train loss: 7.736110, node_f_loss: 3.345338, [type_loss 1.461144, index_loss 0.334761, int_v_loss 0.034374, float_v_loss 0.011810, string_loss 1.503249], direction_loss:4.390772
+Epoch: 1630/5000, train loss: 7.519957, node_f_loss: 3.245313, [type_loss 1.400446, index_loss 0.292451, int_v_loss 0.010269, float_v_loss 0.010142, string_loss 1.532005], direction_loss:4.274644
+Epoch: 1640/5000, train loss: 7.393065, node_f_loss: 3.276205, [type_loss 1.429545, index_loss 0.286320, int_v_loss 0.010347, float_v_loss 0.010589, string_loss 1.539404], direction_loss:4.116860
+Epoch: 1650/5000, train loss: 7.617541, node_f_loss: 3.203428, [type_loss 1.321769, index_loss 0.342470, int_v_loss 0.012398, float_v_loss 0.013441, string_loss 1.513350], direction_loss:4.414113
+Epoch: 1660/5000, train loss: 7.646388, node_f_loss: 3.404344, [type_loss 1.450929, index_loss 0.359292, int_v_loss 0.039430, float_v_loss 0.009915, string_loss 1.544777], direction_loss:4.242044
+Epoch: 1670/5000, train loss: 7.692360, node_f_loss: 3.290005, [type_loss 1.438788, index_loss 0.298998, int_v_loss 0.010636, float_v_loss 0.013550, string_loss 1.528033], direction_loss:4.402355
+Epoch: 1680/5000, train loss: 7.549037, node_f_loss: 3.295478, [type_loss 1.388749, index_loss 0.334903, int_v_loss 0.040742, float_v_loss 0.008580, string_loss 1.522504], direction_loss:4.253559
+Epoch: 1690/5000, train loss: 7.110027, node_f_loss: 3.070258, [type_loss 1.250908, index_loss 0.275877, int_v_loss 0.012992, float_v_loss 0.008308, string_loss 1.522171], direction_loss:4.039770
+Epoch: 1700/5000, train loss: 7.463471, node_f_loss: 3.188743, [type_loss 1.338957, index_loss 0.295026, int_v_loss 0.034633, float_v_loss 0.011634, string_loss 1.508492], direction_loss:4.274729
+Epoch: 1710/5000, train loss: 7.757589, node_f_loss: 3.345716, [type_loss 1.414379, index_loss 0.358070, int_v_loss 0.033927, float_v_loss 0.009618, string_loss 1.529721], direction_loss:4.411873
+Epoch: 1720/5000, train loss: 7.725141, node_f_loss: 3.452761, [type_loss 1.564572, index_loss 0.303410, int_v_loss 0.033255, float_v_loss 0.011421, string_loss 1.540103], direction_loss:4.272379
+Epoch: 1730/5000, train loss: 7.854151, node_f_loss: 3.415347, [type_loss 1.463447, index_loss 0.362091, int_v_loss 0.042053, float_v_loss 0.011727, string_loss 1.536030], direction_loss:4.438804
+Epoch: 1740/5000, train loss: 7.385926, node_f_loss: 3.110321, [type_loss 1.263737, index_loss 0.283847, int_v_loss 0.033126, float_v_loss 0.010560, string_loss 1.519052], direction_loss:4.275605
+Epoch: 1750/5000, train loss: 7.554083, node_f_loss: 3.137252, [type_loss 1.312920, index_loss 0.293145, int_v_loss 0.013855, float_v_loss 0.014603, string_loss 1.502730], direction_loss:4.416831
+Epoch: 1760/5000, train loss: 7.641282, node_f_loss: 3.299735, [type_loss 1.373676, index_loss 0.319096, int_v_loss 0.063410, float_v_loss 0.010451, string_loss 1.533102], direction_loss:4.341547
+Epoch: 1770/5000, train loss: 7.598578, node_f_loss: 3.175667, [type_loss 1.295309, index_loss 0.304194, int_v_loss 0.034059, float_v_loss 0.009574, string_loss 1.532531], direction_loss:4.422912
+Epoch: 1780/5000, train loss: 7.529680, node_f_loss: 3.115919, [type_loss 1.236881, index_loss 0.316206, int_v_loss 0.012721, float_v_loss 0.024270, string_loss 1.525842], direction_loss:4.413761
+Epoch: 1790/5000, train loss: 7.436574, node_f_loss: 3.283058, [type_loss 1.387961, index_loss 0.301116, int_v_loss 0.033138, float_v_loss 0.015886, string_loss 1.544956], direction_loss:4.153516
+Epoch: 1800/5000, train loss: 7.347187, node_f_loss: 3.119695, [type_loss 1.301103, index_loss 0.258360, int_v_loss 0.034058, float_v_loss 0.012985, string_loss 1.513189], direction_loss:4.227492
+Epoch: 1810/5000, train loss: 7.491321, node_f_loss: 3.119890, [type_loss 1.270192, index_loss 0.281892, int_v_loss 0.058660, float_v_loss 0.008253, string_loss 1.500893], direction_loss:4.371430
+Epoch: 1820/5000, train loss: 7.736214, node_f_loss: 3.233642, [type_loss 1.369210, index_loss 0.326686, int_v_loss 0.014692, float_v_loss 0.008777, string_loss 1.514277], direction_loss:4.502572
+Epoch: 1830/5000, train loss: 7.524110, node_f_loss: 3.349305, [type_loss 1.398303, index_loss 0.317078, int_v_loss 0.080760, float_v_loss 0.010111, string_loss 1.543053], direction_loss:4.174805
+Epoch: 1840/5000, train loss: 7.306553, node_f_loss: 3.238984, [type_loss 1.281358, index_loss 0.322770, int_v_loss 0.080705, float_v_loss 0.009419, string_loss 1.544733], direction_loss:4.067569
+Epoch: 1850/5000, train loss: 7.218874, node_f_loss: 3.183583, [type_loss 1.313832, index_loss 0.316551, int_v_loss 0.014613, float_v_loss 0.008889, string_loss 1.529698], direction_loss:4.035291
+Epoch: 1860/5000, train loss: 7.485569, node_f_loss: 3.248842, [type_loss 1.355616, index_loss 0.287374, int_v_loss 0.060301, float_v_loss 0.009045, string_loss 1.536507], direction_loss:4.236727
+Epoch: 1870/5000, train loss: 7.469623, node_f_loss: 3.179849, [type_loss 1.317968, index_loss 0.281234, int_v_loss 0.038122, float_v_loss 0.010751, string_loss 1.531775], direction_loss:4.289773
+Epoch: 1880/5000, train loss: 7.423522, node_f_loss: 3.179665, [type_loss 1.293850, index_loss 0.293407, int_v_loss 0.036776, float_v_loss 0.009199, string_loss 1.546433], direction_loss:4.243856
+Epoch: 1890/5000, train loss: 7.217936, node_f_loss: 3.071313, [type_loss 1.242631, index_loss 0.276578, int_v_loss 0.017916, float_v_loss 0.009808, string_loss 1.524380], direction_loss:4.146622
+Epoch: 1900/5000, train loss: 7.411147, node_f_loss: 3.183887, [type_loss 1.321531, index_loss 0.278921, int_v_loss 0.034142, float_v_loss 0.010679, string_loss 1.538614], direction_loss:4.227260
+Epoch: 1910/5000, train loss: 7.492043, node_f_loss: 3.143629, [type_loss 1.243053, index_loss 0.319906, int_v_loss 0.036619, float_v_loss 0.011304, string_loss 1.532747], direction_loss:4.348414
+Epoch: 1920/5000, train loss: 7.586938, node_f_loss: 3.190770, [type_loss 1.322999, index_loss 0.266127, int_v_loss 0.060485, float_v_loss 0.010645, string_loss 1.530514], direction_loss:4.396168
+Epoch: 1930/5000, train loss: 7.606461, node_f_loss: 3.238606, [type_loss 1.288023, index_loss 0.320529, int_v_loss 0.064312, float_v_loss 0.008489, string_loss 1.557253], direction_loss:4.367855
+Epoch: 1940/5000, train loss: 7.451837, node_f_loss: 3.041075, [type_loss 1.196386, index_loss 0.291109, int_v_loss 0.011445, float_v_loss 0.011348, string_loss 1.530787], direction_loss:4.410762
+Epoch: 1950/5000, train loss: 7.268244, node_f_loss: 3.044825, [type_loss 1.209349, index_loss 0.276102, int_v_loss 0.012941, float_v_loss 0.009166, string_loss 1.537267], direction_loss:4.223419
+Epoch: 1960/5000, train loss: 7.318628, node_f_loss: 3.155390, [type_loss 1.273869, index_loss 0.278904, int_v_loss 0.055043, float_v_loss 0.010728, string_loss 1.536846], direction_loss:4.163239
+Epoch: 1970/5000, train loss: 7.532506, node_f_loss: 3.149370, [type_loss 1.282595, index_loss 0.289466, int_v_loss 0.014130, float_v_loss 0.012656, string_loss 1.550524], direction_loss:4.383135
+Epoch: 1980/5000, train loss: 7.543334, node_f_loss: 3.127590, [type_loss 1.292726, index_loss 0.252023, int_v_loss 0.035007, float_v_loss 0.009077, string_loss 1.538756], direction_loss:4.415744
+Epoch: 1990/5000, train loss: 7.251774, node_f_loss: 3.106606, [type_loss 1.215031, index_loss 0.277441, int_v_loss 0.055620, float_v_loss 0.009544, string_loss 1.548970], direction_loss:4.145168
+Epoch: 2000/5000, train loss: 7.376238, node_f_loss: 3.104319, [type_loss 1.149765, index_loss 0.306771, int_v_loss 0.085739, float_v_loss 0.009886, string_loss 1.552158], direction_loss:4.271919
+Epoch: 2010/5000, train loss: 7.478009, node_f_loss: 3.173080, [type_loss 1.260494, index_loss 0.308822, int_v_loss 0.061881, float_v_loss 0.015028, string_loss 1.526855], direction_loss:4.304929
+Epoch: 2020/5000, train loss: 7.250014, node_f_loss: 3.084361, [type_loss 1.159569, index_loss 0.327666, int_v_loss 0.033246, float_v_loss 0.011075, string_loss 1.552805], direction_loss:4.165653
+Epoch: 2030/5000, train loss: 7.390438, node_f_loss: 3.114469, [type_loss 1.202865, index_loss 0.304943, int_v_loss 0.039737, float_v_loss 0.017822, string_loss 1.549101], direction_loss:4.275969
+Epoch: 2040/5000, train loss: 7.379162, node_f_loss: 3.093326, [type_loss 1.216799, index_loss 0.290554, int_v_loss 0.033998, float_v_loss 0.010157, string_loss 1.541819], direction_loss:4.285836
+Epoch: 2050/5000, train loss: 7.251031, node_f_loss: 3.031395, [type_loss 1.157375, index_loss 0.262948, int_v_loss 0.056414, float_v_loss 0.006779, string_loss 1.547878], direction_loss:4.219636
+Epoch: 2060/5000, train loss: 7.379848, node_f_loss: 3.121936, [type_loss 1.269074, index_loss 0.268790, int_v_loss 0.038398, float_v_loss 0.009749, string_loss 1.535925], direction_loss:4.257912
+Epoch: 2070/5000, train loss: 7.394897, node_f_loss: 3.116963, [type_loss 1.243913, index_loss 0.262403, int_v_loss 0.059773, float_v_loss 0.010141, string_loss 1.540732], direction_loss:4.277935
+Epoch: 2080/5000, train loss: 7.224522, node_f_loss: 2.995957, [type_loss 1.103171, index_loss 0.267932, int_v_loss 0.082209, float_v_loss 0.007251, string_loss 1.535395], direction_loss:4.228565
+Epoch: 2090/5000, train loss: 7.299305, node_f_loss: 3.119470, [type_loss 1.255804, index_loss 0.295625, int_v_loss 0.020890, float_v_loss 0.009968, string_loss 1.537183], direction_loss:4.179835
+Epoch: 2100/5000, train loss: 7.144032, node_f_loss: 3.030775, [type_loss 1.136499, index_loss 0.256909, int_v_loss 0.080279, float_v_loss 0.014517, string_loss 1.542571], direction_loss:4.113257
+Epoch: 2110/5000, train loss: 7.318915, node_f_loss: 3.085412, [type_loss 1.230616, index_loss 0.285261, int_v_loss 0.017937, float_v_loss 0.010825, string_loss 1.540772], direction_loss:4.233503
+Epoch: 2120/5000, train loss: 7.363858, node_f_loss: 3.033279, [type_loss 1.194290, index_loss 0.295317, int_v_loss 0.016253, float_v_loss 0.006892, string_loss 1.520528], direction_loss:4.330579
+Epoch: 2130/5000, train loss: 7.328784, node_f_loss: 3.166699, [type_loss 1.235365, index_loss 0.322708, int_v_loss 0.058500, float_v_loss 0.012943, string_loss 1.537184], direction_loss:4.162085
+Epoch: 2140/5000, train loss: 7.353738, node_f_loss: 3.130983, [type_loss 1.232853, index_loss 0.298865, int_v_loss 0.041781, float_v_loss 0.007915, string_loss 1.549570], direction_loss:4.222754
+Epoch: 2150/5000, train loss: 7.130522, node_f_loss: 3.023736, [type_loss 1.182733, index_loss 0.252810, int_v_loss 0.035440, float_v_loss 0.009503, string_loss 1.543251], direction_loss:4.106785
+Epoch: 2160/5000, train loss: 7.135218, node_f_loss: 2.956848, [type_loss 1.106534, index_loss 0.277398, int_v_loss 0.013692, float_v_loss 0.008810, string_loss 1.550414], direction_loss:4.178370
+Epoch: 2170/5000, train loss: 7.253215, node_f_loss: 3.009761, [type_loss 1.144562, index_loss 0.283337, int_v_loss 0.038217, float_v_loss 0.008254, string_loss 1.535392], direction_loss:4.243454
+Epoch: 2180/5000, train loss: 7.393246, node_f_loss: 3.082662, [type_loss 1.233300, index_loss 0.268755, int_v_loss 0.022707, float_v_loss 0.009111, string_loss 1.548789], direction_loss:4.310584
+Epoch: 2190/5000, train loss: 7.286028, node_f_loss: 3.033793, [type_loss 1.179030, index_loss 0.293737, int_v_loss 0.018987, float_v_loss 0.014041, string_loss 1.527998], direction_loss:4.252235
+Epoch: 2200/5000, train loss: 7.122450, node_f_loss: 2.913778, [type_loss 1.078560, index_loss 0.255506, int_v_loss 0.034727, float_v_loss 0.010744, string_loss 1.534240], direction_loss:4.208673
+Epoch: 2210/5000, train loss: 7.040907, node_f_loss: 3.010145, [type_loss 1.173463, index_loss 0.280392, int_v_loss 0.020415, float_v_loss 0.013154, string_loss 1.522722], direction_loss:4.030762
+Epoch: 2220/5000, train loss: 7.093250, node_f_loss: 2.942048, [type_loss 1.095349, index_loss 0.273292, int_v_loss 0.011760, float_v_loss 0.014806, string_loss 1.546842], direction_loss:4.151202
+Epoch: 2230/5000, train loss: 7.189060, node_f_loss: 3.002595, [type_loss 1.151592, index_loss 0.254760, int_v_loss 0.036045, float_v_loss 0.009519, string_loss 1.550679], direction_loss:4.186465
+Epoch: 2240/5000, train loss: 7.474244, node_f_loss: 3.042666, [type_loss 1.194313, index_loss 0.298479, int_v_loss 0.012533, float_v_loss 0.008498, string_loss 1.528842], direction_loss:4.431578
+Epoch: 2250/5000, train loss: 7.166471, node_f_loss: 2.954134, [type_loss 1.094602, index_loss 0.268523, int_v_loss 0.035357, float_v_loss 0.013295, string_loss 1.542357], direction_loss:4.212337
+Epoch: 2260/5000, train loss: 7.249722, node_f_loss: 2.928456, [type_loss 1.110664, index_loss 0.239738, int_v_loss 0.036135, float_v_loss 0.017414, string_loss 1.524506], direction_loss:4.321266
+Epoch: 2270/5000, train loss: 7.487892, node_f_loss: 3.049285, [type_loss 1.211329, index_loss 0.243868, int_v_loss 0.061018, float_v_loss 0.015682, string_loss 1.517388], direction_loss:4.438607
+Epoch: 2280/5000, train loss: 7.206135, node_f_loss: 2.931983, [type_loss 1.107591, index_loss 0.267520, int_v_loss 0.042913, float_v_loss 0.006692, string_loss 1.507267], direction_loss:4.274153
+Epoch: 2290/5000, train loss: 7.341464, node_f_loss: 3.043443, [type_loss 1.188432, index_loss 0.257677, int_v_loss 0.064636, float_v_loss 0.009425, string_loss 1.523273], direction_loss:4.298021
+Epoch: 2300/5000, train loss: 7.306091, node_f_loss: 2.964080, [type_loss 1.126066, index_loss 0.258482, int_v_loss 0.035996, float_v_loss 0.011094, string_loss 1.532442], direction_loss:4.342011
+Epoch: 2310/5000, train loss: 7.354633, node_f_loss: 3.027487, [type_loss 1.141200, index_loss 0.275962, int_v_loss 0.040617, float_v_loss 0.010102, string_loss 1.559605], direction_loss:4.327147
+Epoch: 2320/5000, train loss: 7.125110, node_f_loss: 2.907898, [type_loss 1.061885, index_loss 0.290022, int_v_loss 0.012683, float_v_loss 0.009633, string_loss 1.533675], direction_loss:4.217212
+Epoch: 2330/5000, train loss: 7.096480, node_f_loss: 2.826740, [type_loss 0.985467, index_loss 0.273635, int_v_loss 0.035042, float_v_loss 0.011125, string_loss 1.521470], direction_loss:4.269741
+Epoch: 2340/5000, train loss: 7.247495, node_f_loss: 2.998725, [type_loss 1.146014, index_loss 0.285686, int_v_loss 0.035252, float_v_loss 0.011374, string_loss 1.520400], direction_loss:4.248770
+Epoch: 2350/5000, train loss: 7.149890, node_f_loss: 3.009387, [type_loss 1.191997, index_loss 0.236263, int_v_loss 0.059730, float_v_loss 0.009429, string_loss 1.511968], direction_loss:4.140503
+Epoch: 2360/5000, train loss: 7.185559, node_f_loss: 2.918107, [type_loss 1.107632, index_loss 0.244327, int_v_loss 0.014254, float_v_loss 0.009715, string_loss 1.542178], direction_loss:4.267452
+Epoch: 2370/5000, train loss: 7.308157, node_f_loss: 2.969759, [type_loss 1.089657, index_loss 0.263528, int_v_loss 0.058423, float_v_loss 0.008428, string_loss 1.549723], direction_loss:4.338398
+Epoch: 2380/5000, train loss: 6.946534, node_f_loss: 2.945779, [type_loss 1.027547, index_loss 0.289691, int_v_loss 0.059915, float_v_loss 0.010400, string_loss 1.558226], direction_loss:4.000755
+Epoch: 2390/5000, train loss: 6.978906, node_f_loss: 2.869922, [type_loss 1.051333, index_loss 0.243887, int_v_loss 0.012520, float_v_loss 0.012342, string_loss 1.549840], direction_loss:4.108984
+Epoch: 2400/5000, train loss: 7.389196, node_f_loss: 2.992946, [type_loss 1.146965, index_loss 0.241531, int_v_loss 0.039128, float_v_loss 0.012399, string_loss 1.552923], direction_loss:4.396251
+Epoch: 2410/5000, train loss: 7.185764, node_f_loss: 2.872892, [type_loss 1.035522, index_loss 0.265113, int_v_loss 0.035525, float_v_loss 0.010058, string_loss 1.526673], direction_loss:4.312872
+Epoch: 2420/5000, train loss: 7.118473, node_f_loss: 2.906097, [type_loss 1.083580, index_loss 0.262711, int_v_loss 0.017385, float_v_loss 0.008602, string_loss 1.533819], direction_loss:4.212376
+Epoch: 2430/5000, train loss: 7.051180, node_f_loss: 2.875293, [type_loss 1.035405, index_loss 0.238800, int_v_loss 0.039261, float_v_loss 0.008388, string_loss 1.553439], direction_loss:4.175888
+Epoch: 2440/5000, train loss: 7.269799, node_f_loss: 2.953273, [type_loss 1.048383, index_loss 0.285125, int_v_loss 0.058481, float_v_loss 0.011465, string_loss 1.549818], direction_loss:4.316526
+Epoch: 2450/5000, train loss: 7.087472, node_f_loss: 2.941751, [type_loss 1.065091, index_loss 0.289821, int_v_loss 0.018900, float_v_loss 0.012516, string_loss 1.555423], direction_loss:4.145720
+Epoch: 2460/5000, train loss: 7.060872, node_f_loss: 2.902183, [type_loss 1.018661, index_loss 0.274813, int_v_loss 0.037890, float_v_loss 0.012053, string_loss 1.558767], direction_loss:4.158689
+Epoch: 2470/5000, train loss: 7.141949, node_f_loss: 2.948021, [type_loss 1.088578, index_loss 0.264929, int_v_loss 0.038138, float_v_loss 0.019129, string_loss 1.537247], direction_loss:4.193927
+Epoch: 2480/5000, train loss: 7.137628, node_f_loss: 2.919131, [type_loss 1.069062, index_loss 0.259716, int_v_loss 0.038926, float_v_loss 0.016730, string_loss 1.534698], direction_loss:4.218497
+Epoch: 2490/5000, train loss: 7.235658, node_f_loss: 2.932418, [type_loss 1.090244, index_loss 0.275134, int_v_loss 0.021913, float_v_loss 0.010753, string_loss 1.534374], direction_loss:4.303240
+Epoch: 2500/5000, train loss: 6.924948, node_f_loss: 2.866663, [type_loss 1.028157, index_loss 0.269012, int_v_loss 0.016141, float_v_loss 0.009312, string_loss 1.544041], direction_loss:4.058284
+Epoch: 2510/5000, train loss: 7.025076, node_f_loss: 2.875154, [type_loss 1.001519, index_loss 0.285504, int_v_loss 0.037208, float_v_loss 0.011451, string_loss 1.539472], direction_loss:4.149923
+Epoch: 2520/5000, train loss: 7.084149, node_f_loss: 2.824284, [type_loss 0.991263, index_loss 0.247076, int_v_loss 0.040044, float_v_loss 0.011197, string_loss 1.534704], direction_loss:4.259866
+Epoch: 2530/5000, train loss: 7.159498, node_f_loss: 2.911077, [type_loss 1.098804, index_loss 0.260454, int_v_loss 0.014013, float_v_loss 0.008212, string_loss 1.529594], direction_loss:4.248421
+Epoch: 2540/5000, train loss: 7.259819, node_f_loss: 2.874757, [type_loss 1.020498, index_loss 0.265595, int_v_loss 0.036634, float_v_loss 0.008610, string_loss 1.543420], direction_loss:4.385062
+Epoch: 2550/5000, train loss: 7.089632, node_f_loss: 2.848176, [type_loss 1.049560, index_loss 0.233586, int_v_loss 0.014756, float_v_loss 0.007744, string_loss 1.542530], direction_loss:4.241456
+Epoch: 2560/5000, train loss: 7.147770, node_f_loss: 2.833245, [type_loss 1.007840, index_loss 0.260101, int_v_loss 0.015203, float_v_loss 0.015254, string_loss 1.534847], direction_loss:4.314526
+Epoch: 2570/5000, train loss: 6.896594, node_f_loss: 2.888155, [type_loss 0.981405, index_loss 0.276258, int_v_loss 0.056260, float_v_loss 0.009149, string_loss 1.565083], direction_loss:4.008439
+Epoch: 2580/5000, train loss: 7.134972, node_f_loss: 2.878214, [type_loss 1.040662, index_loss 0.259518, int_v_loss 0.047660, float_v_loss 0.009193, string_loss 1.521181], direction_loss:4.256758
+Epoch: 2590/5000, train loss: 6.992168, node_f_loss: 2.797111, [type_loss 0.915752, index_loss 0.308734, int_v_loss 0.014107, float_v_loss 0.022198, string_loss 1.536320], direction_loss:4.195058
+Epoch: 2600/5000, train loss: 7.385072, node_f_loss: 2.924985, [type_loss 1.022534, index_loss 0.322174, int_v_loss 0.016955, float_v_loss 0.023327, string_loss 1.539994], direction_loss:4.460086
+Epoch: 2610/5000, train loss: 7.230812, node_f_loss: 2.896257, [type_loss 1.074982, index_loss 0.252923, int_v_loss 0.037553, float_v_loss 0.012178, string_loss 1.518621], direction_loss:4.334555
+Epoch: 2620/5000, train loss: 6.841378, node_f_loss: 2.799026, [type_loss 0.992679, index_loss 0.258824, int_v_loss 0.015545, float_v_loss 0.010476, string_loss 1.521503], direction_loss:4.042352
+Epoch: 2630/5000, train loss: 6.961479, node_f_loss: 2.754597, [type_loss 0.933339, index_loss 0.239198, int_v_loss 0.035514, float_v_loss 0.008211, string_loss 1.538335], direction_loss:4.206882
+Epoch: 2640/5000, train loss: 7.095971, node_f_loss: 2.960694, [type_loss 1.099709, index_loss 0.279388, int_v_loss 0.037903, float_v_loss 0.008096, string_loss 1.535598], direction_loss:4.135277
+Epoch: 2650/5000, train loss: 7.177856, node_f_loss: 2.839216, [type_loss 1.020714, index_loss 0.220552, int_v_loss 0.061153, float_v_loss 0.008756, string_loss 1.528041], direction_loss:4.338641
+Epoch: 2660/5000, train loss: 7.121501, node_f_loss: 2.810320, [type_loss 0.969554, index_loss 0.253674, int_v_loss 0.036266, float_v_loss 0.008842, string_loss 1.541985], direction_loss:4.311181
+Epoch: 2670/5000, train loss: 7.353617, node_f_loss: 2.957484, [type_loss 1.095963, index_loss 0.245307, int_v_loss 0.062472, float_v_loss 0.011508, string_loss 1.542235], direction_loss:4.396132
+Epoch: 2680/5000, train loss: 6.974029, node_f_loss: 2.842130, [type_loss 1.004327, index_loss 0.247383, int_v_loss 0.036278, float_v_loss 0.006935, string_loss 1.547207], direction_loss:4.131899
+Epoch: 2690/5000, train loss: 7.168762, node_f_loss: 2.867996, [type_loss 0.999606, index_loss 0.276291, int_v_loss 0.012527, float_v_loss 0.016842, string_loss 1.562730], direction_loss:4.300766
+Epoch: 2700/5000, train loss: 6.838517, node_f_loss: 2.839499, [type_loss 1.000774, index_loss 0.273140, int_v_loss 0.023692, float_v_loss 0.010206, string_loss 1.531687], direction_loss:3.999018
+Epoch: 2710/5000, train loss: 6.925420, node_f_loss: 2.773155, [type_loss 0.927681, index_loss 0.263332, int_v_loss 0.036329, float_v_loss 0.011710, string_loss 1.534104], direction_loss:4.152265
+Epoch: 2720/5000, train loss: 7.080520, node_f_loss: 2.855966, [type_loss 1.019801, index_loss 0.231496, int_v_loss 0.059655, float_v_loss 0.007127, string_loss 1.537886], direction_loss:4.224555
+Epoch: 2730/5000, train loss: 6.821193, node_f_loss: 2.683464, [type_loss 0.894245, index_loss 0.227266, int_v_loss 0.014572, float_v_loss 0.007261, string_loss 1.540120], direction_loss:4.137729
+Epoch: 2740/5000, train loss: 7.084147, node_f_loss: 2.868439, [type_loss 1.017968, index_loss 0.251323, int_v_loss 0.037465, float_v_loss 0.009316, string_loss 1.552367], direction_loss:4.215708
+Epoch: 2750/5000, train loss: 6.800569, node_f_loss: 2.767626, [type_loss 0.879491, index_loss 0.275790, int_v_loss 0.055850, float_v_loss 0.012261, string_loss 1.544234], direction_loss:4.032943
+Epoch: 2760/5000, train loss: 6.723160, node_f_loss: 2.759634, [type_loss 0.893792, index_loss 0.257216, int_v_loss 0.032143, float_v_loss 0.014860, string_loss 1.561623], direction_loss:3.963527
+Epoch: 2770/5000, train loss: 7.153316, node_f_loss: 2.862641, [type_loss 0.936874, index_loss 0.248482, int_v_loss 0.108766, float_v_loss 0.008994, string_loss 1.559525], direction_loss:4.290674
+Epoch: 2780/5000, train loss: 7.181809, node_f_loss: 2.922215, [type_loss 1.021206, index_loss 0.294338, int_v_loss 0.042980, float_v_loss 0.011030, string_loss 1.552662], direction_loss:4.259594
+Epoch: 2790/5000, train loss: 6.876387, node_f_loss: 2.722928, [type_loss 0.902744, index_loss 0.242151, int_v_loss 0.038518, float_v_loss 0.009975, string_loss 1.529541], direction_loss:4.153459
+Epoch: 2800/5000, train loss: 6.748050, node_f_loss: 2.694694, [type_loss 0.897416, index_loss 0.237695, int_v_loss 0.012575, float_v_loss 0.007020, string_loss 1.539988], direction_loss:4.053356
+Epoch: 2810/5000, train loss: 7.041714, node_f_loss: 2.734704, [type_loss 0.904085, index_loss 0.250035, int_v_loss 0.041537, float_v_loss 0.009623, string_loss 1.529423], direction_loss:4.307010
+Epoch: 2820/5000, train loss: 7.196646, node_f_loss: 2.843451, [type_loss 0.965469, index_loss 0.299210, int_v_loss 0.020831, float_v_loss 0.008208, string_loss 1.549732], direction_loss:4.353195
+Epoch: 2830/5000, train loss: 6.882506, node_f_loss: 2.702738, [type_loss 0.926890, index_loss 0.236592, int_v_loss 0.016291, float_v_loss 0.010469, string_loss 1.512497], direction_loss:4.179768
+Epoch: 2840/5000, train loss: 7.232923, node_f_loss: 2.869172, [type_loss 0.978215, index_loss 0.282587, int_v_loss 0.020301, float_v_loss 0.011466, string_loss 1.576602], direction_loss:4.363750
+Epoch: 2850/5000, train loss: 6.909711, node_f_loss: 2.781093, [type_loss 0.936788, index_loss 0.230462, int_v_loss 0.060709, float_v_loss 0.008140, string_loss 1.544994], direction_loss:4.128618
+Epoch: 2860/5000, train loss: 6.875245, node_f_loss: 2.768548, [type_loss 0.934274, index_loss 0.270643, int_v_loss 0.019605, float_v_loss 0.009125, string_loss 1.534900], direction_loss:4.106697
+Epoch: 2870/5000, train loss: 6.868289, node_f_loss: 2.694141, [type_loss 0.878735, index_loss 0.242121, int_v_loss 0.036335, float_v_loss 0.008140, string_loss 1.528810], direction_loss:4.174148
+Epoch: 2880/5000, train loss: 6.919398, node_f_loss: 2.730617, [type_loss 0.953220, index_loss 0.228180, int_v_loss 0.013465, float_v_loss 0.008639, string_loss 1.527113], direction_loss:4.188781
+Epoch: 2890/5000, train loss: 7.133582, node_f_loss: 2.768291, [type_loss 0.936734, index_loss 0.256688, int_v_loss 0.039084, float_v_loss 0.007592, string_loss 1.528194], direction_loss:4.365291
+Epoch: 2900/5000, train loss: 7.026583, node_f_loss: 2.763933, [type_loss 0.914847, index_loss 0.249516, int_v_loss 0.034312, float_v_loss 0.013310, string_loss 1.551949], direction_loss:4.262650
+Epoch: 2910/5000, train loss: 7.079542, node_f_loss: 2.800062, [type_loss 0.924229, index_loss 0.262203, int_v_loss 0.066493, float_v_loss 0.011966, string_loss 1.535171], direction_loss:4.279480
+Epoch: 2920/5000, train loss: 6.874647, node_f_loss: 2.666200, [type_loss 0.851061, index_loss 0.260641, int_v_loss 0.014885, float_v_loss 0.014321, string_loss 1.525291], direction_loss:4.208447
+Epoch: 2930/5000, train loss: 6.903774, node_f_loss: 2.721961, [type_loss 0.903723, index_loss 0.243174, int_v_loss 0.059536, float_v_loss 0.009808, string_loss 1.505719], direction_loss:4.181814
+Epoch: 2940/5000, train loss: 6.932356, node_f_loss: 2.733544, [type_loss 0.918185, index_loss 0.229005, int_v_loss 0.059495, float_v_loss 0.010902, string_loss 1.515958], direction_loss:4.198812
+Epoch: 2950/5000, train loss: 6.867037, node_f_loss: 2.695399, [type_loss 0.846108, index_loss 0.235309, int_v_loss 0.014043, float_v_loss 0.024207, string_loss 1.575732], direction_loss:4.171638
+Epoch: 2960/5000, train loss: 7.116629, node_f_loss: 2.820910, [type_loss 0.988918, index_loss 0.248375, int_v_loss 0.037770, float_v_loss 0.016594, string_loss 1.529254], direction_loss:4.295718
+Epoch: 2970/5000, train loss: 7.125553, node_f_loss: 2.841544, [type_loss 0.971649, index_loss 0.258047, int_v_loss 0.072163, float_v_loss 0.011067, string_loss 1.528618], direction_loss:4.284009
+Epoch: 2980/5000, train loss: 6.995867, node_f_loss: 2.668722, [type_loss 0.859422, index_loss 0.236028, int_v_loss 0.034577, float_v_loss 0.011313, string_loss 1.527381], direction_loss:4.327146
+Epoch: 2990/5000, train loss: 6.876703, node_f_loss: 2.669008, [type_loss 0.856070, index_loss 0.225491, int_v_loss 0.033879, float_v_loss 0.007895, string_loss 1.545673], direction_loss:4.207695
+Epoch: 3000/5000, train loss: 6.874862, node_f_loss: 2.772307, [type_loss 0.959412, index_loss 0.234637, int_v_loss 0.041445, float_v_loss 0.009319, string_loss 1.527494], direction_loss:4.102555
+Batch 3 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 3 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 2 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #12 pred type tensor([[7]], device='cuda:0') gt type tensor([[12]])
+Batch 3 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #13 pred type tensor([[0]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #14 pred type tensor([[8]], device='cuda:0') gt type tensor([[7]])
+test done, graphs saved
+Epoch: 3010/5000, train loss: 7.008975, node_f_loss: 2.779033, [type_loss 0.931841, index_loss 0.275728, int_v_loss 0.016529, float_v_loss 0.008803, string_loss 1.546132], direction_loss:4.229942
+Epoch: 3020/5000, train loss: 6.769376, node_f_loss: 2.681580, [type_loss 0.843095, index_loss 0.220894, int_v_loss 0.031958, float_v_loss 0.008482, string_loss 1.577151], direction_loss:4.087796
+Epoch: 3030/5000, train loss: 6.951519, node_f_loss: 2.673573, [type_loss 0.915442, index_loss 0.218908, int_v_loss 0.015940, float_v_loss 0.012574, string_loss 1.510708], direction_loss:4.277946
+Epoch: 3040/5000, train loss: 6.892043, node_f_loss: 2.685981, [type_loss 0.903839, index_loss 0.239110, int_v_loss 0.010834, float_v_loss 0.009140, string_loss 1.523057], direction_loss:4.206062
+Epoch: 3050/5000, train loss: 6.937998, node_f_loss: 2.733216, [type_loss 0.890089, index_loss 0.272900, int_v_loss 0.013951, float_v_loss 0.012833, string_loss 1.543444], direction_loss:4.204782
+Epoch: 3060/5000, train loss: 6.831620, node_f_loss: 2.662535, [type_loss 0.872670, index_loss 0.224609, int_v_loss 0.035015, float_v_loss 0.007241, string_loss 1.523000], direction_loss:4.169085
+Epoch: 3070/5000, train loss: 7.034278, node_f_loss: 2.695816, [type_loss 0.890547, index_loss 0.240116, int_v_loss 0.037695, float_v_loss 0.008195, string_loss 1.519262], direction_loss:4.338462
+Epoch: 3080/5000, train loss: 7.005394, node_f_loss: 2.678488, [type_loss 0.870980, index_loss 0.242354, int_v_loss 0.033871, float_v_loss 0.008526, string_loss 1.522756], direction_loss:4.326907
+Epoch: 3090/5000, train loss: 7.029446, node_f_loss: 2.731423, [type_loss 0.897063, index_loss 0.262244, int_v_loss 0.037029, float_v_loss 0.010906, string_loss 1.524181], direction_loss:4.298023
+Epoch: 3100/5000, train loss: 7.010267, node_f_loss: 2.793298, [type_loss 0.893597, index_loss 0.262636, int_v_loss 0.065678, float_v_loss 0.011827, string_loss 1.559560], direction_loss:4.216969
+Batch 0 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 3 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 3 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 4 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 5 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 6 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 1 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 4 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 6 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 1 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #9 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #12 pred type tensor([[7]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #13 pred type tensor([[0]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #14 pred type tensor([[8]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 0 Node #17 pred type tensor([[0]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3110/5000, train loss: 7.018206, node_f_loss: 2.751911, [type_loss 0.863441, index_loss 0.243828, int_v_loss 0.081220, float_v_loss 0.009336, string_loss 1.554087], direction_loss:4.266294
+Epoch: 3120/5000, train loss: 6.779918, node_f_loss: 2.674875, [type_loss 0.791039, index_loss 0.236810, int_v_loss 0.075220, float_v_loss 0.011989, string_loss 1.559817], direction_loss:4.105042
+Epoch: 3130/5000, train loss: 6.985202, node_f_loss: 2.636834, [type_loss 0.832707, index_loss 0.248769, int_v_loss 0.013654, float_v_loss 0.008971, string_loss 1.532732], direction_loss:4.348368
+Epoch: 3140/5000, train loss: 6.730197, node_f_loss: 2.654438, [type_loss 0.854880, index_loss 0.238855, int_v_loss 0.015336, float_v_loss 0.009845, string_loss 1.535522], direction_loss:4.075760
+Epoch: 3150/5000, train loss: 6.907564, node_f_loss: 2.623171, [type_loss 0.846787, index_loss 0.244105, int_v_loss 0.014904, float_v_loss 0.005947, string_loss 1.511429], direction_loss:4.284392
+Epoch: 3160/5000, train loss: 6.966460, node_f_loss: 2.794379, [type_loss 0.929954, index_loss 0.240880, int_v_loss 0.065911, float_v_loss 0.012991, string_loss 1.544642], direction_loss:4.172082
+Epoch: 3170/5000, train loss: 6.873415, node_f_loss: 2.694991, [type_loss 0.868993, index_loss 0.237987, int_v_loss 0.016063, float_v_loss 0.039328, string_loss 1.532620], direction_loss:4.178423
+Epoch: 3180/5000, train loss: 7.078117, node_f_loss: 2.730958, [type_loss 0.858994, index_loss 0.246214, int_v_loss 0.057704, float_v_loss 0.014023, string_loss 1.554022], direction_loss:4.347159
+Epoch: 3190/5000, train loss: 7.029944, node_f_loss: 2.759002, [type_loss 0.926138, index_loss 0.223029, int_v_loss 0.060676, float_v_loss 0.007664, string_loss 1.541495], direction_loss:4.270942
+Epoch: 3200/5000, train loss: 7.047644, node_f_loss: 2.812124, [type_loss 0.955300, index_loss 0.273860, int_v_loss 0.038803, float_v_loss 0.007933, string_loss 1.536227], direction_loss:4.235520
+Batch 1 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 2 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[19]])
+Batch 5 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 6 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #14 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #14 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[14]], device='cuda:0') gt type tensor([[15]])
+Batch 1 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 2 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 1 Node #17 pred type tensor([[11]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #17 pred type tensor([[11]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3210/5000, train loss: 6.607378, node_f_loss: 2.534487, [type_loss 0.779877, index_loss 0.225291, int_v_loss 0.011804, float_v_loss 0.007402, string_loss 1.510113], direction_loss:4.072891
+Epoch: 3220/5000, train loss: 6.784319, node_f_loss: 2.569152, [type_loss 0.804161, index_loss 0.228411, int_v_loss 0.012355, float_v_loss 0.006340, string_loss 1.517886], direction_loss:4.215167
+Epoch: 3230/5000, train loss: 6.910477, node_f_loss: 2.684556, [type_loss 0.885857, index_loss 0.224030, int_v_loss 0.040166, float_v_loss 0.005647, string_loss 1.528857], direction_loss:4.225921
+Epoch: 3240/5000, train loss: 6.879549, node_f_loss: 2.602996, [type_loss 0.818835, index_loss 0.225809, int_v_loss 0.038734, float_v_loss 0.008043, string_loss 1.511575], direction_loss:4.276553
+Epoch: 3250/5000, train loss: 6.751015, node_f_loss: 2.572700, [type_loss 0.805867, index_loss 0.228832, int_v_loss 0.009298, float_v_loss 0.008917, string_loss 1.519784], direction_loss:4.178315
+Epoch: 3260/5000, train loss: 7.053147, node_f_loss: 2.678898, [type_loss 0.854091, index_loss 0.234472, int_v_loss 0.034262, float_v_loss 0.010843, string_loss 1.545232], direction_loss:4.374249
+Epoch: 3270/5000, train loss: 6.847242, node_f_loss: 2.601011, [type_loss 0.843955, index_loss 0.240826, int_v_loss 0.020906, float_v_loss 0.007380, string_loss 1.487943], direction_loss:4.246231
+Epoch: 3280/5000, train loss: 6.848924, node_f_loss: 2.745804, [type_loss 0.854329, index_loss 0.253301, int_v_loss 0.076017, float_v_loss 0.007086, string_loss 1.555071], direction_loss:4.103120
+Epoch: 3290/5000, train loss: 7.007647, node_f_loss: 2.697509, [type_loss 0.849123, index_loss 0.229008, int_v_loss 0.064764, float_v_loss 0.010469, string_loss 1.544144], direction_loss:4.310138
+Epoch: 3300/5000, train loss: 6.976583, node_f_loss: 2.764405, [type_loss 0.894210, index_loss 0.256158, int_v_loss 0.063236, float_v_loss 0.008742, string_loss 1.542060], direction_loss:4.212178
+Batch 1 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 1 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 3 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 7 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 3 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[17]])
+Batch 7 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 3 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #12 pred type tensor([[7]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #13 pred type tensor([[0]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 3 Node #14 pred type tensor([[8]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3310/5000, train loss: 6.985603, node_f_loss: 2.554945, [type_loss 0.808032, index_loss 0.191940, int_v_loss 0.036312, float_v_loss 0.008691, string_loss 1.509970], direction_loss:4.430659
+Epoch: 3320/5000, train loss: 6.831281, node_f_loss: 2.689882, [type_loss 0.849416, index_loss 0.241386, int_v_loss 0.034867, float_v_loss 0.008063, string_loss 1.556150], direction_loss:4.141399
+Epoch: 3330/5000, train loss: 7.004970, node_f_loss: 2.666801, [type_loss 0.832367, index_loss 0.265437, int_v_loss 0.041270, float_v_loss 0.007596, string_loss 1.520132], direction_loss:4.338168
+Epoch: 3340/5000, train loss: 6.735812, node_f_loss: 2.605426, [type_loss 0.809187, index_loss 0.247485, int_v_loss 0.021080, float_v_loss 0.008444, string_loss 1.519230], direction_loss:4.130386
+Epoch: 3350/5000, train loss: 6.648941, node_f_loss: 2.625521, [type_loss 0.840907, index_loss 0.235993, int_v_loss 0.020474, float_v_loss 0.009003, string_loss 1.519144], direction_loss:4.023420
+Epoch: 3360/5000, train loss: 6.742174, node_f_loss: 2.639813, [type_loss 0.820947, index_loss 0.245208, int_v_loss 0.033309, float_v_loss 0.009375, string_loss 1.530973], direction_loss:4.102361
+Epoch: 3370/5000, train loss: 6.978948, node_f_loss: 2.665531, [type_loss 0.889643, index_loss 0.245985, int_v_loss 0.014632, float_v_loss 0.008437, string_loss 1.506834], direction_loss:4.313417
+Epoch: 3380/5000, train loss: 6.780103, node_f_loss: 2.632811, [type_loss 0.819313, index_loss 0.209601, int_v_loss 0.056992, float_v_loss 0.007258, string_loss 1.539647], direction_loss:4.147292
+Epoch: 3390/5000, train loss: 6.838483, node_f_loss: 2.589185, [type_loss 0.809624, index_loss 0.236948, int_v_loss 0.015918, float_v_loss 0.011901, string_loss 1.514795], direction_loss:4.249298
+Epoch: 3400/5000, train loss: 6.817608, node_f_loss: 2.603407, [type_loss 0.798680, index_loss 0.249443, int_v_loss 0.014863, float_v_loss 0.006420, string_loss 1.534001], direction_loss:4.214201
+Batch 0 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 1 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 0 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 1 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 2 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[17]])
+Batch 5 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 2 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 1 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 7 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #12 pred type tensor([[7]], device='cuda:0') gt type tensor([[12]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #13 pred type tensor([[0]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #14 pred type tensor([[1]], device='cuda:0') gt type tensor([[7]])
+test done, graphs saved
+Epoch: 3410/5000, train loss: 6.867271, node_f_loss: 2.644708, [type_loss 0.852789, index_loss 0.233511, int_v_loss 0.037705, float_v_loss 0.008294, string_loss 1.512409], direction_loss:4.222563
+Epoch: 3420/5000, train loss: 6.909944, node_f_loss: 2.737489, [type_loss 0.891407, index_loss 0.242836, int_v_loss 0.036955, float_v_loss 0.029937, string_loss 1.536354], direction_loss:4.172454
+Epoch: 3430/5000, train loss: 6.867381, node_f_loss: 2.692907, [type_loss 0.853846, index_loss 0.230223, int_v_loss 0.036001, float_v_loss 0.013218, string_loss 1.559618], direction_loss:4.174474
+Epoch: 3440/5000, train loss: 6.844501, node_f_loss: 2.637819, [type_loss 0.791859, index_loss 0.231374, int_v_loss 0.059376, float_v_loss 0.010311, string_loss 1.544900], direction_loss:4.206681
+Epoch: 3450/5000, train loss: 7.121106, node_f_loss: 2.657027, [type_loss 0.847066, index_loss 0.222901, int_v_loss 0.061997, float_v_loss 0.009786, string_loss 1.515277], direction_loss:4.464079
+Epoch: 3460/5000, train loss: 6.560345, node_f_loss: 2.563875, [type_loss 0.770271, index_loss 0.237372, int_v_loss 0.012804, float_v_loss 0.007445, string_loss 1.535981], direction_loss:3.996470
+Epoch: 3470/5000, train loss: 7.011561, node_f_loss: 2.657761, [type_loss 0.859909, index_loss 0.231773, int_v_loss 0.016714, float_v_loss 0.005741, string_loss 1.543624], direction_loss:4.353801
+Epoch: 3480/5000, train loss: 6.752979, node_f_loss: 2.607992, [type_loss 0.806367, index_loss 0.256961, int_v_loss 0.019920, float_v_loss 0.008838, string_loss 1.515906], direction_loss:4.144987
+Epoch: 3490/5000, train loss: 6.875148, node_f_loss: 2.683245, [type_loss 0.878017, index_loss 0.220360, int_v_loss 0.058307, float_v_loss 0.009423, string_loss 1.517138], direction_loss:4.191904
+Epoch: 3500/5000, train loss: 6.898187, node_f_loss: 2.718787, [type_loss 0.859364, index_loss 0.234595, int_v_loss 0.081035, float_v_loss 0.009643, string_loss 1.534150], direction_loss:4.179399
+Batch 1 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 2 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 3 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 4 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 5 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 1 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 2 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 3 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 2 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 3 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 4 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 5 Node #3 pred type tensor([[14]], device='cuda:0') gt type tensor([[9]])
+Batch 6 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 7 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 3 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 4 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 5 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 6 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 7 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 4 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 5 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 6 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #9 pred type tensor([[4]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 5 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 6 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 6 Node #12 pred type tensor([[7]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 5 Node #13 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 6 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 6 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #15 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #15 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #15 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #15 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 5 Node #15 pred type tensor([[14]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3510/5000, train loss: 6.791857, node_f_loss: 2.528402, [type_loss 0.767617, index_loss 0.226238, int_v_loss 0.016558, float_v_loss 0.007368, string_loss 1.510620], direction_loss:4.263455
+Epoch: 3520/5000, train loss: 6.779364, node_f_loss: 2.575605, [type_loss 0.807053, index_loss 0.222137, int_v_loss 0.033582, float_v_loss 0.011133, string_loss 1.501700], direction_loss:4.203759
+Epoch: 3530/5000, train loss: 6.796241, node_f_loss: 2.566746, [type_loss 0.816823, index_loss 0.229018, int_v_loss 0.011001, float_v_loss 0.007507, string_loss 1.502397], direction_loss:4.229495
+Epoch: 3540/5000, train loss: 6.794695, node_f_loss: 2.534746, [type_loss 0.790226, index_loss 0.229848, int_v_loss 0.009646, float_v_loss 0.008315, string_loss 1.496712], direction_loss:4.259948
+Epoch: 3550/5000, train loss: 6.709684, node_f_loss: 2.519818, [type_loss 0.797801, index_loss 0.211434, int_v_loss 0.011681, float_v_loss 0.009282, string_loss 1.489619], direction_loss:4.189866
+Epoch: 3560/5000, train loss: 6.906963, node_f_loss: 2.648077, [type_loss 0.809840, index_loss 0.257092, int_v_loss 0.039479, float_v_loss 0.012748, string_loss 1.528917], direction_loss:4.258886
+Epoch: 3570/5000, train loss: 6.706959, node_f_loss: 2.561749, [type_loss 0.766025, index_loss 0.253428, int_v_loss 0.009384, float_v_loss 0.008606, string_loss 1.524307], direction_loss:4.145210
+Epoch: 3580/5000, train loss: 6.874452, node_f_loss: 2.654425, [type_loss 0.834203, index_loss 0.272427, int_v_loss 0.014834, float_v_loss 0.007716, string_loss 1.525244], direction_loss:4.220027
+Epoch: 3590/5000, train loss: 6.856251, node_f_loss: 2.628419, [type_loss 0.822644, index_loss 0.215033, int_v_loss 0.034289, float_v_loss 0.006780, string_loss 1.549674], direction_loss:4.227832
+Epoch: 3600/5000, train loss: 7.054833, node_f_loss: 2.697411, [type_loss 0.887926, index_loss 0.252154, int_v_loss 0.010116, float_v_loss 0.010240, string_loss 1.536975], direction_loss:4.357422
+Batch 0 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 4 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 4 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 4 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 4 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 4 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[7]])
+Batch 4 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 0 Node #17 pred type tensor([[11]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3610/5000, train loss: 6.711690, node_f_loss: 2.596686, [type_loss 0.799279, index_loss 0.244795, int_v_loss 0.013372, float_v_loss 0.006594, string_loss 1.532646], direction_loss:4.115004
+Epoch: 3620/5000, train loss: 6.880720, node_f_loss: 2.593326, [type_loss 0.801704, index_loss 0.240210, int_v_loss 0.033993, float_v_loss 0.007254, string_loss 1.510166], direction_loss:4.287394
+Epoch: 3630/5000, train loss: 6.810518, node_f_loss: 2.565498, [type_loss 0.785220, index_loss 0.224361, int_v_loss 0.016594, float_v_loss 0.016205, string_loss 1.523118], direction_loss:4.245021
+Epoch: 3640/5000, train loss: 6.783783, node_f_loss: 2.589112, [type_loss 0.787108, index_loss 0.256791, int_v_loss 0.013043, float_v_loss 0.010916, string_loss 1.521255], direction_loss:4.194671
+Epoch: 3650/5000, train loss: 6.724871, node_f_loss: 2.684850, [type_loss 0.813071, index_loss 0.275619, int_v_loss 0.060457, float_v_loss 0.009369, string_loss 1.526334], direction_loss:4.040021
+Epoch: 3660/5000, train loss: 6.776675, node_f_loss: 2.591030, [type_loss 0.830958, index_loss 0.207129, int_v_loss 0.034694, float_v_loss 0.012286, string_loss 1.505964], direction_loss:4.185645
+Epoch: 3670/5000, train loss: 6.846253, node_f_loss: 2.724834, [type_loss 0.872065, index_loss 0.278846, int_v_loss 0.025462, float_v_loss 0.010665, string_loss 1.537795], direction_loss:4.121419
+Epoch: 3680/5000, train loss: 6.875302, node_f_loss: 2.661669, [type_loss 0.863301, index_loss 0.198306, int_v_loss 0.061345, float_v_loss 0.010832, string_loss 1.527884], direction_loss:4.213634
+Epoch: 3690/5000, train loss: 6.628256, node_f_loss: 2.547187, [type_loss 0.816141, index_loss 0.215226, int_v_loss 0.012089, float_v_loss 0.005911, string_loss 1.497821], direction_loss:4.081069
+Epoch: 3700/5000, train loss: 6.888706, node_f_loss: 2.600302, [type_loss 0.801163, index_loss 0.246691, int_v_loss 0.011255, float_v_loss 0.017766, string_loss 1.523428], direction_loss:4.288404
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 6 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 3 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 6 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 6 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 3 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 3 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 1 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 2 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 3 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3710/5000, train loss: 6.832115, node_f_loss: 2.526957, [type_loss 0.738533, index_loss 0.236570, int_v_loss 0.009550, float_v_loss 0.022845, string_loss 1.519458], direction_loss:4.305158
+Epoch: 3720/5000, train loss: 6.677275, node_f_loss: 2.467011, [type_loss 0.768274, index_loss 0.201300, int_v_loss 0.014314, float_v_loss 0.015180, string_loss 1.467944], direction_loss:4.210264
+Epoch: 3730/5000, train loss: 6.823120, node_f_loss: 2.572545, [type_loss 0.799314, index_loss 0.216011, int_v_loss 0.033942, float_v_loss 0.012293, string_loss 1.510985], direction_loss:4.250575
+Epoch: 3740/5000, train loss: 6.911728, node_f_loss: 2.649462, [type_loss 0.828261, index_loss 0.228990, int_v_loss 0.034400, float_v_loss 0.011496, string_loss 1.546316], direction_loss:4.262266
+Epoch: 3750/5000, train loss: 6.851891, node_f_loss: 2.602182, [type_loss 0.781950, index_loss 0.235231, int_v_loss 0.059400, float_v_loss 0.007286, string_loss 1.518315], direction_loss:4.249709
+Epoch: 3760/5000, train loss: 6.718825, node_f_loss: 2.631311, [type_loss 0.843878, index_loss 0.233903, int_v_loss 0.038500, float_v_loss 0.008983, string_loss 1.506048], direction_loss:4.087514
+Epoch: 3770/5000, train loss: 6.873095, node_f_loss: 2.560055, [type_loss 0.798550, index_loss 0.208810, int_v_loss 0.040075, float_v_loss 0.007623, string_loss 1.504997], direction_loss:4.313040
+Epoch: 3780/5000, train loss: 6.665565, node_f_loss: 2.506774, [type_loss 0.794990, index_loss 0.199105, int_v_loss 0.012305, float_v_loss 0.008488, string_loss 1.491886], direction_loss:4.158791
+Epoch: 3790/5000, train loss: 6.737333, node_f_loss: 2.514108, [type_loss 0.803896, index_loss 0.197882, int_v_loss 0.034209, float_v_loss 0.008474, string_loss 1.469647], direction_loss:4.223225
+Epoch: 3800/5000, train loss: 6.698898, node_f_loss: 2.557249, [type_loss 0.807814, index_loss 0.219782, int_v_loss 0.014012, float_v_loss 0.006424, string_loss 1.509217], direction_loss:4.141650
+Batch 3 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 3 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 3 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 3810/5000, train loss: 6.826170, node_f_loss: 2.588551, [type_loss 0.793423, index_loss 0.236346, int_v_loss 0.040570, float_v_loss 0.008479, string_loss 1.509733], direction_loss:4.237619
+Epoch: 3820/5000, train loss: 6.617859, node_f_loss: 2.505057, [type_loss 0.785247, index_loss 0.203528, int_v_loss 0.013801, float_v_loss 0.009163, string_loss 1.493318], direction_loss:4.112803
+Epoch: 3830/5000, train loss: 6.795355, node_f_loss: 2.642453, [type_loss 0.828716, index_loss 0.229506, int_v_loss 0.058221, float_v_loss 0.011110, string_loss 1.514900], direction_loss:4.152903
+Epoch: 3840/5000, train loss: 6.821302, node_f_loss: 2.588740, [type_loss 0.797805, index_loss 0.205299, int_v_loss 0.034492, float_v_loss 0.029453, string_loss 1.521691], direction_loss:4.232562
+Epoch: 3850/5000, train loss: 6.659297, node_f_loss: 2.568793, [type_loss 0.803915, index_loss 0.239366, int_v_loss 0.011905, float_v_loss 0.016362, string_loss 1.497246], direction_loss:4.090504
+Epoch: 3860/5000, train loss: 6.747609, node_f_loss: 2.557167, [type_loss 0.796683, index_loss 0.248697, int_v_loss 0.010099, float_v_loss 0.007834, string_loss 1.493853], direction_loss:4.190442
+Epoch: 3870/5000, train loss: 6.640795, node_f_loss: 2.530087, [type_loss 0.750752, index_loss 0.235521, int_v_loss 0.008015, float_v_loss 0.007478, string_loss 1.528321], direction_loss:4.110708
+Epoch: 3880/5000, train loss: 6.799186, node_f_loss: 2.604938, [type_loss 0.825063, index_loss 0.241440, int_v_loss 0.014469, float_v_loss 0.013736, string_loss 1.510230], direction_loss:4.194248
+Epoch: 3890/5000, train loss: 6.783823, node_f_loss: 2.552183, [type_loss 0.801753, index_loss 0.222961, int_v_loss 0.011199, float_v_loss 0.007827, string_loss 1.508444], direction_loss:4.231640
+Epoch: 3900/5000, train loss: 6.803677, node_f_loss: 2.589724, [type_loss 0.797614, index_loss 0.264179, int_v_loss 0.010002, float_v_loss 0.010747, string_loss 1.507183], direction_loss:4.213953
+Batch 0 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 2 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 6 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 6 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 3 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 3 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 3 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[7]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #12 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #12 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #14 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #14 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 1 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 2 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+test done, graphs saved
+Epoch: 3910/5000, train loss: 6.688699, node_f_loss: 2.508941, [type_loss 0.733759, index_loss 0.224115, int_v_loss 0.031773, float_v_loss 0.008666, string_loss 1.510629], direction_loss:4.179758
+Epoch: 3920/5000, train loss: 6.758982, node_f_loss: 2.516040, [type_loss 0.750410, index_loss 0.229912, int_v_loss 0.059944, float_v_loss 0.006271, string_loss 1.469503], direction_loss:4.242941
+Epoch: 3930/5000, train loss: 6.748585, node_f_loss: 2.470437, [type_loss 0.770007, index_loss 0.201932, int_v_loss 0.013501, float_v_loss 0.009410, string_loss 1.475586], direction_loss:4.278148
+Epoch: 3940/5000, train loss: 6.827082, node_f_loss: 2.537476, [type_loss 0.789842, index_loss 0.237209, int_v_loss 0.013942, float_v_loss 0.007542, string_loss 1.488940], direction_loss:4.289606
+Epoch: 3950/5000, train loss: 6.873256, node_f_loss: 2.668125, [type_loss 0.839897, index_loss 0.241122, int_v_loss 0.083216, float_v_loss 0.008634, string_loss 1.495255], direction_loss:4.205131
+Epoch: 3960/5000, train loss: 6.794520, node_f_loss: 2.545009, [type_loss 0.796426, index_loss 0.239155, int_v_loss 0.009396, float_v_loss 0.007036, string_loss 1.492996], direction_loss:4.249511
+Epoch: 3970/5000, train loss: 6.845589, node_f_loss: 2.554859, [type_loss 0.802521, index_loss 0.233188, int_v_loss 0.036084, float_v_loss 0.008468, string_loss 1.474599], direction_loss:4.290730
+Epoch: 3980/5000, train loss: 6.522614, node_f_loss: 2.529039, [type_loss 0.765360, index_loss 0.240005, int_v_loss 0.036763, float_v_loss 0.006054, string_loss 1.480857], direction_loss:3.993575
+Epoch: 3990/5000, train loss: 6.800228, node_f_loss: 2.529397, [type_loss 0.753316, index_loss 0.217303, int_v_loss 0.059168, float_v_loss 0.008471, string_loss 1.491139], direction_loss:4.270831
+Epoch: 4000/5000, train loss: 7.025694, node_f_loss: 2.615336, [type_loss 0.815348, index_loss 0.240622, int_v_loss 0.040562, float_v_loss 0.008975, string_loss 1.509831], direction_loss:4.410358
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 2 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 6 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 6 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 0 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+test done, graphs saved
+Epoch: 4010/5000, train loss: 6.812915, node_f_loss: 2.559201, [type_loss 0.793169, index_loss 0.213515, int_v_loss 0.037031, float_v_loss 0.014232, string_loss 1.501254], direction_loss:4.253714
+Epoch: 4020/5000, train loss: 6.827186, node_f_loss: 2.526500, [type_loss 0.805057, index_loss 0.212061, int_v_loss 0.012343, float_v_loss 0.009636, string_loss 1.487402], direction_loss:4.300686
+Epoch: 4030/5000, train loss: 6.734922, node_f_loss: 2.528607, [type_loss 0.740447, index_loss 0.241519, int_v_loss 0.010233, float_v_loss 0.007490, string_loss 1.528919], direction_loss:4.206315
+Epoch: 4040/5000, train loss: 6.686940, node_f_loss: 2.519511, [type_loss 0.763265, index_loss 0.208038, int_v_loss 0.033212, float_v_loss 0.008433, string_loss 1.506563], direction_loss:4.167428
+Epoch: 4050/5000, train loss: 6.766179, node_f_loss: 2.499264, [type_loss 0.757389, index_loss 0.248629, int_v_loss 0.012597, float_v_loss 0.009277, string_loss 1.471372], direction_loss:4.266915
+Epoch: 4060/5000, train loss: 6.597330, node_f_loss: 2.376762, [type_loss 0.666539, index_loss 0.225323, int_v_loss 0.006966, float_v_loss 0.008290, string_loss 1.469643], direction_loss:4.220568
+Epoch: 4070/5000, train loss: 6.668767, node_f_loss: 2.497335, [type_loss 0.802000, index_loss 0.198686, int_v_loss 0.009930, float_v_loss 0.008188, string_loss 1.478531], direction_loss:4.171432
+Epoch: 4080/5000, train loss: 6.653555, node_f_loss: 2.583952, [type_loss 0.745741, index_loss 0.246184, int_v_loss 0.059240, float_v_loss 0.007066, string_loss 1.525722], direction_loss:4.069603
+Epoch: 4090/5000, train loss: 6.769891, node_f_loss: 2.528877, [type_loss 0.780512, index_loss 0.205109, int_v_loss 0.033998, float_v_loss 0.010003, string_loss 1.499256], direction_loss:4.241014
+Epoch: 4100/5000, train loss: 6.464617, node_f_loss: 2.404068, [type_loss 0.672159, index_loss 0.212033, int_v_loss 0.030483, float_v_loss 0.009848, string_loss 1.479546], direction_loss:4.060549
+Batch 3 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 3 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 4 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 5 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 6 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 2 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 4 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 5 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 5 Node #8 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 4110/5000, train loss: 6.650827, node_f_loss: 2.497335, [type_loss 0.743122, index_loss 0.228288, int_v_loss 0.011385, float_v_loss 0.008732, string_loss 1.505807], direction_loss:4.153492
+Epoch: 4120/5000, train loss: 6.752445, node_f_loss: 2.542255, [type_loss 0.795919, index_loss 0.241069, int_v_loss 0.016713, float_v_loss 0.009211, string_loss 1.479343], direction_loss:4.210190
+Epoch: 4130/5000, train loss: 6.681201, node_f_loss: 2.555531, [type_loss 0.766261, index_loss 0.249979, int_v_loss 0.009529, float_v_loss 0.006368, string_loss 1.523394], direction_loss:4.125670
+Epoch: 4140/5000, train loss: 6.725955, node_f_loss: 2.511143, [type_loss 0.760654, index_loss 0.226846, int_v_loss 0.037620, float_v_loss 0.010527, string_loss 1.475495], direction_loss:4.214812
+Epoch: 4150/5000, train loss: 6.711131, node_f_loss: 2.532560, [type_loss 0.780107, index_loss 0.229580, int_v_loss 0.018772, float_v_loss 0.008222, string_loss 1.495879], direction_loss:4.178571
+Epoch: 4160/5000, train loss: 6.781185, node_f_loss: 2.615222, [type_loss 0.784730, index_loss 0.226141, int_v_loss 0.080209, float_v_loss 0.013140, string_loss 1.511001], direction_loss:4.165963
+Epoch: 4170/5000, train loss: 6.652355, node_f_loss: 2.528865, [type_loss 0.764604, index_loss 0.229895, int_v_loss 0.019930, float_v_loss 0.022001, string_loss 1.492436], direction_loss:4.123490
+Epoch: 4180/5000, train loss: 6.940984, node_f_loss: 2.619335, [type_loss 0.768029, index_loss 0.231181, int_v_loss 0.090972, float_v_loss 0.014249, string_loss 1.514904], direction_loss:4.321649
+Epoch: 4190/5000, train loss: 6.753048, node_f_loss: 2.537944, [type_loss 0.759164, index_loss 0.235597, int_v_loss 0.038370, float_v_loss 0.008481, string_loss 1.496332], direction_loss:4.215104
+Epoch: 4200/5000, train loss: 6.629661, node_f_loss: 2.493556, [type_loss 0.728803, index_loss 0.227834, int_v_loss 0.032937, float_v_loss 0.010592, string_loss 1.493390], direction_loss:4.136104
+Batch 2 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 1 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 2 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #3 pred type tensor([[27]], device='cuda:0') gt type tensor([[9]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[8]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #12 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #13 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #14 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 1 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 4210/5000, train loss: 6.703784, node_f_loss: 2.622805, [type_loss 0.810347, index_loss 0.219333, int_v_loss 0.037435, float_v_loss 0.010796, string_loss 1.544893], direction_loss:4.080979
+Epoch: 4220/5000, train loss: 6.626212, node_f_loss: 2.428529, [type_loss 0.717866, index_loss 0.215425, int_v_loss 0.011474, float_v_loss 0.009491, string_loss 1.474272], direction_loss:4.197682
+Epoch: 4230/5000, train loss: 6.717082, node_f_loss: 2.499315, [type_loss 0.751392, index_loss 0.209129, int_v_loss 0.010499, float_v_loss 0.006231, string_loss 1.522065], direction_loss:4.217767
+Epoch: 4240/5000, train loss: 6.927867, node_f_loss: 2.586459, [type_loss 0.761370, index_loss 0.269518, int_v_loss 0.035234, float_v_loss 0.009204, string_loss 1.511132], direction_loss:4.341408
+Epoch: 4250/5000, train loss: 6.716678, node_f_loss: 2.545220, [type_loss 0.792695, index_loss 0.219822, int_v_loss 0.015948, float_v_loss 0.006289, string_loss 1.510466], direction_loss:4.171458
+Epoch: 4260/5000, train loss: 6.896883, node_f_loss: 2.612910, [type_loss 0.792354, index_loss 0.229191, int_v_loss 0.082072, float_v_loss 0.008144, string_loss 1.501148], direction_loss:4.283972
+Epoch: 4270/5000, train loss: 6.816429, node_f_loss: 2.504455, [type_loss 0.800583, index_loss 0.227174, int_v_loss 0.013224, float_v_loss 0.006993, string_loss 1.456480], direction_loss:4.311974
+Epoch: 4280/5000, train loss: 6.739639, node_f_loss: 2.454330, [type_loss 0.754071, index_loss 0.201560, int_v_loss 0.013545, float_v_loss 0.008276, string_loss 1.476877], direction_loss:4.285309
+Epoch: 4290/5000, train loss: 6.553810, node_f_loss: 2.451083, [type_loss 0.724796, index_loss 0.234983, int_v_loss 0.015457, float_v_loss 0.009961, string_loss 1.465885], direction_loss:4.102727
+Epoch: 4300/5000, train loss: 6.831041, node_f_loss: 2.521057, [type_loss 0.781425, index_loss 0.230607, int_v_loss 0.009869, float_v_loss 0.010466, string_loss 1.488690], direction_loss:4.309984
+Batch 0 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 0 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[27]], device='cuda:0') gt type tensor([[9]])
+Batch 3 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 3 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 5 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 3 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 0 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[22]])
+Batch 3 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+test done, graphs saved
+Epoch: 4310/5000, train loss: 6.641074, node_f_loss: 2.463232, [type_loss 0.715980, index_loss 0.243501, int_v_loss 0.009032, float_v_loss 0.008854, string_loss 1.485865], direction_loss:4.177843
+Epoch: 4320/5000, train loss: 6.665833, node_f_loss: 2.484695, [type_loss 0.760339, index_loss 0.224207, int_v_loss 0.012652, float_v_loss 0.006264, string_loss 1.481234], direction_loss:4.181138
+Epoch: 4330/5000, train loss: 6.586824, node_f_loss: 2.427237, [type_loss 0.695252, index_loss 0.224794, int_v_loss 0.008758, float_v_loss 0.007231, string_loss 1.491202], direction_loss:4.159587
+Epoch: 4340/5000, train loss: 6.502286, node_f_loss: 2.423835, [type_loss 0.743883, index_loss 0.192012, int_v_loss 0.010426, float_v_loss 0.006445, string_loss 1.471070], direction_loss:4.078451
+Epoch: 4350/5000, train loss: 6.562137, node_f_loss: 2.437804, [type_loss 0.723443, index_loss 0.211190, int_v_loss 0.010423, float_v_loss 0.010163, string_loss 1.482585], direction_loss:4.124333
+Epoch: 4360/5000, train loss: 6.719184, node_f_loss: 2.492389, [type_loss 0.728577, index_loss 0.246620, int_v_loss 0.033125, float_v_loss 0.012633, string_loss 1.471434], direction_loss:4.226795
+Epoch: 4370/5000, train loss: 6.671671, node_f_loss: 2.482632, [type_loss 0.741511, index_loss 0.227032, int_v_loss 0.010542, float_v_loss 0.007765, string_loss 1.495783], direction_loss:4.189039
+Epoch: 4380/5000, train loss: 6.601199, node_f_loss: 2.487448, [type_loss 0.773266, index_loss 0.212681, int_v_loss 0.012129, float_v_loss 0.009141, string_loss 1.480231], direction_loss:4.113751
+Epoch: 4390/5000, train loss: 6.790487, node_f_loss: 2.504773, [type_loss 0.757121, index_loss 0.232313, int_v_loss 0.014897, float_v_loss 0.031523, string_loss 1.468918], direction_loss:4.285714
+Epoch: 4400/5000, train loss: 6.803875, node_f_loss: 2.503199, [type_loss 0.730642, index_loss 0.222819, int_v_loss 0.035198, float_v_loss 0.017142, string_loss 1.497397], direction_loss:4.300676
+Batch 2 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 4 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 6 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 4 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 2 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 4 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 6 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 3 Node #10 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #11 pred type tensor([[12]], device='cuda:0') gt type tensor([[7]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #12 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 1 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 2 Node #16 pred type tensor([[11]], device='cuda:0') gt type tensor([[27]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 4410/5000, train loss: 6.618212, node_f_loss: 2.402473, [type_loss 0.686991, index_loss 0.213232, int_v_loss 0.013121, float_v_loss 0.007867, string_loss 1.481263], direction_loss:4.215738
+Epoch: 4420/5000, train loss: 6.732403, node_f_loss: 2.472257, [type_loss 0.751467, index_loss 0.234139, int_v_loss 0.011722, float_v_loss 0.006270, string_loss 1.468660], direction_loss:4.260145
+Epoch: 4430/5000, train loss: 6.801873, node_f_loss: 2.612535, [type_loss 0.788790, index_loss 0.241903, int_v_loss 0.084366, float_v_loss 0.006997, string_loss 1.490479], direction_loss:4.189338
+Epoch: 4440/5000, train loss: 6.668185, node_f_loss: 2.476356, [type_loss 0.726519, index_loss 0.218704, int_v_loss 0.035927, float_v_loss 0.008030, string_loss 1.487174], direction_loss:4.191830
+Epoch: 4450/5000, train loss: 6.918883, node_f_loss: 2.525795, [type_loss 0.745698, index_loss 0.243075, int_v_loss 0.069972, float_v_loss 0.007492, string_loss 1.459557], direction_loss:4.393088
+Epoch: 4460/5000, train loss: 6.856392, node_f_loss: 2.550756, [type_loss 0.791675, index_loss 0.215873, int_v_loss 0.062507, float_v_loss 0.007764, string_loss 1.472937], direction_loss:4.305635
+Epoch: 4470/5000, train loss: 6.660268, node_f_loss: 2.455154, [type_loss 0.742498, index_loss 0.225029, int_v_loss 0.011129, float_v_loss 0.005924, string_loss 1.470574], direction_loss:4.205113
+Epoch: 4480/5000, train loss: 6.654390, node_f_loss: 2.447325, [type_loss 0.721737, index_loss 0.219701, int_v_loss 0.011163, float_v_loss 0.016195, string_loss 1.478528], direction_loss:4.207065
+Epoch: 4490/5000, train loss: 6.582713, node_f_loss: 2.485067, [type_loss 0.769120, index_loss 0.217589, int_v_loss 0.014843, float_v_loss 0.005447, string_loss 1.478067], direction_loss:4.097645
+Epoch: 4500/5000, train loss: 6.893733, node_f_loss: 2.518946, [type_loss 0.800615, index_loss 0.202991, int_v_loss 0.038922, float_v_loss 0.008120, string_loss 1.468298], direction_loss:4.374787
+Batch 1 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 1 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #3 pred type tensor([[27]], device='cuda:0') gt type tensor([[9]])
+Batch 4 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 4 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 5 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 4 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 4 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 4 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 4 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 4 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 4510/5000, train loss: 6.673178, node_f_loss: 2.562172, [type_loss 0.806035, index_loss 0.231274, int_v_loss 0.035654, float_v_loss 0.009125, string_loss 1.480084], direction_loss:4.111005
+Epoch: 4520/5000, train loss: 6.872434, node_f_loss: 2.534889, [type_loss 0.757030, index_loss 0.219309, int_v_loss 0.064241, float_v_loss 0.007164, string_loss 1.487145], direction_loss:4.337545
+Epoch: 4530/5000, train loss: 6.628026, node_f_loss: 2.522163, [type_loss 0.711914, index_loss 0.253827, int_v_loss 0.056743, float_v_loss 0.007263, string_loss 1.492415], direction_loss:4.105863
+Epoch: 4540/5000, train loss: 6.635222, node_f_loss: 2.465239, [type_loss 0.787616, index_loss 0.188951, int_v_loss 0.038150, float_v_loss 0.007709, string_loss 1.442812], direction_loss:4.169983
+Epoch: 4550/5000, train loss: 6.925112, node_f_loss: 2.537855, [type_loss 0.751204, index_loss 0.259559, int_v_loss 0.033590, float_v_loss 0.006358, string_loss 1.487144], direction_loss:4.387257
+Epoch: 4560/5000, train loss: 6.508153, node_f_loss: 2.388769, [type_loss 0.670758, index_loss 0.222534, int_v_loss 0.009299, float_v_loss 0.011203, string_loss 1.474975], direction_loss:4.119384
+Epoch: 4570/5000, train loss: 6.714002, node_f_loss: 2.434487, [type_loss 0.724337, index_loss 0.207216, int_v_loss 0.031356, float_v_loss 0.011579, string_loss 1.459999], direction_loss:4.279515
+Epoch: 4580/5000, train loss: 6.564171, node_f_loss: 2.435663, [type_loss 0.718698, index_loss 0.217542, int_v_loss 0.032581, float_v_loss 0.011800, string_loss 1.455043], direction_loss:4.128508
+Epoch: 4590/5000, train loss: 6.683789, node_f_loss: 2.444530, [type_loss 0.734806, index_loss 0.214669, int_v_loss 0.010192, float_v_loss 0.011241, string_loss 1.473622], direction_loss:4.239259
+Epoch: 4600/5000, train loss: 6.915918, node_f_loss: 2.625964, [type_loss 0.789546, index_loss 0.217744, int_v_loss 0.106337, float_v_loss 0.017352, string_loss 1.494985], direction_loss:4.289954
+Batch 0 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 7 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 7 Node #4 pred type tensor([[3]], device='cuda:0') gt type tensor([[21]])
+Batch 3 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 3 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 3 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #8 pred type tensor([[20]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 3 Node #9 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #10 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #11 pred type tensor([[12]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #11 pred type tensor([[12]], device='cuda:0') gt type tensor([[7]])
+Batch 3 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #12 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 3 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[11]], device='cuda:0') gt type tensor([[27]])
+Batch 1 Node #16 pred type tensor([[11]], device='cuda:0') gt type tensor([[27]])
+test done, graphs saved
+Epoch: 4610/5000, train loss: 6.649355, node_f_loss: 2.444253, [type_loss 0.727208, index_loss 0.228324, int_v_loss 0.018380, float_v_loss 0.010962, string_loss 1.459380], direction_loss:4.205102
+Epoch: 4620/5000, train loss: 6.663376, node_f_loss: 2.445677, [type_loss 0.710342, index_loss 0.240197, int_v_loss 0.007280, float_v_loss 0.010949, string_loss 1.476909], direction_loss:4.217699
+Epoch: 4630/5000, train loss: 6.674962, node_f_loss: 2.419009, [type_loss 0.695760, index_loss 0.226717, int_v_loss 0.031067, float_v_loss 0.010993, string_loss 1.454472], direction_loss:4.255952
+Epoch: 4640/5000, train loss: 6.618296, node_f_loss: 2.391405, [type_loss 0.690907, index_loss 0.218829, int_v_loss 0.009240, float_v_loss 0.011606, string_loss 1.460824], direction_loss:4.226891
+Epoch: 4650/5000, train loss: 6.501922, node_f_loss: 2.477883, [type_loss 0.688993, index_loss 0.245991, int_v_loss 0.033723, float_v_loss 0.012026, string_loss 1.497150], direction_loss:4.024039
+Epoch: 4660/5000, train loss: 6.716715, node_f_loss: 2.476022, [type_loss 0.744188, index_loss 0.209344, int_v_loss 0.032005, float_v_loss 0.008409, string_loss 1.482076], direction_loss:4.240693
+Epoch: 4670/5000, train loss: 6.816927, node_f_loss: 2.553594, [type_loss 0.769566, index_loss 0.220466, int_v_loss 0.084613, float_v_loss 0.005947, string_loss 1.473003], direction_loss:4.263333
+Epoch: 4680/5000, train loss: 6.468280, node_f_loss: 2.418026, [type_loss 0.703962, index_loss 0.218891, int_v_loss 0.031257, float_v_loss 0.009766, string_loss 1.454151], direction_loss:4.050254
+Epoch: 4690/5000, train loss: 6.770510, node_f_loss: 2.480878, [type_loss 0.716881, index_loss 0.226127, int_v_loss 0.059386, float_v_loss 0.011779, string_loss 1.466706], direction_loss:4.289631
+Epoch: 4700/5000, train loss: 6.613417, node_f_loss: 2.487466, [type_loss 0.746832, index_loss 0.238284, int_v_loss 0.036252, float_v_loss 0.015480, string_loss 1.450618], direction_loss:4.125951
+Batch 1 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 0 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #3 pred type tensor([[27]], device='cuda:0') gt type tensor([[9]])
+Batch 4 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 4 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 4 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[17]])
+Batch 4 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[3]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[0]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[3]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[14]], device='cuda:0') gt type tensor([[7]])
+Batch 4 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 4 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[18]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #13 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #15 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #16 pred type tensor([[6]], device='cuda:0') gt type tensor([[27]])
+test done, graphs saved
+Epoch: 4710/5000, train loss: 6.722456, node_f_loss: 2.479627, [type_loss 0.745999, index_loss 0.217643, int_v_loss 0.037677, float_v_loss 0.009627, string_loss 1.468681], direction_loss:4.242829
+Epoch: 4720/5000, train loss: 6.420142, node_f_loss: 2.448690, [type_loss 0.694385, index_loss 0.229649, int_v_loss 0.034692, float_v_loss 0.009254, string_loss 1.480710], direction_loss:3.971452
+Epoch: 4730/5000, train loss: 6.639687, node_f_loss: 2.480018, [type_loss 0.715293, index_loss 0.225918, int_v_loss 0.062575, float_v_loss 0.007925, string_loss 1.468307], direction_loss:4.159668
+Epoch: 4740/5000, train loss: 6.562858, node_f_loss: 2.403504, [type_loss 0.690729, index_loss 0.224381, int_v_loss 0.012862, float_v_loss 0.009798, string_loss 1.465734], direction_loss:4.159354
+Epoch: 4750/5000, train loss: 6.688523, node_f_loss: 2.449296, [type_loss 0.738749, index_loss 0.193503, int_v_loss 0.056506, float_v_loss 0.008153, string_loss 1.452386], direction_loss:4.239227
+Epoch: 4760/5000, train loss: 6.649616, node_f_loss: 2.470582, [type_loss 0.727106, index_loss 0.219331, int_v_loss 0.032534, float_v_loss 0.010822, string_loss 1.480789], direction_loss:4.179034
+Epoch: 4770/5000, train loss: 6.633049, node_f_loss: 2.435091, [type_loss 0.716025, index_loss 0.236131, int_v_loss 0.014560, float_v_loss 0.007504, string_loss 1.460871], direction_loss:4.197959
+Epoch: 4780/5000, train loss: 6.676645, node_f_loss: 2.470755, [type_loss 0.719158, index_loss 0.254664, int_v_loss 0.018664, float_v_loss 0.006613, string_loss 1.471655], direction_loss:4.205890
+Epoch: 4790/5000, train loss: 6.790277, node_f_loss: 2.478116, [type_loss 0.759976, index_loss 0.215518, int_v_loss 0.035142, float_v_loss 0.007484, string_loss 1.459995], direction_loss:4.312161
+Epoch: 4800/5000, train loss: 6.855152, node_f_loss: 2.473443, [type_loss 0.753013, index_loss 0.223598, int_v_loss 0.038984, float_v_loss 0.008842, string_loss 1.449005], direction_loss:4.381710
+Batch 1 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 2 Node #1 pred type tensor([[1]], device='cuda:0') gt type tensor([[8]])
+Batch 1 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 2 Node #2 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 1 Node #3 pred type tensor([[27]], device='cuda:0') gt type tensor([[9]])
+Batch 2 Node #3 pred type tensor([[27]], device='cuda:0') gt type tensor([[9]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 2 Node #4 pred type tensor([[5]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #7 pred type tensor([[2]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 2 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 6 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #13 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 0 Node #15 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #15 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 2 Node #15 pred type tensor([[7]], device='cuda:0') gt type tensor([[5]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 4810/5000, train loss: 6.711041, node_f_loss: 2.445528, [type_loss 0.725029, index_loss 0.224356, int_v_loss 0.033561, float_v_loss 0.008250, string_loss 1.454333], direction_loss:4.265513
+Epoch: 4820/5000, train loss: 6.602745, node_f_loss: 2.445532, [type_loss 0.709790, index_loss 0.224227, int_v_loss 0.036745, float_v_loss 0.025649, string_loss 1.449120], direction_loss:4.157214
+Epoch: 4830/5000, train loss: 6.626153, node_f_loss: 2.515965, [type_loss 0.767854, index_loss 0.234392, int_v_loss 0.037307, float_v_loss 0.020699, string_loss 1.455713], direction_loss:4.110188
+Epoch: 4840/5000, train loss: 6.452508, node_f_loss: 2.463202, [type_loss 0.704213, index_loss 0.199555, int_v_loss 0.082911, float_v_loss 0.011225, string_loss 1.465298], direction_loss:3.989306
+Epoch: 4850/5000, train loss: 6.513692, node_f_loss: 2.432872, [type_loss 0.709060, index_loss 0.240066, int_v_loss 0.018443, float_v_loss 0.006746, string_loss 1.458558], direction_loss:4.080820
+Epoch: 4860/5000, train loss: 6.688268, node_f_loss: 2.434558, [type_loss 0.727310, index_loss 0.255140, int_v_loss 0.014673, float_v_loss 0.007744, string_loss 1.429690], direction_loss:4.253710
+Epoch: 4870/5000, train loss: 6.579830, node_f_loss: 2.413250, [type_loss 0.724012, index_loss 0.228068, int_v_loss 0.014993, float_v_loss 0.006907, string_loss 1.439269], direction_loss:4.166580
+Epoch: 4880/5000, train loss: 6.623727, node_f_loss: 2.453142, [type_loss 0.738617, index_loss 0.210622, int_v_loss 0.033330, float_v_loss 0.007236, string_loss 1.463337], direction_loss:4.170585
+Epoch: 4890/5000, train loss: 6.790270, node_f_loss: 2.485961, [type_loss 0.758141, index_loss 0.226202, int_v_loss 0.040239, float_v_loss 0.011689, string_loss 1.449690], direction_loss:4.304308
+Epoch: 4900/5000, train loss: 6.548063, node_f_loss: 2.394469, [type_loss 0.703498, index_loss 0.220183, int_v_loss 0.010830, float_v_loss 0.007184, string_loss 1.452774], direction_loss:4.153594
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 1 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 2 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 4 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #4 pred type tensor([[6]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 4 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[2]], device='cuda:0') gt type tensor([[16]])
+Batch 1 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 4 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[22]])
+Batch 0 Node #8 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #9 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #9 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[3]], device='cuda:0') gt type tensor([[5]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 4 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 2 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 2 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 0 Node #15 pred type tensor([[7]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #16 pred type tensor([[7]], device='cuda:0') gt type tensor([[15]])
+Batch 0 Node #18 pred type tensor([[7]], device='cuda:0') gt type tensor([[6]])
+test done, graphs saved
+Epoch: 4910/5000, train loss: 6.592450, node_f_loss: 2.449420, [type_loss 0.725054, index_loss 0.232955, int_v_loss 0.036380, float_v_loss 0.008261, string_loss 1.446770], direction_loss:4.143030
+Epoch: 4920/5000, train loss: 6.707755, node_f_loss: 2.495654, [type_loss 0.750287, index_loss 0.193070, int_v_loss 0.083368, float_v_loss 0.013453, string_loss 1.455477], direction_loss:4.212101
+Epoch: 4930/5000, train loss: 6.753404, node_f_loss: 2.427443, [type_loss 0.729814, index_loss 0.204338, int_v_loss 0.033577, float_v_loss 0.007627, string_loss 1.452087], direction_loss:4.325961
+Epoch: 4940/5000, train loss: 6.773519, node_f_loss: 2.459536, [type_loss 0.738180, index_loss 0.223566, int_v_loss 0.033717, float_v_loss 0.006932, string_loss 1.457141], direction_loss:4.313983
+Epoch: 4950/5000, train loss: 6.585578, node_f_loss: 2.437676, [type_loss 0.718012, index_loss 0.210407, int_v_loss 0.037342, float_v_loss 0.007672, string_loss 1.464243], direction_loss:4.147902
+Epoch: 4960/5000, train loss: 6.645448, node_f_loss: 2.397230, [type_loss 0.699792, index_loss 0.215750, int_v_loss 0.034659, float_v_loss 0.007262, string_loss 1.439767], direction_loss:4.248218
+Epoch: 4970/5000, train loss: 6.620209, node_f_loss: 2.458885, [type_loss 0.751462, index_loss 0.210827, int_v_loss 0.011030, float_v_loss 0.010061, string_loss 1.475505], direction_loss:4.161324
+Epoch: 4980/5000, train loss: 6.567312, node_f_loss: 2.378962, [type_loss 0.699109, index_loss 0.236984, int_v_loss 0.011058, float_v_loss 0.008135, string_loss 1.423676], direction_loss:4.188350
+Epoch: 4990/5000, train loss: 6.474011, node_f_loss: 2.338765, [type_loss 0.659758, index_loss 0.215653, int_v_loss 0.010774, float_v_loss 0.008247, string_loss 1.444333], direction_loss:4.135246
+Epoch: 5000/5000, train loss: 6.712205, node_f_loss: 2.429049, [type_loss 0.737000, index_loss 0.241712, int_v_loss 0.012392, float_v_loss 0.007400, string_loss 1.430545], direction_loss:4.283156
+Batch 2 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 7 Node #2 pred type tensor([[2]], device='cuda:0') gt type tensor([[19]])
+Batch 0 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 1 Node #3 pred type tensor([[3]], device='cuda:0') gt type tensor([[16]])
+Batch 2 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #3 pred type tensor([[2]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #3 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 1 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[17]])
+Batch 2 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #4 pred type tensor([[19]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[21]])
+Batch 7 Node #4 pred type tensor([[7]], device='cuda:0') gt type tensor([[21]])
+Batch 0 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #5 pred type tensor([[14]], device='cuda:0') gt type tensor([[4]])
+Batch 2 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #5 pred type tensor([[3]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 7 Node #5 pred type tensor([[5]], device='cuda:0') gt type tensor([[3]])
+Batch 0 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #6 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 2 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 4 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 5 Node #6 pred type tensor([[7]], device='cuda:0') gt type tensor([[1]])
+Batch 6 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[6]])
+Batch 7 Node #6 pred type tensor([[14]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 6 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 7 Node #7 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 1 Node #8 pred type tensor([[5]], device='cuda:0') gt type tensor([[6]])
+Batch 0 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #9 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #10 pred type tensor([[7]], device='cuda:0') gt type tensor([[4]])
+Batch 3 Node #10 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 1 Node #11 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 1 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[12]])
+Batch 2 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 4 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 5 Node #12 pred type tensor([[5]], device='cuda:0') gt type tensor([[4]])
+Batch 0 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 1 Node #13 pred type tensor([[4]], device='cuda:0') gt type tensor([[18]])
+Batch 0 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+Batch 1 Node #14 pred type tensor([[4]], device='cuda:0') gt type tensor([[7]])
+test done, graphs saved
