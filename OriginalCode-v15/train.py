@@ -711,6 +711,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
     # (32, 1, 40)
     if args.if_test_use_groundtruth:
         assert not test_set is None
+        G_test_list = []
         for _, test_data in enumerate(test_set):
             #TODO: if total_size != batch_size maybe need tab
             # Initialize
@@ -736,6 +737,13 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
             else:
                 BS, N, M = edge_f_unsorted.shape; EF=1
                 edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :] # Dim: BS * N * M
+
+            G_test = nx.Graph()
+            for i in range(test_batch_size):
+                node_idx_list = add_from_node_f_matrix(input_node_f_unsorted[i], G_test)
+                add_from_edge_f_matrix(edge_f_unsorted[i], G_test, node_idx_list)
+            G_test_list.append(G_test)
+
             # initialize GRU hidden state according to batch size
             rnn.hidden = rnn.init_hidden(batch_size=input_node_f_unsorted.size(0))
             
@@ -874,7 +882,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
             node_idx_list = add_from_node_f_matrix(node_f_pred_long_data[i].cpu().numpy(), G_pred, new_args=args)
             add_from_edge_f_matrix(edge_f_pred_long_data[i].cpu().numpy(), G_pred, node_idx_list)
             G_pred_list.append(G_pred)
-
+        return G_pred_list,G_test_list
     else:
         # generate graphs
         max_num_node = int(args.max_num_node)
@@ -970,7 +978,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
             add_from_edge_f_matrix(edge_f_pred_long_data[i].cpu().numpy(), G_pred, node_idx_list)
             G_pred_list.append(G_pred)
 
-    return G_pred_list
+        return G_pred_list
 
 
 
@@ -1101,20 +1109,40 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
         time_end = tm.time()
         time_all[epoch - 1] = time_end - time_start
         # test
-        if epoch % args.epochs_test == 0 and epoch>=args.epochs_test_start:
-            for sample_time in range(1,4):
+        if epoch % args.epochs_test == 0 and epoch >= args.epochs_test_start:
+            for sample_time in range(1, 4):
                 G_pred = []
-                while len(G_pred)<args.test_total_size:
+                G_test = []
+                while len(G_pred) < args.test_total_size:
                     if 'GraphRNN_VAE' in args.note:
-                        G_pred_step = test_vae_epoch(epoch, args, rnn, output, test_batch_size=args.test_batch_size,sample_time=sample_time)
+                        G_pred_step = test_vae_epoch(epoch, args, rnn, output, test_batch_size=args.test_batch_size,
+                                                     sample_time=sample_time)
                     elif 'GraphRNN_MLP' in args.note:
-                        G_pred_step = test_mlp_epoch(epoch, args, rnn, output, test_batch_size=args.test_batch_size,sample_time=sample_time)
+                        G_pred_step = test_mlp_epoch(epoch, args, rnn, output, test_batch_size=args.test_batch_size,
+                                                     sample_time=sample_time)
                     elif 'GraphRNN_RNN' in args.note:
-                        G_pred_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen, test_batch_size=args.test_batch_size, test_set=test_set)
-                    G_pred.extend(G_pred_step)
+                        if args.if_test_use_groundtruth:
+                            G_pred_step, G_test_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen,
+                                                                      test_batch_size=args.test_batch_size,
+                                                                      test_set=test_set)
+                        else:
+                            G_pred_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen,
+                                                         test_batch_size=args.test_batch_size, test_set=test_set)
+                    if args.if_test_use_groundtruth:
+                        G_pred.extend(G_pred_step)
+                        G_test.extend(G_test_step)
+                    else:
+                        G_pred.extend(G_pred_step)
                 # save graphs
-                fname = args.graph_save_path + args.fname_pred + str(epoch) +'_'+str(sample_time) + '.dat'
-                save_graph_list(G_pred, fname)
+                if args.if_test_use_groundtruth:
+                    fname = args.graph_save_path + args.fname_pred + str(epoch) + '_' + 'test' + '_' + str(
+                        sample_time) + '.dat'
+                    save_graph_list(G_test, fname)
+                    fname = args.graph_save_path + args.fname_pred + str(epoch) + '_' + str(sample_time) + '.dat'
+                    save_graph_list(G_pred, fname)
+                else:
+                    fname = args.graph_save_path + args.fname_pred + str(epoch) + '_' + str(sample_time) + '.dat'
+                    save_graph_list(G_pred, fname)
                 if 'GraphRNN_RNN' in args.note:
                     break
             print('test done, graphs saved')
