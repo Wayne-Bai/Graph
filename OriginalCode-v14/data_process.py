@@ -26,7 +26,7 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
     elif args.dataset_type == '500-50-normalize':
         path = '../dataset/dataset_500graphs_50nodes_normalize/'
     elif args.dataset_type == '2-normalize':
-        path = '../dataset/dataset_2graphs_normalize/'
+        path = '../../../dataset/dataset_2graphs_normalize/'
     elif args.dataset_type == '50-normalize':
         path = '../../../dataset/dataset_50graphs_20nodes_normalize/'
     
