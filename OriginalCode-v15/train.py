@@ -738,10 +738,11 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
                 BS, N, M = edge_f_unsorted.shape; EF=1
                 edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :] # Dim: BS * N * M
 
-            G_test = nx.Graph()
+
             input_node_f_unsorted_data = input_node_f_unsorted.data.float()
             edge_f_unsorted_data = edge_f_unsorted.data.float()
             for i in range(test_batch_size):
+                G_test = nx.Graph()
                 node_idx_list = add_from_node_f_matrix(input_node_f_unsorted_data[i].cpu().numpy(), G_test, new_args=args)
                 add_from_edge_f_matrix(edge_f_unsorted_data[i].cpu().numpy(), G_test, node_idx_list)
                 G_test_list.append(G_test)
