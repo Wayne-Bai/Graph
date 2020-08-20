@@ -706,8 +706,9 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
                 BS, N, M = edge_f_unsorted.shape; EF=1
                 edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :] # Dim: BS * N * M
             # initialize GRU hidden state according to batch size
-            G_test = nx.Graph()
+
             for i in range(test_batch_size):
+                G_test = nx.Graph()
                 node_idx_list = add_from_node_f_matrix(input_node_f_unsorted[i], G_test)
                 add_from_edge_f_matrix(edge_f_unsorted[i], G_test, node_idx_list)
             G_test_list.append(G_test)
