@@ -434,12 +434,10 @@ def train_mlp_forward_epoch(epoch, args, rnn, output, data_loader):
 def train_rnn_epoch(epoch, args, rnn, output, data_loader,
                     optimizer_rnn, optimizer_output,
                     scheduler_rnn, scheduler_output,
+                    train_loss_list, node_f_loss_list,
+                    edge_f_loss_list, direction_loss_list,
                     node_f_gen=None, edge_f_gen=None):
-    # viszualize train loss
-    train_loss_list = []
-    node_f_loss_list = []
-    edge_f_loss_list = []
-    direction_loss_list = []
+
 
     flag_gen = False
     if node_f_gen : #and edge_f_gen:
@@ -663,39 +661,7 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
         feature_dim = N*M
         loss_sum += loss.data*feature_dim
 
-    # visualize
-    x = range(0,args.epochs)
-    y1 = train_loss_list
-    y2 = node_f_loss_list
-    y3 = edge_f_loss_list
-    y4 = direction_loss_list
 
-    plt.subplot(2,2,1)
-    plt.plot(x, y1, 'o-')
-    plt.title('Train loss vs. epochs')
-    plt.xlable('Epochs')
-    plt.ylable('Train loss')
-
-    plt.subplot(2, 2, 2)
-    plt.plot(x, y2, 'o-')
-    plt.title('Node feature loss vs. epochs')
-    plt.xlable('Epochs')
-    plt.ylable('Node feature loss')
-
-    plt.subplot(2, 2, 3)
-    plt.plot(x, y3, 'o-')
-    plt.title('Edge feature loss vs. epochs')
-    plt.xlable('Epochs')
-    plt.ylable('Edge feature loss')
-
-    plt.subplot(2, 2, 4)
-    plt.plot(x, y4, 'o-')
-    plt.title('Direction loss vs. epochs')
-    plt.xlable('Epochs')
-    plt.ylable('Direction loss')
-
-    plt.show()
-    plt.savefig('loss.jpg')
 
     return loss_sum/(batch_idx+1)
 
@@ -1085,6 +1051,13 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
 
     # start main loop
     time_all = np.zeros(args.epochs)
+
+    # viszualize train loss
+    train_loss_list = []
+    node_f_loss_list = []
+    edge_f_loss_list = []
+    direction_loss_list = []
+
     while epoch<=args.epochs:
         time_start = tm.time()
         # train
@@ -1100,6 +1073,8 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
             train_rnn_epoch(epoch, args, rnn, output, dataset_train,
                             optimizer_rnn, optimizer_output,
                             scheduler_rnn, scheduler_output,
+                            train_loss_list, node_f_loss_list,
+                            edge_f_loss_list, direction_loss_list,
                             node_f_gen, edge_f_gen)
         time_end = tm.time()
         time_all[epoch - 1] = time_end - time_start
@@ -1155,6 +1130,39 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
         epoch += 1
     np.save(args.timing_save_path+args.fname,time_all)
 
+    # visualize
+    x = range(0, args.epochs)
+    y1 = train_loss_list
+    y2 = node_f_loss_list
+    y3 = edge_f_loss_list
+    y4 = direction_loss_list
+
+    plt.subplot(2, 2, 1)
+    plt.plot(x, y1, 'o-')
+    plt.title('Train loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Train loss')
+
+    plt.subplot(2, 2, 2)
+    plt.plot(x, y2, 'o-')
+    plt.title('Node feature loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Node feature loss')
+
+    plt.subplot(2, 2, 3)
+    plt.plot(x, y3, 'o-')
+    plt.title('Edge feature loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Edge feature loss')
+
+    plt.subplot(2, 2, 4)
+    plt.plot(x, y4, 'o-')
+    plt.title('Direction loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Direction loss')
+
+    plt.show()
+    plt.savefig('loss.jpg')
 
 ########### for graph completion task
 def train_graph_completion(args, dataset_test, rnn, output):
