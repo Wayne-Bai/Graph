@@ -23,6 +23,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
         path = "../dataset/dataset_54graphs/"
     elif args.dataset_type == "500":
         path = "../dataset/dataset_500graphs_50nodes/"
+    elif args.dataset_type == "50-13":
+        path = "../Data-Processing/dataset_50graphs_13nodes/"
     
 
     data_adj = np.loadtxt(path + name + '_A.txt', delimiter=',').astype(int)
