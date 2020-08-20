@@ -703,13 +703,13 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
                 BS, N, M = edge_f_unsorted.shape; EF=1
                 edge_f_unsorted = edge_f_unsorted[:, 0:y_len_max, :] # Dim: BS * N * M
 
-            input_node_f_unsorted_data = input_node_f_unsorted.data.float()
-            edge_f_unsorted_data = edge_f_unsorted.data.float()
-            for i in range(test_batch_size):
-                G_test = nx.Graph()
-                node_idx_list = add_from_node_f_matrix(input_node_f_unsorted_data[i].cpu().numpy(), G_test)
-                add_from_edge_f_matrix(edge_f_unsorted_data[i].cpu().numpy(), G_test, node_idx_list)
-                G_test_list.append(G_test)
+            # input_node_f_unsorted_data = input_node_f_unsorted.data.float()
+            # edge_f_unsorted_data = edge_f_unsorted.data.float()
+            # for i in range(test_batch_size):
+            #     G_test = nx.Graph()
+            #     node_idx_list = add_from_node_f_matrix(input_node_f_unsorted_data[i].cpu().numpy(), G_test)
+            #     add_from_edge_f_matrix(edge_f_unsorted_data[i].cpu().numpy(), G_test, node_idx_list)
+            #     G_test_list.append(G_test)
 
             # initialize GRU hidden state according to batch size
             rnn.hidden = rnn.init_hidden(batch_size=input_node_f_unsorted.size(0))
@@ -831,45 +831,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
                 add_from_edge_f_matrix(edge_f_pred_long_data[i].cpu().numpy(), G_pred, node_idx_list)
                 G_pred_list.append(G_pred)
 
-            loss = 0
-            if args.loss_type == "mse":
-                direction_loss = my_cross_entropy(y_pred, output_y)
-                edge_f_loss = 0
-                node_f_loss = my_cross_entropy(node_f_pred, output_node_f)
-            else:
-                #  direction_loss =
-                # print(node_f_pred.shape)
-                # print(output_node_f.shape)
-                # print(output_y.shape)
-                # direction_loss = binary_cross_entropy_weight(F.sigmoid(y_pred[:,:,-2:]),output_y[:,:,-2:])
-                # direction_loss = binary_cross_entropy_weight(torch.sigmoid(y_pred[:,:,-2:-1]),output_y[:,:,-2:-1])
-                # compute loss of last two dimension separately
-                # direction_loss = my_cross_entropy(torch.sigmoid(y_pred[:,:,-4:]),output_y[:,:,-4:],if_CE=True)
-                if not args.only_use_adj:
-                    direction_loss = my_cross_entropy(y_pred[:, :, -4:], torch.argmax(output_y[:, :, -4:], dim=2),
-                                                      if_CE=True, mask_len=output_y_len)
-                else:
-                    direction_loss = binary_cross_entropy_weight(y_pred, output_y)
-                # weights = torch.FloatTensor([0.0, 0, 1.0, 0]).cuda()
-                # direction_loss = my_cross_entropy(y_pred[:,:,-4:], torch.argmax(output_y[:,:,-4:],dim=2),if_CE=True,my_weight=weights)
-                # y_pred_no_padding = pack_padded_sequence(y_pred[:,:,-4:], output_y_len, batch_first=True)
-                # y_groundtruth_no_padding = pack_padded_sequence(torch.argmax(output_y[:,:,-4:],dim=2), output_y_len, batch_first=True)
-                # direction_loss = my_cross_entropy(y_pred_no_padding, y_groundtruth_no_padding,if_CE=True)
 
-                # edge_f_loss = my_cross_entropy(y_pred[:,:,:-2], torch.argmax(output_y[:,:,:-2],dim=2))
-                edge_f_loss = 0
-                node_f_loss = my_cross_entropy(node_f_pred_new, output_node_f, if_CE=True)  # + \
-                # binary_cross_entropy_weight(edge_f_pred, output_edge_f)
-            loss = args.edge_loss_w * (edge_f_loss + direction_loss) + args.node_loss_w * node_f_loss
-            loss.backward()
-            # update deterministic and lstm
-
-            if epoch % args.epochs_log == 0 and batch_idx == 0:  # only output first batch's statistics
-                print(
-                    'Epoch: {}/{}, train loss: {:.6f}, node_f_loss: {:.6f}, edge_f_loss: {:.6f}, direction_loss:{:.6f}, num_layer: {}, hidden: {}'.format(
-                        # epoch, args.epochs,loss.data, node_f_loss.data, edge_f_loss.data, args.num_layers, args.hidden_size_rnn))
-                        epoch, args.epochs, loss.data, node_f_loss.data, edge_f_loss, direction_loss.data, args.num_layers,
-                        args.hidden_size_rnn))
 
     else:
         # generate graphs
