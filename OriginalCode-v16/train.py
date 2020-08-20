@@ -27,6 +27,7 @@ from data import *
 from args import Args
 import create_graphs
 
+
 args = Args()
 
 def train_vae_epoch(epoch, args, rnn, output, data_loader,
@@ -434,6 +435,12 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
                     optimizer_rnn, optimizer_output,
                     scheduler_rnn, scheduler_output,
                     node_f_gen=None, edge_f_gen=None):
+    # viszualize train loss
+    train_loss_list = []
+    node_f_loss_list = []
+    edge_f_loss_list = []
+    direction_loss_list = []
+
     flag_gen = False
     if node_f_gen : #and edge_f_gen:
         flag_gen = True
@@ -645,10 +652,51 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
                 # epoch, args.epochs,loss.data, node_f_loss.data, edge_f_loss.data, args.num_layers, args.hidden_size_rnn))
                 epoch, args.epochs,loss.data, node_f_loss.data, edge_f_loss, direction_loss.data, args.num_layers, args.hidden_size_rnn))
 
+        # visualize
+        train_loss_list.append(loss.data)
+        node_f_loss_list.append(node_f_loss.data)
+        edge_f_loss_list.append(edge_f_loss)
+        direction_loss_list.append(direction_loss.data)
+
         # logging
         log_value('loss_'+args.fname, loss.data, epoch*args.batch_ratio+batch_idx)
         feature_dim = N*M
         loss_sum += loss.data*feature_dim
+
+    # visualize
+    x = range(0,args.epochs)
+    y1 = train_loss_list
+    y2 = node_f_loss_list
+    y3 = edge_f_loss_list
+    y4 = direction_loss_list
+
+    plt.subplot(2,2,1)
+    plt.plot(x, y1, 'o-')
+    plt.title('Train loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Train loss')
+
+    plt.subplot(2, 2, 2)
+    plt.plot(x, y2, 'o-')
+    plt.title('Node feature loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Node feature loss')
+
+    plt.subplot(2, 2, 3)
+    plt.plot(x, y3, 'o-')
+    plt.title('Edge feature loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Edge feature loss')
+
+    plt.subplot(2, 2, 4)
+    plt.plot(x, y4, 'o-')
+    plt.title('Direction loss vs. epochs')
+    plt.xlable('Epochs')
+    plt.ylable('Direction loss')
+
+    plt.show()
+    plt.savefig('loss.jpg')
+
     return loss_sum/(batch_idx+1)
 
 
@@ -1069,22 +1117,24 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
                                                      sample_time=sample_time)
                     elif 'GraphRNN_RNN' in args.note:
                         if args.if_test_use_groundtruth:
-                            G_pred_step, G_test_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen,
-                                                                      test_batch_size=args.test_batch_size,
-                                                                      test_set=test_set)
+                            # G_pred_step, G_test_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen,
+                            #                                           test_batch_size=args.test_batch_size,
+                            #                                           test_set=test_set)
+                            G_pred_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen,
+                                                         test_batch_size=args.test_batch_size, test_set=test_set)
                         else:
                             G_pred_step = test_rnn_epoch(epoch, args, rnn, output, node_f_gen,
                                                          test_batch_size=args.test_batch_size, test_set=test_set)
                     if args.if_test_use_groundtruth:
                         G_pred.extend(G_pred_step)
-                        G_test.extend(G_test_step)
+                        # G_test.extend(G_test_step)
                     else:
                         G_pred.extend(G_pred_step)
                 # save graphs
                 if args.if_test_use_groundtruth:
-                    fname = args.graph_save_path + args.fname_pred + str(epoch) + '_' + 'test' + '_' + str(
-                        sample_time) + '.dat'
-                    save_graph_list(G_test, fname)
+                    # fname = args.graph_save_path + args.fname_pred + str(epoch) + '_' + 'test' + '_' + str(
+                    #     sample_time) + '.dat'
+                    # save_graph_list(G_test, fname)
                     fname = args.graph_save_path + args.fname_pred + str(epoch) + '_' + str(sample_time) + '.dat'
                     save_graph_list(G_pred, fname)
                 else:
