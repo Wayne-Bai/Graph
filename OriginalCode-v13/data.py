@@ -184,29 +184,25 @@ def bfs_seq(G, start_id):
     return output
 
 
-def add_from_node_f_matrix(matrix, G:nx.Graph):
+def add_from_node_f_matrix(matrix, G:nx.Graph, new_args):
     N, NF = matrix.shape
     node_idx, f_dict = [], []
     for node in range(N):
         indicator = matrix[node, :new_args.max_node_type_num]
-        if indicator.any() and indicator[-1] == 0:  # a node exists
+        if indicator.any() and indicator[-1] == 0:# a node exists
             node_idx.append(node)
-            node_features = {f'type{feature_idx}': matrix[node, feature_idx] for feature_idx in
-                             range(new_args.max_node_type_num)}
-            node_features.update({f'value_type{id}': matrix[node, id + new_args.max_node_type_num] for id in
-                                  range(new_args.node_index_num)})
-            node_features.update({'int_value': matrix[node, new_args.node_index_num + new_args.max_node_type_num]})
-            node_features.update(
-                {'float_value': matrix[node, new_args.node_index_num + new_args.max_node_type_num + 1]})
-            node_features.update(
-                {f'string_value{id}': matrix[node, id + new_args.max_node_type_num + new_args.node_index_num \
-                                             + new_args.node_int_and_float_num] for id in
-                 range(new_args.max_node_value_num)})
+            node_features = {f'type{feature_idx}':matrix[node,feature_idx] for feature_idx in range(new_args.max_node_type_num)}
+            node_features.update({f'value_type{id}':matrix[node,id+new_args.max_node_type_num] for id in range(new_args.node_index_num)})
+            node_features.update({'int_value':matrix[node,new_args.node_index_num+new_args.max_node_type_num]})
+            node_features.update({'float_value':matrix[node,new_args.node_index_num+new_args.max_node_type_num+1]})
+            node_features.update({f'string_value{id}':matrix[node,id+new_args.max_node_type_num+new_args.node_index_num\
+                +new_args.node_int_and_float_num] for id in range(new_args.max_node_value_num)})
             f_dict.append(node_features)
     # f_dict = list({f'f{feature_idx}':matrix[node,feature_idx] for feature_idx in range(NF)} for node in range(N))
     node_list = list(zip(node_idx, f_dict))
     G.add_nodes_from(node_list)
     return node_idx
+
 
 def add_from_edge_f_matrix(matrix, G:nx.Graph, node_idx):
     N, M, EF = matrix.shape
@@ -231,6 +227,7 @@ def add_from_edge_f_matrix(matrix, G:nx.Graph, node_idx):
                 j_real_idx = i - j #>=0 ==> j<=i
                 if (i_real_idx in node_idx) and (j_real_idx in node_idx):
                     G.add_edges_from([(i_real_idx, j_real_idx, f_dict)])
+
 
 
 def encode_adj(adj, max_prev_node=10, is_full = False, is_3D=False):
