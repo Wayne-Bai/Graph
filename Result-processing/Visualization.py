@@ -3,7 +3,7 @@ import extractInfo
 
 def Visualize(name, num, total_feature):
     # path = 'result2/'
-    prefix = 'GraphRNN_RNN_AST2-normalize_4_128_'
+    prefix = 'GraphRNN_RNN_AST468-50-normalize_4_128_'
     # prefix = 'GraphRNN_RNN_AST_4_128_'
     format = '.dat'
     # file = path+prefix+str(name)+format
@@ -39,5 +39,5 @@ if __name__ == '__main__':
     # for i in range(2000, 3100,100):
     #     name = 'pred_%d_1'%(i)
     #     Visualize(name, 0, 43)
-    Visualize('pred_3000_1',1,43)
+    Visualize('pred_5_test_1',7,43)
 

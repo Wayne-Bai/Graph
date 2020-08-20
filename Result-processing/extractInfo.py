@@ -3,7 +3,7 @@ import networkx as nx
 def extract(name, num,total_feature):
 
     f = open('nodeLabel.txt', 'r')
-    f1 = open('nodeValue_2.txt', 'r')
+    f1 = open('nodeValue_468_50.txt', 'r')
 
     G = nx.read_gpickle(name)
 
@@ -46,10 +46,10 @@ def extract(name, num,total_feature):
                     node_value_type_list.append(n)
             elif 'int' in j and 'value' in j:
                 if G[num].node[i]['value_type0'] == 1:
-                    node_value.append(G[num].node[i][j])
+                    node_value.append(int(G[num].node[i][j]))
             elif 'float' in j and 'value' in j:
                 if G[num].node[i]['value_type1'] == 1:
-                    node_value.append(G[num].node[i][j])
+                    node_value.append(float(G[num].node[i][j]))
             elif 'string' in j and 'value' in j:
                 if G[num].node[i][j] == 1:
                     m, n = j.split('value')
@@ -89,9 +89,12 @@ def extract(name, num,total_feature):
         total_value.append(value_name)
         count_v.append(value_id)
     for i in node_value:
-        p = count_v.index(str(int(i)+1))
-        new_value = total_value[p]
-        node_value_list.append(new_value)
+        if type(i) != int or type(i) != float:
+            p = count_v.index(str(int(i)+1))
+            new_value = total_value[p]
+            node_value_list.append(new_value)
+        else:
+            node_value_list.append(i)
     # print(node_value_list)
 
     # Generate edge type list
