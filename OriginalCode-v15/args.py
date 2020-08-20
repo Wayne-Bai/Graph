@@ -37,7 +37,8 @@ class Args():
         # self.dataset_type = "500-50-normalize"
         # self.dataset_type = "2-normalize"
         # self.dataset_type = "50-normalize"
-        self.dataset_type ="468-50-normalize"
+        # self.dataset_type ="468-50-normalize"
+        self.dataset_type = '15-13'
         # self.graph_type = 'grid_small'
         # self.graph_type = 'ladder_small'
 
@@ -60,7 +61,7 @@ class Args():
 
         self.max_node_feature_num = None # max node feature number of desired output , including type and values
         self.max_node_type_num = None # note as NF
-        self.max_node_value_num = 272
+        self.max_node_value_num = 51
         # self.max_node_value_num = 6
         self.node_index_num = 4
         self.node_int_and_float_num = 2
@@ -84,7 +85,7 @@ class Args():
         self.embedding_size_rnn_output = 8 # the embedding size for output rnn
         self.embedding_size_output = int(64/self.parameter_shrink) # the embedding size for output (VAE/MLP)
 
-        self.batch_size = 32 # normal: 32, and the rest should be changed accordingly
+        self.batch_size = 8 # normal: 32, and the rest should be changed accordingly
         self.test_batch_size = 8
         self.test_total_size = 8 # To make things simple, set total_size = batch_size
         self.num_layers = 4
@@ -92,9 +93,9 @@ class Args():
         ### training config
         self.num_workers = 0 # num workers to load data, default 4
         self.batch_ratio = 4 # how many batches of samples per epoch, default 32, e.g., 1 epoch = 32 batches
-        self.epochs = 10 # now one epoch means self.batch_ratio x batch_size
-        self.epochs_test_start = 5
-        self.epochs_test = 1
+        self.epochs = 1000 # now one epoch means self.batch_ratio x batch_size
+        self.epochs_test_start = 900
+        self.epochs_test = 50
         self.epochs_log = 10
         self.epochs_save = 1000
 

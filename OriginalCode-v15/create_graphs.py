@@ -157,7 +157,7 @@ def create(args):
         if not args.max_node_type_num:
             # print(type(graphs[1].nodes._nodes), graphs[1].nodes._nodes.keys())
             args.max_node_type_num = len(list(graphs[1].nodes._nodes._atlas[1].keys()))-1  # now equals to 28
-        if args.dataset_type == "2" or args.dataset_type == "2-normalize":
+        if args.dataset_type == "2" or args.dataset_type == "2-normalize" or args.dataset_type == '15-13':
             args.max_prev_node = 6
             args.max_node_value_num = 6
         elif args.dataset_type == "54" or args.dataset_type =='50-normalize':

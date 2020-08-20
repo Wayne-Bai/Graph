@@ -31,6 +31,8 @@ def Graph_load_batch(min_num_nodes = 1, max_num_nodes = 300, name = 'AST'):
         path = '../../../dataset/dataset_50graphs_20nodes_normalize/'
     elif args.dataset_type == "468-50-normalize":
         path = '../../../dataset/dataset_468graphs_50nodes/'
+    elif args.dataset_type == '15-13':
+        path = '../Data-Processing/dataset_15graphs_13nodes'
 
     data_adj = np.loadtxt(path + name + '_A.txt', delimiter=',').astype(int)
     data_node_label = np.loadtxt(path + name + '_node_labels.txt', delimiter=',').astype(int)
