@@ -677,7 +677,7 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
     if args.if_test_use_groundtruth:
         assert not test_set is None
         G_test_list = []
-        for _, test_data in enumerate(test_set):
+        for batch_idx, test_data in enumerate(test_set):
             #TODO: if total_size != batch_size maybe need tab
             # Initialize
             max_num_node = int(args.max_num_node)
@@ -817,20 +817,60 @@ def test_rnn_epoch(epoch, args, rnn, output, node_f_gen=None, edge_f_gen=None, t
                 
             # y_pred_long_data = y_pred_long.data.long()
     
-        #TODO: if total_size != batch_size maybe need tab
-        node_f_pred_long_data = node_f_pred_long.data.float()
-        edge_f_pred_long_data = edge_f_pred_long.data.float()
+            #TODO: if total_size != batch_size maybe need tab
+            node_f_pred_long_data = node_f_pred_long.data.float()
+            edge_f_pred_long_data = edge_f_pred_long.data.float()
 
-        #TODO: if total_size != batch_size maybe need tab
-        # save graphs as pickle
-        G_pred_list = []
-        for i in range(test_batch_size):
-            # adj_pred = decode_adj(y_pred_long_data[i].cpu().numpy())
-            # G_pred = get_graph(adj_pred) # get a graph from zero-padded adj
-            G_pred = nx.Graph()
-            node_idx_list = add_from_node_f_matrix(node_f_pred_long_data[i].cpu().numpy(), G_pred)
-            add_from_edge_f_matrix(edge_f_pred_long_data[i].cpu().numpy(), G_pred, node_idx_list)
-            G_pred_list.append(G_pred)
+            #TODO: if total_size != batch_size maybe need tab
+            # save graphs as pickle
+            G_pred_list = []
+            for i in range(test_batch_size):
+                # adj_pred = decode_adj(y_pred_long_data[i].cpu().numpy())
+                # G_pred = get_graph(adj_pred) # get a graph from zero-padded adj
+                G_pred = nx.Graph()
+                node_idx_list = add_from_node_f_matrix(node_f_pred_long_data[i].cpu().numpy(), G_pred)
+                add_from_edge_f_matrix(edge_f_pred_long_data[i].cpu().numpy(), G_pred, node_idx_list)
+                G_pred_list.append(G_pred)
+
+            loss = 0
+            if args.loss_type == "mse":
+                direction_loss = my_cross_entropy(y_pred, output_y)
+                edge_f_loss = 0
+                node_f_loss = my_cross_entropy(node_f_pred, output_node_f)
+            else:
+                #  direction_loss =
+                # print(node_f_pred.shape)
+                # print(output_node_f.shape)
+                # print(output_y.shape)
+                # direction_loss = binary_cross_entropy_weight(F.sigmoid(y_pred[:,:,-2:]),output_y[:,:,-2:])
+                # direction_loss = binary_cross_entropy_weight(torch.sigmoid(y_pred[:,:,-2:-1]),output_y[:,:,-2:-1])
+                # compute loss of last two dimension separately
+                # direction_loss = my_cross_entropy(torch.sigmoid(y_pred[:,:,-4:]),output_y[:,:,-4:],if_CE=True)
+                if not args.only_use_adj:
+                    direction_loss = my_cross_entropy(y_pred[:, :, -4:], torch.argmax(output_y[:, :, -4:], dim=2),
+                                                      if_CE=True, mask_len=output_y_len)
+                else:
+                    direction_loss = binary_cross_entropy_weight(y_pred, output_y)
+                # weights = torch.FloatTensor([0.0, 0, 1.0, 0]).cuda()
+                # direction_loss = my_cross_entropy(y_pred[:,:,-4:], torch.argmax(output_y[:,:,-4:],dim=2),if_CE=True,my_weight=weights)
+                # y_pred_no_padding = pack_padded_sequence(y_pred[:,:,-4:], output_y_len, batch_first=True)
+                # y_groundtruth_no_padding = pack_padded_sequence(torch.argmax(output_y[:,:,-4:],dim=2), output_y_len, batch_first=True)
+                # direction_loss = my_cross_entropy(y_pred_no_padding, y_groundtruth_no_padding,if_CE=True)
+
+                # edge_f_loss = my_cross_entropy(y_pred[:,:,:-2], torch.argmax(output_y[:,:,:-2],dim=2))
+                edge_f_loss = 0
+                node_f_loss = my_cross_entropy(node_f_pred_new, output_node_f, if_CE=True)  # + \
+                # binary_cross_entropy_weight(edge_f_pred, output_edge_f)
+            loss = args.edge_loss_w * (edge_f_loss + direction_loss) + args.node_loss_w * node_f_loss
+            loss.backward()
+            # update deterministic and lstm
+
+            if epoch % args.epochs_log == 0 and batch_idx == 0:  # only output first batch's statistics
+                print(
+                    'Epoch: {}/{}, train loss: {:.6f}, node_f_loss: {:.6f}, edge_f_loss: {:.6f}, direction_loss:{:.6f}, num_layer: {}, hidden: {}'.format(
+                        # epoch, args.epochs,loss.data, node_f_loss.data, edge_f_loss.data, args.num_layers, args.hidden_size_rnn))
+                        epoch, args.epochs, loss.data, node_f_loss.data, edge_f_loss, direction_loss.data, args.num_layers,
+                        args.hidden_size_rnn))
 
     else:
         # generate graphs
