@@ -1131,7 +1131,7 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
     np.save(args.timing_save_path+args.fname,time_all)
 
     # visualize
-    x = range(0, args.epochs/args.epochs_log)
+    x = range(0, int(args.epochs/args.epochs_log))
     y1 = train_loss_list
     y2 = node_f_loss_list
     y3 = edge_f_loss_list
