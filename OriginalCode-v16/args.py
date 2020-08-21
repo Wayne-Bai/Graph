@@ -83,9 +83,9 @@ class Args():
         ### training config
         self.num_workers = 0 # num workers to load data, default 4
         self.batch_ratio = 4 # how many batches of samples per epoch, default 32, e.g., 1 epoch = 32 batches
-        self.epochs = 8000 # now one epoch means self.batch_ratio x batch_size
-        self.epochs_test_start = 6000
-        self.epochs_test = 100
+        self.epochs = 4000 # now one epoch means self.batch_ratio x batch_size
+        self.epochs_test_start = 3000
+        self.epochs_test = 50
         self.epochs_log = 10
         self.epochs_save = 1000
 
@@ -138,9 +138,10 @@ class Args():
         self.leaf_node_idx_list = None
 
         self.if_add_train_mask = False
-        self.if_add_test_mask = True
-
-        self.if_test_use_groundtruth = True
+        # self.if_add_test_mask = True
+        self.if_add_test_mask = False
+        # self.if_test_use_groundtruth = True
+        self.if_test_use_groundtruth = False
 
         ### filenames to save intemediate and final outputs
         self.fname = self.note + '_' + self.graph_type + '_' + str(self.num_layers) + '_' + str(self.hidden_size_rnn) + '_'
