@@ -651,10 +651,10 @@ def train_rnn_epoch(epoch, args, rnn, output, data_loader,
                 epoch, args.epochs,loss.data, node_f_loss.data, edge_f_loss, direction_loss.data, args.num_layers, args.hidden_size_rnn))
 
         # visualize
-        train_loss_list.append(loss.data)
-        node_f_loss_list.append(node_f_loss.data)
-        edge_f_loss_list.append(edge_f_loss)
-        direction_loss_list.append(direction_loss.data)
+            train_loss_list.append(loss.data)
+            node_f_loss_list.append(node_f_loss.data)
+            edge_f_loss_list.append(edge_f_loss)
+            direction_loss_list.append(direction_loss.data)
 
         # logging
         log_value('loss_'+args.fname, loss.data, epoch*args.batch_ratio+batch_idx)
@@ -1131,7 +1131,7 @@ def train(args, dataset_train, rnn, output, node_f_gen=None, edge_f_gen=None, te
     np.save(args.timing_save_path+args.fname,time_all)
 
     # visualize
-    x = range(0, args.epochs)
+    x = range(0, args.epochs/args.epochs_log)
     y1 = train_loss_list
     y2 = node_f_loss_list
     y3 = edge_f_loss_list
