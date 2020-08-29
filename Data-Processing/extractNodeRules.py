@@ -1,7 +1,7 @@
 import json
 
 f1 = open('programs_eval.json', 'r')
-f2 = open('nodeLabel.txt')
+f2 = open('nodeLabel.txt', 'r')
 
 w1 = open('nodeRules.txt', 'a')
 
