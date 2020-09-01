@@ -1,0 +1,56 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: ExpressionStatement
+[NoValue]"]
+	3 [label="[3]: LiteralString
+[use strict]"]
+	4 [label="[4]: AssignmentExpression
+[NoValue]"]
+	5 [label="[5]: MemberExpression
+[NoValue]"]
+	6 [label="[6]: FunctionExpression
+[NoValue]"]
+	7 [label="[7]: Identifier
+[v0]"]
+	8 [label="[8]: Property
+[exports]"]
+	9 [label="[9]: BlockStatement
+[NoValue]"]
+	10 [label="[10]: ReturnStatement
+[NoValue]"]
+	11 [label="[11]: ObjectExpression
+[NoValue]"]
+	12 [label="[12]: Property
+[v1]"]
+	13 [label="[13]: Property
+[replace]"]
+	14 [label="[14]: Property
+[v2]"]
+	15 [label="[15]: LiteralString
+[s0]"]
+	16 [label="[16]: LiteralBoolean
+[true]"]
+	17 [label="[17]: LiteralString
+[s1]"]
+	0 -- 1
+	0 -- 2
+	1 -- 3
+	2 -- 4
+	4 -- 5
+	4 -- 6
+	5 -- 7
+	5 -- 8
+	6 -- 9
+	9 -- 10
+	10 -- 11
+	11 -- 12
+	11 -- 13
+	11 -- 14
+	12 -- 15
+	13 -- 16
+	14 -- 17
+}

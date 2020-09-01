@@ -1,0 +1,149 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: VariableDeclaration
+[NoValue]"]
+	3 [label="[3]: LiteralString
+[use strict]"]
+	4 [label="[4]: VariableDeclarator
+[f0]"]
+	5 [label="[5]: FunctionExpression
+[NoValue]"]
+	6 [label="[6]: BlockStatement
+[NoValue]"]
+	7 [label="[7]: VariableDeclaration
+[NoValue]"]
+	8 [label="[8]: FunctionDeclaration
+[NoValue]"]
+	9 [label="[9]: FunctionDeclaration
+[NoValue]"]
+	10 [label="[10]: FunctionDeclaration
+[NoValue]"]
+	11 [label="[11]: FunctionDeclaration
+[NoValue]"]
+	12 [label="[12]: ReturnStatement
+[NoValue]"]
+	13 [label="[13]: VariableDeclarator
+[v0]"]
+	14 [label="[14]: Identifier
+[f1]"]
+	15 [label="[15]: BlockStatement
+[NoValue]"]
+	16 [label="[16]: Identifier
+[f2]"]
+	17 [label="[17]: BlockStatement
+[NoValue]"]
+	18 [label="[18]: Identifier
+[f3]"]
+	19 [label="[19]: BlockStatement
+[NoValue]"]
+	20 [label="[20]: Identifier
+[f4]"]
+	21 [label="[21]: BlockStatement
+[NoValue]"]
+	22 [label="[22]: ObjectExpression
+[NoValue]"]
+	23 [label="[23]: LiteralBoolean
+[false]"]
+	24 [label="[24]: ReturnStatement
+[NoValue]"]
+	25 [label="[25]: ExpressionStatement
+[NoValue]"]
+	26 [label="[26]: ExpressionStatement
+[NoValue]"]
+	27 [label="[27]: ExpressionStatement
+[NoValue]"]
+	28 [label="[28]: Property
+[f1]"]
+	29 [label="[29]: Property
+[f2]"]
+	30 [label="[30]: Property
+[f3]"]
+	31 [label="[31]: Property
+[f4]"]
+	32 [label="[32]: Identifier
+[v0]"]
+	33 [label="[33]: AssignmentExpression
+[NoValue]"]
+	34 [label="[34]: AssignmentExpression
+[NoValue]"]
+	35 [label="[35]: AssignmentExpression
+[NoValue]"]
+	36 [label="[36]: Identifier
+[f1]"]
+	37 [label="[37]: Identifier
+[f2]"]
+	38 [label="[38]: Identifier
+[f3]"]
+	39 [label="[39]: Identifier
+[f4]"]
+	40 [label="[40]: Identifier
+[v0]"]
+	41 [label="[41]: LiteralBoolean
+[true]"]
+	42 [label="[42]: Identifier
+[v0]"]
+	43 [label="[43]: LiteralBoolean
+[false]"]
+	44 [label="[44]: Identifier
+[v0]"]
+	45 [label="[45]: ConditionalExpression
+[NoValue]"]
+	46 [label="[46]: Identifier
+[v0]"]
+	47 [label="[47]: LiteralBoolean
+[false]"]
+	48 [label="[48]: LiteralBoolean
+[true]"]
+	0 -- 1
+	0 -- 2
+	1 -- 3
+	2 -- 4
+	4 -- 5
+	5 -- 6
+	6 -- 7
+	6 -- 8
+	6 -- 9
+	6 -- 10
+	6 -- 11
+	6 -- 12
+	7 -- 13
+	8 -- 14
+	8 -- 15
+	9 -- 16
+	9 -- 17
+	10 -- 18
+	10 -- 19
+	11 -- 20
+	11 -- 21
+	12 -- 22
+	13 -- 23
+	15 -- 24
+	17 -- 25
+	19 -- 26
+	21 -- 27
+	22 -- 28
+	22 -- 29
+	22 -- 30
+	22 -- 31
+	24 -- 32
+	25 -- 33
+	26 -- 34
+	27 -- 35
+	28 -- 36
+	29 -- 37
+	30 -- 38
+	31 -- 39
+	33 -- 40
+	33 -- 41
+	34 -- 42
+	34 -- 43
+	35 -- 44
+	35 -- 45
+	45 -- 46
+	45 -- 47
+	45 -- 48
+}

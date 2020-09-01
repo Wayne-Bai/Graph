@@ -1,0 +1,20 @@
+// Result
+graph {
+	0 [label="[0]: Program"]
+	1 [label="[1]: ExpressionStatement"]
+	2 [label="[2]: AssignmentExpression"]
+	3 [label="[3]: Identifier"]
+	4 [label="[4]: NewExpression"]
+	5 [label="[5]: MemberExpression"]
+	6 [label="[6]: LiteralString"]
+	7 [label="[7]: Identifier"]
+	8 [label="[8]: Property"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	4 -- 5
+	4 -- 6
+	5 -- 7
+	5 -- 8
+}

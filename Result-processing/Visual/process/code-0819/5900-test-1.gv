@@ -1,0 +1,164 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: ExpressionStatement
+[NoValue]"]
+	3 [label="[3]: LiteralString
+[use strict]"]
+	4 [label="[4]: AssignmentExpression
+[NoValue]"]
+	5 [label="[5]: MemberExpression
+[NoValue]"]
+	6 [label="[6]: FunctionExpression
+[NoValue]"]
+	7 [label="[7]: Identifier
+[v0]"]
+	8 [label="[8]: Property
+[exports]"]
+	9 [label="[9]: Identifier
+[v1]"]
+	10 [label="[10]: Identifier
+[v2]"]
+	11 [label="[11]: BlockStatement
+[NoValue]"]
+	12 [label="[12]: ReturnStatement
+[NoValue]"]
+	13 [label="[13]: IfStatement
+[NoValue]"]
+	14 [label="[14]: VariableDeclaration
+[NoValue]"]
+	15 [label="[15]: LogicalExpression
+[||]"]
+	16 [label="[16]: BinaryExpression
+[>]"]
+	17 [label="[17]: BlockStatement
+[NoValue]"]
+	18 [label="[18]: VariableDeclarator
+[v4]"]
+	19 [label="[19]: LogicalExpression
+[||]"]
+	20 [label="[20]: MemberExpression
+[NoValue]"]
+	21 [label="[21]: CallExpression
+[NoValue]"]
+	22 [label="[22]: UnaryExpression
+[-]"]
+	23 [label="[23]: ReturnStatement
+[NoValue]"]
+	24 [label="[24]: CallExpression
+[NoValue]"]
+	25 [label="[25]: LogicalExpression
+[||]"]
+	26 [label="[26]: BinaryExpression
+[===]"]
+	27 [label="[27]: Identifier
+[v2]"]
+	28 [label="[28]: Property
+[v5]"]
+	29 [label="[29]: MemberExpression
+[NoValue]"]
+	30 [label="[30]: LiteralString
+[s1]"]
+	31 [label="[31]: LiteralNumber
+[1]"]
+	32 [label="[32]: LiteralBoolean
+[false]"]
+	33 [label="[33]: MemberExpression
+[NoValue]"]
+	34 [label="[34]: BinaryExpression
+[===]"]
+	35 [label="[35]: BinaryExpression
+[===]"]
+	36 [label="[36]: Identifier
+[v4]"]
+	37 [label="[37]: LiteralString
+[s4]"]
+	38 [label="[38]: BinaryExpression
+[+]"]
+	39 [label="[39]: Property
+[indexOf]"]
+	40 [label="[40]: MemberExpression
+[NoValue]"]
+	41 [label="[41]: Property
+[toLowerCase]"]
+	42 [label="[42]: Identifier
+[v4]"]
+	43 [label="[43]: LiteralString
+[s2]"]
+	44 [label="[44]: Identifier
+[v4]"]
+	45 [label="[45]: LiteralString
+[s3]"]
+	46 [label="[46]: BinaryExpression
+[+]"]
+	47 [label="[47]: LiteralString
+[s0]"]
+	48 [label="[48]: Identifier
+[v2]"]
+	49 [label="[49]: Property
+[v4]"]
+	50 [label="[50]: LiteralString
+[s0]"]
+	51 [label="[51]: MemberExpression
+[NoValue]"]
+	52 [label="[52]: Identifier
+[v2]"]
+	53 [label="[53]: Property
+[v3]"]
+	0 -- 1
+	0 -- 2
+	1 -- 3
+	2 -- 4
+	4 -- 5
+	4 -- 6
+	5 -- 7
+	5 -- 8
+	6 -- 9
+	6 -- 10
+	6 -- 11
+	11 -- 12
+	11 -- 13
+	11 -- 14
+	12 -- 15
+	13 -- 16
+	13 -- 17
+	14 -- 18
+	15 -- 19
+	15 -- 20
+	16 -- 21
+	16 -- 22
+	17 -- 23
+	18 -- 24
+	19 -- 25
+	19 -- 26
+	20 -- 27
+	20 -- 28
+	21 -- 29
+	21 -- 30
+	22 -- 31
+	23 -- 32
+	24 -- 33
+	25 -- 34
+	25 -- 35
+	26 -- 36
+	26 -- 37
+	29 -- 38
+	29 -- 39
+	33 -- 40
+	33 -- 41
+	34 -- 42
+	34 -- 43
+	35 -- 44
+	35 -- 45
+	38 -- 46
+	38 -- 47
+	40 -- 48
+	40 -- 49
+	46 -- 50
+	46 -- 51
+	51 -- 52
+	51 -- 53
+}

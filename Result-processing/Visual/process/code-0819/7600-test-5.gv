@@ -1,0 +1,155 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: MemberExpression
+[NoValue]"]
+	4 [label="[4]: LiteralString
+[s0]"]
+	5 [label="[5]: LiteralString
+[s1]"]
+	6 [label="[6]: ObjectExpression
+[NoValue]"]
+	7 [label="[7]: MemberExpression
+[NoValue]"]
+	8 [label="[8]: Property
+[v2]"]
+	9 [label="[9]: Property
+[v5]"]
+	10 [label="[10]: Property
+[v6]"]
+	11 [label="[11]: Property
+[v7]"]
+	12 [label="[12]: Property
+[v8]"]
+	13 [label="[13]: Property
+[v9]"]
+	14 [label="[14]: Property
+[v10]"]
+	15 [label="[15]: Property
+[v11]"]
+	16 [label="[16]: Property
+[v12]"]
+	17 [label="[17]: Property
+[v13]"]
+	18 [label="[18]: Property
+[v14]"]
+	19 [label="[19]: Property
+[v15]"]
+	20 [label="[20]: Property
+[v16]"]
+	21 [label="[21]: Property
+[v17]"]
+	22 [label="[22]: Property
+[v18]"]
+	23 [label="[23]: Property
+[v19]"]
+	24 [label="[24]: Property
+[v20]"]
+	25 [label="[25]: Property
+[v21]"]
+	26 [label="[26]: Property
+[v22]"]
+	27 [label="[27]: Property
+[v3]"]
+	28 [label="[28]: Property
+[v4]"]
+	29 [label="[29]: Identifier
+[v0]"]
+	30 [label="[30]: Property
+[v1]"]
+	31 [label="[31]: LiteralString
+[s4]"]
+	32 [label="[32]: LiteralString
+[s5]"]
+	33 [label="[33]: LiteralString
+[s6]"]
+	34 [label="[34]: LiteralString
+[s7]"]
+	35 [label="[35]: LiteralString
+[s8]"]
+	36 [label="[36]: LiteralString
+[s9]"]
+	37 [label="[37]: LiteralString
+[s10]"]
+	38 [label="[38]: LiteralString
+[s11]"]
+	39 [label="[39]: LiteralString
+[s12]"]
+	40 [label="[40]: LiteralString
+[s13]"]
+	41 [label="[41]: LiteralString
+[s12]"]
+	42 [label="[42]: LiteralString
+[s14]"]
+	43 [label="[43]: LiteralString
+[s15]"]
+	44 [label="[44]: LiteralString
+[s16]"]
+	45 [label="[45]: LiteralString
+[s17]"]
+	46 [label="[46]: LiteralString
+[s18]"]
+	47 [label="[47]: LiteralString
+[s19]"]
+	48 [label="[48]: LiteralString
+[s20]"]
+	49 [label="[49]: LiteralString
+[s2]"]
+	50 [label="[50]: LiteralString
+[s3]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	2 -- 6
+	3 -- 7
+	3 -- 8
+	6 -- 9
+	6 -- 10
+	6 -- 11
+	6 -- 12
+	6 -- 13
+	6 -- 14
+	6 -- 15
+	6 -- 16
+	6 -- 17
+	6 -- 18
+	6 -- 19
+	6 -- 20
+	6 -- 21
+	6 -- 22
+	6 -- 23
+	6 -- 24
+	6 -- 25
+	6 -- 26
+	6 -- 27
+	6 -- 28
+	7 -- 29
+	7 -- 30
+	9 -- 31
+	10 -- 32
+	11 -- 33
+	12 -- 34
+	13 -- 35
+	14 -- 36
+	15 -- 37
+	16 -- 38
+	17 -- 39
+	18 -- 40
+	19 -- 41
+	20 -- 42
+	21 -- 43
+	22 -- 44
+	23 -- 45
+	24 -- 46
+	25 -- 47
+	26 -- 48
+	27 -- 49
+	28 -- 50
+}

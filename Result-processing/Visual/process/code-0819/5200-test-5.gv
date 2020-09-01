@@ -1,0 +1,152 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: VariableDeclaration
+[NoValue]"]
+	2 [label="[2]: IfStatement
+[NoValue]"]
+	3 [label="[3]: VariableDeclarator
+[v0]"]
+	4 [label="[4]: LogicalExpression
+[&&]"]
+	5 [label="[5]: BlockStatement
+[NoValue]"]
+	6 [label="[6]: LogicalExpression
+[&&]"]
+	7 [label="[7]: Identifier
+[v1]"]
+	8 [label="[8]: ExpressionStatement
+[NoValue]"]
+	9 [label="[9]: Identifier
+[f2]"]
+	10 [label="[10]: Identifier
+[f3]"]
+	11 [label="[11]: AssignmentExpression
+[NoValue]"]
+	12 [label="[12]: Identifier
+[v0]"]
+	13 [label="[13]: FunctionExpression
+[NoValue]"]
+	14 [label="[14]: Identifier
+[v2]"]
+	15 [label="[15]: Identifier
+[f5]"]
+	16 [label="[16]: Identifier
+[v4]"]
+	17 [label="[17]: Identifier
+[f6]"]
+	18 [label="[18]: Identifier
+[v5]"]
+	19 [label="[19]: BlockStatement
+[NoValue]"]
+	20 [label="[20]: VariableDeclaration
+[NoValue]"]
+	21 [label="[21]: ReturnStatement
+[NoValue]"]
+	22 [label="[22]: VariableDeclarator
+[f7]"]
+	23 [label="[23]: CallExpression
+[NoValue]"]
+	24 [label="[24]: FunctionExpression
+[NoValue]"]
+	25 [label="[25]: Identifier
+[f0]"]
+	26 [label="[26]: Identifier
+[v2]"]
+	27 [label="[27]: Identifier
+[v3]"]
+	28 [label="[28]: Identifier
+[f7]"]
+	29 [label="[29]: Identifier
+[v6]"]
+	30 [label="[30]: BlockStatement
+[NoValue]"]
+	31 [label="[31]: VariableDeclaration
+[NoValue]"]
+	32 [label="[32]: IfStatement
+[NoValue]"]
+	33 [label="[33]: VariableDeclarator
+[v7]"]
+	34 [label="[34]: Identifier
+[v7]"]
+	35 [label="[35]: BlockStatement
+[NoValue]"]
+	36 [label="[36]: CallExpression
+[NoValue]"]
+	37 [label="[37]: ExpressionStatement
+[NoValue]"]
+	38 [label="[38]: Identifier
+[f6]"]
+	39 [label="[39]: Identifier
+[v2]"]
+	40 [label="[40]: CallExpression
+[NoValue]"]
+	41 [label="[41]: CallExpression
+[NoValue]"]
+	42 [label="[42]: Identifier
+[f3]"]
+	43 [label="[43]: Identifier
+[v6]"]
+	44 [label="[44]: MemberExpression
+[NoValue]"]
+	45 [label="[45]: Identifier
+[v5]"]
+	46 [label="[46]: Identifier
+[v6]"]
+	47 [label="[47]: Identifier
+[v7]"]
+	48 [label="[48]: Identifier
+[v4]"]
+	49 [label="[49]: Property
+[call]"]
+	0 -- 1
+	0 -- 2
+	1 -- 3
+	2 -- 4
+	2 -- 5
+	4 -- 6
+	4 -- 7
+	5 -- 8
+	6 -- 9
+	6 -- 10
+	8 -- 11
+	11 -- 12
+	11 -- 13
+	13 -- 14
+	13 -- 15
+	13 -- 16
+	13 -- 17
+	13 -- 18
+	13 -- 19
+	19 -- 20
+	19 -- 21
+	20 -- 22
+	21 -- 23
+	22 -- 24
+	23 -- 25
+	23 -- 26
+	23 -- 27
+	23 -- 28
+	24 -- 29
+	24 -- 30
+	30 -- 31
+	30 -- 32
+	31 -- 33
+	32 -- 34
+	32 -- 35
+	33 -- 36
+	35 -- 37
+	36 -- 38
+	36 -- 39
+	36 -- 40
+	37 -- 41
+	40 -- 42
+	40 -- 43
+	41 -- 44
+	41 -- 45
+	41 -- 46
+	41 -- 47
+	44 -- 48
+	44 -- 49
+}

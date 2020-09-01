@@ -1,0 +1,143 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: VariableDeclaration
+[NoValue]"]
+	2 [label="[2]: VariableDeclaration
+[NoValue]"]
+	3 [label="[3]: ExpressionStatement
+[NoValue]"]
+	4 [label="[4]: VariableDeclarator
+[v0]"]
+	5 [label="[5]: VariableDeclarator
+[v1]"]
+	6 [label="[6]: CallExpression
+[NoValue]"]
+	7 [label="[7]: CallExpression
+[NoValue]"]
+	8 [label="[8]: ObjectExpression
+[NoValue]"]
+	9 [label="[9]: MemberExpression
+[NoValue]"]
+	10 [label="[10]: Identifier
+[v1]"]
+	11 [label="[11]: FunctionExpression
+[NoValue]"]
+	12 [label="[12]: Identifier
+[f0]"]
+	13 [label="[13]: LiteralString
+[s0]"]
+	14 [label="[14]: Property
+[v2]"]
+	15 [label="[15]: Property
+[v3]"]
+	16 [label="[16]: Identifier
+[v0]"]
+	17 [label="[17]: Property
+[v4]"]
+	18 [label="[18]: Identifier
+[v5]"]
+	19 [label="[19]: Identifier
+[v6]"]
+	20 [label="[20]: BlockStatement
+[NoValue]"]
+	21 [label="[21]: LiteralString
+[s1]"]
+	22 [label="[22]: LiteralString
+[s2]"]
+	23 [label="[23]: ExpressionStatement
+[NoValue]"]
+	24 [label="[24]: CallExpression
+[NoValue]"]
+	25 [label="[25]: MemberExpression
+[NoValue]"]
+	26 [label="[26]: LiteralString
+[s3]"]
+	27 [label="[27]: FunctionExpression
+[NoValue]"]
+	28 [label="[28]: Identifier
+[v6]"]
+	29 [label="[29]: Property
+[get]"]
+	30 [label="[30]: Identifier
+[v5]"]
+	31 [label="[31]: Identifier
+[v7]"]
+	32 [label="[32]: BlockStatement
+[NoValue]"]
+	33 [label="[33]: ExpressionStatement
+[NoValue]"]
+	34 [label="[34]: ExpressionStatement
+[NoValue]"]
+	35 [label="[35]: CallExpression
+[NoValue]"]
+	36 [label="[36]: CallExpression
+[NoValue]"]
+	37 [label="[37]: MemberExpression
+[NoValue]"]
+	38 [label="[38]: LiteralString
+[s4]"]
+	39 [label="[39]: Identifier
+[v5]"]
+	40 [label="[40]: MemberExpression
+[NoValue]"]
+	41 [label="[41]: LiteralString
+[s5]"]
+	42 [label="[42]: Identifier
+[v7]"]
+	43 [label="[43]: Identifier
+[console]"]
+	44 [label="[44]: Property
+[log]"]
+	45 [label="[45]: Identifier
+[console]"]
+	46 [label="[46]: Property
+[log]"]
+	0 -- 1
+	0 -- 2
+	0 -- 3
+	1 -- 4
+	2 -- 5
+	3 -- 6
+	4 -- 7
+	5 -- 8
+	6 -- 9
+	6 -- 10
+	6 -- 11
+	7 -- 12
+	7 -- 13
+	8 -- 14
+	8 -- 15
+	9 -- 16
+	9 -- 17
+	11 -- 18
+	11 -- 19
+	11 -- 20
+	14 -- 21
+	15 -- 22
+	20 -- 23
+	23 -- 24
+	24 -- 25
+	24 -- 26
+	24 -- 27
+	25 -- 28
+	25 -- 29
+	27 -- 30
+	27 -- 31
+	27 -- 32
+	32 -- 33
+	32 -- 34
+	33 -- 35
+	34 -- 36
+	35 -- 37
+	35 -- 38
+	35 -- 39
+	36 -- 40
+	36 -- 41
+	36 -- 42
+	37 -- 43
+	37 -- 44
+	40 -- 45
+	40 -- 46
+}

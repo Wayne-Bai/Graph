@@ -1,0 +1,155 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: Identifier
+[f0]"]
+	4 [label="[4]: FunctionExpression
+[NoValue]"]
+	5 [label="[5]: BlockStatement
+[NoValue]"]
+	6 [label="[6]: ExpressionStatement
+[NoValue]"]
+	7 [label="[7]: AssignmentExpression
+[NoValue]"]
+	8 [label="[8]: MemberExpression
+[NoValue]"]
+	9 [label="[9]: CallExpression
+[NoValue]"]
+	10 [label="[10]: MemberExpression
+[NoValue]"]
+	11 [label="[11]: Property
+[v3]"]
+	12 [label="[12]: MemberExpression
+[NoValue]"]
+	13 [label="[13]: ObjectExpression
+[NoValue]"]
+	14 [label="[14]: MemberExpression
+[NoValue]"]
+	15 [label="[15]: Property
+[v2]"]
+	16 [label="[16]: MemberExpression
+[NoValue]"]
+	17 [label="[17]: Property
+[v5]"]
+	18 [label="[18]: Property
+[v6]"]
+	19 [label="[19]: Identifier
+[v0]"]
+	20 [label="[20]: Property
+[v1]"]
+	21 [label="[21]: MemberExpression
+[NoValue]"]
+	22 [label="[22]: Property
+[v4]"]
+	23 [label="[23]: FunctionExpression
+[NoValue]"]
+	24 [label="[24]: MemberExpression
+[NoValue]"]
+	25 [label="[25]: Property
+[v2]"]
+	26 [label="[26]: BlockStatement
+[NoValue]"]
+	27 [label="[27]: Identifier
+[v0]"]
+	28 [label="[28]: Property
+[v1]"]
+	29 [label="[29]: VariableDeclaration
+[NoValue]"]
+	30 [label="[30]: ExpressionStatement
+[NoValue]"]
+	31 [label="[31]: ReturnStatement
+[NoValue]"]
+	32 [label="[32]: VariableDeclarator
+[v7]"]
+	33 [label="[33]: AssignmentExpression
+[NoValue]"]
+	34 [label="[34]: CallExpression
+[NoValue]"]
+	35 [label="[35]: CallExpression
+[NoValue]"]
+	36 [label="[36]: MemberExpression
+[NoValue]"]
+	37 [label="[37]: MemberExpression
+[NoValue]"]
+	38 [label="[38]: MemberExpression
+[NoValue]"]
+	39 [label="[39]: Identifier
+[v7]"]
+	40 [label="[40]: MemberExpression
+[NoValue]"]
+	41 [label="[41]: Identifier
+[v7]"]
+	42 [label="[42]: Property
+[v9]"]
+	43 [label="[43]: MemberExpression
+[NoValue]"]
+	44 [label="[44]: Property
+[v11]"]
+	45 [label="[45]: Identifier
+[v12]"]
+	46 [label="[46]: Property
+[v9]"]
+	47 [label="[47]: ThisExpression
+[NoValue]"]
+	48 [label="[48]: Property
+[v8]"]
+	49 [label="[49]: ThisExpression
+[NoValue]"]
+	50 [label="[50]: Property
+[v10]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	4 -- 5
+	5 -- 6
+	6 -- 7
+	7 -- 8
+	7 -- 9
+	8 -- 10
+	8 -- 11
+	9 -- 12
+	9 -- 13
+	10 -- 14
+	10 -- 15
+	12 -- 16
+	12 -- 17
+	13 -- 18
+	14 -- 19
+	14 -- 20
+	16 -- 21
+	16 -- 22
+	18 -- 23
+	21 -- 24
+	21 -- 25
+	23 -- 26
+	24 -- 27
+	24 -- 28
+	26 -- 29
+	26 -- 30
+	26 -- 31
+	29 -- 32
+	30 -- 33
+	31 -- 34
+	32 -- 35
+	33 -- 36
+	33 -- 37
+	34 -- 38
+	34 -- 39
+	35 -- 40
+	36 -- 41
+	36 -- 42
+	37 -- 43
+	37 -- 44
+	38 -- 45
+	38 -- 46
+	40 -- 47
+	40 -- 48
+	43 -- 49
+	43 -- 50
+}

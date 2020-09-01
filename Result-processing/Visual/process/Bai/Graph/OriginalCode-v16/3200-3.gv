@@ -1,0 +1,22 @@
+// Result
+graph {
+	0 [label="[0]: Program"]
+	1 [label="[1]: ExpressionStatement"]
+	2 [label="[2]: CallExpression"]
+	3 [label="[3]: Identifier"]
+	4 [label="[4]: LiteralString"]
+	5 [label="[5]: ObjectExpression"]
+	6 [label="[6]: Property"]
+	7 [label="[7]: LiteralString"]
+	8 [label="[8]: LiteralString"]
+	9 [label="[9]: LiteralString"]
+	10 [label="[10]: LiteralString"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	5 -- 6
+	5 -- 7
+	6 -- 9
+}

@@ -1,0 +1,17 @@
+// Result
+graph {
+	0 [label="[0]: IfStatement
+[getUTCMilliseconds]"]
+	1 [label="[1]: Identifier
+[getUTCMilliseconds]"]
+	2 [label="[2]: Identifier
+[getUTCMilliseconds]"]
+	18 [label="[18]: UpdateExpression
+[NoValue]"]
+	19 [label="[19]: Identifier
+[call]"]
+	0 -- 1
+	0 -- 2
+	0 -- 18
+	18 -- 19
+}

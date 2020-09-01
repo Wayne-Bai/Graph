@@ -1,0 +1,17 @@
+// Result
+graph {
+	0 [label="[0]: Program"]
+	1 [label="[1]: ExpressionStatement"]
+	2 [label="[2]: ExpressionStatement"]
+	3 [label="[3]: ExpressionStatement"]
+	4 [label="[4]: LiteralString"]
+	5 [label="[5]: LiteralString"]
+	6 [label="[6]: Identifier"]
+	7 [label="[7]: Identifier"]
+	0 -- 1
+	0 -- 2
+	0 -- 3
+	1 -- 5
+	3 -- 6
+	3 -- 7
+}

@@ -1,0 +1,26 @@
+// Result
+graph {
+	0 [label="[0]: Program"]
+	1 [label="[1]: VariableDeclaration"]
+	2 [label="[2]: ExpressionStatement"]
+	3 [label="[3]: VariableDeclaration"]
+	4 [label="[4]: CallExpression"]
+	5 [label="[5]: VariableDeclarator"]
+	6 [label="[6]: Identifier"]
+	7 [label="[7]: LiteralString"]
+	8 [label="[8]: FunctionExpression"]
+	9 [label="[9]: Identifier"]
+	10 [label="[10]: LiteralString"]
+	11 [label="[11]: LiteralBoolean"]
+	0 -- 1
+	0 -- 2
+	0 -- 3
+	2 -- 4
+	3 -- 5
+	4 -- 6
+	4 -- 7
+	4 -- 8
+	5 -- 9
+	5 -- 10
+	5 -- 11
+}

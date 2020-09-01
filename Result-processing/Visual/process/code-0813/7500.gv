@@ -1,0 +1,47 @@
+// Result
+graph {
+	0 [label="[0]: IfStatement
+[getUTCMilliseconds]"]
+	1 [label="[1]: IfStatement
+[getUTCMilliseconds]"]
+	2 [label="[2]: IfStatement
+[getUTCMilliseconds]"]
+	3 [label="[3]: IfStatement
+[getUTCMilliseconds]"]
+	4 [label="[4]: IfStatement
+[getUTCMilliseconds]"]
+	5 [label="[5]: IfStatement
+[getUTCMilliseconds]"]
+	6 [label="[6]: IfStatement
+[getUTCMilliseconds]"]
+	7 [label="[7]: IfStatement
+[getUTCMilliseconds]"]
+	8 [label="[8]: Identifier
+[getUTCMilliseconds]"]
+	9 [label="[9]: Identifier
+[getUTCMilliseconds]"]
+	10 [label="[10]: Identifier
+[getUTCMilliseconds]"]
+	11 [label="[11]: Identifier
+[getUTCMilliseconds]"]
+	19 [label="[19]: Identifier
+[getUTCMilliseconds]"]
+	20 [label="[20]: Identifier
+[getUTCMilliseconds]"]
+	21 [label="[21]: Identifier
+[getUTCMilliseconds]"]
+	0 -- 1
+	0 -- 2
+	0 -- 19
+	0 -- 20
+	0 -- 21
+	1 -- 3
+	1 -- 4
+	1 -- 5
+	2 -- 6
+	2 -- 7
+	2 -- 8
+	2 -- 9
+	2 -- 10
+	2 -- 11
+}

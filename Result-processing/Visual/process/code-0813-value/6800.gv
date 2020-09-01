@@ -1,0 +1,165 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: ExpressionStatement
+[NoValue]"]
+	3 [label="[3]: ExpressionStatement
+[v0]"]
+	4 [label="[4]: CallExpression
+[NoValue]"]
+	5 [label="[5]: Identifier
+[NoValue]"]
+	6 [label="[6]: MemberExpression
+[NoValue]"]
+	7 [label="[7]: MemberExpression
+[NoValue]"]
+	8 [label="[8]: MemberExpression
+[NoValue]"]
+	9 [label="[9]: Identifier
+[v0]"]
+	10 [label="[10]: Identifier
+[is]"]
+	11 [label="[11]: Property
+[s22]"]
+	12 [label="[12]: Identifier
+[is]"]
+	13 [label="[13]: CallExpression
+[NoValue]"]
+	14 [label="[14]: CallExpression
+[NoValue]"]
+	15 [label="[15]: CallExpression
+[NoValue]"]
+	16 [label="[16]: CallExpression
+[NoValue]"]
+	17 [label="[17]: CallExpression
+[NoValue]"]
+	18 [label="[18]: CallExpression
+[NoValue]"]
+	19 [label="[19]: Identifier
+[v0]"]
+	20 [label="[20]: CallExpression
+[NoValue]"]
+	21 [label="[21]: MemberExpression
+[NoValue]"]
+	22 [label="[22]: MemberExpression
+[NoValue]"]
+	23 [label="[23]: MemberExpression
+[NoValue]"]
+	24 [label="[24]: Identifier
+[resolve]"]
+	25 [label="[25]: CallExpression
+[v0]"]
+	26 [label="[26]: Identifier
+[resolve]"]
+	27 [label="[27]: Identifier
+[v0]"]
+	28 [label="[28]: Property
+[v0]"]
+	29 [label="[29]: Property
+[v0]"]
+	30 [label="[30]: Property
+[s22]"]
+	31 [label="[31]: Identifier
+[v0]"]
+	32 [label="[32]: Property
+[v0]"]
+	33 [label="[33]: Identifier
+[is]"]
+	34 [label="[34]: Identifier
+[v0]"]
+	35 [label="[35]: Identifier
+[v0]"]
+	36 [label="[36]: Identifier
+[resolve]"]
+	37 [label="[37]: MemberExpression
+[NoValue]"]
+	38 [label="[38]: MemberExpression
+[NoValue]"]
+	39 [label="[39]: Identifier
+[NoValue]"]
+	40 [label="[40]: Identifier
+[NoValue]"]
+	41 [label="[41]: MemberExpression
+[NoValue]"]
+	42 [label="[42]: MemberExpression
+[NoValue]"]
+	43 [label="[43]: MemberExpression
+[NoValue]"]
+	44 [label="[44]: BinaryExpression
+[NoValue]"]
+	45 [label="[45]: MemberExpression
+[NoValue]"]
+	46 [label="[46]: CallExpression
+[NoValue]"]
+	47 [label="[47]: Identifier
+[resolve]"]
+	48 [label="[48]: Identifier
+[resolve]"]
+	49 [label="[49]: ArrayExpression
+[v24]"]
+	50 [label="[50]: CallExpression
+[v24]"]
+	51 [label="[51]: ArrayExpression
+[s22]"]
+	52 [label="[52]: LiteralString
+[v0]"]
+	53 [label="[53]: Property
+[s22]"]
+	54 [label="[54]: Identifier
+[v0]"]
+	0 -- 1
+	0 -- 2
+	0 -- 3
+	1 -- 4
+	3 -- 5
+	4 -- 6
+	4 -- 7
+	4 -- 8
+	4 -- 9
+	4 -- 14
+	6 -- 10
+	6 -- 11
+	7 -- 12
+	7 -- 13
+	14 -- 15
+	14 -- 16
+	15 -- 17
+	16 -- 18
+	16 -- 19
+	16 -- 20
+	17 -- 21
+	18 -- 22
+	18 -- 23
+	18 -- 24
+	18 -- 25
+	20 -- 26
+	20 -- 27
+	21 -- 28
+	22 -- 29
+	22 -- 30
+	23 -- 31
+	23 -- 32
+	25 -- 33
+	25 -- 34
+	25 -- 35
+	28 -- 36
+	28 -- 37
+	30 -- 38
+	32 -- 39
+	32 -- 40
+	32 -- 41
+	32 -- 42
+	32 -- 43
+	32 -- 44
+	38 -- 45
+	41 -- 47
+	43 -- 46
+	45 -- 48
+	45 -- 53
+	46 -- 49
+	46 -- 50
+	46 -- 52
+}

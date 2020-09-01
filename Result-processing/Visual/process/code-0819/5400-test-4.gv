@@ -1,0 +1,149 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: MemberExpression
+[NoValue]"]
+	4 [label="[4]: LiteralString
+[s0]"]
+	5 [label="[5]: LiteralString
+[s1]"]
+	6 [label="[6]: ObjectExpression
+[NoValue]"]
+	7 [label="[7]: MemberExpression
+[NoValue]"]
+	8 [label="[8]: Property
+[v2]"]
+	9 [label="[9]: Property
+[v19]"]
+	10 [label="[10]: Property
+[v20]"]
+	11 [label="[11]: Property
+[v21]"]
+	12 [label="[12]: Property
+[v3]"]
+	13 [label="[13]: Property
+[v4]"]
+	14 [label="[14]: Property
+[v5]"]
+	15 [label="[15]: Property
+[v6]"]
+	16 [label="[16]: Property
+[v7]"]
+	17 [label="[17]: Property
+[v8]"]
+	18 [label="[18]: Property
+[v9]"]
+	19 [label="[19]: Property
+[v10]"]
+	20 [label="[20]: Property
+[v11]"]
+	21 [label="[21]: Property
+[v12]"]
+	22 [label="[22]: Property
+[v13]"]
+	23 [label="[23]: Property
+[v14]"]
+	24 [label="[24]: Property
+[v15]"]
+	25 [label="[25]: Property
+[v16]"]
+	26 [label="[26]: Property
+[v17]"]
+	27 [label="[27]: Property
+[v18]"]
+	28 [label="[28]: Identifier
+[v0]"]
+	29 [label="[29]: Property
+[v1]"]
+	30 [label="[30]: LiteralString
+[s18]"]
+	31 [label="[31]: LiteralString
+[s19]"]
+	32 [label="[32]: LiteralString
+[s20]"]
+	33 [label="[33]: LiteralString
+[s2]"]
+	34 [label="[34]: LiteralString
+[s3]"]
+	35 [label="[35]: LiteralString
+[s4]"]
+	36 [label="[36]: LiteralString
+[s5]"]
+	37 [label="[37]: LiteralString
+[s6]"]
+	38 [label="[38]: LiteralString
+[s7]"]
+	39 [label="[39]: LiteralString
+[s8]"]
+	40 [label="[40]: LiteralString
+[s9]"]
+	41 [label="[41]: LiteralString
+[s10]"]
+	42 [label="[42]: LiteralString
+[s11]"]
+	43 [label="[43]: LiteralString
+[s12]"]
+	44 [label="[44]: LiteralString
+[s13]"]
+	45 [label="[45]: LiteralString
+[s14]"]
+	46 [label="[46]: LiteralString
+[s15]"]
+	47 [label="[47]: LiteralString
+[s16]"]
+	48 [label="[48]: LiteralString
+[s17]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	2 -- 6
+	3 -- 7
+	3 -- 8
+	6 -- 9
+	6 -- 10
+	6 -- 11
+	6 -- 12
+	6 -- 13
+	6 -- 14
+	6 -- 15
+	6 -- 16
+	6 -- 17
+	6 -- 18
+	6 -- 19
+	6 -- 20
+	6 -- 21
+	6 -- 22
+	6 -- 23
+	6 -- 24
+	6 -- 25
+	6 -- 26
+	6 -- 27
+	7 -- 28
+	7 -- 29
+	9 -- 30
+	10 -- 31
+	11 -- 32
+	12 -- 33
+	13 -- 34
+	14 -- 35
+	15 -- 36
+	16 -- 37
+	17 -- 38
+	18 -- 39
+	19 -- 40
+	20 -- 41
+	21 -- 42
+	22 -- 43
+	23 -- 44
+	24 -- 45
+	25 -- 46
+	26 -- 47
+	27 -- 48
+}

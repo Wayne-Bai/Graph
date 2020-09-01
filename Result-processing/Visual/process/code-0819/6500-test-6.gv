@@ -1,0 +1,146 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: FunctionDeclaration
+[NoValue]"]
+	3 [label="[3]: CallExpression
+[NoValue]"]
+	4 [label="[4]: Identifier
+[f0]"]
+	5 [label="[5]: BlockStatement
+[NoValue]"]
+	6 [label="[6]: Identifier
+[v2]"]
+	7 [label="[7]: Identifier
+[f0]"]
+	8 [label="[8]: VariableDeclaration
+[NoValue]"]
+	9 [label="[9]: ReturnStatement
+[NoValue]"]
+	10 [label="[10]: VariableDeclaration
+[NoValue]"]
+	11 [label="[11]: FunctionDeclaration
+[NoValue]"]
+	12 [label="[12]: VariableDeclarator
+[f3]"]
+	13 [label="[13]: LogicalExpression
+[&&]"]
+	14 [label="[14]: VariableDeclarator
+[v0]"]
+	15 [label="[15]: Identifier
+[v1]"]
+	16 [label="[16]: Identifier
+[f1]"]
+	17 [label="[17]: Identifier
+[f2]"]
+	18 [label="[18]: Identifier
+[f3]"]
+	19 [label="[19]: BlockStatement
+[NoValue]"]
+	20 [label="[20]: ObjectExpression
+[NoValue]"]
+	21 [label="[21]: UnaryExpression
+[!]"]
+	22 [label="[22]: UnaryExpression
+[!]"]
+	23 [label="[23]: LiteralBoolean
+[false]"]
+	24 [label="[24]: ExpressionStatement
+[NoValue]"]
+	25 [label="[25]: ReturnStatement
+[NoValue]"]
+	26 [label="[26]: Property
+[0]"]
+	27 [label="[27]: Property
+[length]"]
+	28 [label="[28]: CallExpression
+[NoValue]"]
+	29 [label="[29]: Identifier
+[v0]"]
+	30 [label="[30]: AssignmentExpression
+[NoValue]"]
+	31 [label="[31]: BinaryExpression
+[>]"]
+	32 [label="[32]: LiteralNumber
+[11]"]
+	33 [label="[33]: UnaryExpression
+[-]"]
+	34 [label="[34]: MemberExpression
+[NoValue]"]
+	35 [label="[35]: Identifier
+[f3]"]
+	36 [label="[36]: Identifier
+[v1]"]
+	37 [label="[37]: Identifier
+[v0]"]
+	38 [label="[38]: LiteralBoolean
+[true]"]
+	39 [label="[39]: Identifier
+[f1]"]
+	40 [label="[40]: LiteralNumber
+[10]"]
+	41 [label="[41]: Identifier
+[Infinity]"]
+	42 [label="[42]: MemberExpression
+[NoValue]"]
+	43 [label="[43]: Property
+[call]"]
+	44 [label="[44]: MemberExpression
+[NoValue]"]
+	45 [label="[45]: Property
+[some]"]
+	46 [label="[46]: Identifier
+[Array]"]
+	47 [label="[47]: Property
+[prototype]"]
+	0 -- 1
+	0 -- 2
+	1 -- 3
+	2 -- 4
+	2 -- 5
+	3 -- 6
+	3 -- 7
+	5 -- 8
+	5 -- 9
+	5 -- 10
+	5 -- 11
+	8 -- 12
+	9 -- 13
+	10 -- 14
+	11 -- 15
+	11 -- 16
+	11 -- 17
+	11 -- 18
+	11 -- 19
+	12 -- 20
+	13 -- 21
+	13 -- 22
+	14 -- 23
+	19 -- 24
+	19 -- 25
+	20 -- 26
+	20 -- 27
+	21 -- 28
+	22 -- 29
+	24 -- 30
+	25 -- 31
+	26 -- 32
+	27 -- 33
+	28 -- 34
+	28 -- 35
+	28 -- 36
+	30 -- 37
+	30 -- 38
+	31 -- 39
+	31 -- 40
+	33 -- 41
+	34 -- 42
+	34 -- 43
+	42 -- 44
+	42 -- 45
+	44 -- 46
+	44 -- 47
+}

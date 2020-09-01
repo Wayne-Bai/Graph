@@ -1,0 +1,41 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: ExpressionStatement
+[NoValue]"]
+	3 [label="[3]: ExpressionStatement
+[NoValue]"]
+	4 [label="[4]: ExpressionStatement
+[NoValue]"]
+	5 [label="[5]: ExpressionStatement
+[NoValue]"]
+	6 [label="[6]: ExpressionStatement
+[NoValue]"]
+	7 [label="[7]: Identifier
+[import]"]
+	8 [label="[8]: Identifier
+[v0]"]
+	9 [label="[9]: Identifier
+[from]"]
+	10 [label="[10]: LiteralString
+[s0]"]
+	11 [label="[11]: Identifier
+[export]"]
+	12 [label="[12]: Identifier
+[v0]"]
+	0 -- 1
+	0 -- 2
+	0 -- 3
+	0 -- 4
+	0 -- 5
+	0 -- 6
+	1 -- 7
+	2 -- 8
+	3 -- 9
+	4 -- 10
+	5 -- 11
+	6 -- 12
+}

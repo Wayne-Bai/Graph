@@ -1,0 +1,166 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: ConditionalExpression
+[NoValue]"]
+	4 [label="[4]: Identifier
+[Error]"]
+	5 [label="[5]: LiteralString
+[v5]"]
+	6 [label="[6]: ArrayExpression
+[NoValue]"]
+	7 [label="[7]: Identifier
+[Error]"]
+	8 [label="[8]: Identifier
+[Error]"]
+	9 [label="[9]: Identifier
+[Error]"]
+	10 [label="[10]: ConditionalExpression
+[NoValue]"]
+	11 [label="[11]: LiteralString
+[v5]"]
+	12 [label="[12]: LiteralString
+[v5]"]
+	13 [label="[13]: LiteralString
+[v5]"]
+	14 [label="[14]: LiteralString
+[v5]"]
+	15 [label="[15]: ConditionalExpression
+[NoValue]"]
+	16 [label="[16]: ConditionalExpression
+[NoValue]"]
+	17 [label="[17]: ConditionalExpression
+[NoValue]"]
+	18 [label="[18]: ConditionalExpression
+[NoValue]"]
+	19 [label="[19]: ConditionalExpression
+[NoValue]"]
+	20 [label="[20]: ObjectExpression
+[NoValue]"]
+	21 [label="[21]: ObjectExpression
+[NoValue]"]
+	22 [label="[22]: ObjectExpression
+[NoValue]"]
+	23 [label="[23]: LiteralNull
+[Function]"]
+	24 [label="[24]: CallExpression
+[NoValue]"]
+	25 [label="[25]: Property
+[NoValue]"]
+	26 [label="[26]: Property
+[Function]"]
+	27 [label="[27]: Property
+[NoValue]"]
+	28 [label="[28]: Property
+[v5]"]
+	29 [label="[29]: Property
+[NoValue]"]
+	30 [label="[30]: Property
+[v5]"]
+	31 [label="[31]: Property
+[NoValue]"]
+	32 [label="[32]: ConditionalExpression
+[NoValue]"]
+	33 [label="[33]: ConditionalExpression
+[NoValue]"]
+	34 [label="[34]: MemberExpression
+[NoValue]"]
+	35 [label="[35]: Identifier
+[Error]"]
+	36 [label="[36]: LiteralNull
+[/ /g]"]
+	37 [label="[37]: Identifier
+[Error]"]
+	38 [label="[38]: LiteralNull
+[/ /g]"]
+	39 [label="[39]: Identifier
+[Error]"]
+	40 [label="[40]: LiteralNull
+[/ /g]"]
+	41 [label="[41]: Identifier
+[Error]"]
+	42 [label="[42]: LiteralString
+[v5]"]
+	43 [label="[43]: Identifier
+[Error]"]
+	44 [label="[44]: LiteralNull
+[/ /g]"]
+	45 [label="[45]: Identifier
+[Error]"]
+	46 [label="[46]: LiteralNull
+[/ /g]"]
+	47 [label="[47]: Identifier
+[Error]"]
+	48 [label="[48]: Property
+[/ /g]"]
+	49 [label="[49]: ConditionalExpression
+[/ /g]"]
+	50 [label="[50]: LiteralNull
+[Function]"]
+	51 [label="[51]: LiteralNull
+[Function]"]
+	52 [label="[52]: LiteralNull
+[Function]"]
+	53 [label="[53]: LiteralNull
+[Function]"]
+	54 [label="[54]: LiteralNull
+[Function]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	2 -- 6
+	2 -- 7
+	3 -- 8
+	3 -- 9
+	3 -- 10
+	3 -- 11
+	6 -- 12
+	6 -- 13
+	6 -- 14
+	6 -- 15
+	10 -- 16
+	10 -- 17
+	10 -- 18
+	10 -- 19
+	10 -- 20
+	16 -- 21
+	17 -- 22
+	18 -- 23
+	19 -- 24
+	20 -- 25
+	20 -- 26
+	21 -- 27
+	21 -- 28
+	22 -- 29
+	22 -- 30
+	22 -- 31
+	24 -- 32
+	24 -- 33
+	24 -- 34
+	25 -- 35
+	25 -- 36
+	27 -- 37
+	27 -- 38
+	29 -- 39
+	29 -- 40
+	31 -- 41
+	31 -- 42
+	32 -- 43
+	32 -- 44
+	33 -- 45
+	33 -- 46
+	34 -- 47
+	34 -- 48
+	34 -- 50
+	34 -- 51
+	34 -- 52
+	34 -- 53
+	34 -- 54
+}

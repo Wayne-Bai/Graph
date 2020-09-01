@@ -1,0 +1,47 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: ArrayExpression
+[NoValue]"]
+	4 [label="[4]: FunctionExpression
+[NoValue]"]
+	5 [label="[5]: Identifier
+[v0]"]
+	6 [label="[6]: LiteralString
+[s0]"]
+	7 [label="[7]: LiteralString
+[s1]"]
+	8 [label="[8]: LiteralString
+[s2]"]
+	9 [label="[9]: Identifier
+[v1]"]
+	10 [label="[10]: Identifier
+[v2]"]
+	11 [label="[11]: Identifier
+[v3]"]
+	12 [label="[12]: BlockStatement
+[NoValue]"]
+	13 [label="[13]: ReturnStatement
+[NoValue]"]
+	14 [label="[14]: ObjectExpression
+[NoValue]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	3 -- 6
+	3 -- 7
+	3 -- 8
+	4 -- 9
+	4 -- 10
+	4 -- 11
+	4 -- 12
+	12 -- 13
+	13 -- 14
+}

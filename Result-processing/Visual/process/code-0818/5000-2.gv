@@ -1,0 +1,65 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: MemberExpression
+[NoValue]"]
+	4 [label="[4]: LiteralString
+[name]"]
+	5 [label="[5]: LiteralString
+[add]"]
+	6 [label="[6]: ObjectExpression
+[NoValue]"]
+	7 [label="[7]: Property
+[add]"]
+	8 [label="[8]: Property
+[debug]"]
+	9 [label="[9]: Property
+[add]"]
+	10 [label="[10]: ArrayExpression
+[add]"]
+	11 [label="[11]: ArrayExpression
+[debug]"]
+	12 [label="[12]: LiteralString
+[===]"]
+	13 [label="[13]: LiteralString
+[NoValue]"]
+	14 [label="[14]: LiteralString
+[===]"]
+	15 [label="[15]: LiteralString
+[===]"]
+	19 [label="[19]: LiteralString
+[===]"]
+	20 [label="[20]: CallExpression
+[NoValue]"]
+	21 [label="[21]: UpdateExpression
+[s4]"]
+	22 [label="[22]: LiteralString
+[NoValue]"]
+	24 [label="[24]: LiteralString
+[NoValue]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	2 -- 6
+	3 -- 7
+	3 -- 8
+	3 -- 9
+	7 -- 11
+	7 -- 12
+	8 -- 13
+	9 -- 14
+	9 -- 15
+	11 -- 19
+	11 -- 20
+	11 -- 21
+	20 -- 21
+	20 -- 22
+	20 -- 24
+}

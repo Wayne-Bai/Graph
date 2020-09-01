@@ -1,0 +1,20 @@
+// Result
+graph {
+	0 [label="[0]: IfStatement
+[getUTCMilliseconds]"]
+	1 [label="[1]: IfStatement
+[getUTCMilliseconds]"]
+	2 [label="[2]: Identifier
+[getUTCMilliseconds]"]
+	3 [label="[3]: Identifier
+[getUTCMilliseconds]"]
+	4 [label="[4]: Identifier
+[getUTCMilliseconds]"]
+	5 [label="[5]: Identifier
+[getUTCMilliseconds]"]
+	0 -- 1
+	0 -- 2
+	0 -- 3
+	1 -- 4
+	1 -- 5
+}

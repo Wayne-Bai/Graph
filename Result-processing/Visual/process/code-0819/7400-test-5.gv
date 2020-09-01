@@ -1,0 +1,146 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: Identifier
+[f0]"]
+	4 [label="[4]: FunctionExpression
+[NoValue]"]
+	5 [label="[5]: BlockStatement
+[NoValue]"]
+	6 [label="[6]: ExpressionStatement
+[NoValue]"]
+	7 [label="[7]: CallExpression
+[NoValue]"]
+	8 [label="[8]: MemberExpression
+[NoValue]"]
+	9 [label="[9]: ObjectExpression
+[NoValue]"]
+	10 [label="[10]: CallExpression
+[NoValue]"]
+	11 [label="[11]: Property
+[v0]"]
+	12 [label="[12]: Property
+[v1]"]
+	13 [label="[13]: Identifier
+[f0]"]
+	14 [label="[14]: LiteralString
+[s0]"]
+	15 [label="[15]: ArrayExpression
+[NoValue]"]
+	16 [label="[16]: ObjectExpression
+[NoValue]"]
+	17 [label="[17]: Property
+[v2]"]
+	18 [label="[18]: Property
+[v3]"]
+	19 [label="[19]: ArrayExpression
+[NoValue]"]
+	20 [label="[20]: ArrayExpression
+[NoValue]"]
+	21 [label="[21]: UnaryExpression
+[-]"]
+	22 [label="[22]: UnaryExpression
+[-]"]
+	23 [label="[23]: LiteralNumber
+[0]"]
+	24 [label="[24]: LiteralNumber
+[5]"]
+	25 [label="[25]: LiteralNumber
+[10]"]
+	26 [label="[26]: LiteralNumber
+[15]"]
+	27 [label="[27]: LiteralNumber
+[10]"]
+	28 [label="[28]: LiteralNumber
+[10]"]
+	29 [label="[29]: LiteralNumber
+[5]"]
+	30 [label="[30]: LiteralNumber
+[0]"]
+	31 [label="[31]: UnaryExpression
+[-]"]
+	32 [label="[32]: ObjectExpression
+[NoValue]"]
+	33 [label="[33]: ObjectExpression
+[NoValue]"]
+	34 [label="[34]: ObjectExpression
+[NoValue]"]
+	35 [label="[35]: LiteralNumber
+[10]"]
+	36 [label="[36]: LiteralNumber
+[5]"]
+	37 [label="[37]: LiteralNumber
+[5]"]
+	38 [label="[38]: Property
+[v4]"]
+	39 [label="[39]: Property
+[v5]"]
+	40 [label="[40]: Property
+[v4]"]
+	41 [label="[41]: Property
+[v5]"]
+	42 [label="[42]: Property
+[v5]"]
+	43 [label="[43]: LiteralNumber
+[0]"]
+	44 [label="[44]: LiteralString
+[s1]"]
+	45 [label="[45]: LiteralNumber
+[10]"]
+	46 [label="[46]: LiteralString
+[s2]"]
+	47 [label="[47]: LiteralString
+[s3]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	4 -- 5
+	5 -- 6
+	6 -- 7
+	7 -- 8
+	7 -- 9
+	8 -- 10
+	8 -- 11
+	9 -- 12
+	10 -- 13
+	10 -- 14
+	12 -- 15
+	15 -- 16
+	16 -- 17
+	16 -- 18
+	17 -- 19
+	18 -- 20
+	19 -- 21
+	19 -- 22
+	19 -- 23
+	19 -- 24
+	19 -- 25
+	19 -- 26
+	19 -- 27
+	19 -- 28
+	19 -- 29
+	19 -- 30
+	19 -- 31
+	20 -- 32
+	20 -- 33
+	20 -- 34
+	21 -- 35
+	22 -- 36
+	31 -- 37
+	32 -- 38
+	32 -- 39
+	33 -- 40
+	33 -- 41
+	34 -- 42
+	38 -- 43
+	39 -- 44
+	40 -- 45
+	41 -- 46
+	42 -- 47
+}

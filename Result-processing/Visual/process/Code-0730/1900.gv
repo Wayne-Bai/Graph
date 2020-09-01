@@ -1,0 +1,12 @@
+// Result
+graph {
+	0 [label=Program]
+	1 [label=ExpressionStatement]
+	2 [label=AssignmentExpression]
+	3 [label=Identifier]
+	4 [label=NewExpression]
+	5 [label=MemberExpression]
+	6 [label=LiteralString]
+	7 [label=Identifier]
+	8 [label=Property]
+}

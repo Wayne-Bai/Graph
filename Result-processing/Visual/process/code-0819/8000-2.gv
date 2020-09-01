@@ -1,0 +1,164 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: CallExpression
+[NoValue]"]
+	3 [label="[3]: MemberExpression
+[NoValue]"]
+	4 [label="[4]: LiteralString
+[v5]"]
+	5 [label="[5]: LiteralString
+[v5]"]
+	6 [label="[6]: ObjectExpression
+[NoValue]"]
+	7 [label="[7]: ConditionalExpression
+[NoValue]"]
+	8 [label="[8]: Property
+[/ /g]"]
+	9 [label="[9]: Property
+[/ /g]"]
+	10 [label="[10]: Property
+[/ /g]"]
+	11 [label="[11]: Property
+[/ /g]"]
+	12 [label="[12]: Property
+[/ /g]"]
+	13 [label="[13]: Property
+[/ /g]"]
+	14 [label="[14]: Property
+[/ /g]"]
+	15 [label="[15]: ConditionalExpression
+[/ /g]"]
+	16 [label="[16]: Property
+[/ /g]"]
+	17 [label="[17]: Property
+[/ /g]"]
+	18 [label="[18]: Property
+[/ /g]"]
+	19 [label="[19]: Property
+[/ /g]"]
+	20 [label="[20]: Property
+[/ /g]"]
+	21 [label="[21]: Property
+[/ /g]"]
+	22 [label="[22]: Property
+[/ /g]"]
+	23 [label="[23]: LiteralNull
+[/ /g]"]
+	24 [label="[24]: Property
+[/ /g]"]
+	25 [label="[25]: Property
+[/ /g]"]
+	26 [label="[26]: Property
+[/ /g]"]
+	27 [label="[27]: Property
+[/ /g]"]
+	28 [label="[28]: LiteralNull
+[/ /g]"]
+	29 [label="[29]: Identifier
+[Error]"]
+	30 [label="[30]: LiteralNull
+[/ /g]"]
+	31 [label="[31]: LiteralString
+[v5]"]
+	32 [label="[32]: LiteralString
+[toLowerCase]"]
+	33 [label="[33]: LiteralString
+[toLowerCase]"]
+	34 [label="[34]: LiteralString
+[toLowerCase]"]
+	35 [label="[35]: LiteralString
+[toLowerCase]"]
+	36 [label="[36]: LiteralString
+[toLowerCase]"]
+	37 [label="[37]: LiteralString
+[toLowerCase]"]
+	38 [label="[38]: LiteralString
+[toLowerCase]"]
+	39 [label="[39]: LiteralString
+[v5]"]
+	40 [label="[40]: LiteralString
+[v5]"]
+	41 [label="[41]: LiteralString
+[v5]"]
+	42 [label="[42]: LiteralString
+[v5]"]
+	43 [label="[43]: LiteralString
+[v5]"]
+	44 [label="[44]: LiteralString
+[v5]"]
+	45 [label="[45]: LiteralString
+[v5]"]
+	46 [label="[46]: LiteralString
+[v5]"]
+	47 [label="[47]: LiteralString
+[v5]"]
+	48 [label="[48]: LiteralString
+[v5]"]
+	49 [label="[49]: LiteralString
+[v5]"]
+	50 [label="[50]: LiteralString
+[v5]"]
+	51 [label="[51]: LiteralString
+[v5]"]
+	52 [label="[52]: LiteralString
+[v5]"]
+	53 [label="[53]: LiteralString
+[toLowerCase]"]
+	0 -- 1
+	1 -- 2
+	2 -- 3
+	2 -- 4
+	2 -- 5
+	2 -- 6
+	3 -- 7
+	3 -- 8
+	6 -- 9
+	6 -- 10
+	6 -- 11
+	6 -- 12
+	6 -- 13
+	6 -- 14
+	6 -- 16
+	6 -- 17
+	6 -- 18
+	6 -- 19
+	6 -- 20
+	6 -- 21
+	6 -- 22
+	6 -- 24
+	6 -- 25
+	6 -- 26
+	6 -- 27
+	7 -- 15
+	7 -- 23
+	7 -- 28
+	7 -- 29
+	7 -- 30
+	9 -- 31
+	10 -- 32
+	11 -- 33
+	12 -- 34
+	13 -- 35
+	14 -- 36
+	15 -- 37
+	16 -- 38
+	17 -- 39
+	18 -- 40
+	19 -- 41
+	20 -- 42
+	21 -- 43
+	22 -- 44
+	22 -- 45
+	24 -- 46
+	25 -- 47
+	26 -- 48
+	27 -- 49
+	27 -- 50
+	27 -- 51
+	27 -- 52
+	27 -- 53
+}

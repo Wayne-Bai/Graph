@@ -1,0 +1,164 @@
+// Result
+graph {
+	0 [label="[0]: Program
+[NoValue]"]
+	1 [label="[1]: ExpressionStatement
+[NoValue]"]
+	2 [label="[2]: ConditionalExpression
+[NoValue]"]
+	3 [label="[3]: IfStatement
+[v5]"]
+	4 [label="[4]: LiteralNull
+[Function]"]
+	5 [label="[5]: ConditionalExpression
+[NoValue]"]
+	6 [label="[6]: BlockStatement
+[NoValue]"]
+	7 [label="[7]: ReturnStatement
+[NoValue]"]
+	8 [label="[8]: ReturnStatement
+[NoValue]"]
+	9 [label="[9]: FunctionDeclaration
+[NoValue]"]
+	10 [label="[10]: SequenceExpression
+[NoValue]"]
+	11 [label="[11]: ReturnStatement
+[NoValue]"]
+	12 [label="[12]: ReturnStatement
+[NoValue]"]
+	13 [label="[13]: LiteralNull
+[Function]"]
+	14 [label="[14]: Identifier
+[Error]"]
+	15 [label="[15]: ConditionalExpression
+[NoValue]"]
+	16 [label="[16]: Identifier
+[Error]"]
+	17 [label="[17]: ConditionalExpression
+[NoValue]"]
+	18 [label="[18]: Identifier
+[Error]"]
+	19 [label="[19]: ConditionalExpression
+[NoValue]"]
+	20 [label="[20]: Identifier
+[Error]"]
+	21 [label="[21]: ConditionalExpression
+[NoValue]"]
+	22 [label="[22]: ObjectExpression
+[NoValue]"]
+	23 [label="[23]: LiteralBoolean
+[Function]"]
+	24 [label="[24]: CallExpression
+[NoValue]"]
+	25 [label="[25]: ConditionalExpression
+[NoValue]"]
+	26 [label="[26]: ConditionalExpression
+[NoValue]"]
+	27 [label="[27]: ConditionalExpression
+[NoValue]"]
+	28 [label="[28]: Property
+[null]"]
+	29 [label="[29]: ConditionalExpression
+[/ /g]"]
+	30 [label="[30]: ConditionalExpression
+[/ /g]"]
+	31 [label="[31]: Property
+[/ /g]"]
+	32 [label="[32]: Property
+[Error]"]
+	33 [label="[33]: ObjectExpression
+[NoValue]"]
+	34 [label="[34]: ObjectExpression
+[NoValue]"]
+	35 [label="[35]: ObjectExpression
+[NoValue]"]
+	36 [label="[36]: Identifier
+[Error]"]
+	37 [label="[37]: Identifier
+[Error]"]
+	38 [label="[38]: Identifier
+[Error]"]
+	39 [label="[39]: Identifier
+[Error]"]
+	40 [label="[40]: Identifier
+[Error]"]
+	41 [label="[41]: Property
+[Function]"]
+	42 [label="[42]: Property
+[Error]"]
+	43 [label="[43]: Property
+[Function]"]
+	44 [label="[44]: Property
+[Error]"]
+	45 [label="[45]: Property
+[NoValue]"]
+	46 [label="[46]: Property
+[Error]"]
+	47 [label="[47]: LiteralBoolean
+[Function]"]
+	49 [label="[49]: LiteralNull
+[Function]"]
+	50 [label="[50]: LiteralNull
+[Function]"]
+	51 [label="[51]: LiteralNull
+[Function]"]
+	52 [label="[52]: LiteralNull
+[Function]"]
+	53 [label="[53]: LiteralNull
+[Function]"]
+	54 [label="[54]: LiteralNull
+[Function]"]
+	0 -- 1
+	0 -- 3
+	1 -- 2
+	2 -- 4
+	2 -- 5
+	3 -- 6
+	3 -- 12
+	5 -- 10
+	6 -- 7
+	6 -- 8
+	6 -- 9
+	6 -- 11
+	7 -- 13
+	8 -- 14
+	8 -- 15
+	9 -- 16
+	10 -- 17
+	10 -- 18
+	10 -- 19
+	12 -- 20
+	12 -- 21
+	12 -- 22
+	12 -- 23
+	15 -- 24
+	17 -- 25
+	19 -- 26
+	19 -- 27
+	22 -- 28
+	22 -- 31
+	22 -- 32
+	24 -- 29
+	24 -- 30
+	24 -- 33
+	26 -- 34
+	27 -- 35
+	28 -- 36
+	29 -- 37
+	29 -- 38
+	30 -- 39
+	32 -- 40
+	33 -- 41
+	34 -- 42
+	34 -- 43
+	34 -- 44
+	35 -- 45
+	35 -- 46
+	43 -- 49
+	45 -- 47
+	46 -- 50
+	46 -- 51
+	46 -- 52
+	46 -- 53
+	46 -- 54
+}
