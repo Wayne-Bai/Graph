@@ -169,6 +169,8 @@ def create(args):
             args.max_prev_node = 150
         elif args.dataset_type == "POC":
             args.max_prev_node = 90
+        elif args.dataset_type == 'UAF':
+            args.max_prev_node = 50
     # TODO: args.max_edge_feature_num update
 
         args.node_rules = rule_matrix
