@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "main.py", line 144, in <module>
+    train(args, train_set_loader, rnn, output, node_f_gen, edge_f_gen, test_set=test_set_loader)
+  File "/home/zfk/Documents/graph-generation/debug/Graph/code-0820-novalue/train.py", line 1082, in train
+    node_f_gen, edge_f_gen)
+  File "/home/zfk/Documents/graph-generation/debug/Graph/code-0820-novalue/train.py", line 568, in train_rnn_epoch
+    y_pred = pack_padded_sequence(y_pred_origin, output_y_len, batch_first=True)
+  File "/home/zfk/anaconda3/lib/python3.7/site-packages/torch/nn/utils/rnn.py", line 275, in pack_padded_sequence
+    _VF._pack_padded_sequence(input, lengths, batch_first)
+KeyboardInterrupt
